@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://www.akomantoso.org/2.0">
+  <judgment name="339_k127_2024">
+    <meta>
+      <identification source="#system">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgment/339_k127_2024/2025/main"/>
+          <FRBRuri value="/akn/me/judgment/339_k127_2024/2025"/>
+          <FRBRdate date="2025-09-25" name="generation"/>
+          <FRBRcountry value="me"/>
+        </FRBRWork>
+      </identification>
+    </meta>
+    <body>
+      <caseNumber>K127/2024</caseNumber>
+      <party>L.V. (okrivljeni)</party>
+      <party>ODT-a Podgorica (tužilac)</party>
+      <party>D.B. (branitelj okrivljenog)</party>
+      <party>Dž.B. (oštećeni)</party>
+      <party>Dž.S. (oštećeni)</party>
+      <judge>Larisa Mijušković-Stamatović</judge>
+      <organization>Osnovni Sud u Podgorici</organization>
+      <organization>Osnovno državno tužilaštvo Podgorica</organization>
+      <organization>Uprava policije OB Podgorica</organization>
+      <organization>Ministarstvo pravde ljudskih i manjinskih prava</organization>
+      <date>11.05.2023</date>
+      <date>08.03.2024</date>
+      <date>04.06.2024</date>
+      <date>24.06.2024</date>
+      <date>16.06.2023</date>
+      <date>08.02.2024</date>
+      <date>15.03.2024</date>
+      <date>25.11.2005</date>
+      <date>07.11.2007</date>
+      <date>17.07.2024</date>
+      <ref>čl.339 st.3 u vezi st.1 Krivičnog zakonika Crne Gore</ref>
+      <ref>čl.220 st.2 u vezi st.1 KZ CG</ref>
+      <ref>čl.76 Zakona o bezbjednosti saobraćaja na putevima</ref>
+      <ref>čl.3,4 st.2,5,13,16,32,33,42 st.1,52,53 i54 Krivičnog zakonika Crne Gore</ref>
+      <ref>čl.226,227,229 i374 Zakonika o krivičnom postupku</ref>
+      <decision>Okrivljeni L.V. je proglašen krivim za krivično djelo ugrožavanje javnog saobraćaja i osuđen na uslovnu kaznu zatvora u trajanju od 30 dana.</decision>
+    </body>
+  </judgment>
+</akomaNtoso>
