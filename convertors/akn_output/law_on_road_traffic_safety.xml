@@ -1,0 +1,3454 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://www.akomantoso.org/2.0">
+  <act name="law_on_road_traffic_safety">
+    <meta>
+      <identification source="#system">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/act/law_on_road_traffic_safety/2025/main"/>
+          <FRBRuri value="/akn/me/act/law_on_road_traffic_safety/2025"/>
+          <FRBRdate date="2025-09-25" name="generation"/>
+          <FRBRauthor href="#parliament" as="#legislature"/>
+          <FRBRcountry value="me"/>
+        </FRBRWork>
+      </identification>
+      <references source="#system">
+        <TLCOrganization eId="org1" showAs="AM" href="/akn/me/org/AM"/>
+        <TLCOrganization eId="org2" showAs="B+E.&#10;Vozač" href="/akn/me/org/B+E.&#10;Vozač"/>
+        <TLCOrganization eId="org3" showAs="B+E.&#10;Član 334&#10;Registraciona" href="/akn/me/org/B+E.&#10;Član 334&#10;Registraciona"/>
+        <TLCOrganization eId="org4" showAs="C1+E" href="/akn/me/org/C1+E"/>
+        <TLCOrganization eId="org5" showAs="Evropske Unije" href="/akn/me/org/Evropske Unije"/>
+        <TLCOrganization eId="org6" showAs="FIVA" href="/akn/me/org/FIVA"/>
+        <TLCOrganization eId="org7" showAs="GODINE" href="/akn/me/org/GODINE"/>
+        <TLCOrganization eId="org8" showAs="NADZOR&#10;Član 314&#10;Nadzor" href="/akn/me/org/NADZOR&#10;Član 314&#10;Nadzor"/>
+        <TLCOrganization eId="org9" showAs="OBAVEZE" href="/akn/me/org/OBAVEZE"/>
+        <TLCOrganization eId="org10" showAs="PRAVILA" href="/akn/me/org/PRAVILA"/>
+        <TLCOrganization eId="org11" showAs="PROBNA" href="/akn/me/org/PROBNA"/>
+        <TLCOrganization eId="org12" showAs="RCG" href="/akn/me/org/RCG"/>
+        <TLCOrganization eId="org13" showAs="SAOBRAĆAJNA" href="/akn/me/org/SAOBRAĆAJNA"/>
+        <TLCOrganization eId="org14" showAs="TEHNIČKI" href="/akn/me/org/TEHNIČKI"/>
+        <TLCOrganization eId="org15" showAs="UN ECE Pravilnici" href="/akn/me/org/UN ECE Pravilnici"/>
+        <TLCOrganization eId="org16" showAs="VOZILA&#10;1" href="/akn/me/org/VOZILA&#10;1"/>
+        <TLCOrganization eId="org17" showAs="ZAKON" href="/akn/me/org/ZAKON"/>
+        <TLCOrganization eId="org18" showAs="ZAVRŠNE" href="/akn/me/org/ZAVRŠNE"/>
+        <TLCOrganization eId="org19" showAs="Zakon" href="/akn/me/org/Zakon"/>
+        <TLCOrganization eId="org20" showAs="Zakonu" href="/akn/me/org/Zakonu"/>
+        <TLCOrganization eId="org21" showAs="ako" href="/akn/me/org/ako"/>
+        <TLCOrganization eId="org22" showAs="ako bi" href="/akn/me/org/ako bi"/>
+        <TLCOrganization eId="org23" showAs="bi postupila" href="/akn/me/org/bi postupila"/>
+        <TLCOrganization eId="org24" showAs="iz" href="/akn/me/org/iz"/>
+        <TLCOrganization eId="org25" showAs="kad" href="/akn/me/org/kad"/>
+        <TLCOrganization eId="org26" showAs="pet" href="/akn/me/org/pet"/>
+        <TLCOrganization eId="org27" showAs="pet dana" href="/akn/me/org/pet dana"/>
+        <TLCOrganization eId="org28" showAs="pri" href="/akn/me/org/pri"/>
+        <TLCOrganization eId="org29" showAs="sl" href="/akn/me/org/sl"/>
+        <TLCOrganization eId="org30" showAs="sl." href="/akn/me/org/sl."/>
+        <TLCOrganization eId="org31" showAs="tablicom ili" href="/akn/me/org/tablicom ili"/>
+        <TLCOrganization eId="org32" showAs="tim" href="/akn/me/org/tim"/>
+        <TLCOrganization eId="org33" showAs="upisa" href="/akn/me/org/upisa"/>
+        <TLCOrganization eId="org34" showAs="uže" href="/akn/me/org/uže"/>
+        <TLCAct eId="law1" showAs="Zakon o bezbjednosti saobraćaja na putevima" href="/akn/me/act/Zakon o bezbjednosti saobraćaja na putevima"/>
+      </references>
+      <classification>
+        <classificationUnit eId="cl_26" showAs="Član 26" classifier="articleNumber"/>
+        <classificationUnit eId="cl_27" showAs="Član 27" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_40" showAs="Član 40" classifier="articleNumber"/>
+        <classificationUnit eId="cl_76" showAs="Član 76" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_26" showAs="Član 26" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_26" showAs="Član 26" classifier="articleNumber"/>
+        <classificationUnit eId="cl_27" showAs="Član 27" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_76" showAs="Član 76" classifier="articleNumber"/>
+        <classificationUnit eId="cl_26" showAs="Član 26" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_36" showAs="Član 36" classifier="articleNumber"/>
+        <classificationUnit eId="cl_176" showAs="Član 176" classifier="articleNumber"/>
+      </classification>
+      <annotations/>
+      <internalReferences>
+        <ref>
+          <targetClan>1</targetClan>
+          <raw>Član 1</raw>
+        </ref>
+        <ref>
+          <targetClan>2</targetClan>
+          <raw>Član 2</raw>
+        </ref>
+        <ref>
+          <targetClan>3</targetClan>
+          <raw>Član 3</raw>
+        </ref>
+        <ref>
+          <targetClan>4</targetClan>
+          <raw>Član 4</raw>
+        </ref>
+        <ref>
+          <targetClan>5</targetClan>
+          <raw>Član 5</raw>
+        </ref>
+        <ref>
+          <targetClan>6</targetClan>
+          <raw>Član 6</raw>
+        </ref>
+        <ref>
+          <targetClan>8</targetClan>
+          <raw>Član 8</raw>
+        </ref>
+        <ref>
+          <targetClan>9</targetClan>
+          <raw>Član 9</raw>
+        </ref>
+        <ref>
+          <targetClan>10</targetClan>
+          <raw>Član 10</raw>
+        </ref>
+        <ref>
+          <targetClan>11</targetClan>
+          <raw>Član 11</raw>
+        </ref>
+        <ref>
+          <targetClan>12</targetClan>
+          <raw>Član 12</raw>
+        </ref>
+        <ref>
+          <targetClan>13</targetClan>
+          <raw>Član 13</raw>
+        </ref>
+        <ref>
+          <targetClan>14</targetClan>
+          <raw>Član 14</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <raw>Član 15</raw>
+        </ref>
+        <ref>
+          <targetClan>16</targetClan>
+          <raw>Član 16</raw>
+        </ref>
+        <ref>
+          <targetClan>17</targetClan>
+          <raw>Član 17</raw>
+        </ref>
+        <ref>
+          <targetClan>18</targetClan>
+          <raw>Član 18</raw>
+        </ref>
+        <ref>
+          <targetClan>19</targetClan>
+          <raw>Član 19</raw>
+        </ref>
+        <ref>
+          <targetClan>20</targetClan>
+          <raw>Član 20</raw>
+        </ref>
+        <ref>
+          <targetClan>21</targetClan>
+          <raw>Član 21</raw>
+        </ref>
+        <ref>
+          <targetClan>22</targetClan>
+          <raw>Član 22</raw>
+        </ref>
+        <ref>
+          <targetClan>23</targetClan>
+          <raw>Član 23</raw>
+        </ref>
+        <ref>
+          <targetClan>24</targetClan>
+          <raw>Član 24</raw>
+        </ref>
+        <ref>
+          <targetClan>25</targetClan>
+          <raw>Član 25</raw>
+        </ref>
+        <ref>
+          <targetClan>26</targetClan>
+          <raw>Član 26</raw>
+        </ref>
+        <ref>
+          <targetClan>27</targetClan>
+          <raw>Član 27</raw>
+        </ref>
+        <ref>
+          <targetClan>28</targetClan>
+          <raw>Član 28</raw>
+        </ref>
+        <ref>
+          <targetClan>29</targetClan>
+          <raw>Član 29</raw>
+        </ref>
+        <ref>
+          <targetClan>30</targetClan>
+          <raw>Član 30</raw>
+        </ref>
+        <ref>
+          <targetClan>31</targetClan>
+          <raw>Član 31</raw>
+        </ref>
+        <ref>
+          <targetClan>32</targetClan>
+          <raw>Član 32</raw>
+        </ref>
+        <ref>
+          <targetClan>33</targetClan>
+          <raw>Član 33</raw>
+        </ref>
+        <ref>
+          <targetClan>34</targetClan>
+          <raw>Član 34</raw>
+        </ref>
+        <ref>
+          <targetClan>35</targetClan>
+          <raw>Član 35</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <raw>Član 36</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>Član 37</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>Član 37</raw>
+        </ref>
+        <ref>
+          <targetClan>38</targetClan>
+          <raw>Član 38</raw>
+        </ref>
+        <ref>
+          <targetClan>39</targetClan>
+          <raw>Član 39</raw>
+        </ref>
+        <ref>
+          <targetClan>40</targetClan>
+          <raw>Član 40</raw>
+        </ref>
+        <ref>
+          <targetClan>41</targetClan>
+          <raw>Član 41</raw>
+        </ref>
+        <ref>
+          <targetClan>42</targetClan>
+          <raw>Član 42</raw>
+        </ref>
+        <ref>
+          <targetClan>43</targetClan>
+          <raw>Član 43</raw>
+        </ref>
+        <ref>
+          <targetClan>44</targetClan>
+          <raw>Član 44</raw>
+        </ref>
+        <ref>
+          <targetClan>45</targetClan>
+          <raw>Član 45</raw>
+        </ref>
+        <ref>
+          <targetClan>46</targetClan>
+          <raw>Član 46</raw>
+        </ref>
+        <ref>
+          <targetClan>47</targetClan>
+          <raw>Član 47</raw>
+        </ref>
+        <ref>
+          <targetClan>48</targetClan>
+          <raw>Član 48</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <raw>Član 49</raw>
+        </ref>
+        <ref>
+          <targetClan>50</targetClan>
+          <raw>Član 50</raw>
+        </ref>
+        <ref>
+          <targetClan>51</targetClan>
+          <raw>Član 51</raw>
+        </ref>
+        <ref>
+          <targetClan>52</targetClan>
+          <raw>Član 52</raw>
+        </ref>
+        <ref>
+          <targetClan>53</targetClan>
+          <raw>Član 53</raw>
+        </ref>
+        <ref>
+          <targetClan>54</targetClan>
+          <raw>Član 54</raw>
+        </ref>
+        <ref>
+          <targetClan>55</targetClan>
+          <raw>Član 55</raw>
+        </ref>
+        <ref>
+          <targetClan>56</targetClan>
+          <raw>Član 56</raw>
+        </ref>
+        <ref>
+          <targetClan>57</targetClan>
+          <raw>Član 57</raw>
+        </ref>
+        <ref>
+          <targetClan>61</targetClan>
+          <raw>čl. 61</raw>
+        </ref>
+        <ref>
+          <targetClan>58</targetClan>
+          <raw>Član 58</raw>
+        </ref>
+        <ref>
+          <targetClan>59</targetClan>
+          <raw>Član 59</raw>
+        </ref>
+        <ref>
+          <targetClan>60</targetClan>
+          <raw>Član 60</raw>
+        </ref>
+        <ref>
+          <targetClan>61</targetClan>
+          <raw>Član 61</raw>
+        </ref>
+        <ref>
+          <targetClan>62</targetClan>
+          <raw>Član 62</raw>
+        </ref>
+        <ref>
+          <targetClan>63</targetClan>
+          <raw>Član 63</raw>
+        </ref>
+        <ref>
+          <targetClan>64</targetClan>
+          <raw>Član 64</raw>
+        </ref>
+        <ref>
+          <targetClan>65</targetClan>
+          <raw>Član 65</raw>
+        </ref>
+        <ref>
+          <targetClan>66</targetClan>
+          <raw>Član 66</raw>
+        </ref>
+        <ref>
+          <targetClan>67</targetClan>
+          <raw>Član 67</raw>
+        </ref>
+        <ref>
+          <targetClan>68</targetClan>
+          <raw>Član 68</raw>
+        </ref>
+        <ref>
+          <targetClan>69</targetClan>
+          <raw>Član 69</raw>
+        </ref>
+        <ref>
+          <targetClan>70</targetClan>
+          <raw>Član 70</raw>
+        </ref>
+        <ref>
+          <targetClan>71</targetClan>
+          <raw>Član 71</raw>
+        </ref>
+        <ref>
+          <targetClan>72</targetClan>
+          <raw>Član 72</raw>
+        </ref>
+        <ref>
+          <targetClan>73</targetClan>
+          <raw>Član 73</raw>
+        </ref>
+        <ref>
+          <targetClan>74</targetClan>
+          <raw>Član 74</raw>
+        </ref>
+        <ref>
+          <targetClan>75</targetClan>
+          <raw>Član 75</raw>
+        </ref>
+        <ref>
+          <targetClan>76</targetClan>
+          <raw>Član 76</raw>
+        </ref>
+        <ref>
+          <targetClan>77</targetClan>
+          <raw>Član 77</raw>
+        </ref>
+        <ref>
+          <targetClan>78</targetClan>
+          <raw>Član 78</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <raw>Član 79</raw>
+        </ref>
+        <ref>
+          <targetClan>80</targetClan>
+          <raw>Član 80</raw>
+        </ref>
+        <ref>
+          <targetClan>81</targetClan>
+          <raw>Član 81</raw>
+        </ref>
+        <ref>
+          <targetClan>82</targetClan>
+          <raw>Član 82</raw>
+        </ref>
+        <ref>
+          <targetClan>83</targetClan>
+          <raw>Član 83</raw>
+        </ref>
+        <ref>
+          <targetClan>84</targetClan>
+          <raw>Član 84</raw>
+        </ref>
+        <ref>
+          <targetClan>85</targetClan>
+          <raw>Član 85</raw>
+        </ref>
+        <ref>
+          <targetClan>86</targetClan>
+          <raw>Član 86</raw>
+        </ref>
+        <ref>
+          <targetClan>87</targetClan>
+          <raw>Član 87</raw>
+        </ref>
+        <ref>
+          <targetClan>88</targetClan>
+          <raw>Član 88</raw>
+        </ref>
+        <ref>
+          <targetClan>89</targetClan>
+          <raw>Član 89</raw>
+        </ref>
+        <ref>
+          <targetClan>90</targetClan>
+          <raw>Član 90</raw>
+        </ref>
+        <ref>
+          <targetClan>91</targetClan>
+          <raw>Član 91</raw>
+        </ref>
+        <ref>
+          <targetClan>92</targetClan>
+          <raw>Član 92</raw>
+        </ref>
+        <ref>
+          <targetClan>93</targetClan>
+          <raw>Član 93</raw>
+        </ref>
+        <ref>
+          <targetClan>94</targetClan>
+          <raw>Član 94</raw>
+        </ref>
+        <ref>
+          <targetClan>95</targetClan>
+          <raw>Član 95</raw>
+        </ref>
+        <ref>
+          <targetClan>96</targetClan>
+          <raw>Član 96</raw>
+        </ref>
+        <ref>
+          <targetClan>97</targetClan>
+          <raw>Član 97</raw>
+        </ref>
+        <ref>
+          <targetClan>98</targetClan>
+          <raw>Član 98</raw>
+        </ref>
+        <ref>
+          <targetClan>99</targetClan>
+          <raw>Član 99</raw>
+        </ref>
+        <ref>
+          <targetClan>100</targetClan>
+          <raw>Član 100</raw>
+        </ref>
+        <ref>
+          <targetClan>101</targetClan>
+          <raw>Član 101</raw>
+        </ref>
+        <ref>
+          <targetClan>102</targetClan>
+          <raw>Član 102</raw>
+        </ref>
+        <ref>
+          <targetClan>103</targetClan>
+          <raw>Član 103</raw>
+        </ref>
+        <ref>
+          <targetClan>104</targetClan>
+          <raw>Član 104</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>Član 105</raw>
+        </ref>
+        <ref>
+          <targetClan>106</targetClan>
+          <raw>Član 106</raw>
+        </ref>
+        <ref>
+          <targetClan>107</targetClan>
+          <raw>Član 107</raw>
+        </ref>
+        <ref>
+          <targetClan>108</targetClan>
+          <raw>Član 108</raw>
+        </ref>
+        <ref>
+          <targetClan>109</targetClan>
+          <raw>Član 109</raw>
+        </ref>
+        <ref>
+          <targetClan>110</targetClan>
+          <raw>Član 110</raw>
+        </ref>
+        <ref>
+          <targetClan>111</targetClan>
+          <raw>Član 111</raw>
+        </ref>
+        <ref>
+          <targetClan>112</targetClan>
+          <raw>Član 112</raw>
+        </ref>
+        <ref>
+          <targetClan>113</targetClan>
+          <raw>Član 113</raw>
+        </ref>
+        <ref>
+          <targetClan>114</targetClan>
+          <raw>Član 114</raw>
+        </ref>
+        <ref>
+          <targetClan>115</targetClan>
+          <raw>Član 115</raw>
+        </ref>
+        <ref>
+          <targetClan>116</targetClan>
+          <raw>Član 116</raw>
+        </ref>
+        <ref>
+          <targetClan>117</targetClan>
+          <raw>Član 117</raw>
+        </ref>
+        <ref>
+          <targetClan>118</targetClan>
+          <raw>Član 118</raw>
+        </ref>
+        <ref>
+          <targetClan>119</targetClan>
+          <raw>Član 119</raw>
+        </ref>
+        <ref>
+          <targetClan>120</targetClan>
+          <raw>Član 120</raw>
+        </ref>
+        <ref>
+          <targetClan>121</targetClan>
+          <raw>Član 121</raw>
+        </ref>
+        <ref>
+          <targetClan>122</targetClan>
+          <raw>Član 122</raw>
+        </ref>
+        <ref>
+          <targetClan>123</targetClan>
+          <raw>Član 123</raw>
+        </ref>
+        <ref>
+          <targetClan>124</targetClan>
+          <raw>Član 124</raw>
+        </ref>
+        <ref>
+          <targetClan>125</targetClan>
+          <raw>Član 125</raw>
+        </ref>
+        <ref>
+          <targetClan>126</targetClan>
+          <raw>Član 126</raw>
+        </ref>
+        <ref>
+          <targetClan>127</targetClan>
+          <raw>Član 127</raw>
+        </ref>
+        <ref>
+          <targetClan>128</targetClan>
+          <raw>Član 128</raw>
+        </ref>
+        <ref>
+          <targetClan>129</targetClan>
+          <raw>Član 129</raw>
+        </ref>
+        <ref>
+          <targetClan>130</targetClan>
+          <raw>Član 130</raw>
+        </ref>
+        <ref>
+          <targetClan>131</targetClan>
+          <raw>Član 131</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <raw>Član 132</raw>
+        </ref>
+        <ref>
+          <targetClan>133</targetClan>
+          <raw>Član 133</raw>
+        </ref>
+        <ref>
+          <targetClan>134</targetClan>
+          <raw>Član 134</raw>
+        </ref>
+        <ref>
+          <targetClan>135</targetClan>
+          <raw>Član 135</raw>
+        </ref>
+        <ref>
+          <targetClan>136</targetClan>
+          <raw>Član 136</raw>
+        </ref>
+        <ref>
+          <targetClan>137</targetClan>
+          <raw>Član 137</raw>
+        </ref>
+        <ref>
+          <targetClan>138</targetClan>
+          <raw>Član 138</raw>
+        </ref>
+        <ref>
+          <targetClan>139</targetClan>
+          <raw>Član 139</raw>
+        </ref>
+        <ref>
+          <targetClan>140</targetClan>
+          <raw>Član 140</raw>
+        </ref>
+        <ref>
+          <targetClan>141</targetClan>
+          <raw>Član 141</raw>
+        </ref>
+        <ref>
+          <targetClan>142</targetClan>
+          <raw>Član 142</raw>
+        </ref>
+        <ref>
+          <targetClan>143</targetClan>
+          <raw>Član 143</raw>
+        </ref>
+        <ref>
+          <targetClan>144</targetClan>
+          <raw>Član 144</raw>
+        </ref>
+        <ref>
+          <targetClan>145</targetClan>
+          <raw>Član 145</raw>
+        </ref>
+        <ref>
+          <targetClan>146</targetClan>
+          <raw>Član 146</raw>
+        </ref>
+        <ref>
+          <targetClan>147</targetClan>
+          <raw>Član 147</raw>
+        </ref>
+        <ref>
+          <targetClan>148</targetClan>
+          <raw>Član 148</raw>
+        </ref>
+        <ref>
+          <targetClan>149</targetClan>
+          <raw>Član 149</raw>
+        </ref>
+        <ref>
+          <targetClan>150</targetClan>
+          <raw>Član 150</raw>
+        </ref>
+        <ref>
+          <targetClan>151</targetClan>
+          <raw>Član 151</raw>
+        </ref>
+        <ref>
+          <targetClan>152</targetClan>
+          <raw>Član 152</raw>
+        </ref>
+        <ref>
+          <targetClan>153</targetClan>
+          <raw>Član 153</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <raw>Član 154</raw>
+        </ref>
+        <ref>
+          <targetClan>155</targetClan>
+          <raw>Član 155</raw>
+        </ref>
+        <ref>
+          <targetClan>156</targetClan>
+          <raw>Član 156</raw>
+        </ref>
+        <ref>
+          <targetClan>157</targetClan>
+          <raw>Član 157</raw>
+        </ref>
+        <ref>
+          <targetClan>158</targetClan>
+          <raw>Član 158</raw>
+        </ref>
+        <ref>
+          <targetClan>159</targetClan>
+          <raw>Član 159</raw>
+        </ref>
+        <ref>
+          <targetClan>160</targetClan>
+          <raw>Član 160</raw>
+        </ref>
+        <ref>
+          <targetClan>160</targetClan>
+          <raw>Član 160</raw>
+        </ref>
+        <ref>
+          <targetClan>161</targetClan>
+          <raw>Član 161</raw>
+        </ref>
+        <ref>
+          <targetClan>162</targetClan>
+          <raw>Član 162</raw>
+        </ref>
+        <ref>
+          <targetClan>163</targetClan>
+          <raw>Član 163</raw>
+        </ref>
+        <ref>
+          <targetClan>164</targetClan>
+          <raw>Član 164</raw>
+        </ref>
+        <ref>
+          <targetClan>165</targetClan>
+          <raw>Član 165</raw>
+        </ref>
+        <ref>
+          <targetClan>165</targetClan>
+          <raw>Član 165</raw>
+        </ref>
+        <ref>
+          <targetClan>166</targetClan>
+          <raw>Član 166</raw>
+        </ref>
+        <ref>
+          <targetClan>167</targetClan>
+          <raw>Član 167</raw>
+        </ref>
+        <ref>
+          <targetClan>168</targetClan>
+          <raw>Član 168</raw>
+        </ref>
+        <ref>
+          <targetClan>169</targetClan>
+          <raw>Član 169</raw>
+        </ref>
+        <ref>
+          <targetClan>170</targetClan>
+          <raw>Član 170</raw>
+        </ref>
+        <ref>
+          <targetClan>171</targetClan>
+          <raw>Član 171</raw>
+        </ref>
+        <ref>
+          <targetClan>172</targetClan>
+          <raw>Član 172</raw>
+        </ref>
+        <ref>
+          <targetClan>173</targetClan>
+          <raw>Član 173</raw>
+        </ref>
+        <ref>
+          <targetClan>174</targetClan>
+          <raw>Član 174</raw>
+        </ref>
+        <ref>
+          <targetClan>175</targetClan>
+          <raw>Član 175</raw>
+        </ref>
+        <ref>
+          <targetClan>175</targetClan>
+          <raw>Član 175</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <raw>Član 176</raw>
+        </ref>
+        <ref>
+          <targetClan>177</targetClan>
+          <raw>Član 177</raw>
+        </ref>
+        <ref>
+          <targetClan>178</targetClan>
+          <raw>Član 178</raw>
+        </ref>
+        <ref>
+          <targetClan>179</targetClan>
+          <raw>Član 179</raw>
+        </ref>
+        <ref>
+          <targetClan>180</targetClan>
+          <raw>Član 180</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <raw>Član 181</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>Član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>Član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <raw>Član 183</raw>
+        </ref>
+        <ref>
+          <targetClan>184</targetClan>
+          <raw>Član 184</raw>
+        </ref>
+        <ref>
+          <targetClan>185</targetClan>
+          <raw>Član 185</raw>
+        </ref>
+        <ref>
+          <targetClan>186</targetClan>
+          <raw>Član 186</raw>
+        </ref>
+        <ref>
+          <targetClan>187</targetClan>
+          <raw>Član 187</raw>
+        </ref>
+        <ref>
+          <targetClan>188</targetClan>
+          <raw>Član 188</raw>
+        </ref>
+        <ref>
+          <targetClan>189</targetClan>
+          <raw>Član 189</raw>
+        </ref>
+        <ref>
+          <targetClan>190</targetClan>
+          <raw>Član 190</raw>
+        </ref>
+        <ref>
+          <targetClan>191</targetClan>
+          <raw>Član 191</raw>
+        </ref>
+        <ref>
+          <targetClan>192</targetClan>
+          <raw>Član 192</raw>
+        </ref>
+        <ref>
+          <targetClan>193</targetClan>
+          <raw>Čl. 193</raw>
+        </ref>
+        <ref>
+          <targetClan>195</targetClan>
+          <raw>Član 195</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>čl. 205</raw>
+        </ref>
+        <ref>
+          <targetClan>196</targetClan>
+          <raw>Član 196</raw>
+        </ref>
+        <ref>
+          <targetClan>197</targetClan>
+          <raw>Član 197</raw>
+        </ref>
+        <ref>
+          <targetClan>198</targetClan>
+          <raw>Član 198</raw>
+        </ref>
+        <ref>
+          <targetClan>199</targetClan>
+          <raw>Član 199</raw>
+        </ref>
+        <ref>
+          <targetClan>200</targetClan>
+          <raw>Član 200</raw>
+        </ref>
+        <ref>
+          <targetClan>201</targetClan>
+          <raw>Član 201</raw>
+        </ref>
+        <ref>
+          <targetClan>202</targetClan>
+          <raw>Čl. 202</raw>
+        </ref>
+        <ref>
+          <targetClan>204</targetClan>
+          <raw>Član 204</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>Član 205</raw>
+        </ref>
+        <ref>
+          <targetClan>206</targetClan>
+          <raw>Član 206</raw>
+        </ref>
+        <ref>
+          <targetClan>206</targetClan>
+          <raw>Član 206</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>čl. 205</raw>
+        </ref>
+        <ref>
+          <targetClan>207</targetClan>
+          <raw>Član 207</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>čl. 205</raw>
+        </ref>
+        <ref>
+          <targetClan>208</targetClan>
+          <raw>Član 208</raw>
+        </ref>
+        <ref>
+          <targetClan>209</targetClan>
+          <raw>Član 209</raw>
+        </ref>
+        <ref>
+          <targetClan>210</targetClan>
+          <raw>Član 210</raw>
+        </ref>
+        <ref>
+          <targetClan>211</targetClan>
+          <raw>Član 211</raw>
+        </ref>
+        <ref>
+          <targetClan>212</targetClan>
+          <raw>Član 212</raw>
+        </ref>
+        <ref>
+          <targetClan>213</targetClan>
+          <raw>Član 213</raw>
+        </ref>
+        <ref>
+          <targetClan>214</targetClan>
+          <raw>Član 214</raw>
+        </ref>
+        <ref>
+          <targetClan>215</targetClan>
+          <raw>Član 215</raw>
+        </ref>
+        <ref>
+          <targetClan>216</targetClan>
+          <raw>Član 216</raw>
+        </ref>
+        <ref>
+          <targetClan>217</targetClan>
+          <raw>Član 217</raw>
+        </ref>
+        <ref>
+          <targetClan>218</targetClan>
+          <raw>Član 218</raw>
+        </ref>
+        <ref>
+          <targetClan>219</targetClan>
+          <raw>Član 219</raw>
+        </ref>
+        <ref>
+          <targetClan>220</targetClan>
+          <raw>Član 220</raw>
+        </ref>
+        <ref>
+          <targetClan>221</targetClan>
+          <raw>Član 221</raw>
+        </ref>
+        <ref>
+          <targetClan>222</targetClan>
+          <raw>Član 222</raw>
+        </ref>
+        <ref>
+          <targetClan>223</targetClan>
+          <raw>Član 223</raw>
+        </ref>
+        <ref>
+          <targetClan>223</targetClan>
+          <raw>Član 223</raw>
+        </ref>
+        <ref>
+          <targetClan>224</targetClan>
+          <raw>Član 224</raw>
+        </ref>
+        <ref>
+          <targetClan>225</targetClan>
+          <raw>Član 225</raw>
+        </ref>
+        <ref>
+          <targetClan>226</targetClan>
+          <raw>Član 226</raw>
+        </ref>
+        <ref>
+          <targetClan>227</targetClan>
+          <raw>Član 227</raw>
+        </ref>
+        <ref>
+          <targetClan>228</targetClan>
+          <raw>Član 228</raw>
+        </ref>
+        <ref>
+          <targetClan>229</targetClan>
+          <raw>Član 229</raw>
+        </ref>
+        <ref>
+          <targetClan>230</targetClan>
+          <raw>Član 230</raw>
+        </ref>
+        <ref>
+          <targetClan>231</targetClan>
+          <raw>Član 231</raw>
+        </ref>
+        <ref>
+          <targetClan>232</targetClan>
+          <raw>Član 232</raw>
+        </ref>
+        <ref>
+          <targetClan>233</targetClan>
+          <raw>Član 233</raw>
+        </ref>
+        <ref>
+          <targetClan>234</targetClan>
+          <raw>Član 234</raw>
+        </ref>
+        <ref>
+          <targetClan>235</targetClan>
+          <raw>Član 235</raw>
+        </ref>
+        <ref>
+          <targetClan>236</targetClan>
+          <raw>Član 236</raw>
+        </ref>
+        <ref>
+          <targetClan>237</targetClan>
+          <raw>Član 237</raw>
+        </ref>
+        <ref>
+          <targetClan>238</targetClan>
+          <raw>Član 238</raw>
+        </ref>
+        <ref>
+          <targetClan>239</targetClan>
+          <raw>Član 239</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>Član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>241</targetClan>
+          <raw>Član 241</raw>
+        </ref>
+        <ref>
+          <targetClan>242</targetClan>
+          <raw>Član 242</raw>
+        </ref>
+        <ref>
+          <targetClan>243</targetClan>
+          <raw>Član 243</raw>
+        </ref>
+        <ref>
+          <targetClan>244</targetClan>
+          <raw>Član 244</raw>
+        </ref>
+        <ref>
+          <targetClan>245</targetClan>
+          <raw>Član 245</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>Član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>Član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>Član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>Član 247</raw>
+        </ref>
+        <ref>
+          <targetClan>248</targetClan>
+          <raw>Član 248</raw>
+        </ref>
+        <ref>
+          <targetClan>249</targetClan>
+          <raw>Član 249</raw>
+        </ref>
+        <ref>
+          <targetClan>250</targetClan>
+          <raw>Član 250</raw>
+        </ref>
+        <ref>
+          <targetClan>251</targetClan>
+          <raw>Član 251</raw>
+        </ref>
+        <ref>
+          <targetClan>252</targetClan>
+          <raw>Član 252</raw>
+        </ref>
+        <ref>
+          <targetClan>253</targetClan>
+          <raw>Član 253</raw>
+        </ref>
+        <ref>
+          <targetClan>254</targetClan>
+          <raw>Član 254</raw>
+        </ref>
+        <ref>
+          <targetClan>254</targetClan>
+          <raw>Član 254</raw>
+        </ref>
+        <ref>
+          <targetClan>255</targetClan>
+          <raw>Član 255</raw>
+        </ref>
+        <ref>
+          <targetClan>256</targetClan>
+          <raw>Član 256</raw>
+        </ref>
+        <ref>
+          <targetClan>257</targetClan>
+          <raw>Član 257</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <raw>Član 258</raw>
+        </ref>
+        <ref>
+          <targetClan>259</targetClan>
+          <raw>Član 259</raw>
+        </ref>
+        <ref>
+          <targetClan>260</targetClan>
+          <raw>Član 260</raw>
+        </ref>
+        <ref>
+          <targetClan>261</targetClan>
+          <raw>Član 261</raw>
+        </ref>
+        <ref>
+          <targetClan>262</targetClan>
+          <raw>Član 262</raw>
+        </ref>
+        <ref>
+          <targetClan>263</targetClan>
+          <raw>Član 263</raw>
+        </ref>
+        <ref>
+          <targetClan>264</targetClan>
+          <raw>Član 264</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>čl. 105</raw>
+        </ref>
+        <ref>
+          <targetClan>265</targetClan>
+          <raw>Član 265</raw>
+        </ref>
+        <ref>
+          <targetClan>266</targetClan>
+          <raw>Član 266</raw>
+        </ref>
+        <ref>
+          <targetClan>267</targetClan>
+          <raw>Član 267</raw>
+        </ref>
+        <ref>
+          <targetClan>268</targetClan>
+          <raw>Član 268</raw>
+        </ref>
+        <ref>
+          <targetClan>269</targetClan>
+          <raw>Član 269</raw>
+        </ref>
+        <ref>
+          <targetClan>270</targetClan>
+          <raw>Član 270</raw>
+        </ref>
+        <ref>
+          <targetClan>270</targetClan>
+          <raw>Član 270</raw>
+        </ref>
+        <ref>
+          <targetClan>271</targetClan>
+          <raw>Član 271</raw>
+        </ref>
+        <ref>
+          <targetClan>272</targetClan>
+          <raw>Član 272</raw>
+        </ref>
+        <ref>
+          <targetClan>273</targetClan>
+          <raw>Član 273</raw>
+        </ref>
+        <ref>
+          <targetClan>274</targetClan>
+          <raw>Član 274</raw>
+        </ref>
+        <ref>
+          <targetClan>275</targetClan>
+          <raw>Član 275</raw>
+        </ref>
+        <ref>
+          <targetClan>276</targetClan>
+          <raw>Član 276</raw>
+        </ref>
+        <ref>
+          <targetClan>277</targetClan>
+          <raw>Član 277</raw>
+        </ref>
+        <ref>
+          <targetClan>278</targetClan>
+          <raw>Član 278</raw>
+        </ref>
+        <ref>
+          <targetClan>279</targetClan>
+          <raw>Član 279</raw>
+        </ref>
+        <ref>
+          <targetClan>280</targetClan>
+          <raw>Član 280</raw>
+        </ref>
+        <ref>
+          <targetClan>281</targetClan>
+          <raw>Član 281</raw>
+        </ref>
+        <ref>
+          <targetClan>282</targetClan>
+          <raw>Član 282</raw>
+        </ref>
+        <ref>
+          <targetClan>283</targetClan>
+          <raw>Član 283</raw>
+        </ref>
+        <ref>
+          <targetClan>284</targetClan>
+          <raw>Član 284</raw>
+        </ref>
+        <ref>
+          <targetClan>285</targetClan>
+          <raw>Član 285</raw>
+        </ref>
+        <ref>
+          <targetClan>286</targetClan>
+          <raw>Član 286</raw>
+        </ref>
+        <ref>
+          <targetClan>287</targetClan>
+          <raw>Član 287</raw>
+        </ref>
+        <ref>
+          <targetClan>288</targetClan>
+          <raw>Član 288</raw>
+        </ref>
+        <ref>
+          <targetClan>289</targetClan>
+          <raw>Član 289</raw>
+        </ref>
+        <ref>
+          <targetClan>290</targetClan>
+          <raw>Član 290</raw>
+        </ref>
+        <ref>
+          <targetClan>291</targetClan>
+          <raw>Član 291</raw>
+        </ref>
+        <ref>
+          <targetClan>292</targetClan>
+          <raw>Član 292</raw>
+        </ref>
+        <ref>
+          <targetClan>293</targetClan>
+          <raw>Član 293</raw>
+        </ref>
+        <ref>
+          <targetClan>294</targetClan>
+          <raw>Član 294</raw>
+        </ref>
+        <ref>
+          <targetClan>295</targetClan>
+          <raw>Član 295</raw>
+        </ref>
+        <ref>
+          <targetClan>296</targetClan>
+          <raw>Član 296</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>čl. 105</raw>
+        </ref>
+        <ref>
+          <targetClan>297</targetClan>
+          <raw>Član 297</raw>
+        </ref>
+        <ref>
+          <targetClan>298</targetClan>
+          <raw>Član 298</raw>
+        </ref>
+        <ref>
+          <targetClan>298</targetClan>
+          <raw>Član 298</raw>
+        </ref>
+        <ref>
+          <targetClan>299</targetClan>
+          <raw>Član 299</raw>
+        </ref>
+        <ref>
+          <targetClan>300</targetClan>
+          <raw>Član 300</raw>
+        </ref>
+        <ref>
+          <targetClan>301</targetClan>
+          <raw>Član 301</raw>
+        </ref>
+        <ref>
+          <targetClan>302</targetClan>
+          <raw>Član 302</raw>
+        </ref>
+        <ref>
+          <targetClan>303</targetClan>
+          <raw>Član 303</raw>
+        </ref>
+        <ref>
+          <targetClan>304</targetClan>
+          <raw>Član 304</raw>
+        </ref>
+        <ref>
+          <targetClan>305</targetClan>
+          <raw>Član 305</raw>
+        </ref>
+        <ref>
+          <targetClan>306</targetClan>
+          <raw>Član 306</raw>
+        </ref>
+        <ref>
+          <targetClan>307</targetClan>
+          <raw>Član 307</raw>
+        </ref>
+        <ref>
+          <targetClan>308</targetClan>
+          <raw>Član 308</raw>
+        </ref>
+        <ref>
+          <targetClan>309</targetClan>
+          <raw>Član 309</raw>
+        </ref>
+        <ref>
+          <targetClan>310</targetClan>
+          <raw>Član 310</raw>
+        </ref>
+        <ref>
+          <targetClan>311</targetClan>
+          <raw>Član 311</raw>
+        </ref>
+        <ref>
+          <targetClan>312</targetClan>
+          <raw>Član 312</raw>
+        </ref>
+        <ref>
+          <targetClan>313</targetClan>
+          <raw>Član 313</raw>
+        </ref>
+        <ref>
+          <targetClan>313</targetClan>
+          <raw>Član 313</raw>
+        </ref>
+        <ref>
+          <targetClan>313</targetClan>
+          <raw>Član 313</raw>
+        </ref>
+        <ref>
+          <targetClan>314</targetClan>
+          <raw>Član 314</raw>
+        </ref>
+        <ref>
+          <targetClan>315</targetClan>
+          <raw>Član 315</raw>
+        </ref>
+        <ref>
+          <targetClan>12</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 12
+stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>12</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 12 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>12</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 12 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>23</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 23 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>114</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 114 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>120</targetClan>
+          <raw>član 120</raw>
+        </ref>
+        <ref>
+          <targetClan>122</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 122 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 132 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 154 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>155</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 155 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>167</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 167 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>171</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 171 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <raw>član 176</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član
+182 stav 2</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 182 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>207</targetClan>
+          <raw>član 207</raw>
+        </ref>
+        <ref>
+          <targetClan>290</targetClan>
+          <raw>čl. 290</raw>
+        </ref>
+        <ref>
+          <targetClan>218</targetClan>
+          <raw>član 218</raw>
+        </ref>
+        <ref>
+          <targetClan>227</targetClan>
+          <raw>član 227</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 247 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>253</targetClan>
+          <raw>član 253</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 258 stav
+1)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav
+3)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>290</targetClan>
+          <raw>član 290</raw>
+        </ref>
+        <ref>
+          <targetClan>315</targetClan>
+          <raw>Član 315</raw>
+        </ref>
+        <ref>
+          <targetClan>244</targetClan>
+          <targetStav>10</targetStav>
+          <raw>član 244 stav 10)</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 246 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>član 247</raw>
+        </ref>
+        <ref>
+          <targetClan>250</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 250 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>266</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 266 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>299</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 299 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>300</targetClan>
+          <raw>član 300</raw>
+        </ref>
+        <ref>
+          <targetClan>316</targetClan>
+          <raw>Član 316</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 15 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>63</targetClan>
+          <raw>član 63</raw>
+        </ref>
+        <ref>
+          <targetClan>64</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 64 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>66</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 66 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>67</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 67 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>70</targetClan>
+          <raw>član 70</raw>
+        </ref>
+        <ref>
+          <targetClan>81</targetClan>
+          <raw>član 81</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>čl. 105</raw>
+        </ref>
+        <ref>
+          <targetClan>111</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 111 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>112</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+112 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>116</targetClan>
+          <raw>član 116</raw>
+        </ref>
+        <ref>
+          <targetClan>121</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+121 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>129</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 129 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 132 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>134</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 134 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>135</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 135 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>135</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 135 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>152</targetClan>
+          <raw>član 152</raw>
+        </ref>
+        <ref>
+          <targetClan>153</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 153 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 154 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 154 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 154 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>161</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član
+161 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>167</targetClan>
+          <raw>član 167</raw>
+        </ref>
+        <ref>
+          <targetClan>175</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 175 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>184</targetClan>
+          <raw>član 184</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 181 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>186</targetClan>
+          <raw>član 186</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>čl. 205</raw>
+        </ref>
+        <ref>
+          <targetClan>207</targetClan>
+          <raw>član 207</raw>
+        </ref>
+        <ref>
+          <targetClan>212</targetClan>
+          <raw>čl. 212</raw>
+        </ref>
+        <ref>
+          <targetClan>242</targetClan>
+          <raw>član 242</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>član 247</raw>
+        </ref>
+        <ref>
+          <targetClan>255</targetClan>
+          <raw>član 255</raw>
+        </ref>
+        <ref>
+          <targetClan>256</targetClan>
+          <raw>član 256</raw>
+        </ref>
+        <ref>
+          <targetClan>261</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+261 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>265</targetClan>
+          <raw>član 265</raw>
+        </ref>
+        <ref>
+          <targetClan>268</targetClan>
+          <raw>član 268</raw>
+        </ref>
+        <ref>
+          <targetClan>280</targetClan>
+          <raw>čl.
+280</raw>
+        </ref>
+        <ref>
+          <targetClan>317</targetClan>
+          <raw>Član 317</raw>
+        </ref>
+        <ref>
+          <targetClan>20</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 20 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 79 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>111</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 111 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>113</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 113 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>113</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 113 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>121</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 121 st. 5</raw>
+        </ref>
+        <ref>
+          <targetClan>126</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 126 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>128</targetClan>
+          <raw>član 128</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 132 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>134</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 134 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>134</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član
+134 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>154</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 154 st. 3</raw>
+        </ref>
+        <ref>
+          <targetClan>155</targetClan>
+          <raw>član
+155</raw>
+        </ref>
+        <ref>
+          <targetClan>155</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 155 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>163</targetClan>
+          <raw>član 163</raw>
+        </ref>
+        <ref>
+          <targetClan>164</targetClan>
+          <raw>član 164</raw>
+        </ref>
+        <ref>
+          <targetClan>171</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 171 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <raw>član 181</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+183 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <raw>član 181</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 183 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <raw>član 181</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 183 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 183 stav
+6)</raw>
+        </ref>
+        <ref>
+          <targetClan>211</targetClan>
+          <raw>čl. 211</raw>
+        </ref>
+        <ref>
+          <targetClan>231</targetClan>
+          <raw>čl. 231</raw>
+        </ref>
+        <ref>
+          <targetClan>226</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 226 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>229</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 229 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>242</targetClan>
+          <raw>član 242</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 247 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>čl. 247</raw>
+        </ref>
+        <ref>
+          <targetClan>250</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 250 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>271</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 271 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>257</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 257 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>257</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 257 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 258 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>259</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+259 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>264</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 264 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>317</targetClan>
+          <raw>Član 317</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl. 37</raw>
+        </ref>
+        <ref>
+          <targetClan>164</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 164 stav
+2)</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 182 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>186</targetClan>
+          <raw>član 186</raw>
+        </ref>
+        <ref>
+          <targetClan>205</targetClan>
+          <raw>čl. 205</raw>
+        </ref>
+        <ref>
+          <targetClan>291</targetClan>
+          <raw>član 291</raw>
+        </ref>
+        <ref>
+          <targetClan>318</targetClan>
+          <raw>Član 318</raw>
+        </ref>
+        <ref>
+          <targetClan>23</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 23 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>23</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 23 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>30</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 30 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl. 37</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>114</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 114 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>122</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 122 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 132 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>143</targetClan>
+          <raw>član 143</raw>
+        </ref>
+        <ref>
+          <targetClan>172</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 172 stav
+1)</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 176 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>čl. 182</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>184</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 184 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>240</targetClan>
+          <raw>član 240</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 258 stav
+1)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav
+3)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>290</targetClan>
+          <raw>član 290</raw>
+        </ref>
+        <ref>
+          <targetClan>298</targetClan>
+          <raw>član 298</raw>
+        </ref>
+        <ref>
+          <targetClan>300</targetClan>
+          <raw>član 300</raw>
+        </ref>
+        <ref>
+          <targetClan>319</targetClan>
+          <raw>Član 319</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl. 37</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>63</targetClan>
+          <targetStav>7</targetStav>
+          <raw>član 63 stav 7)</raw>
+        </ref>
+        <ref>
+          <targetClan>98</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 98 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>99</targetClan>
+          <raw>član 99</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>član 105</raw>
+        </ref>
+        <ref>
+          <targetClan>111</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 111
+stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>120</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 120 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>121</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 121 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>128</targetClan>
+          <raw>član 128</raw>
+        </ref>
+        <ref>
+          <targetClan>129</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 129 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>135</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 135 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>164</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 164 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+176 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 176 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>čl. 182</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>242</targetClan>
+          <raw>član 242</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>246</targetClan>
+          <raw>član 246</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>258</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 258 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>261</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 261 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>266</targetClan>
+          <raw>član 266</raw>
+        </ref>
+        <ref>
+          <targetClan>301</targetClan>
+          <raw>član 301</raw>
+        </ref>
+        <ref>
+          <targetClan>320</targetClan>
+          <raw>Član 320</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 15 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>29</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 29 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>30</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 30 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>30</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 30 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>35</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 35 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl. 37</raw>
+        </ref>
+        <ref>
+          <targetClan>47</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 47 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>47</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 47
+stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>48</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 48 stav
+1)</raw>
+        </ref>
+        <ref>
+          <targetClan>48</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 48 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49
+stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>66</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 66 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>66</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 66
+stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>81</targetClan>
+          <raw>član 81</raw>
+        </ref>
+        <ref>
+          <targetClan>97</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 97 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>105</targetClan>
+          <raw>čl. 105</raw>
+        </ref>
+        <ref>
+          <targetClan>107</targetClan>
+          <raw>čl. 107</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 132 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>144</targetClan>
+          <raw>član 144</raw>
+        </ref>
+        <ref>
+          <targetClan>146</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 146 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>148</targetClan>
+          <raw>član 148</raw>
+        </ref>
+        <ref>
+          <targetClan>165</targetClan>
+          <raw>čl. 165</raw>
+        </ref>
+        <ref>
+          <targetClan>169</targetClan>
+          <raw>čl.169</raw>
+        </ref>
+        <ref>
+          <targetClan>175</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 175 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>177</targetClan>
+          <targetStav>8</targetStav>
+          <raw>član 177 stav 8)</raw>
+        </ref>
+        <ref>
+          <targetClan>178</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 178 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>211</targetClan>
+          <raw>član 211</raw>
+        </ref>
+        <ref>
+          <targetClan>226</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 226 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>227</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 227 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>268</targetClan>
+          <raw>član 268</raw>
+        </ref>
+        <ref>
+          <targetClan>280</targetClan>
+          <raw>čl. 280</raw>
+        </ref>
+        <ref>
+          <targetClan>321</targetClan>
+          <raw>Član 321</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 15 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>16</targetClan>
+          <raw>član 16</raw>
+        </ref>
+        <ref>
+          <targetClan>19</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 19 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>22</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 22 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>25</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 25 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>26</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 26 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 49 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>66</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 66 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>69</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 69 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>80</targetClan>
+          <raw>član 80</raw>
+        </ref>
+        <ref>
+          <targetClan>98</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 98 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>102</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 102 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>111</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 111 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>112</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+112 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>113</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 113 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>113</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 113 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>116</targetClan>
+          <raw>član 116</raw>
+        </ref>
+        <ref>
+          <targetClan>119</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član
+119 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>118</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 118 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>121</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 121 st. 5</raw>
+        </ref>
+        <ref>
+          <targetClan>145</targetClan>
+          <raw>član 145</raw>
+        </ref>
+        <ref>
+          <targetClan>159</targetClan>
+          <raw>član 159</raw>
+        </ref>
+        <ref>
+          <targetClan>162</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 162 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>216</targetClan>
+          <raw>član 216</raw>
+        </ref>
+        <ref>
+          <targetClan>265</targetClan>
+          <raw>član 265</raw>
+        </ref>
+        <ref>
+          <targetClan>280</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 280 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>286</targetClan>
+          <raw>član 286</raw>
+        </ref>
+        <ref>
+          <targetClan>322</targetClan>
+          <raw>Član 322</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 15 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>15</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 15 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>19</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 19 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>20</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 20 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>22</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 22
+stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>22</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 22 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>28</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 28 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>30</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 30
+stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>35</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 35 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl.37</raw>
+        </ref>
+        <ref>
+          <targetClan>44</targetClan>
+          <raw>član 44</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 49 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>49</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 49 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>50</targetClan>
+          <raw>član 50</raw>
+        </ref>
+        <ref>
+          <targetClan>52</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 52 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>64</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 64 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>69</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 69 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>77</targetClan>
+          <raw>član 77</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 79 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>88</targetClan>
+          <raw>član 88</raw>
+        </ref>
+        <ref>
+          <targetClan>89</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 89 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>96</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 96 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 132 stav 4</raw>
+        </ref>
+        <ref>
+          <targetClan>112</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 112 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>132</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član
+132 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>160</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 160 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>166</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 166 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>181</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 181
+st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 182 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>183</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 183 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>242</targetClan>
+          <raw>član 242</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>čl. 247</raw>
+        </ref>
+        <ref>
+          <targetClan>247</targetClan>
+          <raw>čl. 247</raw>
+        </ref>
+        <ref>
+          <targetClan>264</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 264 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>305</targetClan>
+          <raw>član 305</raw>
+        </ref>
+        <ref>
+          <targetClan>323</targetClan>
+          <raw>Član 323</raw>
+        </ref>
+        <ref>
+          <targetClan>182</targetClan>
+          <raw>član 182</raw>
+        </ref>
+        <ref>
+          <targetClan>25</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 25 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>26</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 26 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>32</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 32 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>27</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 27 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl.37</raw>
+        </ref>
+        <ref>
+          <targetClan>41</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 41 stav
+2)</raw>
+        </ref>
+        <ref>
+          <targetClan>44</targetClan>
+          <raw>član
+44</raw>
+        </ref>
+        <ref>
+          <targetClan>56</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 56 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>71</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 71 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>76</targetClan>
+          <raw>član 76</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 79 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 79 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>82</targetClan>
+          <raw>član 82</raw>
+        </ref>
+        <ref>
+          <targetClan>89</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 89 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>92</targetClan>
+          <raw>član 92</raw>
+        </ref>
+        <ref>
+          <targetClan>95</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 95 stav 4)</raw>
+        </ref>
+        <ref>
+          <targetClan>97</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 97 stav
+6)</raw>
+        </ref>
+        <ref>
+          <targetClan>103</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 103 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>103</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 103 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>117</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 117 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>133</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 133 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>147</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 147 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>178</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 178 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>229</targetClan>
+          <raw>član
+229</raw>
+        </ref>
+        <ref>
+          <targetClan>250</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 250 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>268</targetClan>
+          <raw>član 268</raw>
+        </ref>
+        <ref>
+          <targetClan>271</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 271 stav 3</raw>
+        </ref>
+        <ref>
+          <targetClan>272</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 272
+stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>276</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 276 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>280</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 280 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>277</targetClan>
+          <raw>čl. 277</raw>
+        </ref>
+        <ref>
+          <targetClan>324</targetClan>
+          <raw>Član 324</raw>
+        </ref>
+        <ref>
+          <targetClan>20</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 20
+stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>21</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 21 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>21</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 21 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>24</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 24 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>25</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 25 st. 2</raw>
+        </ref>
+        <ref>
+          <targetClan>26</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 26 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>29</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 29 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl.37</raw>
+        </ref>
+        <ref>
+          <targetClan>38</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 38 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>42</targetClan>
+          <raw>član 42</raw>
+        </ref>
+        <ref>
+          <targetClan>72</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 72 st. 1</raw>
+        </ref>
+        <ref>
+          <targetClan>74</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 74 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>84</targetClan>
+          <raw>čl. 84</raw>
+        </ref>
+        <ref>
+          <targetClan>89</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 89 st. 3</raw>
+        </ref>
+        <ref>
+          <targetClan>89</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član
+89 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>94</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 94
+stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>96</targetClan>
+          <raw>član 96</raw>
+        </ref>
+        <ref>
+          <targetClan>325</targetClan>
+          <raw>Član 325</raw>
+        </ref>
+        <ref>
+          <targetClan>19</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 19 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>24</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 24 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>24</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 24 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>36</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 36 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>37</targetClan>
+          <raw>čl. 37</raw>
+        </ref>
+        <ref>
+          <targetClan>59</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 59 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>65</targetClan>
+          <raw>član 65</raw>
+        </ref>
+        <ref>
+          <targetClan>71</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 71 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>72</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 72 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>79</targetClan>
+          <targetStav>6</targetStav>
+          <raw>član 79 stav 6)</raw>
+        </ref>
+        <ref>
+          <targetClan>110</targetClan>
+          <targetStav>4</targetStav>
+          <raw>član 110 st. 4</raw>
+        </ref>
+        <ref>
+          <targetClan>117</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 117 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>117</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 117 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>156</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 156 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>156</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 156 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>176</targetClan>
+          <raw>član 176</raw>
+        </ref>
+        <ref>
+          <targetClan>326</targetClan>
+          <raw>Član 326</raw>
+        </ref>
+        <ref>
+          <targetClan>20</targetClan>
+          <targetStav>2</targetStav>
+          <raw>član 20 stav 2)</raw>
+        </ref>
+        <ref>
+          <targetClan>34</targetClan>
+          <raw>član 34</raw>
+        </ref>
+        <ref>
+          <targetClan>61</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 61 stav 5)</raw>
+        </ref>
+        <ref>
+          <targetClan>63</targetClan>
+          <targetStav>5</targetStav>
+          <raw>član 63 st. 5</raw>
+        </ref>
+        <ref>
+          <targetClan>118</targetClan>
+          <targetStav>1</targetStav>
+          <raw>član 118 stav 1)</raw>
+        </ref>
+        <ref>
+          <targetClan>119</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 119 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>162</targetClan>
+          <targetStav>3</targetStav>
+          <raw>član 162 stav 3)</raw>
+        </ref>
+        <ref>
+          <targetClan>326</targetClan>
+          <raw>Član 326</raw>
+        </ref>
+        <ref>
+          <targetClan>315</targetClan>
+          <targetStav>1</targetStav>
+          <raw>čl. 315 stav 1</raw>
+        </ref>
+        <ref>
+          <targetClan>327</targetClan>
+          <raw>Član 327</raw>
+        </ref>
+        <ref>
+          <targetClan>327</targetClan>
+          <raw>Član 327</raw>
+        </ref>
+        <ref>
+          <targetClan>328</targetClan>
+          <raw>Član 328</raw>
+        </ref>
+        <ref>
+          <targetClan>328</targetClan>
+          <raw>Član 328</raw>
+        </ref>
+        <ref>
+          <targetClan>328</targetClan>
+          <raw>Član 328</raw>
+        </ref>
+        <ref>
+          <targetClan>329</targetClan>
+          <raw>Član 329</raw>
+        </ref>
+        <ref>
+          <targetClan>329</targetClan>
+          <raw>Član 329</raw>
+        </ref>
+        <ref>
+          <targetClan>329</targetClan>
+          <raw>Član 329</raw>
+        </ref>
+        <ref>
+          <targetClan>330</targetClan>
+          <raw>Član 330</raw>
+        </ref>
+        <ref>
+          <targetClan>330</targetClan>
+          <raw>Član 330</raw>
+        </ref>
+        <ref>
+          <targetClan>331</targetClan>
+          <raw>Član 331</raw>
+        </ref>
+        <ref>
+          <targetClan>331</targetClan>
+          <raw>Član 331</raw>
+        </ref>
+        <ref>
+          <targetClan>332</targetClan>
+          <raw>Član 332</raw>
+        </ref>
+        <ref>
+          <targetClan>333</targetClan>
+          <raw>Član 333</raw>
+        </ref>
+        <ref>
+          <targetClan>334</targetClan>
+          <raw>Član 334</raw>
+        </ref>
+        <ref>
+          <targetClan>335</targetClan>
+          <raw>Član 335</raw>
+        </ref>
+        <ref>
+          <targetClan>336</targetClan>
+          <raw>Član 336</raw>
+        </ref>
+        <ref>
+          <targetClan>336</targetClan>
+          <raw>Član 336</raw>
+        </ref>
+        <ref>
+          <targetClan>337</targetClan>
+          <raw>Član 337</raw>
+        </ref>
+        <ref>
+          <targetClan>338</targetClan>
+          <raw>Član 338</raw>
+        </ref>
+        <ref>
+          <targetClan>59</targetClan>
+          <raw>Član 59</raw>
+        </ref>
+        <ref>
+          <targetClan>114</targetClan>
+          <raw>Član 114</raw>
+        </ref>
+      </internalReferences>
+    </meta>
+    <body>
+      <article eId="clan26">
+        <num>Član 26</num>
+        <heading>Član 26</heading>
+        <paragraph eId="clan26_stav1">
+          <num>(1)</num>
+          <content>Vozač ne smije naglo da mijenja brzinu vožnje, osim u slučaju izbjegavanja neposredne opasnosti. Vozač koji namjerava da pomjeri vozilo udesno ili ulijevo, promijeni saobraćajnu traku, pretiče, obilazi, zaustavi, skrene, okrene se polukružno, vozi unazad, prestroji se ili da izvrši drugu sličnu radnju, takvu radnju može da otpočne samo ako se uvjerio da to može da učini na bezbjedan način. Nakon što se uvjerio da može da otpočne željenu radnju, vozač je dužan da druge učesnike u saobraćaju jasno i blagovremeno obavijesti o tome, dajući im znak pomoću pokazivača pravca ili odgovarajući znak rukom ako pokazivači ne postoje. Vozač koji pokazivačem pravca daje propisani znak, taj znak mora davati za svo vrijeme vršenja radnje vozilom, a po izvršenoj radnji mora prestati sa davanjem tog znaka. 2. Uključivanje vozila u saobraćaj</content>
+        </paragraph>
+      </article>
+      <article eId="clan27">
+        <num>Član 27</num>
+        <heading>Član 27</heading>
+        <paragraph eId="clan27_stav1">
+          <num>(1)</num>
+          <content>Vozač može da se uključi vozilom u saobraćaj na putu sa površine na kojoj se ne vrši saobraćaj ili sa mjesta na kojem je vozilo bilo zaustavljeno ili parkirano samo ako se uvjerio da time neće ometati ostale učesnike u saobraćaju i ako je o tome na propisan način obavijestio druge učesnike u saobraćaju. Kad se vozač uključuje u saobraćaj iz dvorišta, garaže ili sa druge površine, u uslovima nedovoljne preglednosti ili vidljivosti, dužan je da bezbjedno uključenje izvede uz pomoć lica koje se nalazi na pogodnom mjestu van vozila i koje mu daje odgovarajuće znakove. Vozač iz stava 2 ovog člana dužan je da propusti sva vozila i pješake koji se kreću saobraćajnom površinom na koju se uključuje. Vozač koji se vozilom sa zemljanog puta, gradilišta i sličnih površina uključuje na kolovoz sa asfaltnim zastorom, neposredno prije uključivanja na kolovoz mora zaustaviti vozilo i ukloniti blato sa točkova. Vozač je dužan da ukloni blato sa kolovoza sa asfaltnim zastorom koje je nanio točkovima vozila kojim upravlja. 3. Kretanje vozila po putu</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>Član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>Na putu u naselju vozač ne smije vozilom da se kreće brzinom većom od 50 km/h, odnosno brzinom većom od brzine dozvoljene postavljenim saobraćajnim znakom za cijelo naselje ili njegov dio. Izuzetno od stava 1 ovog člana, na putu u naselju, čiji saobraćajno-tehnički elementi to omogućavaju, može da se saobraćajnim znakom dozvoli kretanje vozilom brzinom i do 80 km/h.</content>
+        </paragraph>
+      </article>
+      <article eId="clan40">
+        <num>Član 40</num>
+        <heading>Član 40</heading>
+        <paragraph eId="clan40_stav1">
+          <num>(1)</num>
+          <content>Na raskrsnici ili u susretu sa drugim vozilom vozač je dužan da propusti vozilo koje nailazi sa njegove desne strane. Vozač vozila koji na raskrsnici skreće ulijevo dužan je da propusti vozilo koje, dolazeći iz suprotnog smjera na raskrsnici zadržava pravac kretanja ili skreće udesno, ako saobraćajnim znakom nije drukčije određeno. Izuzetno od st. 1 i 2 ovog člana, vozilo koje se kreće po šinama u svim slučajevima ima prvenstvo prolaza, bez obzira na to sa koje mu strane vozilo nailazi, osim ako saobraćajnim znakom nije drukčije određeno. Vozač koji ulazi vozilom na put koji je saobraćajnim znakom označen kao put sa prvenstvom prolaza dužan je da propusti sva vozila koja se kreću tim putem. Vozač je dužan da propusti sva vozila koja se kreću putem na koji se uključuje i kad taj put nije saobraćajnim znakom označen kao put sa prvenstvom prolaza, ako vozilom ulazi sa zemljanog puta na put sa asfaltnim zastorom ili ako na put ulazi sa površine na kojoj se ne vrši saobraćaj. Vozač koji prilikom skretanja vozila presijeca biciklističku stazu ili traku dužan je da propusti vozila koja se kreću stazom, odnosno trakom. 7. Saobraćaj na raskrsnici</content>
+        </paragraph>
+      </article>
+      <article eId="clan76">
+        <num>Član 76</num>
+        <heading>Član 76</heading>
+        <paragraph eId="clan76_stav1">
+          <num>(1)</num>
+          <content>Vozač mora da drži potrebno odstojanje od vozila koje se kreće ispred njega, tako da može blagovremeno da uspori ili da se zaustavi, ako vozilo ispred njega uspori ili se zaustavi.</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>Član 176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>Motornim vozilom u saobraćaju na putu može samostalno da upravlja lice koje ima važeću vozačku dozvolu, stranu vozačku dozvolu ili međunarodnu vozačku dozvolu uz stranu vozačku dozvolu za upravljanje vozilom one kategorije kojom upravlja. Stranac koji privremeno boravi u Crnoj Gori i crnogorski državljanin sa privremenim ili stalnim boravkom u drugoj državi može, na osnovu važeće vozačke dozvole ili međunarodne vozačke dozvole, koju je izdao nadležni organ druge države, da upravlja motornim vozilom na teritoriji Crne Gore, uz stranu vozačku dozvolu, za vrijeme njenog važenja. Lica koja čine osoblje diplomatskih i konzularnih predstavništava i misija stranih država i predstavništava međunarodnih organizacija u Crnoj Gori mogu upravljati vozilom na teritoriji Crne Gore na osnovu strane vozačke dozvole ili međunarodne vozačke dozvole, uz stranu vozačku dozvolu, za vrijeme njenog važenja. Stranac kome je u Crnoj Gori odobren privremeni ili stalni boravak, odnosno međunarodna ili privremena zaštita, stranac koji čini osoblje stranog trgovinskog, saobraćajnog, kulturnog ili drugog predstavništva i stranog dopisništva, kao i crnogorski državljanin koji se vrati iz druge države u Crnu Goru da u njoj stalno boravi mogu, na osnovu strane vozačke dozvole, da upravljaju motornim vozilom, odnosno skupom vozila za vrijeme od šest mjeseci od dana ulaska u Crnu Goru. Vozač iz st. 1 do 4 ovog člana ne smije da upravlja vozilom u saobraćaju na putu ako mu je odlukom nadležnog organa zabranjeno upravljanje ili je isključen iz saobraćaja. Vlasnik vozila, odnosno lice kome je vozilo povjereno ne smije omogućiti upravljanje vozilom licu koje nema važeću vozačku dozvolu odgovarajuće kategorije za upravljanje tim vozilom.</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>član 176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>); 13) zdravstvena ustanova koja na ljekarskom pregledu utvrdi da lice nije psihofizički sposobno za vozača motornog vozila ili skupa vozila određene kategorije, odnosno instruktora vožnje određene kategorije o tome odmah, a najkasnije u roku od 15 dana, ne obavijesti Ministarstvo odnosno mladi vozač i vozač početnik (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl. 37, 37a i 38); 2) vozač koji ne zaustavi vozilo na propisani znak ili naredbu ovlašćenog policijskog službenika (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl. 37, 37a i 38); 5) vozač koji započne preticanje ili obilaženje ako time ugrozi bezbjednost saobraćaja ili omete saobraćaj iz suprotnog smjera (</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>član 176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>stav 5); 14) vozač, mladi vozač i vozač početnik koji upravlja vozilom u saobraćaju na putu koji je pod dejstvom alkohola u koncentraciji od 1 g/kg do 2 g/kg, odnosno lice kod koga je nesposobnost za upravljanjem vozilom zbog dejstva alkohola konstatovana stručnim pregledom, ili je u tolikoj mjeri umoran, bolestan ili u takvom psihofizičkom stanju da nije sposoban da bezbjedno upravlja vozilom (čl. 182 i 182a); 15) instruktor vožnje, vozač tramvaja, kandidat za vozača tokom praktične obuke i polaganja vozačkog ispita ili član komisije na praktičnom dijelu vozačkog ispita, ukoliko je pod dejstvom alkohola u koncentraciji od 0,5g/kg do 1g/kg ili je u tolikoj mjeri umoran, bolestan ili u takvom zdravstvenom stanju da nije sposoban da bezbjedno upravlja vozilom, odnosno vrši obuku kandidata za vozača (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl. 37, 37a i 38); 2) vozač koji započne preticanje ili obilaženje ako po izvršenom preticanju ili obilaženju ne može da se vrati u saobraćajnu traku kojom se kretao bez ometanja ili ugrožavanja ostalih učesnika u saobraćaju (</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>član
+176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>stav 1); 18) vlasnik vozila, odnosno lice kome je vozilo povjereno koje omogući upravljanje vozilom licu koje nema važeću vozačku dozvolu odgovarajuće kategorije za upravljanje tim vozilom (</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>član 176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>stav 6); 19) vozač, mladi vozač i vozač početnik koji upravlja vozilom u saobraćaju na putu koji je pod dejstvom alkohola u koncentraciji od 0,5 do 1 g/kg (čl. 182 i 182a); 20) instruktor vožnje, vozač tramvaja, kandidat za vozača tokom praktične obuke i polaganja vozačkog ispita ili član komisije na praktičnom dijelu vozačkog ispita, ukoliko je pod dejstvom alkohola u koncentraciji od 0,3 g/kg do 0,5 g/kg (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl. 37, 37a i 38); 7) vozač koji u pogledu propuštanja vozila postupi na način suprotan članu 40 ovog zakona; 8) vozač koji vrši preticanje ili obilaženje suprotno članu 47 stav 1 ovog zakona; 9) vozač koji sa lijeve strane pretiče vozilo koje je na kolovozu zauzelo takav položaj i čiji vozač daje takav znak da se sa sigurnošću može zaključiti da to vozilo skreće ulijevo (</content>
+        </paragraph>
+      </article>
+      <article eId="clan26">
+        <num>Član 26</num>
+        <heading>član 26</heading>
+        <paragraph eId="clan26_stav1">
+          <num>(1)</num>
+          <content>stav 2); 5) vozač koji se uključi u saobraćaj na putu suprotno članu 27 st. 1, 2 i 3 ovog zakona; 6) vozač koji započne preticanje ili obilaženje drugog vozila saobraćajnom trakom za spora vozila ili na mjestu gdje je to zabranjeno saobraćajnom signalizacijom (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl.37, 37a i 38); 10) vozač koji prilikom skretanja postupi na način suprotan članu 39 ovog zakona; 11) vozač koji vrši polukružno okretanje vozila u tunelu, na mostu, vijaduktu, podvožnjaku, nadvožnjaku, kao i u uslovima smanjene vidljivosti, odnosno na mjestu gdje je nedovoljna preglednost, na dijelu puta koji nema dovoljnu širinu za polukružno okretanje tog vozila (</content>
+        </paragraph>
+      </article>
+      <article eId="clan26">
+        <num>Član 26</num>
+        <heading>član 26</heading>
+        <paragraph eId="clan26_stav1">
+          <num>(1)</num>
+          <content>stav 1 i</content>
+        </paragraph>
+      </article>
+      <article eId="clan27">
+        <num>Član 27</num>
+        <heading>član 27</heading>
+        <paragraph eId="clan27_stav1">
+          <num>(1)</num>
+          <content>st. 4 i 5); 5) vozač koji se vozilom na putu u naselju kreće brzinom koja je za 10 do 20 km/h veća od dozvoljene brzine, odnosno vozač koji se vozilom na putu van naselja kreće brzinom koja je za 30 do 40 km/h veća od dozvoljene brzine odnosno mladi vozač i vozač početnik (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl.37, 37a i 38); 6) vozač koji na dovoljnoj udaljenosti ispred raskrsnice vozilom ne izvrši prestrojavanje i zauzme položaj na saobraćajnoj traci predviđenoj za prolazak kroz raskrsnicu u smjeru u kojem želi nastaviti kretanje (</content>
+        </paragraph>
+      </article>
+      <article eId="clan76">
+        <num>Član 76</num>
+        <heading>član 76</heading>
+        <paragraph eId="clan76_stav1">
+          <num>(1)</num>
+          <content>); 14) vozač koji u saobraćaju na putu na motokultivatoru, traktoru ili radnoj mašini ima priključak za izvođenje radova koji nije namijenjen njihovoj namjeni ili ukoliko u saobraćaju na putu radnom mašinom vuče priključno vozilo (</content>
+        </paragraph>
+      </article>
+      <article eId="clan26">
+        <num>Član 26</num>
+        <heading>član 26</heading>
+        <paragraph eId="clan26_stav1">
+          <num>(1)</num>
+          <content>stav 3); 7) vozač vozila koje se na putu u naselju sa najmanje dvije saobraćajne trake za isti smjer kreće saobraćajnom trakom koja se ne nalazi uz desnu ivicu kolovoza, a pri tome ometa vozila koja se kreću iza njegovog vozila (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl.37, 37a i 38); 10) vozač motornog i priključnog vozila iz člana 38 ovog zakona koji u saobraćaju na putu upravlja vozilom koje nema propisanu oznaku najveće dozvoljene brzine za to vozilo (</content>
+        </paragraph>
+      </article>
+      <article eId="clan36">
+        <num>Član 36</num>
+        <heading>član 36</heading>
+        <paragraph eId="clan36_stav1">
+          <num>(1)</num>
+          <content>stav 1 i čl. 37, 37a i 38); 4) vozač koji prilikom davanja zvučnih znakova upozorenja ne postupi na način propisan članom 53 ovog zakona; 5) vozač koji na javnom putu ne uključi sve pokazivače pravca na vozilu u slučajevima predviđenim članom 55 ovog zakona; 6) lice koje na zaustavljenom ili parkiranom vozilu otvara vrata i time ometa kretanje drugih učesnika u saobraćaju ili ugrožava bezbjednost saobraćaja (</content>
+        </paragraph>
+      </article>
+      <article eId="clan176">
+        <num>Član 176</num>
+        <heading>član 176</heading>
+        <paragraph eId="clan176_stav1">
+          <num>(1)</num>
+          <content>).</content>
+        </paragraph>
+      </article>
+    </body>
+  </act>
+</akomaNtoso>

@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='utf-8'?>
+<akomaNtoso xmlns="http://www.akomantoso.org/2.0">
+    <act name="../codes/data/criminal_procedure_code">
+        <meta>
+            <identification source="#system">
+                <FRBRWork>
+                    <FRBRthis value="/akn/me/act/../codes/data/criminal_procedure_code/2025/main" />
+                    <FRBRuri value="/akn/me/act/../codes/data/criminal_procedure_code/2025" />
+                    <FRBRdate date="2025-09-25" name="generation" />
+                    <FRBRauthor href="#parliament" as_="#legislature" />
+                    <FRBRcountry value="me" />
+                </FRBRWork>
+            </identification>
+            <references source="#system">
+                <TLCOrganization eId="parliament" showAs="Skupština Crne Gore" href="/akn/me/organization/parliament" />
+            </references>
+        </meta>
+        <body>
+            <article eId="clan226">
+                <num>Član 226</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan226_stav1">
+                    <num>(1)</num>
+                    <content>Troškovi krivičnog postupka su izdaci učinjeni povodom krivičnog postupka od njegovog pokretanja do njegovog završetka i izdaci za preduzete dokazne radnje prije istrage.</content>
+                </paragraph>
+                <paragraph eId="clan226_stav2">
+                    <num>(2)</num>
+                    <content>Troškovi krivičnog postupka obuhvataju: 1) troškove za svjedoke, vještake, tumače, stručna lica, troškove uviđaja, rekonstrukcije, ekshumacije i troškove stenodaktilografskog i tehničkog snimanja i kopiranja zapisnika; 2) troškove prevoza okrivljenog; 3) izdatke za dovođenje osumnjičenog, okrivljenog, svjedoka i vještaka; 4) putne troškove službenih lica; 5) troškove liječenja okrivljenog za vrijeme dok se nalazi u pritvoru, kao i troškove porođaja, osim troškova koji se naplaćuju iz Fonda za zdravstveno osiguranje; 6) troškove tehničkog pregleda vozila, analize krvi, analize DNK, analize urina, odnosno druge medicinske analize, kao i troškove prevoza leša do mjesta obdukcije; 7) nagradu i nužne izdatke branioca, nužne izdatke privatnog tužioca i oštećenog kao tužioca i njihovih zakonskih zastupnika, kao i nagradu i nužne izdatke njihovih punomoćnika; 8) nužne izdatke oštećenog i njegovog zakonskog zastupnika, kao i nagradu i nužne izdatke njegovog punomoćnika; 9) paušalni iznos za troškove koji nijesu obuhvaćeni prethodnim tačkama ovog stava.</content>
+                    <point eId="clan226_stav2_t1">
+                        <num>1)</num>
+                        <content>troškove za svjedoke, vještake, tumače, stručna lica, troškove uviđaja, rekonstrukcije, ekshumacije i troškove stenodaktilografskog i tehničkog snimanja i kopiranja zapisnika;</content>
+                    </point>
+                    <point eId="clan226_stav2_t2">
+                        <num>2)</num>
+                        <content>troškove prevoza okrivljenog;</content>
+                    </point>
+                    <point eId="clan226_stav2_t3">
+                        <num>3)</num>
+                        <content>izdatke za dovođenje osumnjičenog, okrivljenog, svjedoka i vještaka;</content>
+                    </point>
+                    <point eId="clan226_stav2_t4">
+                        <num>4)</num>
+                        <content>putne troškove službenih lica;</content>
+                    </point>
+                    <point eId="clan226_stav2_t5">
+                        <num>5)</num>
+                        <content>troškove liječenja okrivljenog za vrijeme dok se nalazi u pritvoru, kao i troškove porođaja, osim troškova koji se naplaćuju iz Fonda za zdravstveno osiguranje;</content>
+                    </point>
+                    <point eId="clan226_stav2_t6">
+                        <num>6)</num>
+                        <content>troškove tehničkog pregleda vozila, analize krvi, analize DNK, analize urina, odnosno druge medicinske analize, kao i troškove prevoza leša do mjesta obdukcije;</content>
+                    </point>
+                    <point eId="clan226_stav2_t7">
+                        <num>7)</num>
+                        <content>nagradu i nužne izdatke branioca, nužne izdatke privatnog tužioca i oštećenog kao tužioca i njihovih zakonskih zastupnika, kao i nagradu i nužne izdatke njihovih punomoćnika;</content>
+                    </point>
+                    <point eId="clan226_stav2_t8">
+                        <num>8)</num>
+                        <content>nužne izdatke oštećenog i njegovog zakonskog zastupnika, kao i nagradu i nužne izdatke njegovog punomoćnika;</content>
+                    </point>
+                    <point eId="clan226_stav2_t9">
+                        <num>9)</num>
+                        <content>paušalni iznos za troškove koji nijesu obuhvaćeni prethodnim tačkama ovog stava.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan226_stav3">
+                    <num>(3)</num>
+                    <content>Paušalni iznos se određuje prema trajanju i složenosti postupka i imovnom stanju lica obaveznog da plati taj iznos.</content>
+                </paragraph>
+                <paragraph eId="clan226_stav4">
+                    <num>(4)</num>
+                    <content>Troškovi iz stava 2 tač. 1 do 6 ovog člana, kao i nagrada i nužni izdaci postavljenog branioca, postavljenog punomoćnika oštećenog kao tužioca iz člana 64 stav 3, člana 69 stav 9 i člana 70 ovog zakonika i postavljenog punomoćnika oštećenog iz člana 58 stav 6 ovog zakonika, u postupku zbog krivičnih djela za koja se goni po službenoj dužnosti, isplaćuju se iz sredstava organa koji vodi krivični postupak po podnošenju zahtjeva za naknadu troškova, a nagrada postavljenom braniocu i punomoćniku nakon njihovog razrješenja.</content>
+                </paragraph>
+                <paragraph eId="clan226_stav5">
+                    <num>(5)</num>
+                    <content>Ako ne dođe do pokretanja krivičnog postupka, troškove preduzetih dokaznih radnji u izviđaju snosi organ po čijem se nalogu radnje izvode.</content>
+                </paragraph>
+                <paragraph eId="clan226_stav6">
+                    <num>(6)</num>
+                    <content>Troškovi prevođenja koji nastaju primjenom odredaba ovog zakonika o pravu stranaka, svjedoka i drugih lica koja učestvuju u postupku na upotrebu svog jezika, neće se naplaćivati od lica koja su po odredbama ovog zakonika dužna da naknade troškove krivičnog postupka. Odluka o troškovima</content>
+                </paragraph>
+            </article>
+            <article eId="clan227">
+                <num>Član 227</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan227_stav1">
+                    <num>(1)</num>
+                    <content>U presudi, kao i u odluci kojom se obustavlja krivični postupak, odnosno odbacuje optužnica, odlučiće se ko će snositi troškove postupka i koliko oni iznose.</content>
+                </paragraph>
+                <paragraph eId="clan227_stav2">
+                    <num>(2)</num>
+                    <content>Ako nedostaju podaci o visini troškova, posebno rješenje o visini tih troškova donijeće državni tužilac ili predsjednik vijeća kad se ti podaci pribave. Podaci o visini troškova koji nedostaju i zahtjev za njihovu naknadu mogu se podnijeti najkasnije u roku od 15 dana od dana prijema pravosnažne presude ili odluke iz stava 1 ovog člana.</content>
+                </paragraph>
+                <paragraph eId="clan227_stav3">
+                    <num>(3)</num>
+                    <content>Kad je o troškovima krivičnog postupka iz stava 2 ovog člana odlučeno posebnim rješenjem, o žalbi protiv tog rješenja odlučuje vijeće iz člana 24 stav 7 ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan227_stav4">
+                    <num>(4)</num>
+                    <content>Kad se krivični postupak ne pokrene ili se obustavi u istrazi, o troškovima odlučuje državni tužilac. Skrivljeni troškovi</content>
+                </paragraph>
+            </article>
+            <article eId="clan229">
+                <num>Član 229</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan229_stav1">
+                    <num>(1)</num>
+                    <content>Kad sud okrivljenog oglasi krivim izreći će u presudi da je dužan da naknadi troškove krivičnog postupka, koji su unaprijed isplaćeni, kao i troškove privatnog tužioca, oštećenog kao tužioca, oštećenog i njihovih zakonskih zastupnika i nagradu i nužne izdatke njihovih punomoćnika.</content>
+                </paragraph>
+                <paragraph eId="clan229_stav2">
+                    <num>(2)</num>
+                    <content>Lice koje je okrivljeno za više krivičnih djela neće se osuditi na naknadu troškova u pogledu djela za koja je oslobođeno od optužbe, ukoliko se ti troškovi mogu izdvojiti iz ukupnih troškova.</content>
+                </paragraph>
+                <paragraph eId="clan229_stav3">
+                    <num>(3)</num>
+                    <content>U presudi kojom je više okrivljenih oglašeno krivim sud će odrediti koliki će dio troškova snositi svaki od njih, a ako to nije moguće, osudiće sve okrivljene da solidarno snose troškove. Plaćanje paušalnog iznosa odrediće se za svakog okrivljenog posebno.</content>
+                </paragraph>
+                <paragraph eId="clan229_stav4">
+                    <num>(4)</num>
+                    <content>U odluci kojom rješava o troškovima sud može osloboditi okrivljenog od dužnosti da naknadi u cjelini ili djelimično troškove krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 i tačka 9 ovog zakonika, ako bi njihovim plaćanjem bilo dovedeno u pitanje izdržavanje okrivljenog ili lica koja je on dužan da izdržava. Ako se ove okolnosti utvrde poslije donošenja odluke o troškovima, predsjednik vijeća može, posebnim rješenjem, osloboditi okrivljenog od dužnosti naknade troškova krivičnog postupka. Troškovi postupka u slučaju obustave postupka, donošenja oslobađajuće ili odbijajuće presude</content>
+                </paragraph>
+            </article>
+            <article eId="clan230">
+                <num>Član 230</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan230_stav1">
+                    <num>(1)</num>
+                    <content>Kad se krivični postupak obustavi ili kad se donese presuda kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija, u odluci o obustavi postupka, odnosno u presudi izreći će se da se troškovi krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 ovog zakonika, kao i nužni izdaci okrivljenog i nužni izdaci i nagrada branioca isplaćuju iz posebnog razdjela budžeta za rad sudova, osim u slučajevima iz st. 2 i 3 ovog člana.</content>
+                </paragraph>
+                <paragraph eId="clan230_stav2">
+                    <num>(2)</num>
+                    <content>Lice koje je oglašeno krivim za krivično djelo lažnog prijavljivanja obavezaće se da snosi troškove krivičnog postupka koje je prouzrokovalo lažnim prijavljivanjem.</content>
+                </paragraph>
+                <paragraph eId="clan230_stav3">
+                    <num>(3)</num>
+                    <content>Privatni tužilac je dužan da naknadi troškove krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 i tačka 8 ovog zakonika, nužne izdatke okrivljenog, kao i nužne izdatke i nagradu njegovog branioca, ako je postupak okončan presudom kojom se okrivljeni oslobađa od optužbe ili presudom kojom se optužba odbija ili rješenjem o obustavi postupka, osim ako je postupak obustavljen, odnosno ako je donesena presuda kojom se optužba odbija zbog smrti okrivljenog ili zbog toga što je nastupila zastarjelost krivičnog gonjenja usljed odugovlačenja postupka koje se ne može pripisati u krivicu privatnog tužioca. Ako je postupak obustavljen usljed odustanka od tužbe, okrivljeni i privatni tužilac mogu se poravnati u pogledu njihovih međusobnih troškova. Ako ima više privatnih tužilaca, svi će snositi troškove solidarno.</content>
+                </paragraph>
+                <paragraph eId="clan230_stav4">
+                    <num>(4)</num>
+                    <content>Kad sud odbaci optužbu zbog nenadležnosti, odluku o troškovima donijeće nadležni sud.</content>
+                </paragraph>
+                <paragraph eId="clan230_stav5">
+                    <num>(5)</num>
+                    <content>O visini nužnih izdataka okrivljenog i nužnih izdataka i nagrade branioca odlučuje predsjednik vijeća posebnim rješenjem. O žalbi protiv tog rješenja odlučuje vijeće iz člana 24 stav 7 ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan230_stav6">
+                    <num>(6)</num>
+                    <content>Zahtjev za naknadu troškova iz stava 5 ovog člana podnosi se u roku od petnaest dana od dana prijema pravosnažne odluke iz stava 1 ovog člana. Nagrada i nužni izdaci branioca</content>
+                </paragraph>
+            </article>
+            <article eId="clan239">
+                <num>Član 239</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan239_stav1">
+                    <num>(1)</num>
+                    <content>O imovinskopravnom zahtjevu odlučuje sud.</content>
+                </paragraph>
+                <paragraph eId="clan239_stav2">
+                    <num>(2)</num>
+                    <content>U presudi kojom okrivljenog oglašava krivim sud može ovlašćenom licu dosuditi imovinskopravni zahtjev u cjelini ili djelimično, a za preostali dio uputiti na parnični postupak. Ako činjenice utvrđene u krivičnom postupku ne pružaju pouzdan osnov ni za potpuno ni za djelimično presuđenje, a njihovo utvrđivanje bi vodilo znatnom odugovlačenju postupka, sud će ovlašćeno lice uputiti da imovinskopravni zahtjev u cjelini može da ostvaruje u parničnom postupku.</content>
+                </paragraph>
+                <paragraph eId="clan239_stav3">
+                    <num>(3)</num>
+                    <content>Kad sud donese presudu kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija ili kad rješenjem obustavi krivični postupak, uputiće ovlašćeno lice da imovinskopravni zahtjev može ostvarivati u parničnom postupku.</content>
+                </paragraph>
+                <paragraph eId="clan239_stav4">
+                    <num>(4)</num>
+                    <content>Kad se sud oglasi nenadležnim za krivični postupak, uputiće ovlašćeno lice da imovinskopravni zahtjev može podnijeti u krivičnom postupku koji će otpočeti ili produžiti nadležni sud.</content>
+                </paragraph>
+                <paragraph eId="clan239_stav5">
+                    <num>(5)</num>
+                    <content>Sud može u toku krivičnog postupka ili po njegovom okončanju, bez obzira na vrstu odluke koju je donio, uputiti oštećenog, odnosno lice koje je podnijelo imovinskopravni zahtjev i okrivljenog da pokušaju da svoj sporni odnos koji je predmet tog zahtjeva riješe u postupku posredovanja u skladu sa zakonom kojim se uređuju pravila postupka posredovanja. Odluka o predaji stvari oštećenom</content>
+                </paragraph>
+            </article>
+            <article eId="clan301">
+                <num>Član 301</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan301_stav1">
+                    <num>(1)</num>
+                    <content>Sporazumom o priznanju krivice okrivljeni u potpunosti priznaje krivično djelo za koje se tereti, odnosno priznaje jedno ili više krivičnih djela učinjenih u sticaju koja su predmet optužbe, a okrivljeni i državni tužilac se saglašavaju o: 1) visini kazne i drugim krivičnim sankcijama koje će okrivljenom biti izrečene u skladu sa odredbama Krivičnog zakonika; 2) troškovima krivičnog postupka i imovinskopravnom zahtjevu; 3) odricanju stranaka i branioca od prava na žalbu protiv odluke suda donesene na osnovu sporazuma o priznanju krivice kad je sud u potpunosti prihvatio sporazum.</content>
+                    <point eId="clan301_stav1_t1">
+                        <num>1)</num>
+                        <content>visini kazne i drugim krivičnim sankcijama koje će okrivljenom biti izrečene u skladu sa odredbama Krivičnog zakonika;</content>
+                    </point>
+                    <point eId="clan301_stav1_t2">
+                        <num>2)</num>
+                        <content>troškovima krivičnog postupka i imovinskopravnom zahtjevu;</content>
+                    </point>
+                    <point eId="clan301_stav1_t3">
+                        <num>3)</num>
+                        <content>odricanju stranaka i branioca od prava na žalbu protiv odluke suda donesene na osnovu sporazuma o priznanju krivice kad je sud u potpunosti prihvatio sporazum.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan301_stav2">
+                    <num>(2)</num>
+                    <content>Sporazum o priznanju krivice sadrži i obavezu okrivljenog da u određenom roku vrati imovinsku korist stečenu izvršenjem krivičnog djela, kao i predmete koji se po Krivičnom zakoniku imaju oduzeti.</content>
+                </paragraph>
+                <paragraph eId="clan301_stav3">
+                    <num>(3)</num>
+                    <content>Okrivljeni se sporazumom o priznanju krivice može obavezati na ispunjenje obaveza iz člana 272 stav 1 ovog zakonika pod uslovom da je, s obzirom na prirodu obaveza, moguće da ih okrivljeni do podnošenja sporazuma o priznanju krivice sudu ispuni, odnosno započne sa ispunjavanjem obaveza. Odlučivanje o sporazumu o priznanju krivice</content>
+                </paragraph>
+            </article>
+            <article eId="clan370">
+                <num>Član 370</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan370_stav1">
+                    <num>(1)</num>
+                    <content>Sud zasniva presudu samo na činjenicama i dokazima koji su neposredno izvedeni na glavnom pretresu ili su sadržani u zapisnicima, odnosno drugim materijalima koji su u skladu sa ovim zakonikom na glavnom pretresu pročitani i na odgovarajući način izneseni.</content>
+                </paragraph>
+                <paragraph eId="clan370_stav2">
+                    <num>(2)</num>
+                    <content>Presuda se ne može zasnivati isključivo na iskazu svjedoka koji je pribavljen na način propisan u članu 262 ovog zakonika i pročitan u skladu sa članom 356 stav 1 tačka 1 ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan370_stav3">
+                    <num>(3)</num>
+                    <content>Sud je dužan da savjesno ocijeni svaki dokaz pojedinačno i u vezi sa ostalim dokazima i da na osnovu takve ocjene izvede zaključak da li je neka činjenica utvrđena. 2. VRSTE PRESUDA Meritorne i procesne presude</content>
+                </paragraph>
+            </article>
+            <article eId="clan372">
+                <num>Član 372</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan372_stav1">
+                    <num>(1)</num>
+                    <content>Presudu kojom se optužba odbija sud će izreći, ako je: 1) tužilac od započinjanja do završetka glavnog pretresa odustao od optužbe; 2) optuženi za isto djelo već pravosnažno osuđen, oslobođen optužbe ili je optužba protiv njega pravosnažno odbijena ili je postupak protiv njega rješenjem pravosnažno obustavljen; 3) optuženi aktom amnestije ili pomilovanja oslobođen od gonjenja ili se krivično gonjenje ne može preduzeti zbog zastarjelosti ili neke druge okolnosti koja trajno isključuje krivično gonjenje. Presuda kojom se optuženi oslobađa od optužbe</content>
+                </paragraph>
+            </article>
+            <article eId="clan373">
+                <num>Član 373</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan373_stav1">
+                    <num>(1)</num>
+                    <content>Presudu kojom se optuženi oslobađa od optužbe sud će izreći, ako: 1) djelo za koje je optužen po zakonu nije krivično djelo; 2) nije dokazano da je optuženi učinio djelo za koje je optužen. Presuda kojom se optuženi oglašava krivim</content>
+                </paragraph>
+            </article>
+            <article eId="clan374">
+                <num>Član 374</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan374_stav1">
+                    <num>(1)</num>
+                    <content>U presudi u kojoj se optuženi oglašava krivim sud će izreći: 1) za koje se djelo oglašava krivim, uz naznačenje činjenica i okolnosti koje čine obilježja krivičnog djela, kao i onih od kojih zavisi primjena određene odredbe Krivičnog zakonika; 2) zakonski naziv krivičnog djela i koje su odredbe Krivičnog zakonika primijenjene; 3) na koju se kaznu osuđuje optuženi ili se po odredbama Krivičnog zakonika oslobađa od kazne; 4) odluku o uslovnoj osudi; 5) odluku o mjerama bezbjednosti i oduzimanju imovinske koristi; 6) odluku o uračunavanju pritvora ili već izdržane kazne, kao i svakog drugog lišenja slobode u vezi sa krivičnim djelom; 7) odluku o troškovima krivičnog postupka i imovinskopravnom zahtjevu.</content>
+                    <point eId="clan374_stav1_t1">
+                        <num>1)</num>
+                        <content>za koje se djelo oglašava krivim, uz naznačenje činjenica i okolnosti koje čine obilježja krivičnog djela, kao i onih od kojih zavisi primjena određene odredbe Krivičnog zakonika;</content>
+                    </point>
+                    <point eId="clan374_stav1_t2">
+                        <num>2)</num>
+                        <content>zakonski naziv krivičnog djela i koje su odredbe Krivičnog zakonika primijenjene;</content>
+                    </point>
+                    <point eId="clan374_stav1_t3">
+                        <num>3)</num>
+                        <content>na koju se kaznu osuđuje optuženi ili se po odredbama Krivičnog zakonika oslobađa od kazne;</content>
+                    </point>
+                    <point eId="clan374_stav1_t4">
+                        <num>4)</num>
+                        <content>odluku o uslovnoj osudi;</content>
+                    </point>
+                    <point eId="clan374_stav1_t5">
+                        <num>5)</num>
+                        <content>odluku o mjerama bezbjednosti i oduzimanju imovinske koristi;</content>
+                    </point>
+                    <point eId="clan374_stav1_t6">
+                        <num>6)</num>
+                        <content>odluku o uračunavanju pritvora ili već izdržane kazne, kao i svakog drugog lišenja slobode u vezi sa krivičnim djelom;</content>
+                    </point>
+                    <point eId="clan374_stav1_t7">
+                        <num>7)</num>
+                        <content>odluku o troškovima krivičnog postupka i imovinskopravnom zahtjevu.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan374_stav2">
+                    <num>(2)</num>
+                    <content>Ako je optuženi osuđen na novčanu kaznu, u presudi će se naznačiti rok u kojem će se novčana kazna platiti i način zamjene novčane kazne. 3. OBJAVLjIVANjE PRESUDE Vrijeme, mjesto i način objavljivanja presude</content>
+                </paragraph>
+            </article>
+            <article eId="clan458">
+                <num>Član 458</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan458_stav1">
+                    <num>(1)</num>
+                    <content>Glavni pretres počinje objavljivanjem glavne sadržine optužnog predloga ili privatne tužbe. Započeti glavni pretres završiće se, po mogućnosti, bez prekidanja.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav2">
+                    <num>(2)</num>
+                    <content>U slučaju potpunog priznanja okrivljenog datog na glavnom pretresu sud će, uz saglasan predlog stranaka, prekinuti dokazni postupak i preći na izricanje krivične sankcije, osim ako posumnja u istinitost priznanja.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav3">
+                    <num>(3)</num>
+                    <content>Pod uslovima iz stava 2 ovog člana sud može izreći sudsku opomenu, uslovnu osudu, novčanu kaznu, kaznu rada u javnom interesu i kaznu zatvora do jedne godine, a uz njih jednu ili više sljedećih mjera bezbjednosti: oduzimanje predmeta, zabranu upotrebe motornog vozila i oduzimanje imovinske koristi.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav4">
+                    <num>(4)</num>
+                    <content>Ako u toku ili po završetku glavnog pretresa sudija nađe da je za suđenje nadležan viši sud, dostaviće spise nadležnom državnom tužiocu. Kad utvrdi da postoji neki od razloga iz člana 367 ovog zakonika sudija će rješenjem odbaciti optužbu.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav5">
+                    <num>(5)</num>
+                    <content>Po zaključenju glavnog pretresa sud će odmah izreći presudu i objaviti je sa bitnim razlozima. Presuda se mora izraditi pisano, u roku od osam dana od dana objavljivanja.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav6">
+                    <num>(6)</num>
+                    <content>Protiv presude žalba se može izjaviti u roku od osam dana od dana dostavljanja prepisa presude.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav7">
+                    <num>(7)</num>
+                    <content>Stranke i oštećeni se mogu odreći prava na žalbu odmah po objavljivanju presude. U tom slučaju prepis presude dostaviće se stranci i oštećenom samo ako to zahtijevaju. Ako su se obje stranke i oštećeni po objavljivanju presude odrekli prava na žalbu i ako niko od njih nije zahtijevao dostavljanje presude, pisano izrađena presuda ne mora da sadrži obrazloženje.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav8">
+                    <num>(8)</num>
+                    <content>Na ukidanje pritvora poslije izricanja presude shodno će se primjenjivati odredbe člana 376 ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan458_stav9">
+                    <num>(9)</num>
+                    <content>Kad sud izrekne kaznu zatvora okrivljenom se može odrediti pritvor, odnosno produženje pritvora, ako postoje razlozi iz člana 448 stav 1 ovog zakonika. U tom slučaju pritvor može trajati do pravosnažnosti presude, ali najduže dok okrivljenom ne istekne kazna zatvora koju je izrekao prvostepeni sud. Ročište radi mirenja</content>
+                </paragraph>
+            </article>
+        </body>
+    </act>
+</akomaNtoso>
