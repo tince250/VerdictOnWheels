@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='utf-8'?>
+<judgment xml:lang="sr-Latn-ME">
+    <meta>
+        <identification>
+            <FRBRWork>
+                <FRBRthis value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024"/>
+            </FRBRWork>
+            <FRBRExpression>
+                <FRBRthis value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024@sr-Latn"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024@sr-Latn"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+                <FRBRthis value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-24/osnovni_sud_cetinje/K_58_2024"/>
+            </FRBRManifestation>
+        </identification>
+        <references source="#this">
+            <TLCOrganization id="osnovni_sud_cetinje" href="/akn/me/organization/osnovni_sud_cetinje"/>
+            <TLCPerson id="judge" href="/akn/me/person/marija_cupic"/>
+            <TLCPerson id="clerk" href="/akn/me/person/sanja_abramovic"/>
+            <TLCPerson id="prosecutor" href="/akn/me/person/jovan_martinovic"/>
+            <TLCPerson id="defendant" href="/akn/me/person/k_r"/>
+            <TLCPerson id="defence" href="/akn/me/person/v_v"/>
+            <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav3"/>
+            <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/>
+            <ref href="/akn/me/act/data/criminal_code/2025/clan125_stav1"/>
+            <ref href="/akn/me/act/data/criminal_code/2025/clan124_stav1_t7"/>
+            <ref href="/akn/me/act/data/criminal_code/2025/clan125_stav7"/>
+            <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan372_stav1_t3"/>
+            <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan230"/>
+            <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan239_stav3"/>
+            <ref href="/akn/me/act/data/law_on_road_traffic_safety/2025/clan26_stav2"/>
+        </references>
+        <classification>
+            <keyword>saobraćaj</keyword>
+            <keyword>ugrožavanje javnog saobraćaja</keyword>
+            <subject href="/akn/me/subjects/criminal-law"/>
+            <subject href="/akn/me/subjects/traffic"/>
+        </classification>
+        <lifecycle>
+            <eventRef type="judgment" date="2025-01-24"/>
+        </lifecycle>
+        <parties>
+            <party role="#defendant" href="/akn/me/person/k_r"/>
+            <party role="#prosecutor" href="/akn/me/person/jovan_martinovic"/>
+            <party role="#defence" href="/akn/me/person/v_v"/>
+        </parties>
+    </meta>
+    <judgmentBody>
+        <introduction>
+            <p>OSNOVNI SUD U CETINJU, kao prvostepeni krivični, po sudiji Ćupić Mariji, kao sudiji pojedincu, uz
+            sudjelovanje sudskog namještenika Abramović Sanje, kao zapisničara, u krivičnom predmetu okr. K. R.,
+            sa poslednjim poznatim boravištem u H. N., na adresi S. K. br...., kojeg brani V. V., adv. iz C., koji mu je
+            postavljen po službenoj dužnosti, a po Optužnom predlogu Osnovnog državnog tužilaštva u H. N. Kt.br. .....
+            od ....., godine, nakon održanog glavnog i javnog pretresa dana 2025-01-24 u prisustvu državnog
+            tužioca u ODT Cetinje Martinović Jovana, branioca okrivljenog, donio je istog dana i javno objavio
+            PRESUDU.</p>
+        </introduction>
+        <decision>
+            <p>Na osnovu čl.372 st.1 t.3 <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan372_stav1_t3"/> ZKP-a
+            OPTUŽBA SE ODBIJA</p>
+            <p>Oštećeni se radi ostvarenja svog imovinskopravnog zahtjeva upućuje na redovnu parnicu.</p>
+            <p>Troškovi krivičnog postupka u iznosu od 187,00 eura, kao i troškovi na ime nagrade i naknade troškova
+            braniocu okrivljenog koji je angažovan po službenoj dužnosti, a o kojima će Sud odlučiti posebnim
+            rješenjem po pravosnažnosti presude padaju na teret budžetskih sredstava suda.</p>
+        </decision>
+        <motivation>
+            <p>Osnovno državno tužilaštvo u H. N., podnijetim Optužnim predlogom Kt. br. ..... od ..... godine stavilo je na
+            teret okr. K. R. izvršenje krivičnog djela ugrožavanje javnog saobraćaja iz čl.339 st.3 u vezi st.1 <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav3"/> <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/> Krivičnog
+            zakonika Crne Gore.</p>
+            <p>Rješenjem Vrhovnog suda Crne Gore Kr.br....., od 2023-12-05 za vođenje postupka protiv
+            okrivljenog K. R., zbog krivičnog djela ugrožavanje javnog saobraćaja iz čl.339 st.3 u vezi st.1 <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav3"/> <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/> KZ CG, po
+            optužnom predlogu Osnovnog državnog tužilaštva u H. N. Kt.br...., od 2020-11-11 određen je
+            Osnovni sud u Cetinju.</p>
+            <p>Rješenjem krivičnog vijeća Osnovnog suda u Cetinju Kv.br...., od 2024-04-30 usvojen je predlog
+            Osnovnog državnog tužilaštva u Cetinju od 2024-04-29 da se okrivljenom K. R. sudi u odsustvu, a
+            po optužnom predlogu Osnovnog državnog tužilaštva u H. N. Kt.br....., od 2020-11-11, zbog
+            krivičnog djela ugrožavanje javnog saobraćaja iz čl.339 st.3 u vezi st.1 <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav3"/> <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/> KZ CG.</p>
+            <p>Rješenjem Osnovnog suda u Cetinju Su.V.... -K.br...., od 2024-06-10 K. R. iz H. N. postavljen je
+            branilac po službenoj dužnosti V. V. adv. iz C.</p>
+            <p>Na rješenje krivičnog vijeća Osnovnog suda u Cetinju Kv.br...., od 2024-04-30 kojim je usvojen
+            predlog Osnovnog državnog tužilaštva u Cetinju od 2024-04-29 da se okrivljenom K. R. sudi u
+            odsustvu, branilac po službenoj dužnosti je izjavio žalbu Višem sudu u Podgorici dana 2024-06-14,
+            a spisi predmeta su dostavljeni Višem sudu u Podgorici dana 2024-06-19, na dalji postupak i
+            odlučivanje po izjavljenoj žalbi.</p>
+            <p>Viši sud u Podgorici je rješenjem Kvž.br...., od 2024-12-09 odbio žalbu na navedeno rješenje kao
+            neosnovanu.</p>
+            <p>Nakon što su dostavljeni spisi predmeta ovog suda K.br...., od strane Višeg suda u Podgorici, dana
+            2024-12-30 zakazan je glavni pretres za dan 2025-01-24 na kojem je zastupnik optužbe u
+            završnoj riječi predložio da kod činjenice da je nastupila apsolutna zastarelost krivičnog gonjenja Sud u
+            konačnom donese odgovarajuću odluku.</p>
+            <p>Sud je pročitao odbranu okrivljenog iznijetu na zapisniku kod ODT-a u H. N. od ..... godine i na glavnom
+            pretresu pred Osnovnim sudom u H. N. dana 2021-02-18, te u dokaznom postupku pročitao iskaz
+            oštećenog dat na zapisniku kod ODT-a Herceg Novi Kt.br..., od ....., godine i na zapisniku pred Osnovnim
+            sudom u H. N. K.br...., od 2021-04-20, zapisnik o uviđaju Uprave policije CB H. N. br...., od ....,
+            godine, sa skicom lica mjesta, izvještaj ljekara specijaliste PZU Opšta bolnica M. za V. D. br....., od ....,
+            godine, nalaz i mišljenje vještaka za saobraćaj i motorna vozila Č. P. od 2020-11-05, nalaz i
+            mišljenje sudskog vještaka medicinske struke dr N. K. od 2020-10-30, izvod iz registra kaznene
+            evidencije na ime okrivljenog od 2025-01-24, izvršio uvid u fotografije lica mjesta izrađene od
+            strane Uprave policije CB H. N. od ....godine.</p>
+            <p>Odredbama čl.339 st.1 <ref href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/> KZ CG predviđeno je da učesnik u saobraćaju na putevima koji se ne pridržava
+            saobraćajnih propisa i time tako ugrozi saobraćaj da dovede u opasnost život ili tijelo ljudi ili imovinu čija
+            vrijednost prelazi iznos od dvadeset hiljada eura, pa usljed toga kod drugog nastupi laka tjelesna povreda
+            ili drugom prouzrokuje imovinsku štetu koja prelazi iznos od tri hiljade eura kazniće se zatvorom do tri
+            godine, dok je u stavu trećem istog člana predviđeno da ako je djelo iz st.1 i 2 ovog člana učinjeno iz nehata
+            učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine.</p>
+            <p>Imajući u vidu gore navedeno sud se nije upuštao u meritorno odlučivanje već je odlučio kao u izreci
+            presude sa sledećih razloga: Iz optužnog predloga ODT-a u H. N. Kt. br. ...., od 2020-11-11 godine
+            proizilazi da je okrivljeni krivično djelo izvršio dana ...., godine od kada prema članu 125 stav 1 <ref href="/akn/me/act/data/criminal_code/2025/clan125_stav1"/> KZ CG
+            počinje teći zastarijevanje krivičnog gonjenja. Krivični zakonik CG i to u članu 124 stav 1 tačka 7 <ref href="/akn/me/act/data/criminal_code/2025/clan124_stav1_t7"/> određuje
+            da se krivično gonjenje ne može preduzeti kada proteknu dvije godine od izvršenja krivičnog djela za koje
+            se po Zakonu može izreći kazna zatvora do jedne godine ili novčana kazna, dok je u članu 125 stav 7 <ref href="/akn/me/act/data/criminal_code/2025/clan125_stav7"/> KZ CG
+            propisano da zastarjelost krivičnog gonjenja nastaje u svakom slučaju kada protekne dvostruko vrijeme
+            koje se po zakonu traži za zastarjelosti krivičnog gonjenja.</p>
+            <p>Na osnovu svega navedenog, a obzirom da je glavni pretres u ovoj pravnoj stvari zaključen dana 2025-01-24,
+            što znači nakon proteka rokova propisanih u članu 124 stav 1 tačka 7 <ref href="/akn/me/act/data/criminal_code/2025/clan124_stav1_t7"/> KZCG i člana 125 stav 7 <ref href="/akn/me/act/data/criminal_code/2025/clan125_stav7"/>
+            Krivičnog zakonika Crne Gore sud je primjenom člana 372 stav 1 tačka 3 <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan372_stav1_t3"/> ZKP-a odlučio kao u izreci presude
+            jer je nastupila apsolutna zastarelost krivičnog gonjenja.</p>
+            <p>Odluku o troškovima krivičnog postupka sud je donio primjenom člana 230 <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan230"/> ZKP-a, a koji troškovi se
+            odnose na ime vještačenja po vještaku saobraćajne struke P. Č. u iznosu od 126,50 eura, koji su odmjereni
+            rješenjem ODT H. N. Kt.br...., od 2020-11-09, te na ime vještačenja po vještaku iz oblasti sudske
+            medicine N. K. u iznosu od 60,50 eura, koji su odmjereni rješenjem ODT H. N. Kt.br...., od
+            2020-11-04, kao i troškove na ime nagrade i naknade troškova braniocu okrivljenog koji je
+            angažovan po službenoj dužnosti, a o kojima će Sud odlučiti posebnim rješenjem po pravosnažnosti
+            presude, dok je Sud shodno članu 239 stav 3 <ref href="/akn/me/act/data/criminal_procedure_code/2025/clan239_stav3"/> ZKP-a oštećenog radi ostvarenja imovinsko pravnog zahtjeva
+            uputio na redovnu parnicu.</p>
+        </motivation>
+        <conclusions>
+            <p>Na osnovu izloženog odlučeno je kao u izreci.</p>
+        </conclusions>
+    </judgmentBody>
+</judgment>

@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<judgment xml:lang="sr-Latn-ME">
+    <meta>
+        <identification>
+            <FRBRWork>
+                <FRBRthis value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024"/>
+            </FRBRWork>
+            <FRBRExpression>
+                <FRBRthis value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024@sr-Latn"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024@sr-Latn"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+                <FRBRthis value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024"/>
+                <FRBRuri value="/akn/me/judgment/2025-01-29/osnovni_sud_herceg_novi/K_130_2024"/>
+            </FRBRManifestation>
+        </identification>
+        <references source="#this">
+            <TLCOrganization id="osnovni_sud_herceg_novi" href="/akn/me/organization/osnovni_sud_herceg_novi" showAs="Osnovni Sud u Herceg Novom"/>
+            <TLCPerson id="vesna_gazdic" href="/akn/me/person/vesna_gazdic" showAs="Vesna Gazdić"/>
+            <TLCPerson id="katarina_ristic" href="/akn/me/person/katarina_ristic" showAs="Katarina Ristić"/>
+            <TLCPerson id="nikola_samardzic" href="/akn/me/person/nikola_samardzic" showAs="Nikola Samardžić"/>
+            <TLCPerson id="mb" href="/akn/me/person/mb" showAs="M.B."/>
+            <ref id="kz_clan339_stav3" href="/akn/me/act/data/criminal_code/2025/clan339_stav3" showAs="čl.339 st.3 KZ CG"/>
+            <ref id="kz_clan339_stav1" href="/akn/me/act/data/criminal_code/2025/clan339_stav1" showAs="čl.339 st.1 KZ CG"/>
+            <ref id="zobs_clan27_stav1" href="/akn/me/act/data/law_on_road_traffic_safety/2025/clan27_stav1" showAs="čl.27 st.1 ZOBS"/>
+            <ref id="zkp_clan229_stav4" href="/akn/me/act/data/criminal_procedure_code/2025/clan229_stav4" showAs="čl.229 st.4 ZKP"/>
+            <ref id="zkp_clan239" href="/akn/me/act/data/criminal_procedure_code/2025/clan239" showAs="čl.239 ZKP"/>
+            <ref id="zkp_clan374" href="/akn/me/act/data/criminal_procedure_code/2025/clan374" showAs="čl.374 ZKP"/>
+            <ref id="zkp_clan458_stav7" href="/akn/me/act/data/criminal_procedure_code/2025/clan458_stav7" showAs="čl.458 st.7 ZKP"/>
+        </references>
+        <classification>
+            <keyword>saobraćaj</keyword>
+            <keyword>ugrožavanje javnog saobraćaja</keyword>
+            <subject href="/akn/me/subjects/criminal-law"/>
+            <subject href="/akn/me/subjects/traffic"/>
+        </classification>
+        <lifecycle>
+            <eventRef type="judgment" date="2025-01-29"/>
+        </lifecycle>
+        <parties>
+            <party role="#defendant" href="#mb"/>
+            <party role="#prosecutor" href="#nikola_samardzic"/>
+        </parties>
+    </meta>
+    <judgmentBody>
+        <introduction>
+            <p>Osnovni Sud u Herceg Novom, K 130/2024, 29. Januar 2025, u ime Crne Gore, po Predsjednici suda-sudiji Vesni Gazdić, uz učestvovanje zapisničara Ristić Katarine, po optužnom predlogu Osnovnog državnog tužilaštva u Herceg Novom Kt.br.228/23 od 23.08.2024. godine, protiv okrivljenog M.B., zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="#kz_clan339_stav3"/> u vezi <ref href="#kz_clan339_stav1"/> Krivičnog Zakonika CG, nakon održanog glavnog pretresa dana 29.01.2025.g. u prisustvu državnog tužioca Nikole Samardžića i okrivljenog, istog dana donio je presudu.</p>
+        </introduction>
+        <decision>
+            <p>Okrivljeni M.B. je kriv što je dana 26.05.2023.g. oko 13:00 časova na dijelu Jadranske magistrale u blizini marketa »HDL« u Igalu, ne pridržavajući se saobraćajnih propisa iz <ref href="#zobs_clan27_stav1"/> na putevima ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi. Sud mu primjenom <ref href="#kz_clan339_stav3"/>, <ref href="#kz_clan339_stav1"/>, te odredbi <ref href="#zkp_clan229_stav4"/>, <ref href="#zkp_clan239"/>, <ref href="#zkp_clan374"/> izriče uslovnu osudu kojom mu utvrđuje kaznu zatvora u trajanju od 3 (tri) mjeseca i istovremeno određuje da se ova kazna neće izvršiti ukoliko okrivljeni u roku od 1 (jedne) godine po pravosnažnosti presude ne izvrši novo krivično djelo. Okrivljeni se oslobađa od plaćanja troškova postupka, shodno <ref href="#zkp_clan229_stav4"/>. Oštećeni H.B. se radi ostvarivanja imovinsko pravnog zahtjeva upućuje na parnični postupak.</p>
+        </decision>
+        <motivation>
+            <p>Obrazloženje je izostalo na osnovu <ref href="#zkp_clan458_stav7"/>, jer su se stranke odrekle prava žalbe i ne zahtjevaju pisani otpravak presude.</p>
+        </motivation>
+        <conclusions>
+            <p>Presuda je pravosnažna danom donošenja, budući da su se stranke odmah po njenom objavljivanju, odrekle prava na žalbu.</p>
+        </conclusions>
+    </judgmentBody>
+</judgment>

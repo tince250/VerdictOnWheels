@@ -156,6 +156,7 @@ def build_akn_xml(law_name, clanovi):
 def main():
     for pdf_file, clan_numbers in laws_data.items():
         law_name = os.path.splitext(pdf_file)[0]
+        law_name = law_name.replace("data", "xml").lower()
         print(f"Parsing {pdf_file}...")
         clanovi = parse_law(pdf_file, clan_numbers)
         xml_tree = build_akn_xml(law_name, clanovi)

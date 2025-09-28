@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='utf-8'?>
+<judgment xml:lang="sr-Latn-ME">
+    <meta>
+        <identification>
+            <FRBRWork>
+                <FRBRthis value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024"/>
+                <FRBRuri value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024"/>
+            </FRBRWork>
+            <FRBRExpression>
+                <FRBRthis value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024/sr-Latn"/>
+                <FRBRuri value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024/sr-Latn"/>
+            </FRBRExpression>
+            <FRBRManifestation>
+                <FRBRthis value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024/sr-Latn"/>
+                <FRBRuri value="/akn/me/judgment/2024-06-25/osnovni_sud_kolasin/37-2024/sr-Latn"/>
+            </FRBRManifestation>
+        </identification>
+        <references source="#this">
+            <TLCOrganization id="osnovni_sud_kolasin" href="/akn/me/organization/osnovni_sud_kolasin"/>
+            <TLCPerson id="arsen_popovic" href="/akn/me/person/arsen_popovic"/>
+            <TLCPerson id="mrdak_ljiljana" href="/akn/me/person/mrdak_ljiljana"/>
+            <TLCPerson id="scepnaovic_maja" href="/akn/me/person/scepnaovic_maja"/>
+            <TLCPerson id="b_r" href="/akn/me/person/b_r"/>
+            <ref id="kz_clan348_stav3" href="/akn/me/act/data/criminal_code/2025/clan348_stav3"/>
+            <ref id="kz_clan339_stav3" href="/akn/me/act/data/criminal_code/2025/clan339_stav3"/>
+            <ref id="kz_clan339_stav1" href="/akn/me/act/data/criminal_code/2025/clan339_stav1"/>
+            <ref id="zobs_clan36_stav1" href="/akn/me/act/data/law_on_road_traffic_safety/2025/clan36_stav1"/>
+            <ref id="zkp_clan229" href="/akn/me/act/data/criminal_procedure_code/2025/clan229"/>
+            <ref id="zkp_clan374" href="/akn/me/act/data/criminal_procedure_code/2025/clan374"/>
+            <ref id="zkp_clan458_stav2" href="/akn/me/act/data/criminal_procedure_code/2025/clan458_stav2"/>
+        </references>
+        <classification>
+            <keyword>saobraćaj</keyword>
+            <keyword>ugrožavanje javnog saobraćaja</keyword>
+            <subject href="/akn/me/subjects/criminal-law"/>
+            <subject href="/akn/me/subjects/traffic"/>
+        </classification>
+        <lifecycle>
+            <eventRef type="judgment" date="2024-06-25"/>
+        </lifecycle>
+        <parties>
+            <party role="#defendant" href="#b_r"/>
+            <party role="#prosecutor" href="#scepnaovic_maja"/>
+        </parties>
+    </meta>
+    <judgmentBody>
+        <introduction>
+            <p>Osnovni sud u Kolašinu, K 37/2024, 25. Jun 2024, K.br. 37/24</p>
+            <p>U IME CRNE GORE</p>
+            <p>Osnovni sud u Kolašinu kao prvostepeni krivični, po sudiji Arsenu Popoviću, uz učešće zapisničara Mrdak Ljiljane, u krivičnom predmetu protiv okrivljenog B. R.a iz K., zbog krivičnog teškog djela protiv bezbjednosti javnog saobraćaja iz čl.348.st.3. u vezi čl.339.st.3. u vezi st.1 Krivičnog zakonika CG, po optužnom predlogu ODT iz Kolašina Kt.br.28/24 od 25.03.2024 godine, nakon održanog glavnog javnog pretresa dana 25.06.2024 godine u prisustvu rukovodioca ODT iz Kolašina Šćepanović Maje i okrivljenog B. R., donio je i javno objavio,-</p>
+        </introduction>
+        <decision>
+            <p>P R E S U D U</p>
+            <p>Okrivljeni: B. R., JMBG ..., od oca P. i majke S. rodj. M., rodjen ... godine u B. P., sa prebivalištem u K. – D. P. br..., državljanin CG, pismen, završio srednju školu, student, neoženjen, srednjeg imovnog stanja, neosudjivan.</p>
+            <p>K r i v j e</p>
+            <p>Zato što je: Dana 31.01.2024 godine oko 22,00 časova, na dijelu regionalnog puta Kolašin – Jezerine, u mjestu S. – Opština Kolašin, ne pridržavajući se saobraćajnih propisa ugrozio saobraćaj tako da je doveo u opasnost život i tijelo ljudi, svjestan da svojom radnjom može učiniti djelo olako držeći da do toga neće doći ili da će to moći spriječiti, na način što je upravljao putničkim vozilom marke “VW Golf” reg.oznaka KL AC ... iz pravca Jezerina u pravcu Kolašina, protivno <ref href="#zobs_clan36_stav1"/> na putevima i to tako što je upravljao vozilom brzinom od oko 56,42 km/h koja brzina je veća od brzine koja je saobraćajnim znakom ograničena na 50 km/h, pa je dolaskom na kritični dio puta na samom početku horizontalnog zavoja izgubio upravljivost nad vozilom, kojom prilikom je vozilo ne slijedeći zakrivljenost puta nastavilo sa kretanjem i napustilo svoju desnu te prešlo preko lijeve kolovozne trake i zemljanog proširenja i sletjelo u korito Paljevinske rijeke, kojom prilikom je njegov saputnik J. J. zadobio tešku tjelesnu povredu manifestovanu u vidu nagnječenja tkiva velikog mozga u predjelu desne strane čeonog režnja, krvni podliv u predjelu lijeve slepoočnice i desne jagodice i oguljotine u predjelu lica i nosa,</p>
+            <p>- čime je izvršio krivično djelo teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="#kz_clan348_stav3"/> u vezi <ref href="#kz_clan339_stav3"/> u vezi <ref href="#kz_clan339_stav1"/> Krivičnog zakonika CG,</p>
+            <p>Pa sud okrivljenom primjenom čl. 2, 4, 13, 16, 32, 52, 53 i 54 Krivičnog zakonika CG i <ref href="#zkp_clan229"/> i <ref href="#zkp_clan374"/> izriče USLOVNU OSUDU</p>
+            <p>Kojoj okrivljenom utvrdjuje kaznu zatvora u trajanju od 4 (četiri) mjeseca i istovremeno određuje da se ista neće izvršiti ukoliko okrivljena u roku od 1 (jedne) godine ne počini novo krivično djelo.</p>
+            <p>Obavezuju se okrivljeni na plaćanje troškova krivičnog postupka u iznosu od 334,00€, te na plaćanje sudskog paušala u iznosu od 30,00 € uplatom na žiro račun br. 832-196-94 koji se vodi na ime Osnovnog suda u Kolašinu, u roku od 15 dana od dana pravosnažnosti ove presude pod prijetnjom prinudnog izvršenja.</p>
+        </decision>
+        <motivation>
+            <p>O b r a z l o ž e nj e</p>
+            <p>Optužnim predlogom ODT iz Kolašina Kt.br.28/24 od 25.03.2024 godine stavljeno je na teret okrivljenom B. R.u da je počinio krivično djelo teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="#kz_clan348_stav3"/> u vezi <ref href="#kz_clan339_stav3"/> u vezi <ref href="#kz_clan339_stav1"/> Krivičnog zakonika CG,</p>
+            <p>Do okončanja glavnog pretresa rukovodilac ODT Kolašin Šćepanović Maja ostala je pri podnijetom optužnom aktu, predlažući sudu da okrivljenog oglasi krivim i osudi po zakonu.</p>
+            <p>Okrivljeni B. R. u svojoj odbrani je priznao krivično djelo koje mu je stavljeno na teret, navodeći da je kritične prilike počinio grešku jer brzinu kretanja vozila „Golf“ reg.br. KL AC ... nije prilagodio uslovima puta na kojem je bilo poledice, izražavajući žaljenje što je došlo do predmetne nezgode posebno zbog činjenice da je njegov saputnik J. J. zadobio tjelesne povrede.</p>
+            <p>Obzirom da je okrivljeni u potpunosti priznao izvršenje kritičnog djela za koje se tereti, a po saglasnom predlogu stranaka, sud je shodno <ref href="#zkp_clan458_stav2"/> donio rješenje da se ne provode dokazi predloženi od strane ODT Kolašin sem onih od kojih zavisi vrsta i mjera krivične sankcije za krivično djelo u pitanju. Tako se oštećeni J. J. u svom iskazu je naveo da se ne pridružuje krivičnom gonjenju protiv okrivljenog i da nepostavlja imovinsko pravni zahtjev. Nadalje je sud uvidom u izvod iz kaznene evidencije na ime okrivljenog izdatog od Ministarstva pravde CG utvrdio da okrivljeni do sada nije osudjivan.</p>
+            <p>Na osnovu priznanja izvršenja krivičnog djela od strane okrivljenog, sud je nesporno utvrdio da je B. R. počinio krivično djelo teško djelo protiv bezbjednosti javnog saobraćaja iz <ref href="#kz_clan348_stav3"/> u vezi <ref href="#kz_clan339_stav3"/> u vezi <ref href="#kz_clan339_stav1"/> Krivičnog zakonika CG, pa ga je za to djelo oglasio krivim i krivičnopravno odgovornim.</p>
+            <p>Cijeneći psihički odnos okrivljenog prema izvršenom krivičnom djelu sud je našao da je isti postupao nehatno jer je bio svjestan da svojom radnjom može učiniti djelo ali je olako držao da do toga neće doći ili da će to moći spriječiti, teko što je vozilom kritične prilike upravljao protivno odredbi <ref href="#zobs_clan36_stav1"/> na putevima.</p>
+            <p>Prilikom određivanja krivične sankcije okrivljenom sud je cijenio sve okolnosti od značaja za individualizaciju iste, pa je od olakšavajućih okolnosti našao da isti do sada nije osudjivan, da je priznao izvršenje krivičnog djela koje mu je stavljeno na teret, da se oštećeni nije pridružo krivičnom gonjenju i da je osoba mladje životne dobi, dok otežavajućih okolnosti nije bilo. Obzirom na sve navedene okolnosti sud je mišljenja da u konkretnom slučaju stoje uslovi za izricanje uslovne osude, da će se zaprijećenom kaznom zatvora od četiri mjeseca dovoljno uticati na okrivljenog da ubuduće ne vrši krivična djela, dok je po ocjeni suda uslovljeni period u trajanju od jedne godine dovoljno dug u cilju njegove provjere, kao i da će se ovom sankcijom postići svrha specijalne i generalne prevencije.</p>
+            <p>Kako je okrivljeni oglašen krivim, sud ga je obavezao na plaćanje troškova krivičnog postupka u iznosu od 334,00 € a koji se odnose na naknadu vještacima medicinske i saobraćajne struke za urađene nalaze i mišljenja i za uradjene analize prisustva alkohola u organizmu od stane KC CG, te na plaćanje sudskog paušala u iznosu od po 30,00 € koji iznos je srazmjeran trajanju i složenosti krivičnog postupka, a shodno <ref href="#zkp_clan229"/>.</p>
+            <p>Na osnovu izloženog, a shodno <ref href="#zkp_clan374"/>, odlučeno je kao u izreci presude.</p>
+        </motivation>
+        <conclusions>
+            <p>OSNOVNI SUD U KOLAŠINU, Dana, 25.06.2024 godine</p>
+            <p>Zapisničar, S U D I J A,</p>
+            <p>Mrdak Ljiljana s.r. Arsen Popović s.r.</p>
+            <p>PRAVNA POUKA: protiv ove presude dozvoljena je žalba u roku od 8. dana od dana prijema pismenog otpravka. Žalba se podnosi Višem sudu u Bijelom Polju a preko ovog suda.</p>
+        </conclusions>
+    </judgmentBody>
+</judgment>
