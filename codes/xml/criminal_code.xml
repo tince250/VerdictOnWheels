@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <akomaNtoso xmlns="http://www.akomantoso.org/2.0">
-    <act name="../codes/data/criminal_code">
+    <act name="data/criminal_code">
         <meta>
             <identification source="#system">
                 <FRBRWork>
-                    <FRBRthis value="/akn/me/act/../codes/data/criminal_code/2025/main" />
-                    <FRBRuri value="/akn/me/act/../codes/data/criminal_code/2025" />
-                    <FRBRdate date="2025-09-25" name="generation" />
+                    <FRBRthis value="/akn/me/act/data/criminal_code/2025/main" />
+                    <FRBRuri value="/akn/me/act/data/criminal_code/2025" />
+                    <FRBRdate date="2025-09-28" name="generation" />
                     <FRBRauthor href="#parliament" as_="#legislature" />
                     <FRBRcountry value="me" />
                 </FRBRWork>
@@ -77,7 +77,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan32_stav1">
                     <num>(1)</num>
-                    <content>U okviru opšte svrhe krivičnih sankcija (član 4 stav 2) , svrha kažnjavanja je: 1) sprječavanje učinioca da čini krivična djela i uticanje na njega da ubuduće ne čini krivična djela; 2) uticanje na druge da ne čine krivična djela; 3) izražavanje društvene osude za krivično djelo i obaveze poštovanja zakona; 4) jačanje morala i uticaj na razvijanje društvene odgovornosti. Vrste kazni</content>
+                    <content>U okviru opšte svrhe krivičnih sankcija <ref href="#clan4_stav2">(član 4 stav 2)</ref> , svrha kažnjavanja je: 1) sprječavanje učinioca da čini krivična djela i uticanje na njega da ubuduće ne čini krivična djela; 2) uticanje na druge da ne čine krivična djela; 3) izražavanje društvene osude za krivično djelo i obaveze poštovanja zakona; 4) jačanje morala i uticaj na razvijanje društvene odgovornosti. Vrste kazni</content>
                 </paragraph>
             </article>
             <article eId="clan33">
@@ -109,7 +109,7 @@
                 </paragraph>
                 <paragraph eId="clan52_stav2">
                     <num>(2)</num>
-                    <content>U okviru opšte svrhe krivičnih sankcija (član 4 stav 2) , svrha uslovne osude i sudske opomene je da se prema učiniocu krivičnog djela ne primijeni kazna za lakša krivična djela, kad to nije nužno radi krivičnopravne zaštite i kad se može očekivati da će upozorenje uz prijetnju kazne (uslovna osuda) ili samo upozorenje (sudska opomena) dovoljno uticati na učinioca da više ne vrši krivična djela. Uslovna osuda</content>
+                    <content>U okviru opšte svrhe krivičnih sankcija <ref href="#clan4_stav2">(član 4 stav 2)</ref> , svrha uslovne osude i sudske opomene je da se prema učiniocu krivičnog djela ne primijeni kazna za lakša krivična djela, kad to nije nužno radi krivičnopravne zaštite i kad se može očekivati da će upozorenje uz prijetnju kazne (uslovna osuda) ili samo upozorenje (sudska opomena) dovoljno uticati na učinioca da više ne vrši krivična djela. Uslovna osuda</content>
                     <point eId="clan52_stav2_t2">
                         <num>2)</num>
                         <content>, svrha uslovne osude i sudske opomene je da se prema učiniocu krivičnog djela ne primijeni kazna za lakša krivična djela, kad to nije nužno radi krivičnopravne zaštite i kad se može očekivati da će upozorenje uz prijetnju kazne (uslovna osuda) ili samo upozorenje (sudska opomena) dovoljno uticati na učinioca da više ne vrši krivična djela. Uslovna osuda</content>
@@ -241,11 +241,11 @@
                 </paragraph>
                 <paragraph eId="clan220_stav3">
                     <num>(3)</num>
-                    <content>Ako je usljed djela iz st. 1 i 2 ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja ili su učinjena prema maloljetnom licu, učinilac će se kazniti zatvorom od jedne do pet godina.</content>
+                    <content>Ako je usljed djela iz <ref href="#clan220_stav1">st. 1</ref> i <ref href="#clan220_stav2">2</ref> ovog člana nastupila teška tjelesna povreda ili teško narušavanje zdravlja ili su učinjena prema maloljetnom licu, učinilac će se kazniti zatvorom od jedne do pet godina.</content>
                 </paragraph>
                 <paragraph eId="clan220_stav4">
                     <num>(4)</num>
-                    <content>Ako je usljed djela iz st. 1, 2 i 3 ovog člana nastupila smrt člana porodice ili porodične zajednice, učinilac će se kazniti zatvorom od tri do dvanaest godina.</content>
+                    <content>Ako je usljed djela iz <ref href="#clan220_stav1">st. 1</ref>, 2 i 3 ovog člana nastupila smrt člana porodice ili porodične zajednice, učinilac će se kazniti zatvorom od tri do dvanaest godina.</content>
                 </paragraph>
                 <paragraph eId="clan220_stav5">
                     <num>(5)</num>
@@ -265,7 +265,7 @@
                 </paragraph>
                 <paragraph eId="clan339_stav3">
                     <num>(3)</num>
-                    <content>Ako je djelo iz st. 1 i 2 ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine. Ugrožavanje saobraćaja opasnom radnjom i opasnim sredstvom</content>
+                    <content>Ako je djelo iz <ref href="#clan339_stav1">st. 1</ref> i <ref href="#clan339_stav2">2</ref> ovog člana učinjeno iz nehata, učinilac će se kazniti novčanom kaznom ili zatvorom do jedne godine. Ugrožavanje saobraćaja opasnom radnjom i opasnim sredstvom</content>
                 </paragraph>
             </article>
             <article eId="clan348">
@@ -273,11 +273,11 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan348_stav1">
                     <num>(1)</num>
-                    <content>Ako je usljed djela iz čl. 339 st. 1 i 2, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila teška tjelesna povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura, učinilac će se kazniti zatvorom od jedne do osam godina.</content>
+                    <content>Ako je usljed djela iz čl. 339 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref>, 340 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref>, 341 stav 1, 344 i 346 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref> ovog zakonika nastupila teška tjelesna povreda nekog lica ili imovinska šteta koja prelazi iznos od četrdeset hiljada eura, učinilac će se kazniti zatvorom od jedne do osam godina.</content>
                 </paragraph>
                 <paragraph eId="clan348_stav2">
                     <num>(2)</num>
-                    <content>Ako je usljed djela iz čl. 339 st. 1 i 2, 340 st. 1 i 2, 341 stav 1, 344 i 346 st. 1 i 2 ovog zakonika nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od dvije do dvanaest godina.</content>
+                    <content>Ako je usljed djela iz čl. 339 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref>, 340 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref>, 341 stav 1, 344 i 346 <ref href="#clan348_stav1">st. 1</ref> i <ref href="#clan348_stav2">2</ref> ovog zakonika nastupila smrt jednog ili više lica, učinilac će se kazniti zatvorom od dvije do dvanaest godina.</content>
                 </paragraph>
                 <paragraph eId="clan348_stav3">
                     <num>(3)</num>

@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <akomaNtoso xmlns="http://www.akomantoso.org/2.0">
-    <act name="../codes/data/criminal_procedure_code">
+    <act name="data/criminal_procedure_code">
         <meta>
             <identification source="#system">
                 <FRBRWork>
-                    <FRBRthis value="/akn/me/act/../codes/data/criminal_procedure_code/2025/main" />
-                    <FRBRuri value="/akn/me/act/../codes/data/criminal_procedure_code/2025" />
-                    <FRBRdate date="2025-09-25" name="generation" />
+                    <FRBRthis value="/akn/me/act/data/criminal_procedure_code/2025/main" />
+                    <FRBRuri value="/akn/me/act/data/criminal_procedure_code/2025" />
+                    <FRBRdate date="2025-09-28" name="generation" />
                     <FRBRauthor href="#parliament" as_="#legislature" />
                     <FRBRcountry value="me" />
                 </FRBRWork>
@@ -125,7 +125,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan230_stav1">
                     <num>(1)</num>
-                    <content>Kad se krivični postupak obustavi ili kad se donese presuda kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija, u odluci o obustavi postupka, odnosno u presudi izreći će se da se troškovi krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 ovog zakonika, kao i nužni izdaci okrivljenog i nužni izdaci i nagrada branioca isplaćuju iz posebnog razdjela budžeta za rad sudova, osim u slučajevima iz st. 2 i 3 ovog člana.</content>
+                    <content>Kad se krivični postupak obustavi ili kad se donese presuda kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija, u odluci o obustavi postupka, odnosno u presudi izreći će se da se troškovi krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 ovog zakonika, kao i nužni izdaci okrivljenog i nužni izdaci i nagrada branioca isplaćuju iz posebnog razdjela budžeta za rad sudova, osim u slučajevima iz <ref href="#clan230_stav2">st. 2</ref> i <ref href="#clan230_stav3">3</ref> ovog člana.</content>
                 </paragraph>
                 <paragraph eId="clan230_stav2">
                     <num>(2)</num>

@@ -16,21 +16,67 @@ laws_data = {
     ]
 }
 
-# Regex patterns for structure
 clan_pattern = re.compile(r"Član\s+(\d+)")
 stav_pattern = re.compile(r"\((\d+)\)")
 tacka_pattern = re.compile(r"(\d+)\)")
 
-# Function to clean text
+clan_stav_ref_pattern = re.compile(
+    r"\(član\s+(\d+)(?:\s+stav\s+(\d+))?\)", re.IGNORECASE
+)
+stav_ref_pattern = re.compile(
+    r"st\.\s*(\d+)(?:\s*i\s*(\d+))?", re.IGNORECASE
+)
+
+
 def clean_text(text):
     return " ".join(text.split())
 
-# Parse one law
+def insert_references(text, current_clan):
+    """Insert <ref> tags for legal references in the text."""
+
+    def replace_clan_stav(match):
+        clan_num = match.group(1)
+        stav_num = match.group(2)
+        if stav_num:
+            href = f"#clan{clan_num}_stav{stav_num}"
+            display = f"(član {clan_num} stav {stav_num})"
+        else:
+            href = f"#clan{clan_num}"
+            display = f"(član {clan_num})"
+        return f'<ref href="{href}">{display}</ref>'
+
+    text = clan_stav_ref_pattern.sub(replace_clan_stav, text)
+
+    def replace_stav(match):
+        s1 = match.group(1)
+        s2 = match.group(2)
+        if s2:
+            return (f'<ref href="#clan{current_clan}_stav{s1}">st. {s1}</ref> i '
+                    f'<ref href="#clan{current_clan}_stav{s2}">{s2}</ref>')
+        else:
+            return f'<ref href="#clan{current_clan}_stav{s1}">st. {s1}</ref>'
+
+    text = stav_ref_pattern.sub(replace_stav, text)
+
+    return text
+
+def set_content_with_refs(parent_element, text_with_refs, current_clan):
+    """Insert text and <ref> tags into a content element."""
+    text_processed = insert_references(text_with_refs, current_clan)
+    wrapped = f"<root>{text_processed}</root>"
+    root_fragment = ET.fromstring(wrapped)
+    for node in root_fragment:
+        parent_element.append(node)
+    if root_fragment.text:
+        if parent_element.text:
+            parent_element.text += root_fragment.text
+        else:
+            parent_element.text = root_fragment.text
+
 def parse_law(pdf_file, relevant_articles):
     with pdfplumber.open(pdf_file) as pdf:
         text = "\n".join([page.extract_text() or "" for page in pdf.pages])
 
-    # Split by člans
     clanovi = re.split(r"(Član\s+\d+)", text)
     results = {}
 
@@ -42,7 +88,6 @@ def parse_law(pdf_file, relevant_articles):
         if clan_number not in relevant_articles:
             continue
 
-        # Extract stavi
         stavi = re.split(stav_pattern, clan_content)
         stavovi = {}
         if len(stavi) > 1:
@@ -97,18 +142,21 @@ def build_akn_xml(law_name, clanovi):
         for stav_num, stav_content in stavi.items():
             paragraph = ET.SubElement(article, "paragraph", eId=f"clan{clan_num}_stav{stav_num}")
             ET.SubElement(paragraph, "num").text = f"({stav_num})"
-            ET.SubElement(paragraph, "content").text = stav_content["text"]
+            content_el = ET.SubElement(paragraph, "content")
+            set_content_with_refs(content_el, stav_content["text"], clan_num)
 
             for tacka_num, tacka_text in stav_content["tacke"].items():
                 point = ET.SubElement(paragraph, "point", eId=f"clan{clan_num}_stav{stav_num}_t{tacka_num}")
                 ET.SubElement(point, "num").text = f"{tacka_num})"
-                ET.SubElement(point, "content").text = tacka_text
+                point_content = ET.SubElement(point, "content")
+                set_content_with_refs(point_content, tacka_text, clan_num)
 
     return akn
 
 def main():
     for pdf_file, clan_numbers in laws_data.items():
         law_name = os.path.splitext(pdf_file)[0]
+        print(f"Parsing {pdf_file}...")
         clanovi = parse_law(pdf_file, clan_numbers)
         xml_tree = build_akn_xml(law_name, clanovi)
 
