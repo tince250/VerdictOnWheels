@@ -4,136 +4,262 @@ import pdfplumber
 import xml.etree.ElementTree as ET
 from datetime import date
 
-laws_data = {
-    "data/criminal_code.pdf": [
-        "2", "3", "4", "5", "13", "16", "32", "33", "42", "52", "53", "54", "124", "125", "348", "339", "220"
-    ],
-    "data/law_on_road_traffic_safety.pdf": [
-        "26", "27", "36", "40", "76", "176"
-    ],
-    "data/criminal_procedure_code.pdf": [
-        "226", "227", "229", "230", "239", "301", "370", "372", "373", "374", "458"
+# --------- CONFIG ----------
+PDF_PATH = "data/criminal_procedure_code.pdf"
+OUT_XML = "xml/criminal_procedure_code.xml"
+# ---------------------------
+
+# Patterns
+clan_split_pattern = re.compile(r"(Član\s+\d+)", re.IGNORECASE)
+clan_number_pattern = re.compile(r"\d+")
+stav_split_pattern = re.compile(r"\((\d+)\)")
+point_line_pattern = re.compile(r"^\s*(\d+)\)\s*(.*)$")
+point_inline_pattern = re.compile(r"(\d+)\)\s*")
+
+# Patterns for references
+ref_clan_full = re.compile(
+    r"člana?\s+(\d+)\s+stav\s+(\d+)\s+tač(?:\.|ka)?\s+(\d+)", re.IGNORECASE
+)
+ref_clan_stav = re.compile(r"člana?\s+(\d+)\s+stav\s+(\d+)", re.IGNORECASE)
+ref_clan = re.compile(r"člana?\s+(\d+)", re.IGNORECASE)
+ref_stav_tacka_same = re.compile(r"stava\s+(\d+)\s+tač(?:\.|ka)?\s+(\d+)", re.IGNORECASE)
+ref_stava_ovog = re.compile(r"stava\s+(\d+)\s+ovog\s+člana", re.IGNORECASE)  # NEW
+ref_stav = re.compile(r"stav\s+(\d+)", re.IGNORECASE)
+ref_tacka = re.compile(r"tač(?:\.|ka)?\s*(\d+)", re.IGNORECASE)
+ref_st_dot = re.compile(r"st\.\s*(\d+)(?:\s*i\s*(\d+))?", re.IGNORECASE)
+
+# -------------------------------------------------
+def clean_text(text: str) -> str:
+    if text is None:
+        return ""
+    text = str(text)
+    text = text.replace("\r", "\n")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r"\n\s*\n+", "\n", text)
+    return text.strip()
+
+# -------------------------------------------------
+def tokenize_with_refs(text: str, current_clan: str):
+    tokens = []
+    pos = 0
+    s = text
+
+    patterns = [
+        ("clan_full", ref_clan_full),
+        ("clan_stav", ref_clan_stav),
+        ("clan", ref_clan),
+        ("stav_tacka_same", ref_stav_tacka_same),
+        ("stava_ovog", ref_stava_ovog),  # NEW handler
+        ("st_dot", ref_st_dot),
+        ("stav", ref_stav),
+        ("tacka", ref_tacka),
     ]
-}
 
-clan_pattern = re.compile(r"Član\s+(\d+)")
-stav_pattern = re.compile(r"\((\d+)\)")
-tacka_pattern = re.compile(r"(\d+)\)")
+    while pos < len(s):
+        earliest = None
+        earliest_kind = None
+        earliest_match = None
+        for kind, pat in patterns:
+            m = pat.search(s, pos)
+            if m:
+                if earliest is None or m.start() < earliest:
+                    earliest = m.start()
+                    earliest_match = m
+                    earliest_kind = kind
+        if earliest is None:
+            tokens.append(s[pos:])
+            break
 
-clan_stav_ref_pattern = re.compile(
-    r"\(član\s+(\d+)(?:\s+stav\s+(\d+))?\)", re.IGNORECASE
-)
-stav_ref_pattern = re.compile(
-    r"st\.\s*(\d+)(?:\s*i\s*(\d+))?", re.IGNORECASE
-)
+        if earliest > pos:
+            tokens.append(s[pos:earliest])
 
+        m = earliest_match
+        kind = earliest_kind
 
-def clean_text(text):
-    text = re.sub(r"\d+\)", "", str(text))
-    return " ".join(text.split())
+        if kind == "clan_full":
+            clan_num, stav_num, t_num = m.group(1), m.group(2), m.group(3)
+            href = f"#clan{clan_num}_stav{stav_num}_t{t_num}"
+            display = f"člana {clan_num} stav {stav_num} tač. {t_num}"
 
-def insert_references(text, current_clan):
-    """Insert <ref> tags for legal references in the text."""
-
-    def replace_clan_stav(match):
-        clan_num = match.group(1)
-        stav_num = match.group(2)
-        if stav_num:
+        elif kind == "clan_stav":
+            clan_num, stav_num = m.group(1), m.group(2)
             href = f"#clan{clan_num}_stav{stav_num}"
-            display = f"(član {clan_num} stav {stav_num})"
+            display = f"člana {clan_num} stav {stav_num}"
+
+        elif kind == "clan":
+            clan_num = m.group(1)
+            href = f"#clan{clan_num}"
+            display = f"člana {clan_num}"
+
+        elif kind == "stav_tacka_same":
+            stav_num, t_num = m.group(1), m.group(2)
+            href = f"#clan{current_clan}_stav{stav_num}_t{t_num}"
+            display = f"stava {stav_num} tač. {t_num}"
+
+        elif kind == "stava_ovog":  # NEW
+            stav_num = m.group(1)
+            href = f"#clan{current_clan}_stav{stav_num}"
+            display = f"stava {stav_num}"
+
+        elif kind == "st_dot":
+            s1 = m.group(1)
+            s2 = m.group(2)
+            if s2:
+                href1 = f"#clan{current_clan}_stav{s1}"
+                href2 = f"#clan{current_clan}_stav{s2}"
+                tokens.append(('ref', href1, f"st. {s1}"))
+                tokens.append(" i ")
+                tokens.append(('ref', href2, f"{s2}"))
+                pos = m.end()
+                continue
+            else:
+                href = f"#clan{current_clan}_stav{s1}"
+                display = f"st. {s1}"
+
+        elif kind == "stav":
+            stav_num = m.group(1)
+            href = f"#clan{current_clan}_stav{stav_num}"
+            display = f"stav {stav_num}"
+
+        elif kind == "tacka":
+            t_num = m.group(1)
+            href = f"#clan{current_clan}_t{t_num}"
+            display = f"tač. {t_num}"
+
         else:
-            href = f"#clan{clanNum}"
-            display = f"(član {clan_num})"
-        return f'<ref href="{href}">{display}</ref>'
+            href = ""
+            display = m.group(0)
 
-    text = clan_stav_ref_pattern.sub(replace_clan_stav, text)
+        tokens.append(('ref', href, display))
+        pos = m.end()
 
-    def replace_stav(match):
-        s1 = match.group(1)
-        s2 = match.group(2)
-        if s2:
-            return (f'<ref href="#clan{current_clan}_stav{s1}">st. {s1}</ref> i '
-                    f'<ref href="#clan{current_clan}_stav{s2}">{s2}</ref>')
-        else:
-            return f'<ref href="#clan{current_clan}_stav{s1}">st. {s1}</ref>'
+    return tokens
 
-    text = stav_ref_pattern.sub(replace_stav, text)
-
-    return text
-
-def set_content_with_refs(parent_element, text_with_refs, current_clan, exclude_points=False):
-    """
-    Insert text and <ref> tags into a content element.
-    If exclude_points is True, remove any text that matches point patterns.
-    """
+# -------------------------------------------------
+def set_content_with_refs(parent_element: ET.Element, raw_text: str, current_clan: str, exclude_points=False):
+    text = clean_text(raw_text)
     if exclude_points:
-        text_with_refs = re.sub(r"\d+\)\s*", "", text_with_refs)
-        text_with_refs = re.sub(r"(\d+\)\s*|\(\s*\d+\s*\))", "", text_with_refs)
-        text_with_refs = text_with_refs.strip()
+        text = re.sub(r"\b\d+\)\s*", "", text)
+        text = re.sub(r"\(\s*\d+\s*\)", "", text)
 
-    text_processed = insert_references(text_with_refs, current_clan)
-    wrapped = f"<root>{text_processed}</root>"
-    root_fragment = ET.fromstring(wrapped)
-    for node in root_fragment:
-        parent_element.append(node)
-    if root_fragment.text:
-        if parent_element.text:
-            parent_element.text += root_fragment.text
+    tokens = tokenize_with_refs(text, current_clan)
+    parent_element.text = None
+    for tok in tokens:
+        if isinstance(tok, str):
+            if parent_element.text is None:
+                parent_element.text = tok
+            else:
+                last = parent_element[-1] if len(parent_element) else None
+                if last is not None:
+                    last.tail = (last.tail or "") + tok
+                else:
+                    parent_element.text = (parent_element.text or "") + tok
+        elif isinstance(tok, tuple) and tok[0] == 'ref':
+            href, display = tok[1], tok[2]
+            ref_el = ET.SubElement(parent_element, "ref", href=href)
+            ref_el.text = display
         else:
-            parent_element.text = root_fragment.text
+            piece = str(tok)
+            if parent_element.text is None:
+                parent_element.text = piece
+            else:
+                last = parent_element[-1] if len(parent_element) else None
+                if last is not None:
+                    last.tail = (last.tail or "") + piece
+                else:
+                    parent_element.text = (parent_element.text or "") + piece
 
-def parse_law(pdf_file, relevant_articles):
+# -------------------------------------------------
+def parse_full_law(pdf_file):
     with pdfplumber.open(pdf_file) as pdf:
-        text = "\n".join([page.extract_text() or "" for page in pdf.pages])
+        pages_text = [page.extract_text() or "" for page in pdf.pages]
+    full_text = "\n".join(pages_text)
+    full_text = clean_text(full_text)
 
-    clanovi = re.split(r"(Član\s+\d+)", text)
+    parts = clan_split_pattern.split(full_text)
     results = {}
 
-    for i in range(1, len(clanovi), 2):
-        clan_header = clanovi[i]
-        clan_content = clanovi[i + 1] if i + 1 < len(clanovi) else ""
-        clan_number = re.search(r"\d+", clan_header).group()
-
-        if clan_number not in relevant_articles:
+    for i in range(1, len(parts), 2):
+        clan_header = parts[i]
+        clan_content = parts[i+1] if i+1 < len(parts) else ""
+        mnum = clan_number_pattern.search(clan_header)
+        if not mnum:
             continue
+        clan_num = mnum.group()
 
-        stavi = re.split(stav_pattern, clan_content)
-        stavovi = {}
-        if len(stavi) > 1:
-            for j in range(1, len(stavi), 2):
-                stav_num = stavi[j]
-                stav_text = stavi[j + 1] if j + 1 < len(stavi) else ""
+        lines = clan_content.strip().split("\n")
+        heading_candidates = []
+        content_start_index = 0
+        for idx, ln in enumerate(lines):
+            ln_stripped = ln.strip()
+            if ln_stripped == "":
+                continue
+            if re.match(r"^\(\s*\d+\s*\)", ln_stripped) or re.match(r"^\d+\)", ln_stripped):
+                content_start_index = idx
+                break
+            heading_candidates.append(ln_stripped)
+            content_start_index = idx + 1
+            if len(" ".join(heading_candidates)) > 3:
+                break
 
-                # Split the text into lines and process each line
-                lines = stav_text.split("\n")
-                main_text = []
+        heading = " ".join(heading_candidates).strip()
+        remaining_lines = lines[content_start_index:]
+        remaining_text = "\n".join(remaining_lines).strip()
+
+        stavi = {}
+        if stav_split_pattern.search(remaining_text):
+            pieces = stav_split_pattern.split(remaining_text)
+            for j in range(1, len(pieces), 2):
+                stav_num = pieces[j]
+                stav_text = pieces[j+1] if j+1 < len(pieces) else ""
+                lines_stav = stav_text.split("\n")
+                main_lines = []
                 tacke = {}
-                current_tacka_num = None
-
-                for line in lines:
+                current_point = None
+                for line in lines_stav:
                     line = line.strip()
-                    if tacka_pattern.match(line):  # If the line starts with a point (e.g., "1)")
-                        match = tacka_pattern.match(line)
-                        current_tacka_num = match.group(1)
-                        tacka_text = line[len(match.group(0)):].strip()
-                        tacke[current_tacka_num] = clean_text(tacka_text)
-                    elif current_tacka_num:  # If it's a continuation of the current point
-                        tacke[current_tacka_num] += " " + clean_text(line)
-                    else:  # Otherwise, it's part of the main paragraph text
-                        main_text.append(line)
-
-                stavovi[stav_num] = {
-                    "text": clean_text(" ".join(main_text)),
-                    "tacke": tacke
-                }
+                    if not line:
+                        continue
+                    m_point = point_line_pattern.match(line)
+                    if m_point:
+                        pnum = m_point.group(1)
+                        ptext = m_point.group(2).strip()
+                        tacke[pnum] = clean_text(ptext)
+                        current_point = pnum
+                    else:
+                        if current_point is not None:
+                            tacke[current_point] += " " + clean_text(line)
+                        else:
+                            main_lines.append(line)
+                stavi[stav_num] = {"text": clean_text(" ".join(main_lines)), "tacke": tacke}
         else:
-            stavovi["1"] = {"text": clean_text(clan_content), "tacke": {}}
+            lines_all = remaining_text.split("\n")
+            main_lines = []
+            tacke = {}
+            current_point = None
+            for line in lines_all:
+                line = line.strip()
+                if not line:
+                    continue
+                m_point = point_line_pattern.match(line)
+                if m_point:
+                    pnum = m_point.group(1)
+                    ptext = m_point.group(2).strip()
+                    tacke[pnum] = clean_text(ptext)
+                    current_point = pnum
+                else:
+                    if current_point is not None:
+                        tacke[current_point] += " " + clean_text(line)
+                    else:
+                        main_lines.append(line)
+            stavi["1"] = {"text": clean_text(" ".join(main_lines)), "tacke": tacke}
 
-        results[clan_number] = stavovi
+        results[clan_num] = {"heading": heading if heading else "Naziv člana", "stavi": stavi}
 
     return results
 
-def build_akn_xml(law_name, clanovi):
+# -------------------------------------------------
+def build_akn_xml_from_parsed(parsed, law_name):
     akn = ET.Element("akomaNtoso", xmlns="http://www.akomantoso.org/2.0")
     act = ET.SubElement(akn, "act", name=law_name)
     meta = ET.SubElement(act, "meta")
@@ -147,43 +273,65 @@ def build_akn_xml(law_name, clanovi):
     ET.SubElement(frbr_work, "FRBRcountry", value="me")
 
     references = ET.SubElement(meta, "references", source="#system")
-    ET.SubElement(references, "TLCOrganization", eId="parliament", 
-                  showAs="Skupština Crne Gore", 
+    ET.SubElement(references, "TLCOrganization", eId="parliament",
+                  showAs="Skupština Crne Gore",
                   href="/akn/me/organization/parliament")
 
     body = ET.SubElement(act, "body")
 
-    for clan_num, stavi in clanovi.items():
+    for clan_num in sorted(parsed.keys(), key=lambda x: int(x)):
+        info = parsed[clan_num]
         article = ET.SubElement(body, "article", eId=f"clan{clan_num}")
         ET.SubElement(article, "num").text = f"Član {clan_num}"
-        ET.SubElement(article, "heading").text = "Naziv člana"
+        ET.SubElement(article, "heading").text = info.get("heading", "Naziv člana")
 
-        for stav_num, stav_content in stavi.items():
+        for stav_num in sorted(info["stavi"].keys(), key=lambda x: int(x)):
+            stav_content = info["stavi"][stav_num]
             paragraph = ET.SubElement(article, "paragraph", eId=f"clan{clan_num}_stav{stav_num}")
             ET.SubElement(paragraph, "num").text = f"({stav_num})"
             content_el = ET.SubElement(paragraph, "content")
-            set_content_with_refs(content_el, stav_content["text"], clan_num, exclude_points=True)
+            set_content_with_refs(content_el, stav_content.get("text", ""), clan_num, exclude_points=True)
 
-            for tacka_num, tacka_text in stav_content["tacke"].items():
+            for tacka_num in sorted(stav_content.get("tacke", {}).keys(), key=lambda x: int(x)):
+                tacka_text = stav_content["tacke"][tacka_num]
                 point = ET.SubElement(paragraph, "point", eId=f"clan{clan_num}_stav{stav_num}_t{tacka_num}")
                 ET.SubElement(point, "num").text = f"{tacka_num})"
                 point_content = ET.SubElement(point, "content")
-                set_content_with_refs(point_content, tacka_text, clan_num)
+                set_content_with_refs(point_content, tacka_text, clan_num, exclude_points=False)
 
     return akn
 
-def main():
-    for pdf_file, clan_numbers in laws_data.items():
-        law_name = os.path.splitext(pdf_file)[0]
-        law_name = law_name.replace("data", "xml").lower()
-        print(f"Parsing {pdf_file}...")
-        clanovi = parse_law(pdf_file, clan_numbers)
-        xml_tree = build_akn_xml(law_name, clanovi)
+# -------------------------------------------------
+def main(pdf_path=PDF_PATH, out_xml=OUT_XML):
+    if not os.path.exists(pdf_path):
+        raise FileNotFoundError(f"PDF not found: {pdf_path}")
 
-        tree = ET.ElementTree(xml_tree)
-        out_file = f"{law_name}.xml"
-        tree.write(out_file, encoding="utf-8", xml_declaration=True)
-        print(f"Saved: {out_file}")
+    print(f"Parsing PDF: {pdf_path}")
+    parsed = parse_full_law(pdf_path)
+    print(f"Found {len(parsed)} articles (Član).")
 
+    law_name = os.path.splitext(out_xml)[0].replace("\\", "/")
+    print("Building Akoma Ntoso XML...")
+    akn_tree = build_akn_xml_from_parsed(parsed, law_name)
+
+    def indent(elem, level=0):
+        i = "\n" + level*"    "
+        if len(elem):
+            if not elem.text or not elem.text.strip():
+                elem.text = i + "    "
+            for child in elem:
+                indent(child, level+1)
+            if not child.tail or not child.tail.strip():
+                child.tail = i
+        else:
+            if level and (not elem.tail or not elem.tail.strip()):
+                elem.tail = i
+    indent(akn_tree)
+
+    os.makedirs(os.path.dirname(out_xml), exist_ok=True)
+    ET.ElementTree(akn_tree).write(out_xml, encoding="utf-8", xml_declaration=True)
+    print(f"Written XML to: {out_xml}")
+
+# -------------------------------------------------
 if __name__ == "__main__":
     main()

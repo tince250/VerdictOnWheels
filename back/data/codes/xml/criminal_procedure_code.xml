@@ -16,9 +16,747 @@
             </references>
         </meta>
         <body>
+            <article eId="clan12">
+                <num>Član 12</num>
+                <heading>Pravo na odbranu</heading>
+                <paragraph eId="clan12_stav1">
+                    <num>(1)</num>
+                    <content>Okrivljeni ima pravo da se brani sam ili uz stručnu pomoć branioca koga sam izabere iz reda advokata.</content>
+                </paragraph>
+                <paragraph eId="clan12_stav2">
+                    <num>(2)</num>
+                    <content>Okrivljeni ima pravo da njegovom saslušanju prisustvuje branilac.</content>
+                </paragraph>
+                <paragraph eId="clan12_stav3">
+                    <num>(3)</num>
+                    <content>Prije prvog saslušanja, okrivljeni će se poučiti o pravu da uzme branioca, da se sa braniocem dogovori o načinu odbrane i da branilac može da prisustvuje njegovom saslušanju. On će biti upozoren da sve što izjavi može biti upotrijebljeno protiv njega kao dokaz.</content>
+                </paragraph>
+                <paragraph eId="clan12_stav4">
+                    <num>(4)</num>
+                    <content>Ako okrivljeni sam ne uzme branica, postaviće mu se branilac po službenoj dužnosti, kad je to određeno ovim zakonikom.</content>
+                </paragraph>
+                <paragraph eId="clan12_stav5">
+                    <num>(5)</num>
+                    <content>Okrivljenom se mora obezbijediti dovoljno vremena i mogućnosti za pripremanje odbrane.</content>
+                </paragraph>
+                <paragraph eId="clan12_stav6">
+                    <num>(6)</num>
+                    <content>Osumnjičeni ima pravo na branioca u skladu sa ovim zakonikom. Pravo na rehabilitaciju i naknadu štete</content>
+                </paragraph>
+            </article>
+            <article eId="clan17">
+                <num>Član 17</num>
+                <heading>Slobodna ocjena dokaza i pravno nevaljani dokazi</heading>
+                <paragraph eId="clan17_stav1">
+                    <num>(1)</num>
+                    <content>Sud i državni tužilac postojanje ili nepostojanje činjenica, na kojima zasniva odluku, cijeni po svom slobodnom uvjerenju.</content>
+                </paragraph>
+                <paragraph eId="clan17_stav2">
+                    <num>(2)</num>
+                    <content>Sudska odluka se ne može zasnivati na dokazima koji su pribavljeni povredama ljudskih prava i osnovnih sloboda zajemčenih Ustavom ili potvrđenim međunarodnim ugovorima, ili na dokazima koji su pribavljeni povredama odredaba krivičnog postupka, kao i drugim dokazima za koje se iz njih saznalo, niti se takvi dokazi mogu koristiti u postupku.</content>
+                </paragraph>
+            </article>
+            <article eId="clan24">
+                <num>Član 24</num>
+                <heading>Sastav suda i funkcionalna sudska nadležnost</heading>
+                <paragraph eId="clan24_stav1">
+                    <num>(1)</num>
+                    <content>U prvom stepenu sud sudi u vijeću sastavljenom od troje sudija, osim u slučaju iz <ref href="#clan24_stav2">stava 2</ref>.
+                    </content>
+                </paragraph>
+                <paragraph eId="clan24_stav2">
+                    <num>(2)</num>
+                    <content>Za krivična djela za koja je kao glavna kazna propisana novčana kazna ili kazna zatvora do deset godina u prvom stepenu sudi sudija pojedinac, osim za djela organizovanog kriminala ili ako zakonom nije drukčije određeno.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav3">
+                    <num>(3)</num>
+                    <content>U drugom stepenu sud sudi u vijeću sastavljenom od troje sudija.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav4">
+                    <num>(4)</num>
+                    <content>U trećem stepenu sud sudi u vijeću sastavljenom od pet sudija.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav5">
+                    <num>(5)</num>
+                    <content>U izviđaju i istrazi učestvuje sudija za istragu prvostepenog suda u skladu sa ovim zakonikom.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav6">
+                    <num>(6)</num>
+                    <content>Predsjednik suda i predsjednik vijeća odlučuju u slučajevima propisanim ovim zakonikom.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav7">
+                    <num>(7)</num>
+                    <content>Prvostepeni sudovi, u vijeću sastavljenom od troje sudija, odlučuju o žalbama protiv rješenja sudije za istragu i drugih rješenja kad je to određeno ovim zakonikom, donose odluke u prvom stepenu van glavnog pretresa, sprovode postupak i donose presudu po zahtjevu kojim se traži izvršenje krivične presude stranog suda i stavljaju predloge u slučajevima propisanim ovim zakonikom ili drugim zakonom.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav8">
+                    <num>(8)</num>
+                    <content>Ako se kod suda koji sudi samo u prvom stepenu, zbog nedovoljnog broja sudija, ne može obrazovati vijeće iz <ref href="#clan24_stav7">stava 7</ref>, poslove iz nadležnosti tog vijeća vršiće vijeće neposredno višeg suda.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav9">
+                    <num>(9)</num>
+                    <content>Odredbe ovog zakonika koje se odnose na prava i dužnosti predsjednika vijeća i vijeća shodno se primjenjuju i na sudiju pojedinca kad sudi u skladu sa odredbama ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav10">
+                    <num>(10)</num>
+                    <content>Sud odlučuje o zahtjevu za zaštitu zakonitosti u vijeću sastavljenom od pet sudija.</content>
+                </paragraph>
+                <paragraph eId="clan24_stav11">
+                    <num>(11)</num>
+                    <content>U slučajevima koji nijesu propisani u <ref href="#clan24_stav3">st. 3</ref>,                        <ref href="#clan24_stav4">4</ref> i <ref href="#clan24_stav10">10</ref> ovog člana, sudovi višeg stepena odlučuju u vijeću sastavljenom od troje sudija, ako ovim zakonikom nije drukčije određeno.</content>
+                </paragraph>
+            </article>
+            <article eId="clan31">
+                <num>Član 31</num>
+                <heading>Spajanje postupka</heading>
+                <paragraph eId="clan31_stav1">
+                    <num>(1)</num>
+                    <content>Ako je isto lice okrivljeno za više krivičnih djela, od kojih je za neka nadležan niži, a za neka viši sud, nadležan je viši sud, a u slučaju kad su nadležni sudovi iste vrste, nadležan je sud koji je po optužbi ovlašćenog tužioca prvi započeo postupak, a u izviđaju i istrazi nadležan je sud koji je prvi preduzeo radnju po predlogu tužioca.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav2">
+                    <num>(2)</num>
+                    <content>Po odredbi <ref href="#clan31_stav1">stava 1</ref> određuje se nadležnost i u slučaju kad je oštećeni istovremeno učinio krivično djelo prema okrivljenom.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav3">
+                    <num>(3)</num>
+                    <content>Za saizvršioce je nadležan, po pravilu, sud koji je kao nadležan za jednog od njih prvi započeo postupak.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav4">
+                    <num>(4)</num>
+                    <content>Sud koji je nadležan za izvršioca krivičnog djela nadležan je, po pravilu, i za saučesnike, prikrivače, lica koja su pomogla učiniocu poslije izvršenog krivičnog djela, kao i za lica koja nijesu prijavila pripremanje ili izvršenje krivičnog djela ili učinioca.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav5">
+                    <num>(5)</num>
+                    <content>U slučajevima iz <ref href="#clan31_stav1">st. 1</ref> do <ref href="#clan31_stav4">4</ref> ovog člana sprovešće se, po pravilu, jedinstveni postupak i donijeti jedna presuda.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav6">
+                    <num>(6)</num>
+                    <content>Sud može odlučiti da se sprovede jedinstveni postupak i donese jedna presuda i u slučaju kad je više lica okrivljeno za više krivičnih djela, ali samo ako između izvršenih krivičnih djela postoji međusobna veza i isti dokazi. Ako je za neka od ovih krivičnih djela nadležan viši sud, a za neka niži sud, jedinstveni postupak može se sprovesti samo pred višim sudom.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav7">
+                    <num>(7)</num>
+                    <content>Sud može odlučiti da se sprovede jedinstveni postupak i donese jedna presuda ako se pred istim sudom vode odvojeni postupci protiv istog lica za više krivičnih djela ili protiv više lica za isto krivično djelo.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav8">
+                    <num>(8)</num>
+                    <content>O spajanju postupka odlučuje sud koji je nadležan za sprovođenje jedinstvenog postupka. Protiv rješenja kojim je određeno spajanje postupka ili kojim je odbijen predlog za spajanje postupka nije dozvoljena žalba.</content>
+                </paragraph>
+                <paragraph eId="clan31_stav9">
+                    <num>(9)</num>
+                    <content>Odredbe o spajanju postupka shodno se primjenjuju i kad u izviđaju i istrazi postupak vodi državni tužilac koji odlučuje o sprovođenju jedinstvenog postupka.</content>
+                </paragraph>
+            </article>
+            <article eId="clan57">
+                <num>Član 57</num>
+                <heading>Pretpostavljeni odustanak od privatne tužbe i povraćaj u pređašnje stanje</heading>
+                <paragraph eId="clan57_stav1">
+                    <num>(1)</num>
+                    <content>Ako privatni tužilac ne dođe na glavni pretres iako je uredno pozvan ili mu se poziv nije mogao uručiti zbog neprijavljivanja sudu promjene adrese ili boravišta smatraće se da je odustao od tužbe, osim u slučaju iz <ref href="#clan457">člana 457</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan57_stav2">
+                    <num>(2)</num>
+                    <content>Predsjednik vijeća dozvoliće povraćaj u pređašnje stanje privatnom tužiocu koji, iz opravdanog razloga, nije mogao da dođe na glavni pretres ili da blagovremeno obavijesti sud o promjeni adrese ili boravišta, ako u roku od osam dana po prestanku smetnje podnese molbu za povraćaj u pređašnje stanje.</content>
+                </paragraph>
+                <paragraph eId="clan57_stav3">
+                    <num>(3)</num>
+                    <content>Poslije proteka tri mjeseca od dana propuštanja podnošenja molbe iz <ref href="#clan57_stav2">stava 2</ref> ne može se tražiti povraćaj u pređašnje stanje.</content>
+                </paragraph>
+                <paragraph eId="clan57_stav4">
+                    <num>(4)</num>
+                    <content>Protiv rješenja kojim se dozvoljava povraćaj u pređašnje stanje nije dozvoljena žalba.</content>
+                </paragraph>
+                <paragraph eId="clan57_stav5">
+                    <num>(5)</num>
+                    <content>Rješenje o obustavi postupka doneseno u slučaju iz <ref href="#clan57_stav1">stava 1</ref> stupa na pravnu snagu kad isteknu rokovi iz <ref href="#clan57_stav2">st. 2</ref> i <ref href="#clan57_stav3">3</ref> ovog člana, ako privatni tužilac u tim rokovima ne podnese molbu za povraćaj u pređašnje stanje ili kad rješenje kojim se molba odbija postane pravosnažno.</content>
+                </paragraph>
+            </article>
+            <article eId="clan58">
+                <num>Član 58</num>
+                <heading>Pravo upoznavanja sa dokaznim materijalom i pravo predlaganja dokaza</heading>
+                <paragraph eId="clan58_stav1">
+                    <num>(1)</num>
+                    <content>Oštećeni ima pravo da u toku istrage ukaže na sve činjenice i da predlaže dokaze koji su od važnosti za krivičnu stvar i njegov imovinskopravni zahtjev.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav2">
+                    <num>(2)</num>
+                    <content>Na glavnom pretresu oštećeni i privatni tužilac imaju pravo da predlažu dokaze, postavljaju pitanja optuženom, svjedocima i vještacima, da iznose primjedbe i objašnjenja u pogledu njihovih iskaza i da daju druge izjave i predloge.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav3">
+                    <num>(3)</num>
+                    <content>Oštećeni, oštećeni kao tužilac i privatni tužilac imaju pravo da razmatraju spise i razgledaju predmete koji služe kao dokaz. Oštećenom se može uskratiti razmatranje spisa do donošenja naredbe o sprovođenju istrage ili dok ne bude saslušan kao svjedok.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav4">
+                    <num>(4)</num>
+                    <content>Oštećeni koji je žrtva krivičnog djela protiv polne slobode ima pravo da ga sasluša i postupak vodi sudija istog pola, ako to omogućava kadrovski sastav suda.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav5">
+                    <num>(5)</num>
+                    <content>Državni tužilac i predsjednik vijeća upoznaće oštećenog i privatnog tužioca sa pravima iz <ref href="#clan58_stav1">st. 1</ref> do <ref href="#clan58_stav4">4</ref> ovog člana.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav6">
+                    <num>(6)</num>
+                    <content>Kad se krivični postupak vodi za krivično djelo za koje je propisana kazna zatvora preko tri godine, a oštećeni prema svom imovnom stanju ne može snositi troškove zastupanja, na njegov zahtjev može mu se postaviti punomoćnik ako je zastupanje oštećenog od strane punomoćnika u interesu pravičnosti. Ako je oštećeni maloljetno lice, sud će u toku cijelog krivičnog postupka po službenoj dužnosti cijeniti da li je potrebno da mu se postavi punomoćnik.</content>
+                </paragraph>
+                <paragraph eId="clan58_stav7">
+                    <num>(7)</num>
+                    <content>Pravo na pravnu pomoć oštećeni ostvaruje u skladu sa posebnim zakonom.</content>
+                </paragraph>
+            </article>
+            <article eId="clan59">
+                <num>Član 59</num>
+                <heading>Oštećeni kao tužilac (supsidijarni tužilac)</heading>
+                <paragraph eId="clan59_stav1">
+                    <num>(1)</num>
+                    <content>Kad državni tužilac nađe da nema osnova da preduzme gonjenje za krivično djelo za koje se goni po službenoj dužnosti ili da nema osnova da preduzme gonjenje protiv nekog od prijavljenih saučesnika dužan je da, u roku od osam dana, o tome obavijesti oštećenog, uputi ga da može sam preduzeti gonjenje i dostavi mu rješenje o odbacivanju krivične prijave, osim u slučajevima iz <ref href="#clan272_stav6">člana 272 stav 6</ref> i <ref href="#clan273">člana 273</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav2">
+                    <num>(2)</num>
+                    <content>Na način iz <ref href="#clan59_stav1">stava 1</ref> postupiće državni tužilac kad donese naredbu o obustavi istrage i sud kad donese rješenje o obustavi postupka zbog odustanka državnog tužioca od optužbe.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav3">
+                    <num>(3)</num>
+                    <content>Oštećeni ima pravo da preduzme, odnosno nastavi gonjenje, u roku od 30 dana od dana kad je primio obavještenje iz <ref href="#clan59_stav1">stava 1</ref>, a u slučaju da je podnio pritužbu u skladu sa <ref href="#clan271a">članom 271a</ref> ovog zakonika, u roku od 30 dana od dana prijema obavještenja neposredno višeg državnog tužilaštva o postupanju po pritužbi.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav4">
+                    <num>(4)</num>
+                    <content>Ako je državni tužilac odustao od optužnice, oštećeni može, preuzimajući gonjenje, ostati pri podignutoj optužnici ili podići novu.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav5">
+                    <num>(5)</num>
+                    <content>Oštećeni koji nije obaviješten da državni tužilac nije preduzeo gonjenje ili da je odustao od gonjenja može svoju izjavu da preduzima ili nastavlja postupak dati pred nadležnim sudom, u roku od šest mjeseci od dana kad je državni tužilac odbacio prijavu ili obustavio istragu, odnosno od dana kad je doneseno rješenje o obustavi postupka.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav6">
+                    <num>(6)</num>
+                    <content>Obavještenje državnog tužioca, odnosno suda da oštećeni može preduzeti gonjenje sadrži i pouku koje radnje može preduzeti radi ostvarivanja ovog prava.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav7">
+                    <num>(7)</num>
+                    <content>Ako oštećeni kao tužilac umre u toku roka za preduzimanje gonjenja ili u toku postupka, njegov bračni drug, lice sa kojim živi u vanbračnoj zajednici, djeca, roditelji, usvojenici, usvojitelji, braća i sestre mogu, u roku od tri mjeseca od dana njegove smrti, preduzeti gonjenje, odnosno dati izjavu da postupak nastavljaju.</content>
+                </paragraph>
+                <paragraph eId="clan59_stav8">
+                    <num>(8)</num>
+                    <content>Rješenje o obustavi postupka zbog odustanka državnog tužioca od gonjenja stupa na pravnu snagu po isteku rokova iz <ref href="#clan59_stav3">st. 3</ref>,                        <ref href="#clan59_stav5">5</ref> i <ref href="#clan59_stav7">7</ref> ovog člana, ako oštećeni, odnosno lica iz <ref href="#clan59_stav7">stava 7</ref> u propisanim rokovima nijesu preuzela gonjenje.</content>
+                </paragraph>
+            </article>
+            <article eId="clan60">
+                <num>Član 60</num>
+                <heading>Nastavljanje gonjenja na glavnom pretresu i povraćaj u pređašnje stanje</heading>
+                <paragraph eId="clan60_stav1">
+                    <num>(1)</num>
+                    <content>Kad državni tužilac odustane od optužnice na glavnom pretresu, oštećeni je dužan da se odmah izjasni da li hoće da nastavi gonjenje.</content>
+                </paragraph>
+                <paragraph eId="clan60_stav2">
+                    <num>(2)</num>
+                    <content>Ako oštećeni nije prisutan na glavnom pretresu, a uredno je pozvan ili mu se poziv nije mogao uručiti zbog neprijavljivanja sudu promjene adrese ili boravišta smatraće se da neće da nastavi gonjenje.</content>
+                </paragraph>
+                <paragraph eId="clan60_stav3">
+                    <num>(3)</num>
+                    <content>Predsjednik vijeća prvostepenog suda dozvoliće povraćaj u pređašnje stanje oštećenom koji nije uredno pozvan ili je uredno pozvan, a iz opravdanih razloga nije mogao doći na glavni pretres na kojem je donesena presuda kojom se optužba odbija zbog odustanka državnog tužioca od optužnice, ako oštećeni u roku od osam dana od prijema presude podnese molbu za povraćaj u pređašnje stanje i ako u toj molbi izjavi da nastavlja gonjenje. U ovom slučaju zakazaće se ponovo glavni pretres i presudom donesenom na osnovu novog glavnog pretresa ukinuće se ranija presuda. Ako uredno pozvani oštećeni kao tužilac ne dođe na novi glavni pretres ili prije početka pretresa izjavi da odustaje od gonjenja, ranija presuda ostaje na snazi.</content>
+                </paragraph>
+                <paragraph eId="clan60_stav4">
+                    <num>(4)</num>
+                    <content>Na povraćaj u pređašnje stanje iz <ref href="#clan60_stav3">stava 3</ref> primijeniće se odredbe <ref href="#clan57">člana 57</ref>
+                        <ref href="#clan60_stav3">st. 3</ref> i <ref href="#clan60_stav4">4</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan60_stav5">
+                    <num>(5)</num>
+                    <content>Presuda kojom se optužba odbija, izrečena u slučaju iz <ref href="#clan60_stav2">stava 2</ref>, postaje pravosnažna kad isteknu rokovi za podnošenje molbe za povraćaj u pređašnje stanje.</content>
+                </paragraph>
+            </article>
+            <article eId="clan64">
+                <num>Član 64</num>
+                <heading>Ostvarivanje prava preko punomoćnika</heading>
+                <paragraph eId="clan64_stav1">
+                    <num>(1)</num>
+                    <content>Privatni tužilac, oštećeni i oštećeni kao tužilac, kao i njihovi zakonski zastupnici mogu svoja prava u postupku vršiti i preko punomoćnika.</content>
+                </paragraph>
+                <paragraph eId="clan64_stav2">
+                    <num>(2)</num>
+                    <content>Sud je dužan da lica iz <ref href="#clan64_stav1">stava 1</ref> pouči o pravu na punomoćnika.</content>
+                </paragraph>
+                <paragraph eId="clan64_stav3">
+                    <num>(3)</num>
+                    <content>Oštećenom kao tužiocu, kad se postupak vodi po njegovoj optužbi za krivično djelo za koje se po zakonu može izreći kazna zatvora u trajanju preko pet godina, može se, na njegovo traženje, postaviti punomoćnik, ako je to u interesu postupka i ako oštećeni kao tužilac, prema svom imovnom stanju, ne može snositi troškove zastupanja. O zahtjevu odlučuje predsjednik vijeća, a punomoćnika postavlja predsjednik suda iz reda advokata.</content>
+                </paragraph>
+            </article>
+            <article eId="clan70">
+                <num>Član 70</num>
+                <heading>Postavljanje branioca zbog slabog imovnog stanja</heading>
+                <paragraph eId="clan70_stav1">
+                    <num>(1)</num>
+                    <content>Kad ne postoje uslovi za obaveznu odbranu, a to zahtijevaju interesi pravičnosti, okrivljenom se, na njegov zahtjev, može postaviti branilac ako prema svom imovnom stanju ne može snositi troškove odbrane.</content>
+                </paragraph>
+                <paragraph eId="clan70_stav2">
+                    <num>(2)</num>
+                    <content>O zahtjevu odlučuje u izviđaju i istrazi nadležni državni tužilac, a nakon podignute optužbe predsjednik suda, po redosljedu sa spiska Advokatske komore. Razrješenje postavljenog branioca</content>
+                </paragraph>
+            </article>
+            <article eId="clan100">
+                <num>Član 100</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan100_stav1">
+                    <num>(1)</num>
+                    <content>Kad se okrivljeni prvi put saslušava, pitaće se za ime i prezime, jedinstveni matični broj, nadimak, ako ga ima, ime i prezime roditelja, djevojačko porodično ime majke, gdje je rođen, gdje stanuje, dan, mjesec i godinu rođenja, čiji je državljanin, da li razumije crnogorski jezik i koji je njegov jezik, kojeg je zanimanja, kakve su mu porodične prilike, da li je pismen, koju je školu završio, kakvog je imovnog stanja, da li je, kad i zašto osuđivan, da li je i kad je izrečenu kaznu izdržao, da li se protiv njega vodi postupak za drugo krivično djelo, a ako je maloljetan, ko mu je zakonski zastupnik.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav2">
+                    <num>(2)</num>
+                    <content>Okrivljeni će se upozoriti da je dužan da se odazove pozivu i da odmah saopšti svaku promjenu adrese ili namjeru da promijeni boravište, kao i na posljedice ako po tome ne postupi. Nakon toga okrivljenom će se saopštiti prava iz <ref href="#clan8_stav2">člana 8 stav 2</ref> i <ref href="#clan12_stav3">člana 12 stav 3</ref> ovog zakonika, zašto se okrivljuje, osnovi sumnje koji stoje protiv njega, da nije dužan da iznese odbranu, niti da odgovara na postavljena pitanja i da njegov iskaz može biti korišćen kao dokaz u postupku i bez njegove saglasnosti i pozvaće se da, ako želi, iznese odbranu.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav3">
+                    <num>(3)</num>
+                    <content>Izjašnjenje okrivljenog o pravima iz <ref href="#clan100_stav2">stava 2</ref> zapisnički će se konstatovati, a okrivljeni će izjašnjenje potvrditi potpisom.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav4">
+                    <num>(4)</num>
+                    <content>Okrivljeni se saslušava usmeno. Okrivljeni ima pravo da se prilikom saslušanja koristi svojim zabilješkama.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav5">
+                    <num>(5)</num>
+                    <content>Prilikom saslušanja treba okrivljenom omogućiti da se u neometanom izlaganju izjasni o svim okolnostima koje ga terete i da iznese činjenice koje mu služe za odbranu.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav6">
+                    <num>(6)</num>
+                    <content>Kad okrivljeni završi svoj iskaz, postaviće mu se pitanja ukoliko je potrebno da se popune praznine ili otklone protivrječnosti i nejasnoće u njegovom izlaganju.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav7">
+                    <num>(7)</num>
+                    <content>Okrivljeni se saslušava uz puno uvažavanje njegove ličnosti.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav8">
+                    <num>(8)</num>
+                    <content>Prema okrivljenom ne smiju se upotrijebiti sila, prijetnja, obmana, iznuda, iznurivanje ili druga sredstva iz <ref href="#clan154_stav5">člana 154 stav 5</ref> ovog zakonika, da bi se došlo do njegove izjave, priznanja ili činjenja koje bi se protiv njega moglo upotrijebiti kao dokaz.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav9">
+                    <num>(9)</num>
+                    <content>Okrivljeni može biti saslušan u odsustvu branioca, ako se izričito odrekao tog prava, a odbrana nije obavezna, ako branilac nije prisutan iako je obaviješten o saslušanju saglasno članu 282 ovog zakonika, a ne postoji mogućnost da okrivljeni uzme drugog branioca ili ako za prvo saslušanje okrivljeni nije obezbijedio prisustvo branioca ni u roku od 24 časa od časa kad je poučen o ovom pravu u skladu sa <ref href="#clan12_stav3">članom 12 stav 3</ref> ovog zakonika, osim u slučaju obavezne odbrane.</content>
+                </paragraph>
+                <paragraph eId="clan100_stav10">
+                    <num>(10)</num>
+                    <content>Ako je postupljeno suprotno odredbama <ref href="#clan100_stav8">st. 8</ref> i <ref href="#clan100_stav9">9</ref> ovog člana ili okrivljeni nije poučen o pravima iz <ref href="#clan100_stav2">stava 2</ref> ili ako izjave okrivljenog iz <ref href="#clan100_stav9">stava 9</ref> o potrebi prisustvovanja branioca nijesu unesene u zapisnik, takav iskaz se ne može koristiti kao dokaz u krivičnom postupku.</content>
+                </paragraph>
+            </article>
+            <article eId="clan109">
+                <num>Član 109</num>
+                <heading>Lica oslobođena od dužnosti svjedočenja</heading>
+                <paragraph eId="clan109_stav1">
+                    <num>(1)</num>
+                    <content>Ako ovim zakonikom nije drukčije određeno, oslobođeni su od dužnosti svjedočenja:</content>
+                    <point eId="clan109_stav1_t1">
+                        <num>1)</num>
+                        <content>bračni drug okrivljenog i lice sa kojim okrivljeni živi u vanbračnoj zajednici;</content>
+                    </point>
+                    <point eId="clan109_stav1_t2">
+                        <num>2)</num>
+                        <content>srodnici okrivljenog po krvi u pravoj liniji, srodnici u pobočnoj liniji zaključno do trećeg stepena, kao i srodnici po tazbini zaključno do drugog stepena;</content>
+                    </point>
+                    <point eId="clan109_stav1_t3">
+                        <num>3)</num>
+                        <content>usvojenik i usvojilac okrivljenog, odnosno hranilac i hranjenik okrivljenog.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan109_stav2">
+                    <num>(2)</num>
+                    <content>Oslobađanje od dužnosti svjedočenja iz <ref href="#clan109_stav1">stava 1</ref> ne odnosi se na lica koja su pozvana da svjedoče u postupku za krivično djelo zapuštanje i zlostavljanje maloljetnog lica, nasilje u porodici ili u porodičnoj zajednici i rodoskrvnjenje, kad je oštećeno maloljetno lice.</content>
+                </paragraph>
+                <paragraph eId="clan109_stav3">
+                    <num>(3)</num>
+                    <content>Organ koji vodi postupak dužan je da lica iz <ref href="#clan109_stav1">stava 1</ref>, prije njihovog saslušanja ili čim sazna za njihov odnos sa okrivljenim, upozori da ne moraju svjedočiti. Lica iz <ref href="#clan109_stav1">stava 1</ref> će se upozoriti da će se njihov iskaz, ako odluče da svjedoče, bez obzira na njihovu kasniju odluku, moći koristiti kao dokaz. Upozorenje i odgovor se unose u zapisnik.</content>
+                </paragraph>
+                <paragraph eId="clan109_stav4">
+                    <num>(4)</num>
+                    <content>Ako ima osnova da lice uskrati svjedočenje u odnosu na jednog od okrivljenih, to lice je oslobođeno dužnosti svjedočenja i u odnosu na druge okrivljene, ako se njegov iskaz, prema prirodi stvari, ne može ograničiti samo na druge okrivljene. </content>
+                </paragraph>
+            </article>
+            <article eId="clan111">
+                <num>Član 111</num>
+                <heading>Uskraćivanje davanja odgovora na pojedina pitanja</heading>
+                <paragraph eId="clan111_stav1">
+                    <num>(1)</num>
+                    <content>Ako ovim zakonikom nije drukčije određeno, svjedok ima pravo da ne odgovara na pojedina pitanja kad je vjerovatno da bi time izložio sebe ili lica iz <ref href="#clan109_stav1">člana 109 stav 1</ref> ovog zakonika teškoj sramoti ili krivičnom gonjenju, o čemu je sud dužan da ga upozna. Pozivanje svjedoka</content>
+                </paragraph>
+            </article>
+            <article eId="clan113">
+                <num>Član 113</num>
+                <heading>Način saslušanja svjedoka i upozorenja suda</heading>
+                <paragraph eId="clan113_stav1">
+                    <num>(1)</num>
+                    <content>Svjedoci se saslušavaju odvojeno i bez prisustva ostalih svjedoka. Svjedok je dužan da odgovore daje usmeno.</content>
+                </paragraph>
+                <paragraph eId="clan113_stav2">
+                    <num>(2)</num>
+                    <content>Svjedok će se prethodno opomenuti da je dužan da govori istinu i da ne smije ništa prećutati i upozoriti da davanje lažnog iskaza predstavlja krivično djelo. Svjedok će se upoznati sa pravom iz <ref href="#clan111">člana 111</ref> ovog zakonika, što će se unijeti u zapisnik.</content>
+                </paragraph>
+                <paragraph eId="clan113_stav3">
+                    <num>(3)</num>
+                    <content>Nakon opomene i upozorenja iz <ref href="#clan113_stav2">stava 2</ref>, svjedok će se pitati za ime i prezime, ime oca ili majke, zanimanje, boravište, mjesto i godinu rođenja i njegov odnos sa okrivljenim i oštećenim. Svjedok će se upozoriti da je dužan da o promjeni adrese ili boravišta obavijesti sud.</content>
+                </paragraph>
+                <paragraph eId="clan113_stav4">
+                    <num>(4)</num>
+                    <content>Prilikom saslušanja maloljetnog lica, naročito ako je ono oštećeno krivičnim djelom, postupiće se obazrivo da saslušanje ne bi štetno uticalo na psihičko stanje maloljetnog lica. Ako je to potrebno, saslušanje maloljetnog lica obaviće se uz pomoć psihologa ili drugog stručnog lica.</content>
+                </paragraph>
+                <paragraph eId="clan113_stav5">
+                    <num>(5)</num>
+                    <content>Oštećeni koji je žrtva krivičnog djela protiv polne slobode, kao i dijete koje se saslušava kao svjedok ima pravo da svjedoči u odvojenoj prostoriji pred sudijom i zapisničarem, a tužilac, okrivljeni i branilac da gledaju prenos iz druge prostorije, uz mogućnost da postavljaju pitanja svjedoku, o čemu ih je sud dužan poučiti, što se zapisnički konstatuje.</content>
+                </paragraph>
+                <paragraph eId="clan113_stav6">
+                    <num>(6)</num>
+                    <content>Sud može odlučiti da se odredba <ref href="#clan113_stav5">stava 5</ref> primijeni i na svjedočenje oštećenog koji je žrtva diskriminacije.</content>
+                </paragraph>
+            </article>
+            <article eId="clan115">
+                <num>Član 115</num>
+                <heading>Prepoznavanje lica ili predmeta</heading>
+                <paragraph eId="clan115_stav1">
+                    <num>(1)</num>
+                    <content>Ako je potrebno da se utvrdi da li svjedok prepoznaje određeno lice ili predmet koje je opisao, pokazaće mu se to lice, zajedno sa drugim njemu nepoznatim licima čije su osnovne osobine slične onima kakve je opisao, odnosno taj predmet, zajedno sa predmetima iste ili slične vrste, nakon čega će se zatražiti da izjavi da li lice ili predmet prepoznaje sa sigurnošću i da, u slučaju potvrdnog odgovora, na prepoznato lice ili predmet ukaže.</content>
+                </paragraph>
+                <paragraph eId="clan115_stav2">
+                    <num>(2)</num>
+                    <content>U izviđaju i istrazi prepoznavanje sprovodi državni tužilac koji će prethodno opomenuti i upozoriti svjedoka u skladu sa članom 113 <ref href="#clan115_stav2">stav 2</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan115_stav3">
+                    <num>(3)</num>
+                    <content>Radnja prepoznavanja će se obaviti tako da lice koje je predmet prepoznavanja ne može da vidi svjedoka, niti svjedok može da vidi to lice prije nego što se pristupi prepoznavanju.</content>
+                </paragraph>
+                <paragraph eId="clan115_stav4">
+                    <num>(4)</num>
+                    <content>O toku prepoznavanja i izjavama svjedoka sastavlja se zapisnik i sačinjava zajednički foto snimak lica ili predmeta koji se prepoznaju, a po potrebi se može izvršiti i audio ili audiovizuelno snimanje. Saslušanje svjedoka preko tumača</content>
+                </paragraph>
+            </article>
+            <article eId="clan154">
+                <num>Član 154</num>
+                <heading>Tjelesni pregled i druge radnje</heading>
+                <paragraph eId="clan154_stav1">
+                    <num>(1)</num>
+                    <content>Tjelesni pregled osumnjičenog ili okrivljenog preduzeće se i bez njegovog pristanka, ako je potrebno da se utvrde činjenice važne za krivični postupak. Tjelesni pregled drugih lica može se, bez njihovog pristanka, preduzeti samo onda ako se mora utvrditi da li se na njihovom tijelu nalazi određen trag ili posljedica krivičnog djela.</content>
+                </paragraph>
+                <paragraph eId="clan154_stav2">
+                    <num>(2)</num>
+                    <content>Uzimanju uzorka krvi i preduzimanju drugih medicinskih radnji koje su po pravilu medicinske nauke neophodne radi analize i utvrđivanja drugih činjenica važnih za krivični postupak može se pristupiti i bez pristanka lica koje se pregleda, izuzev ako bi zbog toga nastupila šteta po njegovo zdravlje.</content>
+                </paragraph>
+                <paragraph eId="clan154_stav3">
+                    <num>(3)</num>
+                    <content>Uzorci pljuvačke radi sprovođenja DNK analize mogu se uzimati kad je to potrebno u cilju identifikacije lica ili u cilju poređenja sa drugim biološkim tragovima i drugim DNK profilima, i za to nije potreban pristanak lica niti se ta radnja može smatrati opasnom po zdravlje.</content>
+                </paragraph>
+                <paragraph eId="clan154_stav4">
+                    <num>(4)</num>
+                    <content>Ako se lica iz <ref href="#clan154_stav1">stava 1</ref> protive sprovođenju radnji iz <ref href="#clan154_stav1">st. 1</ref>, 2 i 3 ovog člana, one se mogu preduzeti samo po naredbi nadležnog suda.</content>
+                </paragraph>
+                <paragraph eId="clan154_stav5">
+                    <num>(5)</num>
+                    <content>Zabranjeno je prema osumnjičenom, okrivljenom ili svjedoku primjenjivati medicinske intervencije ili im davati sredstva kojima bi se uticalo na njihovu svijest i volju prilikom davanja iskaza. Vještačenje poslovnih knjiga</content>
+                </paragraph>
+            </article>
+            <article eId="clan157">
+                <num>Član 157</num>
+                <heading>Vrste mjera tajnog nadzora i uslovi za njihovu primjenu</heading>
+                <paragraph eId="clan157_stav1">
+                    <num>(1)</num>
+                    <content>Ako postoje osnovi sumnje da je neko lice samo ili u saučesništvu sa drugim izvršilo, vrši ili se priprema za vršenje krivičnih djela iz <ref href="#clan158">člana 158</ref> ovog zakonika, a na drugi način se ne mogu prikupiti dokazi ili bi njihovo prikupljanje zahtijevalo nesrazmjerni rizik ili ugrožavanje života ljudi, prema tim licima mogu se odrediti mjere tajnog nadzora:</content>
+                    <point eId="clan157_stav1_t1">
+                        <num>1)</num>
+                        <content>tajni nadzor i snimanje telefonskih razgovora i drugih komunikacija na daljinu;</content>
+                    </point>
+                    <point eId="clan157_stav1_t2">
+                        <num>2)</num>
+                        <content>presrijetanje, prikupljanje i snimanje računarskih podataka;</content>
+                    </point>
+                    <point eId="clan157_stav1_t3">
+                        <num>3)</num>
+                        <content>ulazak u prostorije radi tajnog fotografisanja i video i audio snimanja u prostorijama;</content>
+                    </point>
+                    <point eId="clan157_stav1_t4">
+                        <num>4)</num>
+                        <content>tajno praćenje i video i audio snimanje lica i predmeta.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan157_stav2">
+                    <num>(2)</num>
+                    <content>Ako postoje osnovi sumnje da je neko lice samo ili u saučesništvu sa drugim izvršilo, vrši ili se priprema za vršenje krivičnih djela iz <ref href="#clan158">člana 158</ref> ovog zakonika, a okolnosti slučaja ukazuju da će se sa najmanje povreda prava na privatnost prikupiti dokazi, prema tim licima mogu se odrediti mjere tajnog nadzora:</content>
+                    <point eId="clan157_stav2_t1">
+                        <num>1)</num>
+                        <content>simulirana kupovina predmeta ili lica i simulirano davanje i primanje mita;</content>
+                    </point>
+                    <point eId="clan157_stav2_t2">
+                        <num>2)</num>
+                        <content>pružanje simuliranih poslovnih usluga ili sklapanje simuliranih pravnih poslova;</content>
+                    </point>
+                    <point eId="clan157_stav2_t3">
+                        <num>3)</num>
+                        <content>osnivanje fiktivnog privrednog društva;</content>
+                    </point>
+                    <point eId="clan157_stav2_t4">
+                        <num>4)</num>
+                        <content>praćenje prevoza i isporuke predmeta krivičnog djela;</content>
+                    </point>
+                    <point eId="clan157_stav2_t5">
+                        <num>5)</num>
+                        <content>snimanje razgovora uz prethodno informisanje i saglasnost jednog od učesnika razgovora;</content>
+                    </point>
+                    <point eId="clan157_stav2_t6">
+                        <num>6)</num>
+                        <content>angažovanje prikrivenog isljednika i saradnika.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan157_stav3">
+                    <num>(3)</num>
+                    <content>Mjere iz <ref href="#clan157_stav1_t1">stava 1 tač. 1</ref> ovog člana, mogu se narediti i prema licu za koje postoje osnovi sumnje da izvršiocu ili od izvršioca krivičnih djela iz <ref href="#clan158">člana 158</ref> ovog zakonika prenosi poruke u vezi sa krivičnim djelom, odnosno da se izvršilac služi njihovim priključcima na telefon ili drugim sredstvima za elektronsku komunikaciju.</content>
+                </paragraph>
+                <paragraph eId="clan157_stav4">
+                    <num>(4)</num>
+                    <content>U slučaju kad se ne raspolaže saznanjima o identitetu učinioca krivičnog djela, mjera iz <ref href="#clan157_stav1_t4">stava 1 tač. 4</ref> ovog člana, može se odrediti prema predmetu krivičnog djela.</content>
+                </paragraph>
+                <paragraph eId="clan157_stav5">
+                    <num>(5)</num>
+                    <content>Protiv lica koja izvršavaju mjere iz stava 2 <ref href="#clan157_t1">tač. 1</ref>, 2, 5 i 6 ovog člana, neće se preduzeti krivično gonjenje za radnje koje predstavljaju pomaganje u vršenju krivičnog djela, ako se to čini radi obezbjeđivanja podataka i dokaza za uspješno vođenje krivičnog postupka.</content>
+                </paragraph>
+                <paragraph eId="clan157_stav6">
+                    <num>(6)</num>
+                    <content>Izvršenje mjera iz <ref href="#clan157_stav2_t1">stava 2 tač. 1</ref>, 2, 5 i 6 ovog člana, ne smije da predstavlja podstrekavanje na izvršenje krivičnog djela.</content>
+                </paragraph>
+                <paragraph eId="clan157_stav7">
+                    <num>(7)</num>
+                    <content>Mjere iz <ref href="#clan157_stav1_t1">stava 1 tač. 1</ref> do 4 ovog člana i mjere iz <ref href="#clan157_stav2_t5">stava 2 tač. 5</ref> i 6 ovog člana mogu se narediti i prema licu za kojim je raspisana međunarodna potjernica ili prema trećem licu za koje postoji osnov sumnje daje u direktnom kontaktu sa licem za kojim je raspisana međunarodna potjernica. Krivična djela za koja mogu biti naređene mjere tajnog nadzora</content>
+                </paragraph>
+            </article>
+            <article eId="clan158">
+                <num>Član 158</num>
+                <heading>Krivična djela za koja mogu biti naređene mjere tajnog nadzora</heading>
+                <paragraph eId="clan158_stav1">
+                    <num>(1)</num>
+                    <content>Mjere iz <ref href="#lan157">člana 157</ref> ovog zakonika mogu se narediti za krivična djela:</content>
+                    <point eId="clan158_stav1_t1">
+                        <num>1)</num>
+                        <content>za koja se može izreći kazna zatvora u trajanju od deset godina ili teža kazna;</content>
+                    </point>
+                    <point eId="clan158_stav1_t2">
+                        <num>2)</num>
+                        <content>sa elementima organizovanog kriminala;</content>
+                    </point>
+                    <point eId="clan158_stav1_t3">
+                        <num>3)</num>
+                        <content>prouzrokovanje lažnog stečaja, zloupotreba procjene, primanje mita, davanje mita, protivzakoniti uticaj, zloupotreba službenog položaja, kao i zloupotreba ovlašćenja u privredi i pre- vara u službi za koja je propisana kazna zatvora od osam godina ili teža kazna;</content>
+                    </point>
+                    <point eId="clan158_stav1_t4">
+                        <num>4)</num>
+                        <content>otmica, iznuda, ucjena, posredovanje u vršenju prostitucije, prikazivanje pornografskog materijala, zelenaštvo, utaja poreza i doprinosa, krijumčarenje, nedozvoljeno prerađivanje, odlaganje i skladištenje opasnih materija, napad na službeno lice u vršenju službene dužnosti, sprječavanje dokazivanja, kriminalno udruživanje, odavanje tajnih podataka, povreda tajnosti postupka, pranje novca, falsifikovanje novca, falsifikovanje isprave, falsifikovanje službene isprave, pravljenje, nabavljanje i davanje drugom sredstava i materijala za falsifikovanje, učestvovanje u stranim oružanim formacijama, dogovaranje ishoda takmičenja, nedozvoljeno držanje oružja i eksplozivnih materija, nedozvoljen prelaz državne granice i krijumčarenje ljudi;</content>
+                    </point>
+                    <point eId="clan158_stav1_t5">
+                        <num>5)</num>
+                        <content>protiv bezbjednosti računarskih podataka. Nadležnost za određivanje i trajanje mjera tajnog nadzora</content>
+                    </point>
+                </paragraph>
+            </article>
+            <article eId="clan161">
+                <num>Član 161</num>
+                <heading>Pravno nevaljani dokazi</heading>
+                <paragraph eId="clan161_stav1">
+                    <num>(1)</num>
+                    <content>Ako je prilikom preduzimanja mjera iz <ref href="#clan157">člana 157</ref> ovog zakonika postupljeno suprotno odredbama ovog zakonika ili naredbi sudije za istragu, odnosno državnog tužioca, sudska odluka se ne može zasnivati na prikupljenim podacima.</content>
+                </paragraph>
+                <paragraph eId="clan161_stav2">
+                    <num>(2)</num>
+                    <content>Odredbe <ref href="#clan211_stav1">člana 211 stav 1</ref>,                        <ref href="#clan293_stav6">člana 293 stav 6</ref>,                        <ref href="#clan356_stav4">člana 356 stav 4</ref> i <ref href="#clan392_stav4">člana 392 stav 4</ref> ovog zakonika, shodno će se primjenjivati i na snimke sačinjene suprotno odredbama ovog člana i <ref href="#clan157">člana 157</ref> ovog zakonika.</content>
+                </paragraph>
+            </article>
+            <article eId="clan166">
+                <num>Član 166</num>
+                <heading>Vrste mjera</heading>
+                <paragraph eId="clan166_stav1">
+                    <num>(1)</num>
+                    <content>Ako postoje okolnosti koje ukazuju da bi okrivljeni mogao pobjeći, sakriti se, otići u nepoznato mjesto ili u drugu državu ili ometati vođenje krivičnog postupka, sud može, po službenoj dužnosti, po predlogu tužioca ili oštećenog, obrazloženim rješenjem okrivljenom izreći jednu ili više mjera nadzora.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav2">
+                    <num>(2)</num>
+                    <content>Mjere nadzora su:</content>
+                    <point eId="clan166_stav2_t1">
+                        <num>1)</num>
+                        <content>zabrana napuštanja stana;</content>
+                    </point>
+                    <point eId="clan166_stav2_t2">
+                        <num>2)</num>
+                        <content>zabrana napuštanja boravišta;</content>
+                    </point>
+                    <point eId="clan166_stav2_t3">
+                        <num>3)</num>
+                        <content>zabrana posjećivanja određenog mjesta ili područja;</content>
+                    </point>
+                    <point eId="clan166_stav2_t4">
+                        <num>4)</num>
+                        <content>obaveza povremenog javljanja određenom državnom organu;</content>
+                    </point>
+                    <point eId="clan166_stav2_t5">
+                        <num>5)</num>
+                        <content>zabrana pristupa ili sastajanja sa određenim licima;</content>
+                    </point>
+                    <point eId="clan166_stav2_t6">
+                        <num>6)</num>
+                        <content>privremeno oduzimanje putne isprave;</content>
+                    </point>
+                    <point eId="clan166_stav2_t7">
+                        <num>7)</num>
+                        <content>privremeno oduzimanje vozačke dozvole.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan166_stav3">
+                    <num>(3)</num>
+                    <content>Sprovođenje mjera nadzora iz <ref href="#clan166_stav2_t1">stava 2 tač. 1</ref> do <ref href="#clan166_stav2_t5">5</ref> ovog člana može se kontrolisati elektronskim nadzorom. Kontrola elektronskim nadzorom uređuje se posebnim propisom Vlade Crne Gore (u daljem tekstu: Vlada).</content>
+                </paragraph>
+                <paragraph eId="clan166_stav4">
+                    <num>(4)</num>
+                    <content>Mjerama nadzora ne može se ograničiti pravo okrivljenom da živi u svom stanu, da se nesmetano viđa sa članovima porodice i bliskim srodnicima, osim kad se postupak vodi zbog krivičnog djela učinjenog na štetu člana porodice ili bliskih srodnika, kao i da obavlja svoju profesionalnu djelatnost, osim ako se postupak vodi zbog krivičnog djela učinjenog u vezi sa obavljanjem te djelatnosti.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav5">
+                    <num>(5)</num>
+                    <content>Mjerama nadzora ne može se ograničiti pravo okrivljenog da nesmetano kontaktira sa svojim braniocem.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav6">
+                    <num>(6)</num>
+                    <content>Okrivljeni će se u rješenju o izricanju mjera iz <ref href="#clan166_stav2">stava 2</ref> upozoriti da se protiv njega može odrediti pritvor ako prekrši izrečenu mjeru.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav7">
+                    <num>(7)</num>
+                    <content>U toku istrage mjere iz <ref href="#clan166_stav2">stava 2</ref> određuje i ukida sudija za istragu, a poslije podignute optužnice predsjednik vijeća, u roku od 24 časa od podnošenja predloga iz <ref href="#clan166_stav1">stava 1</ref>. Ako mjeru nije predložio državni tužilac, a postupak se vodi za krivično djelo za koje se goni po službenoj dužnosti, prije donošenja rješenja kojim se mjera izriče ili ukida, sud će zatražiti mišljenje državnog tužioca. Sud će na isti način postupiti i kad nađe da treba ukinuti mjeru predloženu od strane državnog tužioca.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav8">
+                    <num>(8)</num>
+                    <content>Mjere iz <ref href="#clan166_stav2">stava 2</ref> mogu trajati dok za to postoji potreba, a najduže do pravosnažnosti presude. Sudija za istragu ili predsjednik vijeća dužan je da svaka dva mjeseca ispita da li je primijenjena mjera potrebna.</content>
+                </paragraph>
+                <paragraph eId="clan166_stav9">
+                    <num>(9)</num>
+                    <content>Protiv rješenja kojim se određuje, produžava ili ukida mjera iz <ref href="#clan166_stav2">stava 2</ref> stranke mogu izjaviti žalbu, a državni tužilac i protiv rješenja kojim je njegov predlog za primjenu mjere odbijen. O žalbi odlučuje vijeće iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika, u roku od tri dana od prijema žalbe. Žalba ne zadržava izvršenje rješenja.</content>
+                </paragraph>
+            </article>
+            <article eId="clan175">
+                <num>Član 175</num>
+                <heading>Razlozi za određivanje pritvora</heading>
+                <paragraph eId="clan175_stav1">
+                    <num>(1)</num>
+                    <content>Kad postoji osnovana sumnja da je određeno lice učinilo krivično djelo, pritvor protiv tog lica može se odrediti, ako:</content>
+                    <point eId="clan175_stav1_t1">
+                        <num>1)</num>
+                        <content>se krije ili ako se ne može utvrditi njegov identitet ili ako postoje druge okolnosti koje ukazuju na opasnost od bjekstva;</content>
+                    </point>
+                    <point eId="clan175_stav1_t2">
+                        <num>2)</num>
+                        <content>postoje okolnosti koje ukazuju da će uništiti, sakriti, izmijeniti ili falsifikovati dokaze ili tragove krivičnog djela ili da će ometati postupak uticanjem na svjedoke, saučesnike ili prikrivače;</content>
+                    </point>
+                    <point eId="clan175_stav1_t3">
+                        <num>3)</num>
+                        <content>postoje okolnosti koje ukazuju da će ponoviti krivično djelo ili dovršiti pokušano krivično djelo ili da će učiniti krivično djelo kojim prijeti;</content>
+                    </point>
+                    <point eId="clan175_stav1_t4">
+                        <num>4)</num>
+                        <content>je pritvor nužan radi nesmetanog vođenja postupka, a u pitanju je krivično djelo za koje se po zakonu može izreći kazna zatvora od deset godina ili teža kazna i koje je posebno teško zbog načina izvršenja ili posljedica;</content>
+                    </point>
+                    <point eId="clan175_stav1_t5">
+                        <num>5)</num>
+                        <content>uredno pozvani optuženi izbjegava da dođe na glavni pretres.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan175_stav2">
+                    <num>(2)</num>
+                    <content>U slučaju iz <ref href="#clan175_stav1_t1">stava 1 tač. 1</ref> ovog člana, pritvor koji je određen samo zbog toga što se ne može utvrditi identitet lica traje dok se identitet utvrdi. U slučaju iz <ref href="#clan175_stav1_t2">stava 1 tač. 2</ref> ovog člana, pritvor će se ukinuti čim se obezbijede dokazi zbog kojih je pritvor određen. Pritvor koji je određen po stavu 1 <ref href="#clan175_t5">tač. 5</ref> ovog člana može trajati do objavljivanja presude. Određivanje pritvora, sadržaj rješenja o pritvoru i pravo žalbe na rješenje</content>
+                </paragraph>
+            </article>
+            <article eId="clan179">
+                <num>Član 179</num>
+                <heading>Određivanje i kontrola pritvora nakon podizanja optužnice</heading>
+                <paragraph eId="clan179_stav1">
+                    <num>(1)</num>
+                    <content>Nakon predaje optužnice sudu, do završetka glavnog pretresa, pritvor se može, po pribavljenom mišljenju državnog tužioca, kad se postupak vodi po njegovoj optužbi, odrediti ili ukinuti samo rješenjem vijeća. Od podizanja optužnice do donošenja prvostepene presude pritvor može trajati najduže tri godine.</content>
+                </paragraph>
+                <paragraph eId="clan179_stav2">
+                    <num>(2)</num>
+                    <content>Vijeće je dužno, po predlogu stranaka ili po službenoj dužnosti, da ispita da li još postoje razlozi za pritvor i da donese rješenje o produženju ili ukidanju pritvora, po isteku svakih trideset dana do stupanja optužnice na pravnu snagu, a svaka dva mjeseca nakon stupanja optužnice na pravnu snagu.</content>
+                </paragraph>
+                <paragraph eId="clan179_stav3">
+                    <num>(3)</num>
+                    <content>Žalba na rješenje iz <ref href="#clan179_stav1">st. 1</ref> i <ref href="#clan179_stav2">2</ref> ovog člana ne zadržava izvršenje rješenja i o njoj sud odlučuje u roku od tri dana.</content>
+                </paragraph>
+                <paragraph eId="clan179_stav4">
+                    <num>(4)</num>
+                    <content>Protiv rješenja vijeća iz <ref href="#clan179_stav1">stava 1</ref>, kojim se odbija predlog za određivanje ili ukidanje pritvora, žalba nije dozvoljena.</content>
+                </paragraph>
+            </article>
+            <article eId="clan208">
+                <num>Član 208</num>
+                <heading>Sadržaj zapisnika</heading>
+                <paragraph eId="clan208_stav1">
+                    <num>(1)</num>
+                    <content>U zapisnik se unosi naziv državnog organa pred kojim se preduzima radnja, ime i prezime službenog lica koje radnju preduzima, mjesto gdje se preduzima radnja, dan i čas kad je radnja započeta i završena, imena i prezimena prisutnih lica i u kom svojstvu prisustvuju, kao i naznačenje krivičnog predmeta po kojem se preduzima radnja.</content>
+                </paragraph>
+                <paragraph eId="clan208_stav2">
+                    <num>(2)</num>
+                    <content>Zapisnik treba da sadrži bitne podatke o toku i sadržini preduzete radnje. U zapisnik se, u obliku pripovijedanja, unosi samo bitna sadržina datih iskaza i izjava. Pitanja se unose u zapisnik samo ako je potrebno da se razumije odgovor. Kad sud ocijeni da je potrebno ili na zahtjev stranaka ili branioca, u zapisnik će se doslovno unijeti pitanje koje je postavljeno i odgovor koji je dat. U slučaju zloupotrebe,ovo pravo im se može uskratiti. Ako su prilikom preduzimanja radnje oduzeti predmeti ili spisi, to će se navesti u zapisnik, a oduzete stvari će se priključiti zapisniku ili će se navesti gdje se nalaze na čuvanju.</content>
+                </paragraph>
+                <paragraph eId="clan208_stav3">
+                    <num>(3)</num>
+                    <content>Tok glavnog pretresa može se bilježiti i stenografski. Stenografske zabilješke će se, u roku od 48 časova, prevesti, pregledati, potpisati od strane stenografa i priključiti spisima.</content>
+                </paragraph>
+                <paragraph eId="clan208_stav4">
+                    <num>(4)</num>
+                    <content>Prilikom preduzimanja radnji kao što je uviđaj, pretresanje stana ili lica ili prepoznavanje lica ili predmeta iz <ref href="#clan115">člana 115</ref> ovog zakonika, u zapisnik će se unijeti i podaci koji su važni s obzirom na prirodu takve radnje ili za utvrđivanje istovjetnosti pojedinih predmeta (opis, mjere i veličina predmeta ili tragova, stavljanje oznake na predmetima i dr.), a ako su napravljene skice, crteži, planovi, fotografije, filmski snimci i slično, to će se navesti u zapisnik i priključiti zapisniku. Uredno vođenje zapisnika, preinačenja, ispravke i dodaci u zapisniku</content>
+                </paragraph>
+            </article>
+            <article eId="clan211">
+                <num>Član 211</num>
+                <heading>Izdvajanje zapisnika</heading>
+                <paragraph eId="clan211_stav1">
+                    <num>(1)</num>
+                    <content>Kad je ovim zakonikom određeno da se na iskazu okrivljenog, svjedoka ili vještaka ili zapisniku o pretresanju stana ili podacima iz <ref href="#clan161">člana 161</ref> ovog zakonika ne može zasnovati sudska odluka, sudija za istragu će, po službenoj dužnosti ili na predlog stranaka, donijeti rješenje o njihovom izdvajanju iz spisa odmah, a najkasnije do završetka istrage, odnosno podnošenja neposredne optužnice iz <ref href="#clan288">člana 288</ref> ovog zakonika. Protiv ovog rješenja dozvoljena je posebna žalba.</content>
+                </paragraph>
+                <paragraph eId="clan211_stav2">
+                    <num>(2)</num>
+                    <content>Po pravosnažnosti rješenja izdvojeni zapisnici se zatvaraju u poseban omot i čuvaju kod sudije za istragu odvojeno od ostalih spisa i ne mogu se razgledati, niti se mogu koristiti u postupku.</content>
+                </paragraph>
+                <paragraph eId="clan211_stav3">
+                    <num>(3)</num>
+                    <content>Poslije završene istrage, odnosno podnošenja neposredne optužnice iz <ref href="#clan288">člana 288</ref> ovog zakonika, sudija za istragu će postupiti po odredbama <ref href="#clan211_stav1">st. 1</ref> i <ref href="#clan211_stav2">2</ref> ovog člana i sa svim obavještenjima koja su, u smislu <ref href="#clan259_stav1">člana 259 stav 1</ref> i <ref href="#clan271_stav3">člana 271 stav 3</ref> ovog zakonika, državnom tužiocu i policiji dali građani. Kad državni tužilac podigne optužnicu bez sprovođenja istrage, dostaviće spise u kojima se nalaze ovakva obavještenja sudiji za istragu, koji će postupiti po odredbama ovog člana.</content>
+                </paragraph>
+            </article>
+            <article eId="clan212">
+                <num>Član 212</num>
+                <heading>Audio i audiovizuelno snimanje</heading>
+                <paragraph eId="clan212_stav1">
+                    <num>(1)</num>
+                    <content>Sve preduzete radnje u toku krivičnog postupka se, po pravilu, audio ili audiovizuelno snimaju. O tome će se prethodno obavijestiti lice koje se saslušava i poučiti da ima pravo da zatraži reprodukovanje snimka radi provjeravanja date izjave.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav2">
+                    <num>(2)</num>
+                    <content>Vijeće može, iz opravdanih razloga, da odluči da se pojedini dijelovi glavnog pretresa ne snimaju.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav3">
+                    <num>(3)</num>
+                    <content>Snimak mora da sadrži podatke iz <ref href="#clan208_stav1">člana 208 stav 1</ref> ovog zakonika, podatke potrebne za identifikaciju lica čija se izjava snima i podatak u kom svojstvu se saslušava. Kad se snimaju izjave više lica mora se obezbijediti da se iz snimka može jasno razaznati ko je dao izjavu.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav4">
+                    <num>(4)</num>
+                    <content>Na zahtjev saslušanog lica snimak će se odmah reprodukovati, a ispravke ili objašnjenja tog lica će se snimiti.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav5">
+                    <num>(5)</num>
+                    <content>U zapisnik o dokaznoj radnji unijeće se da je izvršeno snimanje, ko je snimanje izvršio, da je lice koje se saslušava prethodno obaviješteno o snimanju, da je snimak reprodukovan i gdje se snimak čuva, ako nije priložen spisima predmeta.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav6">
+                    <num>(6)</num>
+                    <content>Državni tužilac, sudija za istragu ili predsjednik vijeća može odrediti da se snimak u cjelini ili djelimično prepiše. U tom slučaju on će prepis pregledati, ovjeriti i priključiti zapisniku o preduzimanju dokazne radnje.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav7">
+                    <num>(7)</num>
+                    <content>Snimak se čuva u sudu do vremena do kojeg se čuva i krivični spis.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav8">
+                    <num>(8)</num>
+                    <content>Državni tužilac, sudija za istragu ili predsjednik vijeća može dozvoliti da učesnici postupka koji imaju opravdani interes, pomoću magnetofona, snime izvođenje dokazne radnje.</content>
+                </paragraph>
+                <paragraph eId="clan212_stav9">
+                    <num>(9)</num>
+                    <content>Snimci iz <ref href="#clan212_stav1">st. 1</ref> do <ref href="#clan212_stav8">8</ref> ovog člana ne mogu se javno prikazivati bez prethodno pribavljene pisane saglasnosti stranaka i učesnika snimljene radnje.</content>
+                </paragraph>
+            </article>
             <article eId="clan226">
                 <num>Član 226</num>
-                <heading>Naziv člana</heading>
+                <heading>Vrste troškova</heading>
                 <paragraph eId="clan226_stav1">
                     <num>(1)</num>
                     <content>Troškovi krivičnog postupka su izdaci učinjeni povodom krivičnog postupka od njegovog pokretanja do njegovog završetka i izdaci za preduzete dokazne radnje prije istrage.</content>
@@ -69,7 +807,7 @@
                 </paragraph>
                 <paragraph eId="clan226_stav4">
                     <num>(4)</num>
-                    <content>Troškovi iz stava 2 tač. 1 do 6 ovog člana, kao i nagrada i nužni izdaci postavljenog branioca, postavljenog punomoćnika oštećenog kao tužioca iz člana 64 stav 3, člana 69 stav 9 i člana 70 ovog zakonika i postavljenog punomoćnika oštećenog iz člana 58 stav 6 ovog zakonika, u postupku zbog krivičnih djela za koja se goni po službenoj dužnosti, isplaćuju se iz sredstava organa koji vodi krivični postupak po podnošenju zahtjeva za naknadu troškova, a nagrada postavljenom braniocu i punomoćniku nakon njihovog razrješenja.</content>
+                    <content>Troškovi iz <ref href="#clan226_stav2_t1">stava 2 tač. 1</ref> do <ref href="#clan226_stav2_t6">6</ref> ovog člana, kao i nagrada i nužni izdaci postavljenog branioca, postavljenog punomoćnika oštećenog kao tužioca iz <ref href="#clan64_stav3">člana 64 stav 3</ref> i <ref href="#clan70">člana 70</ref> ovog zakonika i postavljenog punomoćnika oštećenog iz <ref href="#clan58_stav6">člana 58 stav 6</ref> ovog zakonika, u postupku zbog krivičnih djela za koja se goni po službenoj dužnosti, isplaćuju se iz sredstava organa koji vodi krivični postupak po podnošenju zahtjeva za naknadu troškova, a nagrada postavljenom braniocu i punomoćniku nakon njihovog razrješenja.</content>
                 </paragraph>
                 <paragraph eId="clan226_stav5">
                     <num>(5)</num>
@@ -77,12 +815,12 @@
                 </paragraph>
                 <paragraph eId="clan226_stav6">
                     <num>(6)</num>
-                    <content>Troškovi prevođenja koji nastaju primjenom odredaba ovog zakonika o pravu stranaka, svjedoka i drugih lica koja učestvuju u postupku na upotrebu svog jezika, neće se naplaćivati od lica koja su po odredbama ovog zakonika dužna da naknade troškove krivičnog postupka. Odluka o troškovima</content>
+                    <content>Troškovi prevođenja koji nastaju primjenom odredaba ovog zakonika o pravu stranaka, svjedoka i drugih lica koja učestvuju u postupku na upotrebu svog jezika, neće se naplaćivati od lica koja su po odredbama ovog zakonika dužna da naknade troškove krivičnog postupka.</content>
                 </paragraph>
             </article>
             <article eId="clan227">
                 <num>Član 227</num>
-                <heading>Naziv člana</heading>
+                <heading>Odluka o troškovima</heading>
                 <paragraph eId="clan227_stav1">
                     <num>(1)</num>
                     <content>U presudi, kao i u odluci kojom se obustavlja krivični postupak, odnosno odbacuje optužnica, odlučiće se ko će snositi troškove postupka i koliko oni iznose.</content>
@@ -93,16 +831,16 @@
                 </paragraph>
                 <paragraph eId="clan227_stav3">
                     <num>(3)</num>
-                    <content>Kad je o troškovima krivičnog postupka iz stava 2 ovog člana odlučeno posebnim rješenjem, o žalbi protiv tog rješenja odlučuje vijeće iz člana 24 stav 7 ovog zakonika.</content>
+                    <content>Kad je o troškovima krivičnog postupka iz <ref href="#clan227_stav2">stava 2</ref> ovog člana odlučeno posebnim rješenjem, o žalbi protiv tog rješenja odlučuje vijeće iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika.</content>
                 </paragraph>
                 <paragraph eId="clan227_stav4">
                     <num>(4)</num>
-                    <content>Kad se krivični postupak ne pokrene ili se obustavi u istrazi, o troškovima odlučuje državni tužilac. Skrivljeni troškovi</content>
+                    <content>Kad se krivični postupak ne pokrene ili se obustavi u istrazi, o troškovima odlučuje državni tužilac.</content>
                 </paragraph>
             </article>
             <article eId="clan229">
                 <num>Član 229</num>
-                <heading>Naziv člana</heading>
+                <heading>Troškovi postupka kad je okrivljeni oglašen krivim</heading>
                 <paragraph eId="clan229_stav1">
                     <num>(1)</num>
                     <content>Kad sud okrivljenog oglasi krivim izreći će u presudi da je dužan da naknadi troškove krivičnog postupka, koji su unaprijed isplaćeni, kao i troškove privatnog tužioca, oštećenog kao tužioca, oštećenog i njihovih zakonskih zastupnika i nagradu i nužne izdatke njihovih punomoćnika.</content>
@@ -117,15 +855,15 @@
                 </paragraph>
                 <paragraph eId="clan229_stav4">
                     <num>(4)</num>
-                    <content>U odluci kojom rješava o troškovima sud može osloboditi okrivljenog od dužnosti da naknadi u cjelini ili djelimično troškove krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 i tačka 9 ovog zakonika, ako bi njihovim plaćanjem bilo dovedeno u pitanje izdržavanje okrivljenog ili lica koja je on dužan da izdržava. Ako se ove okolnosti utvrde poslije donošenja odluke o troškovima, predsjednik vijeća može, posebnim rješenjem, osloboditi okrivljenog od dužnosti naknade troškova krivičnog postupka. Troškovi postupka u slučaju obustave postupka, donošenja oslobađajuće ili odbijajuće presude</content>
+                    <content>U odluci kojom rješava o troškovima sud može osloboditi okrivljenog od dužnosti da naknadi u cjelini ili djelimično troškove krivičnog postupka iz <ref href="#clan225_stav2_t1">člana 226 stav 2 tač. 1</ref> do <ref href="#clan226_stav2_t6">6</ref> i <ref href="#clan226_stav2_t9">tačka 9</ref> ovog zakonika, ako bi njihovim plaćanjem bilo dovedeno u pitanje izdržavanje okrivljenog ili lica koja je on dužan da izdržava. Ako se ove okolnosti utvrde poslije donošenja odluke o troškovima, predsjednik vijeća može, posebnim rješenjem, osloboditi okrivljenog od dužnosti naknade troškova krivičnog postupka.</content>
                 </paragraph>
             </article>
             <article eId="clan230">
                 <num>Član 230</num>
-                <heading>Naziv člana</heading>
+                <heading> Troškovi postupka u slučaju obustave postupka, donošenja oslobađajuće ili odbijajuće presude</heading>
                 <paragraph eId="clan230_stav1">
                     <num>(1)</num>
-                    <content>Kad se krivični postupak obustavi ili kad se donese presuda kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija, u odluci o obustavi postupka, odnosno u presudi izreći će se da se troškovi krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 ovog zakonika, kao i nužni izdaci okrivljenog i nužni izdaci i nagrada branioca isplaćuju iz posebnog razdjela budžeta za rad sudova, osim u slučajevima iz <ref href="#clan230_stav2">st. 2</ref> i <ref href="#clan230_stav3">3</ref> ovog člana.</content>
+                    <content>Kad se krivični postupak obustavi ili kad se donese presuda kojom se okrivljeni oslobađa od optužbe ili kojom se optužba odbija, u odluci o obustavi postupka, odnosno u presudi izreći će se da se troškovi krivičnog postupka iz <ref href="#clan226_stav2_t1">člana 226 stav 2 tač. 1</ref> do <ref href="#clan226_stav2_t6">6</ref> ovog zakonika, kao i nužni izdaci okrivljenog i nužni izdaci i nagrada branioca isplaćuju iz posebnog razdjela budžeta za rad sudova, osim u slučajevima iz <ref href="#clan230_stav2">st. 2</ref> i <ref href="#clan230_stav3">3</ref> ovog člana.</content>
                 </paragraph>
                 <paragraph eId="clan230_stav2">
                     <num>(2)</num>
@@ -133,7 +871,7 @@
                 </paragraph>
                 <paragraph eId="clan230_stav3">
                     <num>(3)</num>
-                    <content>Privatni tužilac je dužan da naknadi troškove krivičnog postupka iz člana 226 stav 2 tač. 1 do 6 i tačka 8 ovog zakonika, nužne izdatke okrivljenog, kao i nužne izdatke i nagradu njegovog branioca, ako je postupak okončan presudom kojom se okrivljeni oslobađa od optužbe ili presudom kojom se optužba odbija ili rješenjem o obustavi postupka, osim ako je postupak obustavljen, odnosno ako je donesena presuda kojom se optužba odbija zbog smrti okrivljenog ili zbog toga što je nastupila zastarjelost krivičnog gonjenja usljed odugovlačenja postupka koje se ne može pripisati u krivicu privatnog tužioca. Ako je postupak obustavljen usljed odustanka od tužbe, okrivljeni i privatni tužilac mogu se poravnati u pogledu njihovih međusobnih troškova. Ako ima više privatnih tužilaca, svi će snositi troškove solidarno.</content>
+                    <content>Privatni tužilac je dužan da naknadi troškove krivičnog postupka iz <ref href="#clan226_stav2_t1">člana 226 stav 2 tač. 1</ref> do <ref href="#clan226_stav2_t6">6</ref> i <ref href="#clan226_stav2_t8">tačka 8</ref> ovog zakonika, nužne izdatke okrivljenog, kao i nužne izdatke i nagradu njegovog branioca, ako je postupak okončan presudom kojom se okrivljeni oslobađa od optužbe ili presudom kojom se optužba odbija ili rješenjem o obustavi postupka, osim ako je postupak obustavljen, odnosno ako je donesena presuda kojom se optužba odbija zbog smrti okrivljenog ili zbog toga što je nastupila zastarjelost krivičnog gonjenja usljed odugovlačenja postupka koje se ne može pripisati u krivicu privatnog tužioca. Ako je postupak obustavljen usljed odustanka od tužbe, okrivljeni i privatni tužilac mogu se poravnati u pogledu njihovih međusobnih troškova. Ako ima više privatnih tužilaca, svi će snositi troškove solidarno.</content>
                 </paragraph>
                 <paragraph eId="clan230_stav4">
                     <num>(4)</num>
@@ -141,16 +879,28 @@
                 </paragraph>
                 <paragraph eId="clan230_stav5">
                     <num>(5)</num>
-                    <content>O visini nužnih izdataka okrivljenog i nužnih izdataka i nagrade branioca odlučuje predsjednik vijeća posebnim rješenjem. O žalbi protiv tog rješenja odlučuje vijeće iz člana 24 stav 7 ovog zakonika.</content>
+                    <content>O visini nužnih izdataka okrivljenog i nužnih izdataka i nagrade branioca odlučuje predsjednik vijeća posebnim rješenjem. O žalbi protiv tog rješenja odlučuje vijeće iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika.</content>
                 </paragraph>
                 <paragraph eId="clan230_stav6">
                     <num>(6)</num>
-                    <content>Zahtjev za naknadu troškova iz stava 5 ovog člana podnosi se u roku od petnaest dana od dana prijema pravosnažne odluke iz stava 1 ovog člana. Nagrada i nužni izdaci branioca</content>
+                    <content>Zahtjev za naknadu troškova iz <ref href="#clan230_stav5">stava 5</ref> ovog člana podnosi se u roku od petnaest dana od dana prijema pravosnažne odluke iz stava 1 ovog člana. </content>
+                </paragraph>
+            </article>
+            <article eId="clan234">
+                <num>Član 234</num>
+                <heading>Predmet imovinskopravnog zahtjeva</heading>
+                <paragraph eId="clan234_stav1">
+                    <num>(1)</num>
+                    <content>Imovinskopravni zahtjev koji je nastao usljed izvršenja krivičnog djela raspraviće se na predlog lica iz <ref href="#clan235">člana 235</ref> ovog zakonika, ako se time ne bi znatno odugovlačio postupak.</content>
+                </paragraph>
+                <paragraph eId="clan234_stav2">
+                    <num>(2)</num>
+                    <content>Imovinskopravni zahtjev može se odnositi na naknadu štete, povraćaj stvari ili poništaj određenog pravnog posla. </content>
                 </paragraph>
             </article>
             <article eId="clan239">
                 <num>Član 239</num>
-                <heading>Naziv člana</heading>
+                <heading>Odluke o imovinskopravnom zahtjevu</heading>
                 <paragraph eId="clan239_stav1">
                     <num>(1)</num>
                     <content>O imovinskopravnom zahtjevu odlučuje sud.</content>
@@ -169,12 +919,290 @@
                 </paragraph>
                 <paragraph eId="clan239_stav5">
                     <num>(5)</num>
-                    <content>Sud može u toku krivičnog postupka ili po njegovom okončanju, bez obzira na vrstu odluke koju je donio, uputiti oštećenog, odnosno lice koje je podnijelo imovinskopravni zahtjev i okrivljenog da pokušaju da svoj sporni odnos koji je predmet tog zahtjeva riješe u postupku posredovanja u skladu sa zakonom kojim se uređuju pravila postupka posredovanja. Odluka o predaji stvari oštećenom</content>
+                    <content>Sud može u toku krivičnog postupka ili po njegovom okončanju, bez obzira na vrstu odluke koju je donio, uputiti oštećenog, odnosno lice koje je podnijelo imovinskopravni zahtjev i okrivljenog da pokušaju da svoj sporni odnos koji je predmet tog zahtjeva riješe u postupku posredovanja u skladu sa zakonom kojim se uređuju pravila postupka posredovanja.</content>
+                </paragraph>
+            </article>
+            <article eId="clan257">
+                <num>Član 257*</num>
+                <heading>Ovlašćenja i radnje policije u izviđaju</heading>
+                <paragraph eId="clan257_stav1">
+                    <num>(1)</num>
+                    <content>Ako postoje osnovi sumnje da je izvršeno krivično djelo za koje se goni po službenoj dužnosti, policija je dužna da obavijesti državnog tužioca i samoinicijativno ili po zahtjevu državnog tužioca preduzme potrebne mjere da se pronađe učinilac krivičnog djela, da se učinilac ili saučesnik ne sakrije ili ne pobjegne, da se otkriju i obezbijede tragovi krivičnog djela i predmeti koji mogu poslužiti kao dokaz, kao i da prikupi sva obavještenja koja bi mogla biti od koristi za uspješno vođenje krivičnog postupka.</content>
+                </paragraph>
+                <paragraph eId="clan257_stav2">
+                    <num>(2)</num>
+                    <content>U cilju ispunjenja dužnosti iz <ref href="#clan257_stav1">stava 1</ref> ovog člana, policija može da traži obavještenja od građana, primijeni poligrafsko testiranje, izvrši analiziranje glasa, izvrši antiteroristički pregled, ograniči kretanje odnosno pristup određenih lica na određenom prostoru za potrebno vrijeme, javno raspiše nagradu u cilju prikupljanja obavještenja, izvrši potreban pregled prevoznih sredstava, putnika i prtljaga, preduzme potrebne mjere u cilju pronalaženja lica, preduzme potrebne mjere u vezi sa utvrđivanjem identiteta lica i istovjetnosti predmeta, uzme uzorak za DNK analizu, raspiše potragu za licima i stvarima za kojima se traga, pregleda određene objekte i prostorije državnih organa, privrednih društava, drugih pravnih lica i preduzetnika u prisustvu odgovornog lica, ostvari uvid u njihovu dokumentaciju i po potrebi je oduzme, kao i da preduzme i druge potrebne radnje i mjere u skladu sa ovim zakonikom. O činjenicama i okolnostima koje su utvrđene prilikom preduzimanja pojedinih radnji, a mogu biti od interesa za krivični postupak, kao i o predmetima koji su pronađeni ili oduzeti sastaviće se zapisnik ili službena zabilješka. Izvršenje pojedinih radnji iz ovog stava policija može da zabilježi i uređajem za audio ili audiovizuelno snimanje i ovi snimci se prilažu zapisniku, odnosno službenoj zabilješci.</content>
+                </paragraph>
+                <paragraph eId="clan257_stav3">
+                    <num>(3)</num>
+                    <content>Prilikom uviđaja za krivično djelo protiv bezbjednosti javnog saobraćaja za koje postoje osnovi sumnje da je prouzrokovalo teške posljedice ili da je izvršeno sa umišljajem, policija može od osumnjičenog privremeno, a najduže do tri dana, oduzeti vozačku dozvolu.</content>
+                </paragraph>
+                <paragraph eId="clan257_stav4">
+                    <num>(4)</num>
+                    <content>Lice prema kojem je primijenjena neka od radnji ili mjera iz <ref href="#clan257_stav2">st. 2</ref> i <ref href="#clan257_stav3">3</ref> ovog člana ima pravo da podnese pritužbu nadležnom državnom tužiocu.</content>
+                </paragraph>
+            </article>
+            <article eId="clan258">
+                <num>Član 258</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan258_stav1">
+                    <num>(1)</num>
+                    <content>Ovlašćeni policijski službenik ima pravo da lice zatečeno na mjestu izvršenja krivičnog djela uputi državnom tužiocu ili da ga zadrži na mjestu izvršenja krivičnog djela do njegovog dolaska, ako bi to lice moglo dati podatke važne za krivični postupak i ako je vjerovatno da se njegovo saslušanje kasnije ne bi moglo izvršiti ili bi bilo skopčano sa znatnim odugovlačenjem ili drugim teškoćama. Zadržavanje ovog lica na mjestu izvršenja krivičnog djela ne može trajati duže od šest sati.</content>
+                </paragraph>
+                <paragraph eId="clan258_stav2">
+                    <num>(2)</num>
+                    <content>Kad je to neophodno radi utvrđivanja identiteta ili u drugim slučajevima od interesa za uspješno vođenje postupka, policija može fotografisati osumnjičenog i uzeti otiske njegovih prstiju, kao i preduzeti druge radnje potrebne za utvrđivanje identiteta, a uz prethodno odobrenje državnog tužioca i javno objaviti fotografiju osumnjičenog.</content>
+                </paragraph>
+                <paragraph eId="clan258_stav3">
+                    <num>(3)</num>
+                    <content>Ako je potrebno da se utvrdi od koga potiču otisci prstiju na pojedinim predmetima, policija može uzimati otiske prstiju od lica za koja postoji vjerovatnoća da su mogla doći u dodir s tim predmetima.</content>
+                </paragraph>
+                <paragraph eId="clan258_stav4">
+                    <num>(4)</num>
+                    <content>Lice prema kome je preduzeta neka od radnji iz ovog člana ima pravo da podnese pritužbu nadležnom državnom tužiocu ili neposredno višem organu policije. </content>
+                </paragraph>
+            </article>
+            <article eId="clan259">
+                <num>Član 259</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan259_stav1">
+                    <num>(1)</num>
+                    <content>Policija može pozivati građane radi prikupljanja obavještenja o krivičnom djelu i učiniocu. U pozivu se mora naznačiti razlog pozivanja i da građanin ima pravo da u prostorije policije dođe zajedno sa advokatom. Prinudno se može dovesti lice koje se nije odazvalo pozivu samo ako je u pozivu bilo na to upozoreno.</content>
+                </paragraph>
+                <paragraph eId="clan259_stav2">
+                    <num>(2)</num>
+                    <content>Prikupljanje obavještenja od strane policije od istog lica može trajati onoliko koliko je neophodno da se dobije potrebno obavještenje, a najduže šest sati.</content>
+                </paragraph>
+                <paragraph eId="clan259_stav3">
+                    <num>(3)</num>
+                    <content>Obavještenja od građana ne smiju se prikupljati prinudno niti uz obmanu ili iscrpljivanje, a policija mora da poštuje ličnost i dostojanstvo građana. Ako građanin odbije da pruži obavještenja on se ne može dalje zadržavati i u tom slučaju se ne primijenjuje pravilo o roku iz <ref href="#clan259_stav2">stava 2</ref>.
+                    </content>
+                </paragraph>
+                <paragraph eId="clan259_stav4">
+                    <num>(4)</num>
+                    <content>Ako pozvani građanin dođe u prostorije policije zajedno sa advokatom, policija će dopustiti da advokat prisustvuje prikupljanju obavještenja od građanina.</content>
+                </paragraph>
+                <paragraph eId="clan259_stav5">
+                    <num>(5)</num>
+                    <content>Službena zabilješka ili zapisnik o datom obavještenju pročitaće se licu koje je obavještenje dalo. To lice može staviti primjedbe koje je policija dužna da unese u službenu zabilješku ili zapisnik. Kopija službene zabilješke ili zapisnika o datom obavještenju izdaće se građaninu, ako to zahtijeva.</content>
+                </paragraph>
+                <paragraph eId="clan259_stav6">
+                    <num>(6)</num>
+                    <content>Građanin se može ponovo pozivati radi prikupljanja obavještenja o okolnostima drugog krivičnog djela ili učinioca, a radi prikupljanja obavještenja o istom krivičnom djelu može se ponovo pozvati uz saglasnost državnog tužioca.</content>
+                </paragraph>
+                <paragraph eId="clan259_stav7">
+                    <num>(7)</num>
+                    <content>Prilikom postupanja u skladu sa <ref href="#clan259_stav1">st. 1</ref> do <ref href="#clan259_stav6">6</ref> ovog člana policija ne može građane saslušavati u svojstvu okrivljenog, svjedoka ili vještaka.</content>
+                </paragraph>
+            </article>
+            <article eId="clan262">
+                <num>Član 262</num>
+                <heading>Saslušanje svjedoka u izviđaju</heading>
+                <paragraph eId="clan262_stav1">
+                    <num>(1)</num>
+                    <content>Ako u toku izviđaja državni tužilac ocijeni da je radi donošenja naredbe o sprovođenju istrage potrebno neko lice saslušati u svojstvu svjedoka, saslušanje će obaviti u skladu sa <ref href="#clan113">članom 113</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan262_stav2">
+                    <num>(2)</num>
+                    <content>Prilikom preduzimanja radnje iz <ref href="#clan262_stav1">stava 1</ref>, osumnjičenom ako je poznat i njegovom braniocu će se omogućiti da prisustvuju saslušanju, osim kad postoji opasnost od odlaganja ili to nije moguće iz drugih važnih razloga, pri čemu oni mogu postavljati pitanja svjedoku i iznositi svoje primjedbe.</content>
+                </paragraph>
+                <paragraph eId="clan262_stav3">
+                    <num>(3)</num>
+                    <content>O saslušanju svjedoka sastavlja se zapisnik koji potpisuje svjedok. U zapisniku će se navesti razlog zbog kojeg je saslušanje svjedoka izvršeno bez prisustva osumnjičenog i njegovog branioca. Tok saslušanja može se snimiti uređajem za audio, odnosno audiovizuelno snimanje. Zapisnik o saslušanju svjedoka se ne izdvaja iz spisa i može se koristiti kao dokaz u krivičnom postupku. </content>
+                </paragraph>
+            </article>
+            <article eId="clan271">
+                <num>Član 271</num>
+                <heading>Odbacivanje i dopuna krivične prijave</heading>
+                <paragraph eId="clan271_stav1">
+                    <num>(1)</num>
+                    <content>Državni tužilac će obrazloženim rješenjem odbaciti prijavu ako iz same prijave proističe da prijavljeno djelo nije krivično djelo, ili nije krivično djelo za koje se goni po službenoj dužnosti, ako je nastupila zastarjelost ili je djelo obuhvaćeno amnestijom ili pomilovanjem ili ako postoje druge okolnosti koje isključuju gonjenje.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav2">
+                    <num>(2)</num>
+                    <content>O odbacivanju krivične prijave obavijestiće se podnosilac krivične prijave, oštećeni u skladu sa <ref href="#clan59">članom 59</ref> ovog zakonika, kao i lice protiv koga je podnijeta krivična prijava, ako ono to zahtijeva. Oštećeni i podnosilac krivične prijave u obavještenju će se poučiti o pravu na podnošenje pritužbe na rješenje o odbacivanju krivične prijave.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav3">
+                    <num>(3)</num>
+                    <content>Ako državni tužilac iz same prijave ne može ocijeniti da li su vjerovatni navodi prijave ili ako podaci u prijavi ne pružaju dovoljno osnova ni za donošenje naredbe o sprovođenju istrage niti rješenja o odbacivanju prijave, a naročito ako je izvršilac nepoznat, državni tužilac će, sam ili posredstvom drugih organa, prikupiti potrebna obavještenja. U tu svrhu državni tužilac može pozvati podnosioca prijave, prijavljeno lice i druga lica za koja ocijeni da mogu pružiti relevantne podatke od značaja za donošenje odluke po prijavi. Ako nije u mogućnosti da to preduzme sam, državni tužilac će zahtijevati od policije da prikupi potrebna obavještenja i preduzme druge mjere radi otkrivanja krivičnog djela i učinioca u skladu sa <ref href="#clan257">čl. 257</ref>,                        <ref href="#clan258">258</ref> i <ref href="#clan259">259</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav4">
+                    <num>(4)</num>
+                    <content>Radi razjašnjenja određenih stručnih pitanja koja se postavljaju kod odlučivanja o krivičnoj prijavi, državni tužilac može zatražiti od lica odgovarajuće struke da mu o tim pitanjima da potrebna objašnjenja.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav5">
+                    <num>(5)</num>
+                    <content>Državni tužilac može uvijek tražiti da ga policija obavijesti o mjerama koje su preduzete. Policija je dužna da mu bez odlaganja odgovori.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav6">
+                    <num>(6)</num>
+                    <content>Ako i poslije preduzetih radnji iz <ref href="#clan271_stav3">st. 3</ref>,                        <ref href="#clan271_stav4">4</ref> i <ref href="#clan271_stav5">5</ref> ovog člana postoje neke od okolnosti iz stava 1 ovog člana ili ako ne postoji osnovana sumnja da je osumnjičeni izvršio krivično djelo za koje se goni po službenoj dužnosti, državni tužilac će odbaciti prijavu.</content>
+                </paragraph>
+                <paragraph eId="clan271_stav7">
+                    <num>(7)</num>
+                    <content>Državni tužilac i drugi državni organ, privredna društva i druga pravna lica dužni su da prilikom prikupljanja obavještenja, odnosno davanja podataka, postupaju obazrivo, vodeći računa da se ne naškodi časti i ugledu lica na koje se ovi podaci odnose.</content>
+                </paragraph>
+            </article>
+            <article eId="clan271a">
+                <num>Član 271a</num>
+                <heading>Pritužba na rješenje o odbacivanju krivične prijave</heading>
+                <paragraph eId="clan271a_stav1">
+                    <num>(1)</num>
+                    <content>Oštećeni ili podnosilac krivične prijave kad nema oštećenog ili je oštećeni nepoznat imaju pravo da, u roku od osam dana od dana prijema obavještenja iz <ref href="#clan271_stav2">člana 271 stav 2</ref> ovog zakonika, neposredno višem državnom tužilaštvu podnesu pritužbu kojom zahtijevaju preispitivanje rješenja o odbacivanju krivične prijave.</content>
+                </paragraph>
+                <paragraph eId="clan271a_stav2">
+                    <num>(2)</num>
+                    <content>Neposredno više državno tužilaštvo će o svom postupanju po pritužbi iz <ref href="#clan271a_stav1">stava 1</ref> obavijestiti oštećenog, odnosno podnosioca krivične prijave u roku od 30 dana od dana podnošenja pritužbe.</content>
+                </paragraph>
+            </article>
+            <article eId="clan272">
+                <num>Član 272</num>
+                <heading>Odlaganje krivičnog gonjenja</heading>
+                <paragraph eId="clan272_stav1">
+                    <num>(1)</num>
+                    <content>Državni tužilac može odložiti krivično gonjenje za krivična djela za koja je propisana novčana kazna ili kazna zatvora do pet godina kad nađe da ne bi bilo cjelishodno da se vodi krivični postupak, s obzirom na prirodu krivičnog djela i okolnosti pod kojima je učinjeno, raniji život učinioca i njegova lična svojstva, ako osumnjičeni prihvati ispunjenje jedne ili više od sljedećih obaveza:</content>
+                    <point eId="clan272_stav1_t1">
+                        <num>1)</num>
+                        <content>da otkloni štetnu posljedicu nastalu izvršenjem krivičnog djela ili da naknadi pričinjenu štetu;</content>
+                    </point>
+                    <point eId="clan272_stav1_t2">
+                        <num>2)</num>
+                        <content>da ispuni dospjele obaveze izdržavanja, odnosno druge obaveze utvrđene pravosnažnom sudskom odlukom;</content>
+                    </point>
+                    <point eId="clan272_stav1_t3">
+                        <num>3)</num>
+                        <content>da plati određeni novčani iznos u korist humanitarne organizacije, fonda ili javne ustanove;</content>
+                    </point>
+                    <point eId="clan272_stav1_t4">
+                        <num>4)</num>
+                        <content>da obavi određeni društveno korisni ili humanitarni rad.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan272_stav2">
+                    <num>(2)</num>
+                    <content>Osumnjičeni je dužan da prihvaćenu obavezu izvrši u roku koji ne može biti duži od šest mjeseci.</content>
+                </paragraph>
+                <paragraph eId="clan272_stav3">
+                    <num>(3)</num>
+                    <content>Obaveze iz <ref href="#clan272_stav1">stava 1</ref> državni tužilac utvrđuje rješenjem. Rješenje se dostavlja osumnjičenom, oštećenom ako ga ima, odnosno humanitarnoj organizaciji ili javnoj ustanovi u čiju se korist nalaže izvršenje.</content>
+                </paragraph>
+                <paragraph eId="clan272_stav4">
+                    <num>(4)</num>
+                    <content>Prije donošenja rješenja iz <ref href="#clan272_stav3">stava 3</ref>, državni tužilac može, uz pomoć posebno obučenih lica - posrednika, sprovesti postupak posredovanja između oštećenog i osumnjičenog na koji se shodno primjenjuju odredbe zakona kojim se uređuju pravila postupka posredovanja za obaveze iz <ref href="#clan272_stav1_t1">stava 1 tač. 1</ref> i <ref href="#clan272_stav1_t2">2</ref> ovog člana, odnosno pribaviće saglasnost oštećenog za mjere iz <ref href="#clan272_stav1_t3">stava 1 tač. 3</ref> i <ref href="#clan272_stav1_t4">4</ref> ovog člana.</content>
+                </paragraph>
+                <paragraph eId="clan272_stav5">
+                    <num>(5)</num>
+                    <content>Bliži način ispunjenja obaveza iz <ref href="#clan272_stav1_t1">stava 1 tač. 1</ref> do <ref href="#clan272_stav1_t4">4</ref> ovog člana, sadržaj rješenja iz <ref href="#clan272_stav3">stava 3</ref>, kao i bliži način sprovođenja radnji u primjeni odredaba ovog člana propisuje ministarstvo nadležno za poslove pravosuđa.</content>
+                </paragraph>
+                <paragraph eId="clan272_stav6">
+                    <num>(6)</num>
+                    <content>Ako osumnjičeni izvrši obavezu iz <ref href="#clan272_stav1">stava 1</ref>, u roku iz <ref href="#clan272_stav2">stava 2</ref> državni tužilac će odbaciti krivičnu prijavu. U ovom slučaju odredbe <ref href="#clan59">člana 59</ref> ovog zakonika neće se primjenjivati, sa čime će državni tužilac upoznati oštećenog prije pribavljanja saglasnosti iz <ref href="#clan272_stav4">stava 4</ref>.
+                    </content>
+                </paragraph>
+                <paragraph eId="clan272_stav7">
+                    <num>(7)</num>
+                    <content>Troškovi krivičnog postupka iz <ref href="#clan226_stav1">člana 226 stav 1</ref> ovog zakonika padaju na teret državnog tužilaštva. Odbacivanje krivične prijave iz razloga pravičnosti</content>
+                </paragraph>
+            </article>
+            <article eId="clan273">
+                <num>Član 273</num>
+                <heading>Za krivična djela za koja je propisana novčana kazna ili kazna zatvora do tri godine državni tužilac može</heading>
+                <paragraph eId="clan273_stav1">
+                    <num>(1)</num>
+                    <content>odbaciti krivičnu prijavu, ako je osumnjičeni usljed stvarnog kajanja spriječio nastupanje štete ili je štetu u potpunosti već naknadio, a državni tužilac, prema okolnostima slučaja, ocijeni da izricanje krivične sankcije ne bi bilo pravično. U ovom slučaju odredbe <ref href="#clan59">člana 59</ref> ovog zakonika neće se primjenjivati. B. PRETHODNI POSTUPAK Glava XVIII ISTRAGA Svrha istrage</content>
+                </paragraph>
+            </article>
+            <article eId="clan288">
+                <num>Član 288</num>
+                <heading>Podizanje neposredne optužnice</heading>
+                <paragraph eId="clan288_stav1">
+                    <num>(1)</num>
+                    <content>Državni tužilac neće sprovoditi istragu ako prikupljeni podaci koji se odnose na krivično djelo i okrivljenog, koji je prethodno saslušan, pružaju dovoljno osnova za podizanje neposredne optužnice. Pribavljanje podataka o okrivljenom koji je prethodno saslušan, pružaju dovoljno osnova za podizanje neposredne optužnice.</content>
+                </paragraph>
+            </article>
+            <article eId="clan292">
+                <num>Član 292</num>
+                <heading>Sadržaj optužnice</heading>
+                <paragraph eId="clan292_stav1">
+                    <num>(1)</num>
+                    <content>Optužnica sadrži:</content>
+                    <point eId="clan292_stav1_t1">
+                        <num>1)</num>
+                        <content>ime i prezime okrivljenog sa ličnim podacima iz <ref href="#clan100_stav1">člana 100 stav 1</ref> ovog zakonika i podacima o tome da li se i od kad nalazi u pritvoru ili se nalazi na slobodi, a ako je prije podizanja optužnice pušten iz pritvora, koliko je vremena proveo u pritvoru;</content>
+                    </point>
+                    <point eId="clan292_stav1_t2">
+                        <num>2)</num>
+                        <content>opis djela iz kojeg proizilaze zakonska obilježja krivičnog djela, vrijeme i mjesto izvršenja krivičnog djela, predmet na kojem je i sredstvo kojim je izvršeno krivično djelo, kao i druge okolnosti potrebne da se krivično djelo što tačnije odredi;</content>
+                    </point>
+                    <point eId="clan292_stav1_t3">
+                        <num>3)</num>
+                        <content>zakonski naziv krivičnog djela, sa navođenjem odredaba zakona koje se po predlogu tužioca imaju primijeniti;</content>
+                    </point>
+                    <point eId="clan292_stav1_t4">
+                        <num>4)</num>
+                        <content>označenje suda pred kojim će se održati glavni pretres;</content>
+                    </point>
+                    <point eId="clan292_stav1_t5">
+                        <num>5)</num>
+                        <content>predlog o dokazima koje treba izvesti na glavnom pretresu, uz naznačenje imena i adrese svjedoka i vještaka, spisa koje treba pročitati i predmeta koji služe kao dokaz;</content>
+                    </point>
+                    <point eId="clan292_stav1_t6">
+                        <num>6)</num>
+                        <content>obrazloženje u kojem će se prema rezultatu istrage opisati stanje stvari, navesti dokazi kojima se odlučne činjenice utvrđuju, iznijeti odbrana okrivljenog i stanovište tužioca o navodima odbrane.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan292_stav2">
+                    <num>(2)</num>
+                    <content>Ako se okrivljeni nalazi na slobodi, u optužnici se može predložiti da se odredi pritvor ili mjere iz <ref href="#clan166_stav2">člana 166 stav 2</ref> ovog zakonika, a ako se nalazi u pritvoru može se predložiti da se pusti iz pritvora, a može se predložiti određivanje drugih mjera iz <ref href="#clan166_stav2">člana 166 stav 2</ref> ovog zakonika. U optužnici se može predložiti produženje pritvora okrivljenom pri čemu tužilac mora učiniti izvjesnim da se drugim mjerama ne mogu postići ciljevi zbog kojih se predlaže produženje pritvora.</content>
+                </paragraph>
+                <paragraph eId="clan292_stav3">
+                    <num>(3)</num>
+                    <content>Jednom optužnicom može se obuhvatiti više krivičnih djela ili više okrivljenih samo ako se po odredbama <ref href="#clan31">člana 31</ref> ovog zakonika može sprovesti jedinstveni postupak i donijeti jedna presuda.</content>
+                </paragraph>
+            </article>
+            <article eId="clan293">
+                <num>Član 293</num>
+                <heading>Kontrola optužnice</heading>
+                <paragraph eId="clan293_stav1">
+                    <num>(1)</num>
+                    <content>Optužnica se dostavlja sudu radi kontrole i potvrđivanja.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav2">
+                    <num>(2)</num>
+                    <content>Kontrolu i potvrđivanje optužnice za krivična djela za koja u prvom stepenu sudi sudija pojedinac vrši predsjednik vijeća iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika, a za krivična djela za koja sudi vijeće kontrolu i potvrđivanje optužnice vrši vijeće iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav3">
+                    <num>(3)</num>
+                    <content>Po prijemu optužnice predsjednik vijeća iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika, u roku od 15 dana, zakazuje ročište radi ispitivanja i ocjene zakonitosti i opravdanosti optužnice. Na ročište se poziva tužilac, okrivljeni i branilac i u pozivu se upozoravaju da će se ročište održati i u njihovom odsustvu ukoliko se na uredan poziv ne odazovu.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav4">
+                    <num>(4)</num>
+                    <content>Predsjednik vijeća, nakon što provjeri da li su se svi pozvani odazvali na poziv i da li su im pozivi uredno uručeni, otvara ročište i upoznaje prisutne sa optužnicom koja je sudu dostavljena radi kontrole i potvrđivanja. Tužilac iznosi dokaze na kojima se optužnica zasniva, a okrivljeni i branilac mogu da ukazu na propuste u istrazi ili na nezakonite dokaze ili da nema dovoljno dokaza za osnovanu sumnju da je okrivljeni izvršio krivično djelo koje je predmet optužbe, kao i da ukažu na dokaze koji idu u korist okrivljenom.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav5">
+                    <num>(5)</num>
+                    <content>Ročište će se održati i kad se poziv okrivljenom nije mogao uručiti na njegovu do tada poznatu adresu.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav6">
+                    <num>(6)</num>
+                    <content>Kad sud utvrdi da postoje greške ili nedostaci u optužnici iz <ref href="#clan292">člana 292</ref> ovog zakonika ili u samom postupku ili je potrebno bolje razjašnjenje stanja stvari da bi se ispitala opravdanost optužnice vratiće optužnicu da se zapaženi nedostaci otklone ili da se istraga dopuni, odnosno sprovede. Tužilac je dužan da, u roku od tri dana od dana kad mu je saopštena odluka suda, podnese ispravljenu optužnicu ili da u roku od dva mjeseca dopuni istragu ili je sprovede. Iz opravdanih razloga, na zahtjev tužioca, ovaj rok se može produžiti. Ako državni tužilac propusti rok, dužan je da o razlozima propuštanja obavijesti neposredno više državno tužilaštvo. Ako oštećeni kao tužilac propusti pomenuti rok, smatraće se da je odustao od gonjenja i postupak će se obustaviti.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav7">
+                    <num>(7)</num>
+                    <content>Ako je potrebno bolje razjašnjenje stvari da bi se ispitala opravdanost optužnice oštećenog kao tužioca, sud će optužnicu dostaviti sudiji za istragu da u roku od dva mjeseca preduzme određene dokazne radnje.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav8">
+                    <num>(8)</num>
+                    <content>Ako sud utvrdi da je za krivično djelo koje je predmet optužbe nadležan drugi sud, oglasiće nenadležnim sud kojem je podnesena optužnica i po pravosnažnosti rješenja uputiće predmet nadležnom sudu.</content>
+                </paragraph>
+                <paragraph eId="clan293_stav9">
+                    <num>(9)</num>
+                    <content>Ako sud utvrdi da se u spisima nalaze zapisnici ili obavještenja iz <ref href="#clan211">člana 211</ref> ovog zakonika, donijeće rješenje o njihovom izdvajanju iz spisa. Protiv ovog rješenja dozvoljena je posebna žalba o kojoj odlučuje vijeće neposredno višeg suda. Po pravosnažnosti rješenja, predsjednik vijeća iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika obezbijediće da se izdvojeni zapisnici i obavještenja zatvore u poseban omot i predaju sudiji za istragu radi čuvanja odvojeno od ostalih spisa. Izdvojeni zapisnici i obavještenja se ne mogu razgledati niti se mogu koristiti u krivičnom postupku.</content>
                 </paragraph>
             </article>
             <article eId="clan301">
                 <num>Član 301</num>
-                <heading>Naziv člana</heading>
+                <heading>Predmet sporazuma o priznanju krivicea</heading>
                 <paragraph eId="clan301_stav1">
                     <num>(1)</num>
                     <content>Sporazumom o priznanju krivice okrivljeni u potpunosti priznaje krivično djelo za koje se tereti, odnosno priznaje jedno ili više krivičnih djela učinjenih u sticaju koja su predmet optužbe, a okrivljeni i državni tužilac se saglašavaju o:</content>
@@ -197,39 +1225,139 @@
                 </paragraph>
                 <paragraph eId="clan301_stav3">
                     <num>(3)</num>
-                    <content>Okrivljeni se sporazumom o priznanju krivice može obavezati na ispunjenje obaveza iz člana 272 stav 1 ovog zakonika pod uslovom da je, s obzirom na prirodu obaveza, moguće da ih okrivljeni do podnošenja sporazuma o priznanju krivice sudu ispuni, odnosno započne sa ispunjavanjem obaveza. Odlučivanje o sporazumu o priznanju krivice</content>
+                    <content>Okrivljeni se sporazumom o priznanju krivice može obavezati na ispunjenje obaveza iz <ref href="#clan272_stav1">člana 272 stav 1</ref> ovog zakonika pod uslovom da je, s obzirom na prirodu obaveza, moguće da ih okrivljeni do podnošenja sporazuma o priznanju krivice sudu ispuni, odnosno započne sa ispunjavanjem obaveza.</content>
+                </paragraph>
+            </article>
+            <article eId="clan340">
+                <num>Član 340</num>
+                <heading>Priznanje optuženog</heading>
+                <paragraph eId="clan340_stav1">
+                    <num>(1)</num>
+                    <content>Ako je optuženi priznao sve tačke optužbe, vijeće, po saslušanju optuženog, a nakon što se o tome izjasne tužilac i branilac, može odlučiti da ne izvodi dokaze koji se odnose na djelo koje je predmet optužbe i krivicu optuženog, već samo one od kojih zavisi odluka o krivičnoj sankciji, ako nađe da je priznanje:</content>
+                    <point eId="clan340_stav1_t1">
+                        <num>1)</num>
+                        <content>jasno i potpuno i da je optuženi nedvosmisleno objasnio sve odlučne činjenice koje se odnose na djelo i krivicu;</content>
+                    </point>
+                    <point eId="clan340_stav1_t2">
+                        <num>2)</num>
+                        <content>dato svjesno i dobrovoljno, a da je optuženi u potpunosti razumio sve moguće posljedice svog priznanja, uključujući i one posljedice koje se odnose na odluku o imovinskopravnom zahtjevu i troškovima krivičnog postupka;</content>
+                    </point>
+                    <point eId="clan340_stav1_t3">
+                        <num>3)</num>
+                        <content>u skladu sa dokazima sadržanim u optužbi i da nema dokaza koji bi govorili u prilog lažnom priznanju.</content>
+                    </point>
+                </paragraph>
+            </article>
+            <article eId="clan356">
+                <num>Član 356</num>
+                <heading>Izuzeci od neposrednog izvođenja dokaza</heading>
+                <paragraph eId="clan356_stav1">
+                    <num>(1)</num>
+                    <content>Osim u slučajevima koji su posebno propisani ovim zakonikom, zapisnici o iskazima svjedoka, saoptuženih ili već osuđenih učesnika u krivičnom djelu, kao i zapisnici ili druga pismena o nalazu i mišljenju vještaka mogu se, po odluci vijeća, pročitati ako:</content>
+                    <point eId="clan356_stav1_t1">
+                        <num>1)</num>
+                        <content>je saslušano lice umrlo, duševno oboljelo ili se ne može pronaći ili je njegov dolazak pred sud nemoguć ili znatno otežan zbog starosti, bolesti i drugih važnih razloga;</content>
+                    </point>
+                    <point eId="clan356_stav1_t2">
+                        <num>2)</num>
+                        <content>svjedoci ili vještaci, bez zakonskih razloga, odbiju da daju iskaz na glavnom pretresu;</content>
+                    </point>
+                    <point eId="clan356_stav1_t3">
+                        <num>3)</num>
+                        <content>se stranke saglase da se pročita zapisnik o iskazima već saslušanih svjedoka, odnosno zapisnik o nalazu i mišljenju vještaka;</content>
+                    </point>
+                    <point eId="clan356_stav1_t4">
+                        <num>4)</num>
+                        <content>se u toku glavnog pretresa okrivljeni koristi pravom da ne iznosi svoju odbranu ili da odgovara na postavljena pitanja, zapisnik o iskazu okrivljenog koji je dat u istrazi može se po odluci vijeća pročitati i koristiti kao dokaz na glavnom pretresu samo ako je okrivljeni prilikom saslušanja u istrazi bio upozoren u skladu sa članom 100 <ref href="#clan356_stav2">stav 2</ref> ovog zakonika, ali se presuda ne može zasnivati samo na ovom dokazu.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan356_stav2">
+                    <num>(2)</num>
+                    <content>Izuzetno, bez saglasnosti stranaka, ali po njihovom saslušanju, vijeće može odlučiti da se pročita zapisnik o saslušanju svjedoka ili vještaka na ranijem glavnom pretresu, koji je održan pred istim predsjednikom vijeća, ako je svjedok ili vještak na ranijem glavnom pretresu saslušan na sve okolnosti i ako bi njihovo ponovno pozivanje vodilo samo odugovlačenju krivičnog postupka.</content>
+                </paragraph>
+                <paragraph eId="clan356_stav3">
+                    <num>(3)</num>
+                    <content>U slučajevima iz <ref href="#clan356_stav1">stava 1</ref> biće reprodukovan i audio, odnosno audiovizuelni snimak saslušanja ako je saslušanje zabilježeno u skladu sa <ref href="#clan212">članom 212</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan356_stav4">
+                    <num>(4)</num>
+                    <content>Zapisnici o ranijem saslušanju lica koja su oslobođena od dužnosti svjedočenja iz <ref href="#clan109_stav1">člana 109 stav 1</ref> ovog zakonika ne smiju se pročitati, ako ta lica nijesu uopšte pozvana na glavni pretres ili su na glavnom pretresu, prije prvog saslušanja, izjavila da neće da svjedoče. Po završenom dokaznom postupku vijeće će odlučiti da se ovi zapisnici izdvoje iz spisa i odvojeno čuvaju u skladu sa članom 211 ovog zakonika. Ovako će vijeće postupati i u pogledu drugih zapisnika i obavještenja navedenih iz <ref href="#clan211">člana 211</ref> ovog zakonika, ako nije ranije donesena odluka o njihovom izdvajanju. Protiv rješenja o izdvajanju zapisnika i obavještenja dozvoljena je posebna žalba. Po pravosnažnosti rješenja, izdvojeni zapisnici i obavještenja zatvaraju se u poseban omot i predaju sudiji za istragu radi čuvanja odvojeno od ostalih spisa i ne mogu se razgledati ni koristiti u postupku. Zapisnici i obavještenja moraju biti izdvojeni prije nego što se spisi, povodom žalbe protiv presude, dostave višem sudu.</content>
+                </paragraph>
+                <paragraph eId="clan356_stav5">
+                    <num>(5)</num>
+                    <content>Razlozi zbog kojih se čitaju zapisnik i druga pismena navešće se u zapisnik o glavnom pretresu, a prilikom čitanja će se saopštiti da li je svjedok ili vještak zaklet.</content>
+                </paragraph>
+            </article>
+            <article eId="clan367">
+                <num>Član 367</num>
+                <heading></heading>
+                <paragraph eId="clan367_stav1">
+                    <num>(1)</num>
+                    <content>U toku ili po završetku glavnog pretresa vijeće će rješenjem odbaciti optužnicu, ako utvrdi da:</content>
+                    <point eId="clan367_stav1_t1">
+                        <num>1)</num>
+                        <content>sud nije stvarno nadležan;</content>
+                    </point>
+                    <point eId="clan367_stav1_t2">
+                        <num>2)</num>
+                        <content>je postupak vođen bez optužbe ovlašćenog tužioca, bez odobrenja nadležnog državnog organa ili je nadležni državni organ odustao od datog odobrenja;</content>
+                    </point>
+                    <point eId="clan367_stav1_t3">
+                        <num>3)</num>
+                        <content>postoje druge okolnosti koje privremeno sprječavaju gonjenje. Glava XXIII PRESUDA 1. IZRICANjE PRESUDE Izricanje i objavljivanje presude</content>
+                    </point>
                 </paragraph>
             </article>
             <article eId="clan370">
                 <num>Član 370</num>
-                <heading>Naziv člana</heading>
+                <heading>Dokazi na kojima se presuda zasniva</heading>
                 <paragraph eId="clan370_stav1">
                     <num>(1)</num>
                     <content>Sud zasniva presudu samo na činjenicama i dokazima koji su neposredno izvedeni na glavnom pretresu ili su sadržani u zapisnicima, odnosno drugim materijalima koji su u skladu sa ovim zakonikom na glavnom pretresu pročitani i na odgovarajući način izneseni.</content>
                 </paragraph>
                 <paragraph eId="clan370_stav2">
                     <num>(2)</num>
-                    <content>Presuda se ne može zasnivati isključivo na iskazu svjedoka koji je pribavljen na način propisan u članu 262 ovog zakonika i pročitan u skladu sa članom 356 stav 1 tačka 1 ovog zakonika.</content>
+                    <content>Presuda se ne može zasnivati isključivo na iskazu svjedoka koji je pribavljen na način propisan u članu 262 ovog zakonika i pročitan u skladu sa <ref href="#clan356_stav1_t1">članom 356 stav 1 tačka 1</ref> ovog zakonika.</content>
                 </paragraph>
                 <paragraph eId="clan370_stav3">
                     <num>(3)</num>
-                    <content>Sud je dužan da savjesno ocijeni svaki dokaz pojedinačno i u vezi sa ostalim dokazima i da na osnovu takve ocjene izvede zaključak da li je neka činjenica utvrđena. 2. VRSTE PRESUDA Meritorne i procesne presude</content>
+                    <content>Sud je dužan da savjesno ocijeni svaki dokaz pojedinačno i u vezi sa ostalim dokazima i da na osnovu takve ocjene izvede zaključak da li je neka činjenica utvrđena.</content>
                 </paragraph>
             </article>
             <article eId="clan372">
                 <num>Član 372</num>
-                <heading>Naziv člana</heading>
+                <heading>Presuda kojom se optužba odbija</heading>
                 <paragraph eId="clan372_stav1">
                     <num>(1)</num>
-                    <content>Presudu kojom se optužba odbija sud će izreći, ako je: tužilac od započinjanja do završetka glavnog pretresa odustao od optužbe; optuženi za isto djelo već pravosnažno osuđen, oslobođen optužbe ili je optužba protiv njega pravosnažno odbijena ili je postupak protiv njega rješenjem pravosnažno obustavljen; optuženi aktom amnestije ili pomilovanja oslobođen od gonjenja ili se krivično gonjenje ne može preduzeti zbog zastarjelosti ili neke druge okolnosti koja trajno isključuje krivično gonjenje. Presuda kojom se optuženi oslobađa od optužbe</content>
+                    <content>Presudu kojom se optužba odbija sud će izreći, ako je:</content>
+                    <point eId="clan372_stav1_t1">
+                        <num>1)</num>
+                        <content>tužilac od započinjanja do završetka glavnog pretresa odustao od optužbe;</content>
+                    </point>
+                    <point eId="clan372_stav1_t2">
+                        <num>2)</num>
+                        <content>optuženi za isto djelo već pravosnažno osuđen, oslobođen optužbe ili je optužba protiv njega pravosnažno odbijena ili je postupak protiv njega rješenjem pravosnažno obustavljen;</content>
+                    </point>
+                    <point eId="clan372_stav1_t3">
+                        <num>3)</num>
+                        <content>optuženi aktom amnestije ili pomilovanja oslobođen od gonjenja ili se krivično gonjenje ne može preduzeti zbog zastarjelosti ili neke druge okolnosti koja trajno isključuje krivično gonjenje.</content>
+                    </point>
                 </paragraph>
             </article>
             <article eId="clan373">
                 <num>Član 373</num>
-                <heading>Naziv člana</heading>
+                <heading>Presuda kojom se optuženi oslobađa od optužbe</heading>
                 <paragraph eId="clan373_stav1">
                     <num>(1)</num>
-                    <content>Presudu kojom se optuženi oslobađa od optužbe sud će izreći, ako: djelo za koje je optužen po zakonu nije krivično djelo; nije dokazano da je optuženi učinio djelo za koje je optužen. Presuda kojom se optuženi oglašava krivim</content>
+                    <content>Presudu kojom se optuženi oslobađa od optužbe sud će izreći, ako:</content>
+                    <point eId="clan373_stav1_t1">
+                        <num>1)</num>
+                        <content>djelo za koje je optužen po zakonu nije krivično djelo;</content>
+                    </point>
+                    <point eId="clan373_stav1_t2">
+                        <num>2)</num>
+                        <content>nije dokazano da je optuženi učinio djelo za koje je optužen.</content>
+                    </point>
                 </paragraph>
             </article>
             <article eId="clan374">
@@ -269,12 +1397,156 @@
                 </paragraph>
                 <paragraph eId="clan374_stav2">
                     <num>(2)</num>
-                    <content>Ako je optuženi osuđen na novčanu kaznu, u presudi će se naznačiti rok u kojem će se novčana kazna platiti i način zamjene novčane kazne. 3. OBJAVLjIVANjE PRESUDE Vrijeme, mjesto i način objavljivanja presude</content>
+                    <content>Ako je optuženi osuđen na novčanu kaznu, u presudi će se naznačiti rok u kojem će se novčana kazna platiti i način zamjene novčane kazne.</content>
+                </paragraph>
+            </article>
+            <article eId="clan376">
+                <num>Član 376</num>
+                <heading>Pritvor nakon izricanja presude</heading>
+                <paragraph eId="clan376_stav1">
+                    <num>(1)</num>
+                    <content>Kad izrekne presudu na kaznu zatvora ispod pet godina, vijeće će optuženom koji se brani sa slobode odrediti pritvor ako postoje razlozi iz <ref href="#clan175_stav1_t1">člana 175 stav 1 tač. 1</ref> i <ref href="#clan175_stav1_t3">3</ref> ovog zakonika, a optuženom kome je presudom prvostepenog suda izrečena kazna zatvora od pet godina ili teža kazna i ako postoje razlozi iz <ref href="#clan175_stav1_t4">člana 175 stav 1 tač. 4</ref>. Optuženom koji se nalazi u pritvoru vijeće će ukinuti pritvor, ako za pritvor više ne postoje razlozi zbog kojih je bio određen.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav2">
+                    <num>(2)</num>
+                    <content>Vijeće će ukinuti pritvor i narediti da se optuženi pusti na slobodu, ako je oslobođen od optužbe ili je optužba odbijena ili ako je oglašen krivim, a oslobođen od kazne ili je osuđen samo na novčanu kaznu, odnosno na kaznu rada u javnom interesu ili mu je izrečena uslovna osuda ili sudska opomena ili je zbog uračunavanja pritvora ili drugog oblika lišenja slobode kaznu već izdržao ili je optužba odbačena u skladu sa članom 367 ovog zakonika, osim zbog stvarne nenadležnosti.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav3">
+                    <num>(3)</num>
+                    <content>Za određivanje ili ukidanje pritvora poslije objavljivanja presude, do njene pravosnažnosti, primjenjivaće se odredba <ref href="#clan376_stav1">stava 1</ref>. Odluku donosi vijeće prvostepenog suda iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav4">
+                    <num>(4)</num>
+                    <content>Prije donošenja rješenja kojim se određuje ili ukida pritvor u slučajevima iz <ref href="#clan376_stav1">st. 1</ref> i <ref href="#clan376_stav3">3</ref> ovog člana, pribaviće se mišljenje državnog tužioca kad se postupak vodi po njegovoj optužbi.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav5">
+                    <num>(5)</num>
+                    <content>Ako se optuženi već nalazi u pritvoru, a vijeće nađe da još postoje razlozi zbog kojih je pritvor bio određen ili da postoje razlozi iz <ref href="#clan376_stav1">stava 1</ref>, donijeće posebno rješenje o produženju pritvora. Posebno rješenje vijeće donosi i kad treba odrediti ili ukinuti pritvor. Žalba protiv rješenja ne zadržava izvršenje rješenja, a o žalbi sud odlučuje u roku od tri dana.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav6">
+                    <num>(6)</num>
+                    <content>Pritvor koji je određen ili produžen u skladu sa <ref href="#clan376_stav1">st. 1</ref> do <ref href="#clan376_stav5">5</ref> ovog člana može trajati do pravosnažnosti presude, a najduže dok ne istekne vrijeme trajanja kazne izrečene u prvostepenoj presudi.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav7">
+                    <num>(7)</num>
+                    <content>Na zahtjev optuženog koji se poslije izricanja kazne zatvora nalazi u pritvoru, predsjednik vijeća može optuženog uputiti na izdržavanje kazne i prije pravosnažnosti presude.</content>
+                </paragraph>
+                <paragraph eId="clan376_stav8">
+                    <num>(8)</num>
+                    <content>Ako je presuda donesena na osnovu sporazuma o priznanju krivice, optuženi koji se nalazi u pritvoru upućuje se na izdržavanje kazne zatvora, ako je vrijeme provedeno u pritvoru kraće od dužine izrečene kazne zatvora. Pouka o pravu na žalbu i druga upozorenja</content>
+                </paragraph>
+            </article>
+            <article eId="clan378">
+                <num>Član 378</num>
+                <heading>Naziv člana</heading>
+                <paragraph eId="clan378_stav1">
+                    <num>(1)</num>
+                    <content>Presuda koja je objavljena mora se pisano izraditi i otpremiti u roku od mjesec dana po objavljivanju, a u složenim stvarima, izuzetno u roku od dva mjeseca. Ako presuda nije izrađena u tim rokovima, predsjednik vijeća je dužan da pisano obavijesti predsjednika suda zbog čega to nije učinjeno. Predsjednik suda će preduzeti mjere da se presuda što prije izradi.</content>
+                </paragraph>
+                <paragraph eId="clan378_stav2">
+                    <num>(2)</num>
+                    <content>Presudu potpisuju predsjednik vijeća i zapisničar.</content>
+                </paragraph>
+                <paragraph eId="clan378_stav3">
+                    <num>(3)</num>
+                    <content>Ovjereni prepis presude dostaviće se tužiocu, kao i optuženom i braniocu saglasno članu <ref href="#clan195">195</ref> ovog zakonika. Ako se optuženi nalazi u pritvoru, ovjereni prepisi presude moraju biti poslati u rokovima predviđenim u stavu 1 ovog člana.</content>
+                </paragraph>
+                <paragraph eId="clan378_stav4">
+                    <num>(4)</num>
+                    <content>Optuženom, privatnom tužiocu i oštećenom kao tužiocu daje se pouka o pravu na žalbu.</content>
+                </paragraph>
+                <paragraph eId="clan378_stav5">
+                    <num>(5)</num>
+                    <content>Ovjereni prepis presude sa poukom o pravu na žalbu sud će dostaviti oštećenom, ako ima pravo na žalbu, licu kome je tom presudom izrečena mjera bezbjednosti oduzimanje predmeta, kao i pravnom licu prema kojem je izrečeno oduzimanje imovinske koristi. Oštećenom koji nema pravo na žalbu prepis presude će se dostaviti u slučaju iz <ref href="#clan60_stav2">člana 60 stav 2</ref> ovog zakonika, sa poukom o pravu na traženje povraćaja u pređašnje stanje. Pravosnažna presuda će se dostaviti oštećenom, ako on to zahtijeva.</content>
+                </paragraph>
+                <paragraph eId="clan378_stav6">
+                    <num>(6)</num>
+                    <content>Ako je sud, primjenom odredaba o odmjeravanju jedinstvene kazne za krivična djela u sticaju, izrekao kaznu, uzimajući u obzir i presude koje su donijeli i drugi sudovi, dostaviće ovjereni prepis pravosnažne presude tim sudovima.</content>
+                </paragraph>
+            </article>
+            <article eId="clan380">
+                <num>Član 380</num>
+                <heading>Ispravke u presudi</heading>
+                <paragraph eId="clan380_stav1">
+                    <num>(1)</num>
+                    <content>Greške u imenima i brojevima, kao i druge očigledne greške u pisanju i računanju, nedostatke u obliku i nesaglasnosti pisano izrađene presude sa izvornikom, predsjednik vijeća će ispraviti posebnim rješenjem, na zahtjev stranaka ili po službenoj dužnosti.</content>
+                </paragraph>
+                <paragraph eId="clan380_stav2">
+                    <num>(2)</num>
+                    <content>Ako postoji nesaglasnost između pisano izrađene presude i njenog izvornika u pogledu podataka iz <ref href="#clan374_stav1_t1">člana 374 stav 1 tač. 1</ref> do 5 i <ref href="#clan380_t7">tač. 7</ref> ovog zakonika, rješenje o ispravci dostaviće se licima iz <ref href="#clan378">člana 378</ref> ovog zakonika. U tom slučaju rok za žalbu protiv presude teče od dana dostavljanja tog rješenja, protiv kojeg posebna žalba nije dozvoljena. </content>
+                </paragraph>
+            </article>
+            <article eId="clan392">
+                <num>Član 392</num>
+                <heading>Postupanje pred drugostepenim sudom</heading>
+                <paragraph eId="clan392_stav1">
+                    <num>(1)</num>
+                    <content>Kad spisi sa žalbom stignu drugostepenom sudu odmah se, na propisan način, određuje sudija izvjestilac.</content>
+                </paragraph>
+                <paragraph eId="clan392_stav2">
+                    <num>(2)</num>
+                    <content>Ako sudija izvjestilac utvrdi da postoje greške u imenima i brojevima, kao i druge očigledne greške u pisanju i računanju, nedostaci u obliku i nesaglasnosti pisano izrađene presude sa izvornikom u pogledu podataka iz <ref href="#clan374_stav1_t1">člana 374 stav 1 tač. 1</ref> do 5 i <ref href="#clan392_t7">tač. 7</ref> ovog zakonika, dostaviće spise prvostepenom sudu prije održavanja sjednice drugostepenog vijeća, da predsjednik prvostepenog vijeća donese posebno rješenje o ispravci prvostepene presude, u skladu sa <ref href="#clan380">članom 380</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan392_stav3">
+                    <num>(3)</num>
+                    <content>Sudija izvjestilac može, po potrebi, od prvostepenog suda pribaviti izvještaj o povredama odredaba krivičnog postupka, a može preko tog suda ili sudije za istragu suda na čijem se području radnja ima izvršiti ili na drugi način provjeriti navode žalbe u pogledu novih dokaza i novih činjenica ili od drugih organa ili organizacija pribaviti potrebne izvještaje ili spise.</content>
+                </paragraph>
+                <paragraph eId="clan392_stav4">
+                    <num>(4)</num>
+                    <content>Ako sudija izvjestilac utvrdi da se u spisima nalaze zapisnici i obavještenja iz <ref href="#clan211">člana 211</ref> ovog zakonika, dostaviće spise prvostepenom sudu, prije održavanja sjednice drugostepenog vijeća, da predsjednik prvostepenog vijeća donese rješenje o njihovom izdvajanju iz spisa i da ih, po pravosnažnosti rješenja, u zatvorenom omotu preda sudiji za istragu radi čuvanja odvojeno od ostalih spisa.</content>
+                </paragraph>
+                <paragraph eId="clan392_stav5">
+                    <num>(5)</num>
+                    <content>Ako se radi o krivičnom djelu za koje se goni po optužbi državnog tužioca, sudija izvjestilac će spise dostaviti državnom tužiocu, koji je dužan da ih razmotri i podnese svoj predlog ili izjavi da će predlog podnijeti na sjednici vijeća i da ih bez odlaganja vrati sudu.</content>
+                </paragraph>
+            </article>
+            <article eId="clan448">
+                <num>Član 448</num>
+                <heading>Pritvor u skraćenom postupku</heading>
+                <paragraph eId="clan448_stav1">
+                    <num>(1)</num>
+                    <content>Pritvor se može odrediti, u cilju nesmetanog vođenja krivičnog postupka, protiv lica za koje postoji osnovana sumnja da je učinilo krivično djelo, ako:</content>
+                    <point eId="clan448_stav1_t1">
+                        <num>1)</num>
+                        <content>se krije ili se ne može utvrditi njegov identitet ili postoje druge okolnosti koje očigledno ukazuju na opasnost od bjekstva;</content>
+                    </point>
+                    <point eId="clan448_stav1_t2">
+                        <num>2)</num>
+                        <content>posebne okolnosti ukazuju da će okrivljeni dovršiti pokušano krivično djelo ili izvršiti krivično djelo kojim prijeti ili ponoviti krivično djelo;</content>
+                    </point>
+                    <point eId="clan448_stav1_t3">
+                        <num>3)</num>
+                        <content>postoje okolnosti koje ukazuju da će okrivljeni uništiti, sakriti, izmijeniti ili falsifikovati dokaze ili tragove krivičnog djela ili da će ometati postupak uticanjem na svjedoke, saučesnike ili prikrivače;</content>
+                    </point>
+                    <point eId="clan448_stav1_t4">
+                        <num>4)</num>
+                        <content>uredno pozvani okrivljeni izbjegava da dođe na glavni pretres.</content>
+                    </point>
+                </paragraph>
+                <paragraph eId="clan448_stav2">
+                    <num>(2)</num>
+                    <content>Prije podnošenja optužnog predloga pritvor može trajati samo onoliko koliko je potrebno da se sprovedu dokazne radnje, ali ne duže od 30 dana. O žalbi protiv rješenja o pritvoru rješava vijeće iz <ref href="#clan24_stav7">člana 24 stav 7</ref> ovog zakonika.</content>
+                </paragraph>
+                <paragraph eId="clan448_stav3">
+                    <num>(3)</num>
+                    <content>Na određivanje, produženje i ukidanje pritvora od predaje optužnog predloga do izricanja prvostepene presude primjenjuju se shodno odredbe <ref href="#clan179">člana 179</ref> ovog zakonika, pri čemu je vijeće dužno da svakih mjesec dana ispita da li postoje razlozi za pritvor.</content>
+                </paragraph>
+                <paragraph eId="clan448_stav4">
+                    <num>(4)</num>
+                    <content>Kad se okrivljeni nalazi u pritvoru sud je dužan da postupa sa naročitom hitnošću.</content>
+                </paragraph>
+            </article>
+            <article eId="clan457">
+                <num>Član 457</num>
+                <heading>Nedolazak okrivljenog</heading>
+                <paragraph eId="clan457_stav1">
+                    <num>(1)</num>
+                    <content>Ako okrivljeni ne dođe na glavni pretres, iako je uredno pozvan ili mu se poziv nije mogao uručiti zbog neprijavljivanja sudu promjene adrese ili boravišta, sud može odlučiti da se glavni pretres održi i u njegovom odsustvu pod uslovom da njegovo prisustvo nije nužno i da je prije toga bio saslušan.</content>
                 </paragraph>
             </article>
             <article eId="clan458">
                 <num>Član 458</num>
-                <heading>Naziv člana</heading>
+                <heading>Tok pretresa</heading>
                 <paragraph eId="clan458_stav1">
                     <num>(1)</num>
                     <content>Glavni pretres počinje objavljivanjem glavne sadržine optužnog predloga ili privatne tužbe. Započeti glavni pretres završiće se, po mogućnosti, bez prekidanja.</content>
@@ -285,11 +1557,11 @@
                 </paragraph>
                 <paragraph eId="clan458_stav3">
                     <num>(3)</num>
-                    <content>Pod uslovima iz stava 2 ovog člana sud može izreći sudsku opomenu, uslovnu osudu, novčanu kaznu, kaznu rada u javnom interesu i kaznu zatvora do jedne godine, a uz njih jednu ili više sljedećih mjera bezbjednosti: oduzimanje predmeta, zabranu upotrebe motornog vozila i oduzimanje imovinske koristi.</content>
+                    <content>Pod uslovima iz <ref href="#clan458_stav2">stava 2</ref> ovog člana sud može izreći sudsku opomenu, uslovnu osudu, novčanu kaznu, kaznu rada u javnom interesu i kaznu zatvora do jedne godine, a uz njih jednu ili više sljedećih mjera bezbjednosti: oduzimanje predmeta, zabranu upotrebe motornog vozila i oduzimanje imovinske koristi.</content>
                 </paragraph>
                 <paragraph eId="clan458_stav4">
                     <num>(4)</num>
-                    <content>Ako u toku ili po završetku glavnog pretresa sudija nađe da je za suđenje nadležan viši sud, dostaviće spise nadležnom državnom tužiocu. Kad utvrdi da postoji neki od razloga iz člana 367 ovog zakonika sudija će rješenjem odbaciti optužbu.</content>
+                    <content>Ako u toku ili po završetku glavnog pretresa sudija nađe da je za suđenje nadležan viši sud, dostaviće spise nadležnom državnom tužiocu. Kad utvrdi da postoji neki od razloga iz <ref href="#clan367">člana 367</ref> ovog zakonika sudija će rješenjem odbaciti optužbu.</content>
                 </paragraph>
                 <paragraph eId="clan458_stav5">
                     <num>(5)</num>
@@ -305,11 +1577,11 @@
                 </paragraph>
                 <paragraph eId="clan458_stav8">
                     <num>(8)</num>
-                    <content>Na ukidanje pritvora poslije izricanja presude shodno će se primjenjivati odredbe člana 376 ovog zakonika.</content>
+                    <content>Na ukidanje pritvora poslije izricanja presude shodno će se primjenjivati odredbe <ref href="#clan376">člana 376</ref> ovog zakonika.</content>
                 </paragraph>
                 <paragraph eId="clan458_stav9">
                     <num>(9)</num>
-                    <content>Kad sud izrekne kaznu zatvora okrivljenom se može odrediti pritvor, odnosno produženje pritvora, ako postoje razlozi iz člana 448 stav 1 ovog zakonika. U tom slučaju pritvor može trajati do pravosnažnosti presude, ali najduže dok okrivljenom ne istekne kazna zatvora koju je izrekao prvostepeni sud. Ročište radi mirenja</content>
+                    <content>Kad sud izrekne kaznu zatvora okrivljenom se može odrediti pritvor, odnosno produženje pritvora, ako postoje razlozi iz <ref href="#clan448_stav1">člana 448 stav 1</ref> ovog zakonika. U tom slučaju pritvor može trajati do pravosnažnosti presude, ali najduže dok okrivljenom ne istekne kazna zatvora koju je izrekao prvostepeni sud. Ročište radi mirenja</content>
                 </paragraph>
             </article>
         </body>
