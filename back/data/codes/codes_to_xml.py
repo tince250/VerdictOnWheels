@@ -4,31 +4,26 @@ import pdfplumber
 import xml.etree.ElementTree as ET
 from datetime import date
 
-# --------- CONFIG ----------
 PDF_PATH = "data/criminal_procedure_code.pdf"
 OUT_XML = "xml/criminal_procedure_code.xml"
-# ---------------------------
 
-# Patterns
 clan_split_pattern = re.compile(r"(Član\s+\d+)", re.IGNORECASE)
 clan_number_pattern = re.compile(r"\d+")
 stav_split_pattern = re.compile(r"\((\d+)\)")
 point_line_pattern = re.compile(r"^\s*(\d+)\)\s*(.*)$")
 point_inline_pattern = re.compile(r"(\d+)\)\s*")
 
-# Patterns for references
 ref_clan_full = re.compile(
     r"člana?\s+(\d+)\s+stav\s+(\d+)\s+tač(?:\.|ka)?\s+(\d+)", re.IGNORECASE
 )
 ref_clan_stav = re.compile(r"člana?\s+(\d+)\s+stav\s+(\d+)", re.IGNORECASE)
 ref_clan = re.compile(r"člana?\s+(\d+)", re.IGNORECASE)
 ref_stav_tacka_same = re.compile(r"stava\s+(\d+)\s+tač(?:\.|ka)?\s+(\d+)", re.IGNORECASE)
-ref_stava_ovog = re.compile(r"stava\s+(\d+)\s+ovog\s+člana", re.IGNORECASE)  # NEW
+ref_stava_ovog = re.compile(r"stava\s+(\d+)\s+ovog\s+člana", re.IGNORECASE) 
 ref_stav = re.compile(r"stav\s+(\d+)", re.IGNORECASE)
 ref_tacka = re.compile(r"tač(?:\.|ka)?\s*(\d+)", re.IGNORECASE)
 ref_st_dot = re.compile(r"st\.\s*(\d+)(?:\s*i\s*(\d+))?", re.IGNORECASE)
 
-# -------------------------------------------------
 def clean_text(text: str) -> str:
     if text is None:
         return ""
@@ -38,7 +33,6 @@ def clean_text(text: str) -> str:
     text = re.sub(r"\n\s*\n+", "\n", text)
     return text.strip()
 
-# -------------------------------------------------
 def tokenize_with_refs(text: str, current_clan: str):
     tokens = []
     pos = 0
@@ -49,7 +43,7 @@ def tokenize_with_refs(text: str, current_clan: str):
         ("clan_stav", ref_clan_stav),
         ("clan", ref_clan),
         ("stav_tacka_same", ref_stav_tacka_same),
-        ("stava_ovog", ref_stava_ovog),  # NEW handler
+        ("stava_ovog", ref_stava_ovog), 
         ("st_dot", ref_st_dot),
         ("stav", ref_stav),
         ("tacka", ref_tacka),
@@ -96,7 +90,7 @@ def tokenize_with_refs(text: str, current_clan: str):
             href = f"#clan{current_clan}_stav{stav_num}_t{t_num}"
             display = f"stava {stav_num} tač. {t_num}"
 
-        elif kind == "stava_ovog":  # NEW
+        elif kind == "stava_ovog": 
             stav_num = m.group(1)
             href = f"#clan{current_clan}_stav{stav_num}"
             display = f"stava {stav_num}"
@@ -135,7 +129,6 @@ def tokenize_with_refs(text: str, current_clan: str):
 
     return tokens
 
-# -------------------------------------------------
 def set_content_with_refs(parent_element: ET.Element, raw_text: str, current_clan: str, exclude_points=False):
     text = clean_text(raw_text)
     if exclude_points:
@@ -169,7 +162,6 @@ def set_content_with_refs(parent_element: ET.Element, raw_text: str, current_cla
                 else:
                     parent_element.text = (parent_element.text or "") + piece
 
-# -------------------------------------------------
 def parse_full_law(pdf_file):
     with pdfplumber.open(pdf_file) as pdf:
         pages_text = [page.extract_text() or "" for page in pdf.pages]
@@ -258,7 +250,6 @@ def parse_full_law(pdf_file):
 
     return results
 
-# -------------------------------------------------
 def build_akn_xml_from_parsed(parsed, law_name):
     akn = ET.Element("akomaNtoso", xmlns="http://www.akomantoso.org/2.0")
     act = ET.SubElement(akn, "act", name=law_name)
@@ -301,7 +292,6 @@ def build_akn_xml_from_parsed(parsed, law_name):
 
     return akn
 
-# -------------------------------------------------
 def main(pdf_path=PDF_PATH, out_xml=OUT_XML):
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF not found: {pdf_path}")
@@ -332,6 +322,5 @@ def main(pdf_path=PDF_PATH, out_xml=OUT_XML):
     ET.ElementTree(akn_tree).write(out_xml, encoding="utf-8", xml_declaration=True)
     print(f"Written XML to: {out_xml}")
 
-# -------------------------------------------------
 if __name__ == "__main__":
     main()
