@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <akomaNtoso xmlns="http://www.akomantoso.org/2.0">
-    <act name="data/criminal_procedure_code">
+    <act name="xml/criminal_procedure_code">
         <meta>
             <identification source="#system">
                 <FRBRWork>
-                    <FRBRthis value="/akn/me/act/data/criminal_procedure_code/2025/main" />
-                    <FRBRuri value="/akn/me/act/data/criminal_procedure_code/2025" />
-                    <FRBRdate date="2025-09-28" name="generation" />
+                    <FRBRthis value="/akn/me/act/xml/criminal_procedure_code/2025/main" />
+                    <FRBRuri value="/akn/me/act/xml/criminal_procedure_code/2025" />
+                    <FRBRdate date="2025-09-29" name="generation" />
                     <FRBRauthor href="#parliament" as_="#legislature" />
                     <FRBRcountry value="me" />
                 </FRBRWork>
@@ -25,7 +25,7 @@
                 </paragraph>
                 <paragraph eId="clan226_stav2">
                     <num>(2)</num>
-                    <content>Troškovi krivičnog postupka obuhvataju: 1) troškove za svjedoke, vještake, tumače, stručna lica, troškove uviđaja, rekonstrukcije, ekshumacije i troškove stenodaktilografskog i tehničkog snimanja i kopiranja zapisnika; 2) troškove prevoza okrivljenog; 3) izdatke za dovođenje osumnjičenog, okrivljenog, svjedoka i vještaka; 4) putne troškove službenih lica; 5) troškove liječenja okrivljenog za vrijeme dok se nalazi u pritvoru, kao i troškove porođaja, osim troškova koji se naplaćuju iz Fonda za zdravstveno osiguranje; 6) troškove tehničkog pregleda vozila, analize krvi, analize DNK, analize urina, odnosno druge medicinske analize, kao i troškove prevoza leša do mjesta obdukcije; 7) nagradu i nužne izdatke branioca, nužne izdatke privatnog tužioca i oštećenog kao tužioca i njihovih zakonskih zastupnika, kao i nagradu i nužne izdatke njihovih punomoćnika; 8) nužne izdatke oštećenog i njegovog zakonskog zastupnika, kao i nagradu i nužne izdatke njegovog punomoćnika; 9) paušalni iznos za troškove koji nijesu obuhvaćeni prethodnim tačkama ovog stava.</content>
+                    <content>Troškovi krivičnog postupka obuhvataju:</content>
                     <point eId="clan226_stav2_t1">
                         <num>1)</num>
                         <content>troškove za svjedoke, vještake, tumače, stručna lica, troškove uviđaja, rekonstrukcije, ekshumacije i troškove stenodaktilografskog i tehničkog snimanja i kopiranja zapisnika;</content>
@@ -60,7 +60,7 @@
                     </point>
                     <point eId="clan226_stav2_t9">
                         <num>9)</num>
-                        <content>paušalni iznos za troškove koji nijesu obuhvaćeni prethodnim tačkama ovog stava.</content>
+                        <content>paušalni iznos za troškove koji nijesu obuhvaćeni prethodnim tačkama ovog stava. </content>
                     </point>
                 </paragraph>
                 <paragraph eId="clan226_stav3">
@@ -177,7 +177,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan301_stav1">
                     <num>(1)</num>
-                    <content>Sporazumom o priznanju krivice okrivljeni u potpunosti priznaje krivično djelo za koje se tereti, odnosno priznaje jedno ili više krivičnih djela učinjenih u sticaju koja su predmet optužbe, a okrivljeni i državni tužilac se saglašavaju o: 1) visini kazne i drugim krivičnim sankcijama koje će okrivljenom biti izrečene u skladu sa odredbama Krivičnog zakonika; 2) troškovima krivičnog postupka i imovinskopravnom zahtjevu; 3) odricanju stranaka i branioca od prava na žalbu protiv odluke suda donesene na osnovu sporazuma o priznanju krivice kad je sud u potpunosti prihvatio sporazum.</content>
+                    <content>Sporazumom o priznanju krivice okrivljeni u potpunosti priznaje krivično djelo za koje se tereti, odnosno priznaje jedno ili više krivičnih djela učinjenih u sticaju koja su predmet optužbe, a okrivljeni i državni tužilac se saglašavaju o:</content>
                     <point eId="clan301_stav1_t1">
                         <num>1)</num>
                         <content>visini kazne i drugim krivičnim sankcijama koje će okrivljenom biti izrečene u skladu sa odredbama Krivičnog zakonika;</content>
@@ -188,7 +188,7 @@
                     </point>
                     <point eId="clan301_stav1_t3">
                         <num>3)</num>
-                        <content>odricanju stranaka i branioca od prava na žalbu protiv odluke suda donesene na osnovu sporazuma o priznanju krivice kad je sud u potpunosti prihvatio sporazum.</content>
+                        <content>odricanju stranaka i branioca od prava na žalbu protiv odluke suda donesene na osnovu sporazuma o priznanju krivice kad je sud u potpunosti prihvatio sporazum. </content>
                     </point>
                 </paragraph>
                 <paragraph eId="clan301_stav2">
@@ -221,7 +221,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan372_stav1">
                     <num>(1)</num>
-                    <content>Presudu kojom se optužba odbija sud će izreći, ako je: 1) tužilac od započinjanja do završetka glavnog pretresa odustao od optužbe; 2) optuženi za isto djelo već pravosnažno osuđen, oslobođen optužbe ili je optužba protiv njega pravosnažno odbijena ili je postupak protiv njega rješenjem pravosnažno obustavljen; 3) optuženi aktom amnestije ili pomilovanja oslobođen od gonjenja ili se krivično gonjenje ne može preduzeti zbog zastarjelosti ili neke druge okolnosti koja trajno isključuje krivično gonjenje. Presuda kojom se optuženi oslobađa od optužbe</content>
+                    <content>Presudu kojom se optužba odbija sud će izreći, ako je: tužilac od započinjanja do završetka glavnog pretresa odustao od optužbe; optuženi za isto djelo već pravosnažno osuđen, oslobođen optužbe ili je optužba protiv njega pravosnažno odbijena ili je postupak protiv njega rješenjem pravosnažno obustavljen; optuženi aktom amnestije ili pomilovanja oslobođen od gonjenja ili se krivično gonjenje ne može preduzeti zbog zastarjelosti ili neke druge okolnosti koja trajno isključuje krivično gonjenje. Presuda kojom se optuženi oslobađa od optužbe</content>
                 </paragraph>
             </article>
             <article eId="clan373">
@@ -229,7 +229,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan373_stav1">
                     <num>(1)</num>
-                    <content>Presudu kojom se optuženi oslobađa od optužbe sud će izreći, ako: 1) djelo za koje je optužen po zakonu nije krivično djelo; 2) nije dokazano da je optuženi učinio djelo za koje je optužen. Presuda kojom se optuženi oglašava krivim</content>
+                    <content>Presudu kojom se optuženi oslobađa od optužbe sud će izreći, ako: djelo za koje je optužen po zakonu nije krivično djelo; nije dokazano da je optuženi učinio djelo za koje je optužen. Presuda kojom se optuženi oglašava krivim</content>
                 </paragraph>
             </article>
             <article eId="clan374">
@@ -237,7 +237,7 @@
                 <heading>Naziv člana</heading>
                 <paragraph eId="clan374_stav1">
                     <num>(1)</num>
-                    <content>U presudi u kojoj se optuženi oglašava krivim sud će izreći: 1) za koje se djelo oglašava krivim, uz naznačenje činjenica i okolnosti koje čine obilježja krivičnog djela, kao i onih od kojih zavisi primjena određene odredbe Krivičnog zakonika; 2) zakonski naziv krivičnog djela i koje su odredbe Krivičnog zakonika primijenjene; 3) na koju se kaznu osuđuje optuženi ili se po odredbama Krivičnog zakonika oslobađa od kazne; 4) odluku o uslovnoj osudi; 5) odluku o mjerama bezbjednosti i oduzimanju imovinske koristi; 6) odluku o uračunavanju pritvora ili već izdržane kazne, kao i svakog drugog lišenja slobode u vezi sa krivičnim djelom; 7) odluku o troškovima krivičnog postupka i imovinskopravnom zahtjevu.</content>
+                    <content>U presudi u kojoj se optuženi oglašava krivim sud će izreći:</content>
                     <point eId="clan374_stav1_t1">
                         <num>1)</num>
                         <content>za koje se djelo oglašava krivim, uz naznačenje činjenica i okolnosti koje čine obilježja krivičnog djela, kao i onih od kojih zavisi primjena određene odredbe Krivičnog zakonika;</content>
@@ -264,7 +264,7 @@
                     </point>
                     <point eId="clan374_stav1_t7">
                         <num>7)</num>
-                        <content>odluku o troškovima krivičnog postupka i imovinskopravnom zahtjevu.</content>
+                        <content>odluku o troškovima krivičnog postupka i imovinskopravnom zahtjevu. </content>
                     </point>
                 </paragraph>
                 <paragraph eId="clan374_stav2">

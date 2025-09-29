@@ -29,6 +29,7 @@ stav_ref_pattern = re.compile(
 
 
 def clean_text(text):
+    text = re.sub(r"\d+\)", "", str(text))
     return " ".join(text.split())
 
 def insert_references(text, current_clan):
@@ -41,7 +42,7 @@ def insert_references(text, current_clan):
             href = f"#clan{clan_num}_stav{stav_num}"
             display = f"(član {clan_num} stav {stav_num})"
         else:
-            href = f"#clan{clan_num}"
+            href = f"#clan{clanNum}"
             display = f"(član {clan_num})"
         return f'<ref href="{href}">{display}</ref>'
 
@@ -60,8 +61,16 @@ def insert_references(text, current_clan):
 
     return text
 
-def set_content_with_refs(parent_element, text_with_refs, current_clan):
-    """Insert text and <ref> tags into a content element."""
+def set_content_with_refs(parent_element, text_with_refs, current_clan, exclude_points=False):
+    """
+    Insert text and <ref> tags into a content element.
+    If exclude_points is True, remove any text that matches point patterns.
+    """
+    if exclude_points:
+        text_with_refs = re.sub(r"\d+\)\s*", "", text_with_refs)
+        text_with_refs = re.sub(r"(\d+\)\s*|\(\s*\d+\s*\))", "", text_with_refs)
+        text_with_refs = text_with_refs.strip()
+
     text_processed = insert_references(text_with_refs, current_clan)
     wrapped = f"<root>{text_processed}</root>"
     root_fragment = ET.fromstring(wrapped)
@@ -95,16 +104,26 @@ def parse_law(pdf_file, relevant_articles):
                 stav_num = stavi[j]
                 stav_text = stavi[j + 1] if j + 1 < len(stavi) else ""
 
-                tacke_parts = re.split(tacka_pattern, stav_text)
+                # Split the text into lines and process each line
+                lines = stav_text.split("\n")
+                main_text = []
                 tacke = {}
-                if len(tacke_parts) > 1:
-                    for k in range(1, len(tacke_parts), 2):
-                        tacka_num = tacke_parts[k]
-                        tacka_text = tacke_parts[k + 1] if k + 1 < len(tacke_parts) else ""
-                        tacke[tacka_num] = clean_text(tacka_text)
+                current_tacka_num = None
+
+                for line in lines:
+                    line = line.strip()
+                    if tacka_pattern.match(line):  # If the line starts with a point (e.g., "1)")
+                        match = tacka_pattern.match(line)
+                        current_tacka_num = match.group(1)
+                        tacka_text = line[len(match.group(0)):].strip()
+                        tacke[current_tacka_num] = clean_text(tacka_text)
+                    elif current_tacka_num:  # If it's a continuation of the current point
+                        tacke[current_tacka_num] += " " + clean_text(line)
+                    else:  # Otherwise, it's part of the main paragraph text
+                        main_text.append(line)
 
                 stavovi[stav_num] = {
-                    "text": clean_text(stav_text),
+                    "text": clean_text(" ".join(main_text)),
                     "tacke": tacke
                 }
         else:
@@ -143,7 +162,7 @@ def build_akn_xml(law_name, clanovi):
             paragraph = ET.SubElement(article, "paragraph", eId=f"clan{clan_num}_stav{stav_num}")
             ET.SubElement(paragraph, "num").text = f"({stav_num})"
             content_el = ET.SubElement(paragraph, "content")
-            set_content_with_refs(content_el, stav_content["text"], clan_num)
+            set_content_with_refs(content_el, stav_content["text"], clan_num, exclude_points=True)
 
             for tacka_num, tacka_text in stav_content["tacke"].items():
                 point = ET.SubElement(paragraph, "point", eId=f"clan{clan_num}_stav{stav_num}_t{tacka_num}")
