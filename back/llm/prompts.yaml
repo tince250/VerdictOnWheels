@@ -1,0 +1,110 @@
+judgment_to_akn: |
+  Convert the following Montenegrin/Serbian **judgment (presuda)** into valid **Akoma Ntoso 3.0 XML**.
+  Follow these rules:
+
+  1. **Structure**
+
+     * Root: `<judgment xml:lang="sr-Latn-ME">`.
+     * Sections: `<meta>`, `<judgmentBody>` (with `<introduction>`, `<decision>`, `<motivation>`, `<conclusions>`), optional `<attachments>`.
+
+  2. **Meta**
+
+     * **FRBR identifiers**: Work, Expression, Manifestation with URIs `/akn/me/judgment/YYYY-MM-DD/COURT_SLUG/CASE_NUMBER`. Add `@sr-Latn` for Expression.
+     * **References**:
+
+       * `<TLCOrganization>` for court, `<TLCPerson>` for judge, clerk, prosecutor, defendant, counsel.
+       * `<ref>` for every cited law article/paragraph/item, URIs like:
+
+         * KZ CG → `/akn/me/act/data/criminal_code/2025`
+         * ZKP → `/akn/me/act/data/criminal_procedure_code/2025`
+         * ZOBS → `/akn/me/act/data/law_on_road_traffic_safety/2025`
+         * the references for go in format clan1_stav1_t1 
+
+     * **Classification**: at least keywords `saobraćaj`, `ugrožavanje javnog saobraćaja`; subjects `/akn/me/subjects/criminal-law`, `/akn/me/subjects/traffic`.
+     * **Lifecycle**: `<eventRef type="judgment" date="YYYY-MM-DD"/>`.
+     * **Parties**: `<party>` linking roles (`#defendant`, `#prosecutor`, `#defence`) to persons.
+
+  3. **Judgment body**
+
+     * **Introduction**: court, case number, parties, date.
+     * **Decision**: operative part (acquittal/conviction, costs), with legal refs.
+     * **Motivation**: facts, reasoning, all cited laws in `<ref>`.
+     * **Conclusions**: publication/appeal info.
+     * keep most of the text as is.
+       * All of the references should be used in this sections in the middle of the text when they are mentioned.
+       * If the law uses "clan u vezi sa clanom" references, use seperate references `clanX_stavY` for each part.
+       * If the law uses "clan u vezi sa stavom" references, use seperate references `clan_stavX`and `clan_stavY` for each part.
+
+  4. **Facts/attachments (optional)**: add `<doc name="facts-summary">` with structured summary if clear.
+
+  5. **Extraction & normalization**
+
+     * Dates → ISO `YYYY-MM-DD`.
+     * Keep initials for anonymized names.
+     * Normalize law acronyms: `kz`, `zkp`, `zobs`.
+     * Do **not invent** content; omit missing sections.
+
+  RETURN ONLY THE Akoma Ntoso 3.0 XML, NO EXPLANATIONS.
+
+judgment_to_db: |
+  You are a legal NLP assistant. 
+  Your task is to extract structured data from the following Montenegrin court judgment (presuda). 
+  The output MUST be in valid JSON format following this schema:
+
+  {
+    "judgment_id": "string",                   // broj predmeta
+    "court": "string",                     // naziv suda
+    "decision_date": "YYYY-MM-DD",         // datum donošenja
+    "decision_type": "string",             // Presuda / Rešenje
+    "judge": "string",
+    "clerk": "string",
+    "prosecutor": "string or null",
+    "defendant": "string or initials",
+    "prosecuted_before": "true/false",    // da li je optuzeni ranije osudjivan
+    "prosecuted_before_act": "string or null",    // za sta je optuzeni ranije osudjivan
+    "lawyers": ["string"],
+    "witnesses": ["string"],
+    "decision": "kriv/nije kriv",
+    "punishment": "string or null",                   // kazna, na sta je osudjen ako je kriv
+    "due_payment": "string or null",                  // novcana kazna
+    "condition": "string or null",                    //u slucaju uslovne presude, koji je uslov
+
+    "legal_references": [
+      { "law": "string", "article": int, "paragraph": int or null }
+    ],
+
+    "facts": {
+      "driver_actions": {
+        "speed_kmh": int or null,
+        "speed_limit_kmh": int or null,
+        "alcohol_level_promil": float or null,
+        "distance_too_short": true/false/null,
+        "failed_to_yield": true/false/null,
+        "reversing": true/false/null
+      },
+      "accident": {
+        "occurred": true/false,
+        "injury": {
+          "type": "laka/teska/null",
+          "victim": "string or null"
+        },
+        "damage_eur": float or null
+      },
+      "mental_state": "nehat/umišljaj/null"
+    },
+
+    "reasoner_facts": [
+      "string"  // atoms ready for DR-Device, e.g. followsAnotherVehicle(vozac1)
+    ]
+  }
+
+  Rules:
+  - If a field is not mentioned, set it to null (not empty string).
+  - Extract full names if available, otherwise use initials.
+  - Always normalize legal references to {law, article, paragraph}.
+  - Facts should be expressed in numbers/booleans where possible.
+  - For reasoner_facts, map the facts into logical atoms following LegalRuleML rules 
+    (e.g. if text says 'nije držao odstojanje' → distanceTooShort(vozac1)).
+  - Always respond with the extracted JSON only, put the response between "```json" and "```"
+
+  Now extract the data from the following judgment text:
