@@ -1,7 +1,8 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from utils import xml_parser, reference_utils
 from services import law_service
 from services import judgment_service
+from typing import Any, Dict
 
 router = APIRouter(prefix="", tags=["Laws and Judgments"])
 
@@ -28,3 +29,11 @@ def get_judgment(judgment_id: str):
 @router.get("/judgments/{judgment_id}/references")
 def get_references(judgment_id: str):
     return judgment_service.get_references(judgment_id)
+
+@router.post("/judgments/upsert")
+def upsert_judgment(judgment: Dict[str, Any]):
+    try:
+        judgment_service.insert_judgment(judgment)
+        return {"status": "ok", "judgment_id": judgment["judgment_id"]}
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=str(e))
