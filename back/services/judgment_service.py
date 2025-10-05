@@ -1,5 +1,7 @@
-from utils.xml_parser import parse_judgment_xml
 import os
+from typing import Any, Dict
+from utils.xml_parser import parse_judgment_xml
+from data.db import insert_judgment
 
 DATA_DIR = "data/verdicts/xml"
 
@@ -14,3 +16,7 @@ def get_judgment(judgment_id: str):
 def get_references(judgment_id: str):
     judgment = get_judgment(judgment_id)
     return judgment["references"]
+
+def update_judgment(judgment: Dict[str, Any]):
+    insert_judgment(judgment)
+    return judgment

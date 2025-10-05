@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/"
+                  xmlns:ruleml="http://ruleml.org/spec"
+                  xml:lang="sr-Latn-ME">
+
+  <!-- ===================== REFERENCES (AKN) ===================== -->
+  <lrml:References>
+    <lrml:Reference lrml:key="refKZ339_1" lrml:href="/akn/me/act/kz/last/art_339.par_1"/>
+    <lrml:Reference lrml:key="refKZ339_2" lrml:href="/akn/me/act/kz/last/art_339.par_2"/>
+    <lrml:Reference lrml:key="refKZ339_3" lrml:href="/akn/me/act/kz/last/art_339.par_3"/>
+  </lrml:References>
+
+  <!-- ============================================================
+       ČLAN 339 STAV 1 — Ugrožavanje javnog saobraćaja (osnovni oblik)
+       Uslovi:
+         - učesnik na putu + nepoštovanje saobraćajnih propisa
+         - ugrožen saobraćaj tako da postoji opasnost za život/tijelo ili imovinu > 20.000 €
+         - i (rezultat) nastupi laka tjelesna povreda ILI šteta > 3.000 €
+  ============================================================ -->
+  <lrml:PrescriptiveStatement lrml:key="PS_KZ_339_1">
+    <lrml:Modality lrml:type="sanction"/>
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>roadParticipant</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>violatesTrafficRules</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>trafficEndangered</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+
+          <!-- opasnost: život/tijelo ILI imovina čija vrijednost > 20k -->
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>riskToLifeOrBody</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel>riskToPropertyOverEUR</ruleml:Rel>
+              <ruleml:Var>?X</ruleml:Var><ruleml:Ind>20000</ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+
+          <!-- rezultat: laka povreda ILI imovinska šteta > 3k -->
+          <ruleml:Or>
+            <ruleml:Atom>
+              <ruleml:Rel>injurySeverity</ruleml:Rel>
+              <ruleml:Var>?Victim</ruleml:Var><ruleml:Ind>laka</ruleml:Ind>
+            </ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel>propertyDamageOverEUR</ruleml:Rel>
+              <ruleml:Var>?X</ruleml:Var><ruleml:Ind>3000</ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>liable_KZ_339_1</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References>
+      <lrml:Reference lrml:key="refKZ339_1"/>
+    </lrml:References>
+  </lrml:PrescriptiveStatement>
+
+  <!-- ============================================================
+       ČLAN 339 STAV 2 — Ugrožavanje željezničkog/brodskog/autobusnog/žičara saobraćaja
+       Uslovi:
+         - nepoštovanje propisa + ugrožen specificirani saobraćaj
+         - opasnost za život/tijelo ili imovinu > 20.000 €
+         - (ovaj stav ne zahtijeva nužno nastupanje povrede/štete)
+  ============================================================ -->
+  <lrml:PrescriptiveStatement lrml:key="PS_KZ_339_2">
+    <lrml:Modality lrml:type="sanction"/>
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>violatesTrafficRules</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+
+          <!-- ugrožen jedan od navedenih vidova saobraćaja -->
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>railTrafficEndangered</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>maritimeTrafficEndangered</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>busTrafficEndangered</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>cableCarTrafficEndangered</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+          </ruleml:Or>
+
+          <!-- opasnost: život/tijelo ILI imovina čija vrijednost > 20k -->
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>riskToLifeOrBody</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom>
+              <ruleml:Rel>riskToPropertyOverEUR</ruleml:Rel>
+              <ruleml:Var>?X</ruleml:Var><ruleml:Ind>20000</ruleml:Ind>
+            </ruleml:Atom>
+          </ruleml:Or>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>liable_KZ_339_2</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References>
+      <lrml:Reference lrml:key="refKZ339_2"/>
+    </lrml:References>
+  </lrml:PrescriptiveStatement>
+
+  <!-- ============================================================
+       ČLAN 339 STAV 3 — Nehatna varijanta stav 1 ili 2
+       Uslovi:
+         - ispunjeni uslovi za 339(1) ili 339(2) (gore definisani zaključci)
+         - i (krivica) nehat
+  ============================================================ -->
+  <!-- Varianta A: iz stava 1 učinjeno iz nehata -->
+  <lrml:PrescriptiveStatement lrml:key="PS_KZ_339_3_from_1">
+    <lrml:Modality lrml:type="sanction"/>
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>liable_KZ_339_1</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>negligence</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>liable_KZ_339_3</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References>
+      <lrml:Reference lrml:key="refKZ339_3"/>
+    </lrml:References>
+  </lrml:PrescriptiveStatement>
+
+  <!-- Varianta B: iz stava 2 učinjeno iz nehata -->
+  <lrml:PrescriptiveStatement lrml:key="PS_KZ_339_3_from_2">
+    <lrml:Modality lrml:type="sanction"/>
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>liable_KZ_339_2</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>negligence</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>liable_KZ_339_3</ruleml:Rel><ruleml:Var>?X</ruleml:Var></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References>
+      <lrml:Reference lrml:key="refKZ339_3"/>
+    </lrml:References>
+  </lrml:PrescriptiveStatement>
+
+</lrml:LegalRuleML>
