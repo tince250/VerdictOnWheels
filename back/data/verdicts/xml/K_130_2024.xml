@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+      <identification source="#court">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgment/osnovni_sud_u_herceg/2025-01-29/K_130_2024"/>
+          <FRBRuri value="/akn/me/judgment/osnovni_sud_u_herceg/2025-01-29/K_130_2024"/>
+          <FRBRdate date="2025-01-29" name="Decision"/>
+          <FRBRauthor href="#osnovni_sud_u_herceg"/>
+        </FRBRWork>
+      </identification>
+    </meta>
+    <judgmentBody>
+      <introduction>
+        <p>U IME CRNE GORE K.br.130/24 OSNOVNI SUD U HERCEG NOVOM, po Predsjednici suda-sudiji Vesni Gazdić, uz učestvovanje zapisničara Ristić Katarine, po optužnom predlogu Osnovnog državnog tužilaštva u Herceg Novom Kt.br.228/23 od 23.08.2024. godine, protiv okrivljenog M.B., zbog krivičnog djela ugrožavanje javnog saobraćaja iz <ref href="criminal_code#clan339_stav3" showAs="član 339 stav 3"/> u vezi <ref href="criminal_code#clan339_stav1" showAs="član 339 stav 1"/> Krivičnog Zakonika CG, nakon održanog glavnog pretresa dana 29.01.2025.g. u prisustvu državnog tužioca Nikole Samardžića i okrivljenog, istog dana donio je</p>
+      </introduction>
+      <defendant>
+        <p>Okrivljeni M.B. (JMBG: ...) od oca LJ. i majke M. rođ.K., rođen ... godine, u K., nastanjen u I., ul...., građevinski tehničar, nezaposlen, bez primanja, oženjen, otac dvoje maloljetne djece, neosuđivan, ne vodi drugi krivični postupak protiv njega, državljanin Crne Gore</p>
+      </defendant>
+      <verdict>
+        <p>Kriv je</p>
+      </verdict>
+      <reasoning>
+        <p>Što je: Dana 26.05.2023.g. oko 13:00 časova na dijelu Jadranske magistrale u blizini marketa »HDL« u Igalu, ne pridržavajući se saobraćajnih propisa iz <ref href="law_on_road_traffic_safety#clan27_stav1" showAs="član 27 stav 1"/> ZOBS-a na putevima ugrozio saobraćaj i doveo u opasnost život i tijelo ljudi na način što je, upravljajući pmv marke »Mercedes« tip »Viano« reg.oznaka BG ... započeo uključivanje na magistralu sa površine ispred marketa »HDL« na kojoj je njegovo vozilo bilo parkirano u namjeri da krene u smjeru Igala a da se nije prethodno uvjerio da time neće ometati ostale učesnike u saobraćaju, iako je bio svjestan da svojom radnjom može izazvati sudar sa vozilima koja nailaze magistralom i imaju prvenstvo prolaza ali je olako držao da do toga neće doći ili da će to moći spriječiti, pa je svojim vozilom stvorio fizičku prepreku na putanji motocikla »BMW« reg.oznaka ZH... kojim je upravljao oštećeni H.B. iz C. krećući se magistralom u smjeru ka Sutorini svojom kolovoznom trakom, usljed čega je došlo do kontakta čeono bočne lijeve strane motocikla oštećenog sa bočnom lijevom zadnjom stranom vozila okrivljenog i usljed čega je oštećeni H.B. zadobio laku tjelesnu povredu u vidu manje oguljotine kože u predjelu desne potkoljenice, -čime je izvršio krivično djelo ugrožavanje javnog saobraćaja iz <ref href="criminal_code#clan339_stav3" showAs="član 339 stav 3"/> u vezi <ref href="criminal_code#clan339_stav1" showAs="član 339 stav 1"/> Krivičnog zakonika Crne Gore, Pa mu sud primjenom <ref href="criminal_code#clan3" showAs="član 3"/><ref href="criminal_code#clan4" showAs="član 4"/><ref href="criminal_code#clan5" showAs="član 5"/><ref href="criminal_code#clan13" showAs="član 13"/><ref href="criminal_code#clan16" showAs="član 16"/><ref href="criminal_code#clan32" showAs="član 32"/><ref href="criminal_code#clan42" showAs="član 42"/><ref href="criminal_code#clan52" showAs="član 52"/><ref href="criminal_code#clan53" showAs="član 53"/><ref href="criminal_code#clan54" showAs="član 54"/> KZ CG, te odredbi <ref href="criminal_code#clan229_stav4" showAs="član 229 stav 4"/>, <ref href="criminal_code#clan239" showAs="član 239"/> i <ref href="criminal_code#clan374" showAs="član 374"/> ZKP-a, izriče</p>
+      </reasoning>
+      <punishment>
+        <p>USLOVNU OSUDU Kojom mu utvrđuje kaznu zatvora u trajanju od 3 (tri) mjeseca i istovremeno određuje da se ova kazna neće izvršiti ukoliko okrivljeni u roku od 1 (jedne) godine po pravosnažnosti presude ne izvrši novo krivično djelo. Okrivljeni se oslobađa od plaćanja troškova postupka, shodno <ref href="criminal_procedure_code#clan229_stav4" showAs="član 229 stav 4"/> ZKP. Oštećeni H.B. se radi ostvarivanja imovinsko pravnog zahtjeva upućuje na parnični postupak.</p>
+      </punishment>
+      <arguments>
+        <p>O b r a z l o ž e nj e: Obrazloženje je izostalo na osnovu <ref href="criminal_procedure_code#clan458_stav7" showAs="član 458 stav 7"/> ZKP-a, jer su se stranke odrekle prava žalbe i ne zahtjevaju pisani otpravak presude. OSNOVNI SUD U HERCEG NOVOM Dana 29.01.2025. godine Zapisničar PREDSJEDNICA SUDA-S UDIJA Ristić Katarina Vesna Gazdić Dna: -ODT -okrivljenom -oštećenom -u spise PRAVNA POUKA: Presuda je pravosnažna danom donošenja, budući da su se stranke odmah po njenom objavljivanju, odrekle prava na žalbu.</p>
+      </arguments>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>

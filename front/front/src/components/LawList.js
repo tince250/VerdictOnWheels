@@ -17,7 +17,6 @@ const LawList = () => {
   };
 
   const formatYear = (date) => {
-    // Extract the year from the date string
     return new Date(date).getFullYear();
   };
 
