@@ -43,7 +43,7 @@ const LawDetail = () => {
   };
 
   const formatYear = (date) => new Date(date).getFullYear();
-s
+
   const renderTextWithReferences = (text, references) => {
     let parts = [text];
     references.forEach((ref) => {
