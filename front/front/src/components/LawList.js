@@ -22,14 +22,13 @@ const LawList = () => {
 
   return (
     <Paper style={{ padding: 16, marginBottom: 16 }}>
-      <Typography variant="h5" gutterBottom>Laws</Typography>
+      <Typography variant="h5" gutterBottom>Zakonici</Typography>
       <List>
         {laws.map((law, i) => (
           <ListItem key={i} disablePadding>
             <ListItemButton component={Link} to={`/laws/${law.title.split("/")[law.title.split("/").length - 3]}`}>
               <ListItemText
                 primary={formatTitle(law.title)}
-                secondary={`Year: ${formatYear(law.date)}`}
               />
             </ListItemButton>
           </ListItem>

@@ -30,6 +30,10 @@ def get_judgment(judgment_filename: str):
 def get_references(judgment_id: str):
     return judgment_service.get_references(judgment_id)
 
+@router.get("/judgments/{case_number}/metadata")
+def get_judgment_metadata(case_number: str):
+    return judgment_service.get_judgment_metadata(case_number)
+
 @router.post("/judgments/upsert")
 def upsert_judgment(judgment: Dict[str, Any]):
     try:

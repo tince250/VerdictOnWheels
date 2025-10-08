@@ -1,8 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Box, Typography, CircularProgress, Card, CardContent, Grid, Divider } from '@mui/material';
+import {
+  Box,
+  Typography,
+  CircularProgress,
+  Card,
+  CardContent,
+  Divider,
+  List,
+  ListItem,
+  ListItemText,
+  Paper
+} from '@mui/material';
 
 const JudgmentDetail = ({ judgmentId }) => {
   const [judgment, setJudgment] = useState(null);
+  const [metadata, setMetadata] = useState(null);
 
   useEffect(() => {
     const fetchJudgment = async () => {
@@ -14,7 +26,19 @@ const JudgmentDetail = ({ judgmentId }) => {
         console.error('Error fetching judgment:', error);
       }
     };
+
+    const fetchMetadata = async () => {
+      try {
+        const response = await fetch(`http://localhost:8000/judgments/K_37_2024/metadata`);
+        const data = await response.json();
+        setMetadata(data);
+      } catch (error) {
+        console.error('Error fetching judgment metadata:', error);
+      }
+    };
+
     fetchJudgment();
+    fetchMetadata();
   }, [judgmentId]);
 
   const processTextWithRefs = (section) => {
@@ -47,7 +71,7 @@ const JudgmentDetail = ({ judgmentId }) => {
     return elements;
   };
 
-  if (!judgment) {
+  if (!judgment || !metadata) {
     return (
       <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
         <CircularProgress />
@@ -55,80 +79,187 @@ const JudgmentDetail = ({ judgmentId }) => {
     );
   }
 
-  const { metadata, sections } = judgment;
+  const { sections } = judgment;
 
   return (
-    <Box sx={{ padding: 3 }}>
-      <Card variant="outlined">
-        <CardContent>
-          <Typography variant="h4" gutterBottom>
-            Broj: {metadata.FRBRthis.split('/').pop().replace(/_/g, '').replace(/(\d+)(\d{4})/, '$1/$2')}
-          </Typography>
-          <Typography variant="h6" color="textSecondary" gutterBottom>
-            Datum: {metadata.FRBRdate}
-          </Typography>
-          <Typography variant="h6" color="textSecondary" gutterBottom>
-            Sud: {metadata.FRBRauthor.replace(/#|_/g, ' ').toUpperCase().trim()}
-          </Typography>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'row',
+        gap: 3,
+        padding: 3,
+        width: '100%',
+        height: '100vh',
+        boxSizing: 'border-box',
+      }}
+    >
 
-          <Divider sx={{ margin: '16px 0' }} />
+      <Box
+        sx={{
+          flex: 2,
+          overflowY: 'auto',
+          paddingRight: 2,
+        }}
+      >
+        <Card variant="outlined" sx={{ mb: 2 }}>
+          <CardContent>
+            <Typography variant="h4" gutterBottom>
+              Broj:{' '}
+              {judgment.metadata.FRBRthis
+                .split('/')
+                .pop()
+                .replace(/_/g, '')
+                .replace(/(\d+)(\d{4})/, '$1/$2')}
+            </Typography>
+            <Typography variant="h6" color="textSecondary" gutterBottom>
+              Datum: {judgment.metadata.FRBRdate}
+            </Typography>
+            <Typography variant="h6" color="textSecondary" gutterBottom>
+              Sud: {judgment.metadata.FRBRauthor.replace(/#|_/g, ' ').toUpperCase().trim()}
+            </Typography>
 
-          <Grid container spacing={3}>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Uvod:
-              </Typography>
-              <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-                {processTextWithRefs(sections.introduction)}
-              </Typography>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-                Okrivljeni:
-              </Typography>
-              <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-                {processTextWithRefs(sections.defendant)}
-              </Typography>
-            </Grid>
-          </Grid>
+            <Divider sx={{ margin: '16px 0' }} />
 
-          <Divider sx={{ margin: '16px 0' }} />
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Uvod:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.introduction)}
+            </Typography>
 
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            Presuda:
+            <Divider sx={{ margin: '16px 0' }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Okrivljeni:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.defendant)}
+            </Typography>
+
+            <Divider sx={{ margin: '16px 0' }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Presuda:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.verdict)}
+            </Typography>
+
+            <Divider sx={{ margin: '16px 0' }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Razlog:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.reasoning)}
+            </Typography>
+
+            <Divider sx={{ margin: '16px 0' }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Izriče:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.punishment)}
+            </Typography>
+
+            <Divider sx={{ margin: '16px 0' }} />
+
+            <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
+              Obrazloženje:
+            </Typography>
+            <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
+              {processTextWithRefs(sections.arguments)}
+            </Typography>
+          </CardContent>
+        </Card>
+      </Box>
+
+
+      <Box
+        sx={{
+          flex: 1,
+          position: 'sticky',
+          top: 24,
+          height: 'calc(100vh - 48px)',
+          overflowY: 'auto',
+        }}
+      >
+        <Paper elevation={3} sx={{ padding: 2, borderRadius: 2 }}>
+          <Typography variant="h5" gutterBottom sx={{ fontWeight: 'bold' }}>
+            Metadata
           </Typography>
-          <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-            {processTextWithRefs(sections.verdict)}
-          </Typography>
+          <Divider sx={{ marginBottom: 2 }} />
 
-          <Divider sx={{ margin: '16px 0' }} />
-
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            Razlog:
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-            {processTextWithRefs(sections.reasoning)}
-          </Typography>
-
-          <Divider sx={{ margin: '16px 0' }} />
-
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            Izriče:
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-            {processTextWithRefs(sections.punishment)}
-          </Typography>
-
-          <Divider sx={{ margin: '16px 0' }} />
-
-          <Typography variant="h6" sx={{ fontWeight: 'bold' }}>
-            Obrazloženje:
-          </Typography>
-          <Typography variant="body1" paragraph sx={{ textAlign: 'justify' }}>
-            {processTextWithRefs(sections.arguments)}
-          </Typography>
-        </CardContent>
-      </Card>
+          <List dense>
+            <ListItem>
+              <ListItemText primary="Broj slučaja" secondary={metadata.caseNumber || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Sud" secondary={metadata.court || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Sudija" secondary={metadata.judge || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Tužilac" secondary={metadata.prosecutor || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Okrivljeni" secondary={metadata.defendant || '-'} />
+            </ListItem>
+            <Divider sx={{ marginY: 1 }} />
+            <ListItem>
+              <ListItemText primary="Prekršaj ili krivično delo" secondary={metadata.offense || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Tip presude" secondary={metadata.verdictType || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText
+                primary="Primijenjene odredbe"
+                secondary={metadata.appliedProvisions?.join(', ') || '-'}
+              />
+            </ListItem>
+            <Divider sx={{ marginY: 1 }} />
+            <ListItem>
+              <ListItemText primary="Brzina (km/h)" secondary={metadata.speedKmh ?? '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Ograničenje brzine (km/h)" secondary={metadata.speedLimitKmh ?? '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Alkohol (‰)" secondary={metadata.alcoholLevelPromil ?? '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Stanje na putu" secondary={metadata.roadCondition || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Stepen povrede" secondary={metadata.injurySeverity || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Oštećenje (€)" secondary={metadata.damageEur ?? '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Mentalno stanje" secondary={metadata.mentalState || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Dosije" secondary={metadata.priorRecord ? 'Da' : 'Ne'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Vrsta kazne" secondary={metadata.punishmentType || '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Kazna (meseci)" secondary={metadata.sentenceMonths ?? '-'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Saobraćajna nesreća" secondary={metadata.accidentOccured ? 'Da' : 'Ne'} />
+            </ListItem>
+            <ListItem>
+              <ListItemText primary="Vrsta puta" secondary={metadata.roadType || '-'} />
+            </ListItem>
+          </List>
+        </Paper>
+      </Box>
     </Box>
   );
 };

@@ -36,3 +36,41 @@ def get_references(judgment_id: str):
 def update_judgment(judgment: Dict[str, Any]):
     insert_judgment(judgment)
     return judgment
+
+from typing import Dict, Any
+
+def get_judgment_metadata(case_number: str) -> Dict[str, Any]:
+    """
+    Mock function that returns metadata for a given judgment case number.
+    """
+    # Normally, you'd query a database or parse XML here.
+    # For now, we're returning static example data.
+    return {
+        "id": "J12345",
+        "filePath": f"/cases/{case_number}/judgment.xml",
+        "court": "Općinski sud u Zagrebu",
+        "caseNumber": case_number,
+        "judge": "Marko Horvat",
+        "prosecutor": "Ivana Perić",
+        "defendant": "Petar Petrović",
+
+        # Legal core
+        "offense": "Ugrožavanje javnog prometa",
+        "verdictType": "Kriv",
+        "appliedProvisions": ["Zakon o sigurnosti prometa - čl. 45", "Kazneni zakon - čl. 227"],
+
+        # CBR attributes
+        "violationTypes": ["failedToYield", "speeding"],
+        "speedKmh": 110.0,
+        "speedLimitKmh": 80.0,
+        "alcoholLevelPromil": 1.25,
+        "roadCondition": "wet, night",
+        "injurySeverity": "serious",
+        "damageEur": 7500.0,
+        "mentalState": "nehat",
+        "priorRecord": True,
+        "punishmentType": "Uvjetna kazna zatvora",
+        "sentenceMonths": 8,
+        "accidentOccured": True,
+        "roadType": "regional road"
+    }
