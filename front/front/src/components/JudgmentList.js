@@ -13,7 +13,7 @@ const JudgmentList = () => {
 
   return (
     <Paper style={{ padding: 16, marginBottom: 16 }}>
-      <Typography variant="h5" gutterBottom>Judgments</Typography>
+      <Typography variant="h5" gutterBottom>Presude</Typography>
       
     </Paper>
   );

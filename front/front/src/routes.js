@@ -8,12 +8,11 @@ const AppRoutes = () => (
   <Router>
     <Routes>
       <Route path="/" element={<div>
-        <h1>Law & Judgment Review</h1>
+        <h1>Verdict On Wheels</h1>
         <LawList />
         <JudgmentList />
       </div>} />
       <Route path="/laws/:lawId" element={<LawDetail />} />
-      <Route path="/laws/:lawId/articles/:articleId" element={<LawDetail />} />
       <Route path="/judgments/:judgmentId" element={<JudgmentDetail />} />
     </Routes>
   </Router>

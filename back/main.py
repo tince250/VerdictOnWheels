@@ -22,13 +22,17 @@ def get_article(law_id: str, article_id: str):
 def list_judgments():
     return judgment_service.list_judgments()
 
-@router.get("/judgments/{judgment_id}")
-def get_judgment(judgment_id: str):
-    return judgment_service.get_judgment(judgment_id)
+@router.get("/judgments/{judgment_filename}")
+def get_judgment(judgment_filename: str):
+    return judgment_service.get_judgment(judgment_filename)
 
 @router.get("/judgments/{judgment_id}/references")
 def get_references(judgment_id: str):
     return judgment_service.get_references(judgment_id)
+
+@router.get("/judgments/{case_number}/metadata")
+def get_judgment_metadata(case_number: str):
+    return judgment_service.get_judgment_metadata(case_number)
 
 @router.post("/judgments/upsert")
 def upsert_judgment(judgment: Dict[str, Any]):
