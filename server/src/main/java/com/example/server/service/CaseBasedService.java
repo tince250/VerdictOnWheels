@@ -1,62 +1,109 @@
 package com.example.server.service;
 
+import com.example.server.dto.SimilarCaseDTO;
 import com.example.server.model.Judgment;
 import com.example.server.repository.CsvConnector;
 import com.example.server.utils.TabularSimilarity;
 import es.ucm.fdi.gaia.jcolibri.casebase.LinealCaseBase;
 import es.ucm.fdi.gaia.jcolibri.cbraplications.StandardCBRApplication;
-import es.ucm.fdi.gaia.jcolibri.cbrcore.*;
+import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
+import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRCaseBase;
+import es.ucm.fdi.gaia.jcolibri.cbrcore.CBRQuery;
 import es.ucm.fdi.gaia.jcolibri.exception.ExecutionException;
-import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
-import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.LocalSimilarityFunction;
-import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.global.Average;
-import org.springframework.stereotype.Service;
-
-import es.ucm.fdi.gaia.jcolibri.method.retrieve.RetrievalResult;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNConfig;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.NNScoringMethod;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.global.Average;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Equal;
+import es.ucm.fdi.gaia.jcolibri.method.retrieve.RetrievalResult;
 import es.ucm.fdi.gaia.jcolibri.method.retrieve.selection.SelectCases;
+import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
 @Service
-class CaseBasedService implements StandardCBRApplication {
+public class CaseBasedService implements StandardCBRApplication {
 
-    Connector _connector;  /** Connector object */
-    CBRCaseBase _caseBase;  /** CaseBase object */
+    private CsvConnector _connector;
+    /**
+     * Connector object
+     */
+    CBRCaseBase _caseBase;
+    /**
+     * CaseBase object
+     */
 
-    NNConfig simConfig;  /** KNN configuration */
+    NNConfig simConfig;
+    /**
+     * KNN configuration
+     */
+
+    private volatile boolean initialized = false;
+
+    public CaseBasedService(CsvConnector csvConnector) {
+        this._connector = csvConnector;
+    }
+
+    private void initIfNeeded() {
+        if (initialized) return;
+        synchronized (this) {
+            if (initialized) return;
+            try {
+                configure();
+                preCycle();
+                initialized = true;
+                System.out.println("[CBR] Initialized. Cases: " + _caseBase.getCases().size());
+            } catch (ExecutionException e) {
+                throw new RuntimeException("CBR init failed", e);
+            }
+        }
+    }
 
     public void configure() throws ExecutionException {
-        _connector =  new CsvConnector();
+        _caseBase = new LinealCaseBase();
 
-        _caseBase = new LinealCaseBase();  // Create a Lineal case base for in-memory organization
-
-        simConfig = new NNConfig(); // KNN configuration
-        simConfig.setDescriptionSimFunction(new Average());  // global similarity function = average
+        simConfig = new NNConfig();
+        simConfig.setDescriptionSimFunction(new Average());
 
         simConfig.addMapping(new Attribute("offense", Judgment.class), new Equal());
-        TabularSimilarity injurySimilarity = new TabularSimilarity(Arrays.asList(new String[] {"lake", "teske", "fatalne"}));
+        simConfig.setWeight(new Attribute("offense", Judgment.class), 1.0);
+
+        TabularSimilarity injurySimilarity = new TabularSimilarity(Arrays.asList(new String[]{"nema", "lake", "teske", "fatalne"}));
         injurySimilarity.setSimilarity("lake", "teske", .5);
-        injurySimilarity.setSimilarity("teske", "fatalne", .5);
+        injurySimilarity.setSimilarity("teske", "fatalne", .6);
         injurySimilarity.setSimilarity("lake", "fatalne", .2);
+        injurySimilarity.setSimilarity("nema", "lake", .2);
         simConfig.addMapping(new Attribute("injurySeverity", Judgment.class), injurySimilarity);
-        TabularSimilarity provisionsSimilarity = new TabularSimilarity(Arrays.asList(new String[] {
-                "cl. 42 st. 1 ZOBSNP",
-                "cl. 43 st. 1 ZOBSNP",
-                "cl. 47 st. 1 ZOBSNP",
-                "cl. 47 st. 3 ZOBSNP",
-                "cl. 47 st. 4 ZOBSNP"}));
-        provisionsSimilarity.setSimilarity("cl. 42 st. 1 ZOBSNP", "cl. 43 st. 1 ZOBSNP", .5);
-        provisionsSimilarity.setSimilarity("cl. 47 st. 1 ZOBSNP", "cl. 47 st. 3 ZOBSNP", .5);
-        provisionsSimilarity.setSimilarity("cl. 47 st. 3 ZOBSNP", "cl. 47 st. 4 ZOBSNP", .5);
-        provisionsSimilarity.setSimilarity("cl. 47 st. 1 ZOBSNP", "cl. 47 st. 4 ZOBSNP", .5);
-        simConfig.addMapping(new Attribute("appliedProvisions", Judgment.class), provisionsSimilarity);
+        simConfig.setWeight(new Attribute("injurySeverity", Judgment.class), 1.2);
+
+        TabularSimilarity mensSimilarity = new TabularSimilarity(Arrays.asList(new String[]{"nehat", "umislaj"}));
+        mensSimilarity.setSimilarity("nehat", "umislaj", 0.3);
+
+        simConfig.addMapping(new Attribute("mentalState", Judgment.class), mensSimilarity);
+        simConfig.setWeight(new Attribute("mentalState", Judgment.class), 0.6);
+
+        simConfig.addMapping(new Attribute("priorRecord", Judgment.class), new Equal());
+        simConfig.setWeight(new Attribute("priorRecord", Judgment.class), 0.3);
+
+        simConfig.addMapping(new Attribute("accidentOccured", Judgment.class), new Equal());
+        simConfig.setWeight(new Attribute("accidentOccured", Judgment.class), 0.5);
+
+        simConfig.addMapping(new Attribute("alcoholLevelPromil", Judgment.class),
+                new es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval(2.0));
+        simConfig.setWeight(new Attribute("alcoholLevelPromil", Judgment.class), 1.1);
+
+        simConfig.addMapping(new Attribute("speedKmh", Judgment.class),
+                new es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval(60.0));
+        simConfig.setWeight(new Attribute("speedKmh", Judgment.class), 0.8);
+
+        simConfig.addMapping(new Attribute("speedLimitKmh", Judgment.class),
+                new es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval(50.0));
+        simConfig.setWeight(new Attribute("speedLimitKmh", Judgment.class), 0.5);
+
+        simConfig.addMapping(new Attribute("damageEur", Judgment.class),
+                new es.ucm.fdi.gaia.jcolibri.method.retrieve.NNretrieval.similarity.local.Interval(25000.0));
+        simConfig.setWeight(new Attribute("damageEur", Judgment.class), 0.8);
 
         // Equal - returns 1 if both individuals are equal, otherwise returns 0
         // Interval - returns the similarity of two number inside an interval: sim(x,y) = 1-(|x-y|/interval)
@@ -83,40 +130,149 @@ class CaseBasedService implements StandardCBRApplication {
 
     public CBRCaseBase preCycle() throws ExecutionException {
         _caseBase.init(_connector);
-        java.util.Collection<CBRCase> cases = _caseBase.getCases();
-//		for (CBRCase c: cases)
-//			System.out.println(c.getDescription());
         return _caseBase;
     }
 
-    public static void main(String[] args) {
-        StandardCBRApplication recommender = new CaseBasedService();
-        System.out.println("ticko");
-        try {
-            recommender.configure();
+    public List<SimilarCaseDTO> retrieveTopK(Judgment query, int k) {
+        initIfNeeded();
+        normalizeJudgment(query);
 
-            recommender.preCycle();
+        System.out.println(query);
 
-            CBRQuery query = new CBRQuery();
-            Judgment Judgment = new Judgment();
+        CBRQuery q = new CBRQuery();
+        q.setDescription(query);
 
-            Judgment.setOffense("cl. 289 st. 3 KZ");
-            List<String> appliedProvisions = new ArrayList();
-            appliedProvisions.add("cl. 55 st. 3 tac. 15 ZOBSNP");
-            appliedProvisions.add("cl. 43 st. 1 ZOBSNP");
-            Judgment.setAppliedProvisions(appliedProvisions);
-            Judgment.setSpeedKmh(60.0);
-            Judgment.setSpeedLimitKmh(50.0);
-            Judgment.setDamageEur(25000.0);
-            Judgment.setInjurySeverity("teška");
+        var scored = NNScoringMethod.evaluateSimilarity(_caseBase.getCases(), q, simConfig);
+        var top = SelectCases.selectTopKRR(scored, k);
 
-            query.setDescription( Judgment );
+        System.out.println("Retrieved cases:");
+        for (RetrievalResult nse : top)
+            System.out.println(nse.get_case().getDescription() + " -> " + nse.getEval());
 
-            recommender.cycle(query);
-
-            recommender.postCycle();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        return top.stream()
+                .sorted((a, b) -> Double.compare(b.getEval(), a.getEval()))
+                .map(rr -> new SimilarCaseDTO((Judgment) rr.get_case().getDescription(),
+                        rr.getEval()))
+                .toList();
     }
+
+    public Judgment suggestJudgment(Judgment judgment, List<SimilarCaseDTO> similarCases) {
+
+        Boolean isGuilty = determineIfGuilty(similarCases);
+
+        judgment.setGuilty(isGuilty);
+
+        if (isGuilty) {
+            judgment.setSentenceMonths(determineSentenceMonths(similarCases));
+            judgment.setFine(determineFine(similarCases));
+            judgment.setDrivingBan(determineDrivingBan(similarCases));
+        }
+
+        return judgment;
+    }
+
+    private Boolean determineDrivingBan(List<SimilarCaseDTO> similarCases) {
+        double banYes = 0, banNo = 0;
+        for (var dto : similarCases) {
+            Judgment j = dto.getCaseDesc();
+            if (j.getDrivingBan() == null) continue;
+            if (j.getDrivingBan()) banYes += dto.getSimilarity();
+            else banNo += dto.getSimilarity();
+        }
+        Boolean drivingBan = null;
+        if (banYes > banNo) drivingBan = true;
+        else if (banNo > banYes) drivingBan = false;
+
+        return drivingBan;
+    }
+
+    private Integer determineFine(List<SimilarCaseDTO> similarCases) {
+        double fineSum = 0, fineWeight = 0;
+        for (var dto : similarCases) {
+            Judgment j = dto.getCaseDesc();
+            if (j.getFine() != null) {
+                fineSum += j.getFine() * dto.getSimilarity();
+                fineWeight += dto.getSimilarity();
+            }
+        }
+        Integer fineEur = (fineWeight > 0)
+                ? (int) Math.round(fineSum / fineWeight)
+                : null;
+
+        return fineEur;
+    }
+
+    private Integer determineSentenceMonths(List<SimilarCaseDTO> similarCases) {
+        double prisonSum = 0, prisonWeight = 0;
+
+        for (var dto : similarCases) {
+            Judgment j = dto.getCaseDesc();
+            if (j.getSentenceMonths() != null) {
+                prisonSum += j.getSentenceMonths() * dto.getSimilarity();
+                prisonWeight += dto.getSimilarity();
+            }
+        }
+
+        Integer prisonMonths = (prisonWeight > 0)
+                ? (int) Math.round(prisonSum / prisonWeight)
+                : null;
+
+        return prisonMonths;
+    }
+
+    private boolean determineIfGuilty(List<SimilarCaseDTO> similarCases) {
+        double guiltyWeight = 0.0;
+        double notGuiltyWeight = 0.0;
+        double weightSum = 0.0;
+
+        for (SimilarCaseDTO dto : similarCases) {
+            double sim = dto.getSimilarity();
+            Judgment j = dto.getCaseDesc();
+            if (j.getGuilty() == null) continue;
+
+            weightSum += sim;
+            if (j.getGuilty()) guiltyWeight += sim;
+            else notGuiltyWeight += sim;
+        }
+
+        Boolean suggestedVerdict = null;
+        double confidence = 0.0;
+
+        if (weightSum > 0) {
+            if (guiltyWeight > notGuiltyWeight) {
+                suggestedVerdict = true;
+                confidence = guiltyWeight / weightSum;
+            } else if (notGuiltyWeight > guiltyWeight) {
+                suggestedVerdict = false;
+                confidence = notGuiltyWeight / weightSum;
+            }
+        }
+
+        return suggestedVerdict;
+    }
+
+    private void normalizeJudgment(Judgment j) {
+        if (j.getInjurySeverity() != null)
+            j.setInjurySeverity(sanitize(j.getInjurySeverity()));
+        if (j.getMentalState() != null)
+            j.setMentalState(sanitize(j.getMentalState()));
+        if (j.getOffense() != null)
+            j.setOffense(j.getOffense().trim());
+        if (j.getRoadCondition() != null)
+            j.setRoadCondition(sanitize(j.getRoadCondition()));
+        if (j.getRoadType() != null)
+            j.setRoadType(sanitize(j.getRoadType()));
+        if (j.getAppliedProvisions() != null)
+            j.setAppliedProvisions(j.getAppliedProvisions().stream().map(String::trim).toList());
+        if (j.getViolationTypes() != null)
+            j.setViolationTypes(j.getViolationTypes().stream().map(this::sanitize).toList());
+    }
+
+    private String sanitize(String s) {
+        if (s == null) return null;
+        String t = s.trim().toLowerCase();
+        t = t.replace("š", "s").replace("č", "c").replace("ć", "c").replace("ž", "z").replace("đ", "dj");
+        return t;
+    }
+
 }

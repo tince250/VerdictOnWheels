@@ -88,7 +88,7 @@ public class CbrApplication implements StandardCBRApplication {
 	}
 
 	public static void main(String[] args) {
-		StandardCBRApplication recommender = new CbrCasepplication();
+		StandardCBRApplication recommender = new CbrApplication();
         System.out.println("ticko");
 		try {
 			recommender.configure();
