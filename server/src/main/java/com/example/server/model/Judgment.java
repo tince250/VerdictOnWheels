@@ -1,12 +1,10 @@
 package com.example.server.model;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-
 import es.ucm.fdi.gaia.jcolibri.cbrcore.Attribute;
 import es.ucm.fdi.gaia.jcolibri.cbrcore.CaseComponent;
-import org.mindswap.pellet.utils.Bool;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Judgment implements CaseComponent {
     // Judgment identity
@@ -22,6 +20,7 @@ public class Judgment implements CaseComponent {
     private String offense;
     private String verdictType;
     private List<String> appliedProvisions = new ArrayList<>();
+    private Boolean isGuilty;
 
     // CBR attributes
     private List<String> violationTypes = new ArrayList<>(); // e.g., failedToYield, distanceTooShort
@@ -35,68 +34,194 @@ public class Judgment implements CaseComponent {
     private Boolean priorRecord;        // previously prosecuted/convicted
     private String punishmentType;
     private Integer sentenceMonths;
+    private Integer fine;
+    private Boolean drivingBan;
     private Boolean accidentOccured;
     private String roadType;
 
-    public String getId() { return id; }
-    public void setId(String id) { this.id = id; }
+    public String getId() {
+        return id;
+    }
 
-    public String getCourt() { return court; }
-    public void setCourt(String court) { this.court = court; }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-    public String getCaseNumber() { return caseNumber; }
-    public void setCaseNumber(String caseNumber) { this.caseNumber = caseNumber; }
+    public String getCourt() {
+        return court;
+    }
 
-    public String getJudge() { return judge; }
-    public void setJudge(String judge) { this.judge = judge; }
+    public Integer getFine() {
+        return fine;
+    }
 
-    public String getProsecutor() { return prosecutor; }
-    public void setProsecutor(String prosecutor) { this.prosecutor = prosecutor; }
+    public void setFine(Integer fine) {
+        this.fine = fine;
+    }
 
-    public String getDefendant() { return defendant; }
-    public void setDefendant(String defendant) { this.defendant = defendant; }
+    public void setCourt(String court) {
+        this.court = court;
+    }
 
-    public String getOffense() { return offense; }
-    public void setOffense(String offense) { this.offense = offense; }
+    public String getCaseNumber() {
+        return caseNumber;
+    }
 
-    public String getVerdictType() { return verdictType; }
-    public void setVerdictType(String verdictType) { this.verdictType = verdictType; }
+    public void setCaseNumber(String caseNumber) {
+        this.caseNumber = caseNumber;
+    }
 
-    public List<String> getAppliedProvisions() { return appliedProvisions; }
-    public void setAppliedProvisions(List<String> appliedProvisions) { this.appliedProvisions = appliedProvisions; }
+    public String getJudge() {
+        return judge;
+    }
 
-    public List<String> getViolationTypes() { return violationTypes; }
-    public void setViolationTypes(List<String> violationTypes) { this.violationTypes = violationTypes; }
+    public void setJudge(String judge) {
+        this.judge = judge;
+    }
 
-    public Double getSpeedKmh() { return speedKmh; }
-    public void setSpeedKmh(Double speedKmh) { this.speedKmh = speedKmh; }
+    public String getProsecutor() {
+        return prosecutor;
+    }
 
-    public Double getSpeedLimitKmh() { return speedLimitKmh; }
-    public void setSpeedLimitKmh(Double speedLimitKmh) { this.speedLimitKmh = speedLimitKmh; }
+    public void setProsecutor(String prosecutor) {
+        this.prosecutor = prosecutor;
+    }
 
-    public Double getAlcoholLevelPromil() { return alcoholLevelPromil; }
-    public void setAlcoholLevelPromil(Double alcoholLevelPromil) { this.alcoholLevelPromil = alcoholLevelPromil; }
+    public String getDefendant() {
+        return defendant;
+    }
 
-    public String getRoadCondition() { return roadCondition; }
-    public void setRoadCondition(String roadCondition) { this.roadCondition = roadCondition; }
+    public void setDefendant(String defendant) {
+        this.defendant = defendant;
+    }
 
-    public String getInjurySeverity() { return injurySeverity; }
-    public void setInjurySeverity(String injurySeverity) { this.injurySeverity = injurySeverity; }
+    public String getOffense() {
+        return offense;
+    }
 
-    public Double getDamageEur() { return damageEur; }
-    public void setDamageEur(Double damageEur) { this.damageEur = damageEur; }
+    public void setOffense(String offense) {
+        this.offense = offense;
+    }
 
-    public String getMentalState() { return mentalState; }
-    public void setMentalState(String mentalState) { this.mentalState = mentalState; }
+    public String getVerdictType() {
+        return verdictType;
+    }
 
-    public Boolean getPriorRecord() { return priorRecord; }
-    public void setPriorRecord(Boolean priorRecord) { this.priorRecord = priorRecord; }
+    public void setVerdictType(String verdictType) {
+        this.verdictType = verdictType;
+    }
 
-    public String getPunishmentType() { return punishmentType; }
-    public void setPunishmentType(String punishmentType) { this.punishmentType = punishmentType; }
+    public List<String> getAppliedProvisions() {
+        return appliedProvisions;
+    }
 
-    public Integer getSentenceMonths() { return sentenceMonths; }
-    public void setSentenceMonths(Integer sentenceMonths) { this.sentenceMonths = sentenceMonths; }
+    public void setAppliedProvisions(List<String> appliedProvisions) {
+        this.appliedProvisions = appliedProvisions;
+    }
+
+    public List<String> getViolationTypes() {
+        return violationTypes;
+    }
+
+    public void setViolationTypes(List<String> violationTypes) {
+        this.violationTypes = violationTypes;
+    }
+
+    public Double getSpeedKmh() {
+        return speedKmh;
+    }
+
+    public void setSpeedKmh(Double speedKmh) {
+        this.speedKmh = speedKmh;
+    }
+
+    public Double getSpeedLimitKmh() {
+        return speedLimitKmh;
+    }
+
+    public void setSpeedLimitKmh(Double speedLimitKmh) {
+        this.speedLimitKmh = speedLimitKmh;
+    }
+
+    public Boolean getDrivingBan() {
+        return drivingBan;
+    }
+
+    public void setDrivingBan(Boolean drivingBan) {
+        this.drivingBan = drivingBan;
+    }
+
+    public Double getAlcoholLevelPromil() {
+        return alcoholLevelPromil;
+    }
+
+    public void setAlcoholLevelPromil(Double alcoholLevelPromil) {
+        this.alcoholLevelPromil = alcoholLevelPromil;
+    }
+
+    public String getRoadCondition() {
+        return roadCondition;
+    }
+
+    public void setRoadCondition(String roadCondition) {
+        this.roadCondition = roadCondition;
+    }
+
+    public String getInjurySeverity() {
+        return injurySeverity;
+    }
+
+    public void setInjurySeverity(String injurySeverity) {
+        this.injurySeverity = injurySeverity;
+    }
+
+    public Double getDamageEur() {
+        return damageEur;
+    }
+
+    public Boolean getGuilty() {
+        return isGuilty;
+    }
+
+    public void setGuilty(Boolean guilty) {
+        isGuilty = guilty;
+    }
+
+    public void setDamageEur(Double damageEur) {
+        this.damageEur = damageEur;
+    }
+
+    public String getMentalState() {
+        return mentalState;
+    }
+
+    public void setMentalState(String mentalState) {
+        this.mentalState = mentalState;
+    }
+
+    public Boolean getPriorRecord() {
+        return priorRecord;
+    }
+
+    public void setPriorRecord(Boolean priorRecord) {
+        this.priorRecord = priorRecord;
+    }
+
+    public String getPunishmentType() {
+        return punishmentType;
+    }
+
+    public void setPunishmentType(String punishmentType) {
+        this.punishmentType = punishmentType;
+    }
+
+    public Integer getSentenceMonths() {
+        return sentenceMonths;
+    }
+
+    public void setSentenceMonths(Integer sentenceMonths) {
+        this.sentenceMonths = sentenceMonths;
+    }
 
     public Boolean getAccidentOccured() {
         return accidentOccured;
@@ -114,8 +239,13 @@ public class Judgment implements CaseComponent {
         this.roadType = roadType;
     }
 
-    public String getFilePath() { return filePath; }
-    public void setFilePath(String filePath) { this.filePath = filePath; }
+    public String getFilePath() {
+        return filePath;
+    }
+
+    public void setFilePath(String filePath) {
+        this.filePath = filePath;
+    }
 
     @Override
     public Attribute getIdAttribute() {
@@ -125,7 +255,8 @@ public class Judgment implements CaseComponent {
     @Override
     public String toString() {
         return "Judgment{" +
-                "id=" + id +
+                "id='" + id + '\'' +
+                ", filePath='" + filePath + '\'' +
                 ", court='" + court + '\'' +
                 ", caseNumber='" + caseNumber + '\'' +
                 ", judge='" + judge + '\'' +
@@ -134,6 +265,7 @@ public class Judgment implements CaseComponent {
                 ", offense='" + offense + '\'' +
                 ", verdictType='" + verdictType + '\'' +
                 ", appliedProvisions=" + appliedProvisions +
+                ", isGuilty=" + isGuilty +
                 ", violationTypes=" + violationTypes +
                 ", speedKmh=" + speedKmh +
                 ", speedLimitKmh=" + speedLimitKmh +
@@ -145,6 +277,8 @@ public class Judgment implements CaseComponent {
                 ", priorRecord=" + priorRecord +
                 ", punishmentType='" + punishmentType + '\'' +
                 ", sentenceMonths=" + sentenceMonths +
+                ", fine=" + fine +
+                ", drivingBan=" + drivingBan +
                 ", accidentOccured=" + accidentOccured +
                 ", roadType='" + roadType + '\'' +
                 '}';

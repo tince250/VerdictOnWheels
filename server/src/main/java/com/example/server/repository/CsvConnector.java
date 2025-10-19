@@ -9,42 +9,52 @@ import es.ucm.fdi.gaia.jcolibri.exception.InitializingException;
 import java.io.*;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 /**
  * CSV-backed connector & mini repository for Judgments.
  * - Read-only mode from classpath resource (for jColibri demos).
  * - Read-write mode when constructed with a writable filesystem path.
- *
+ * <p>
  * CSV schema (21 columns):
  * id,court,caseNumber,judge,prosecutor,defendant,offense,injuries,verdictType,
  * appliedProvisions,violationTypes,speedKmh,speedLimitKmh,alcoholLevelPromil,
  * roadCondition,injurySeverity,damageEur,mentalState,priorRecord,punishmentType,sentenceMonths
- *
+ * <p>
  * List fields are semicolon-separated ("a; b; c"). Strings may be quoted.
  */
 public class CsvConnector implements Connector {
 
-    /** Classpath resource for read-only mode (put under src/main/resources) */
+    /**
+     * Classpath resource for read-only mode (put under src/main/resources)
+     */
     private static final String DEFAULT_RESOURCE = "/presude.csv";
 
-    /** If present, all read/write operations use this path instead of the classpath resource. */
+    /**
+     * If present, all read/write operations use this path instead of the classpath resource.
+     */
     private final Path csvPath;      // nullable → read-only from resource
     private final String resource;   // used when csvPath == null
 
-    /** CSV header in canonical order */
+    /**
+     * CSV header in canonical order
+     */
     private static final String HEADER = String.join(",",
-            "id","court","caseNumber","judge","prosecutor","defendant","offense","injuries","verdictType",
-            "appliedProvisions","violationTypes","speedKmh","speedLimitKmh","alcoholLevelPromil",
-            "roadCondition","injurySeverity","damageEur","mentalState","priorRecord","punishmentType","sentenceMonths"
+            "id", "court", "caseNumber", "judge", "prosecutor", "defendant", "offense", "injuries", "verdictType",
+            "appliedProvisions", "violationTypes", "speedKmh", "speedLimitKmh", "alcoholLevelPromil",
+            "roadCondition", "injurySeverity", "damageEur", "mentalState", "priorRecord", "punishmentType", "sentenceMonths"
     );
 
     // ---------- ctors ----------
 
-    /** Read-only from the default classpath resource (/presude.csv). */
+    /**
+     * Read-only from the default classpath resource (/presude.csv).
+     */
     public CsvConnector() {
         this(null, DEFAULT_RESOURCE);
     }
@@ -128,7 +138,9 @@ public class CsvConnector implements Connector {
 
     // ---------- Repository-style API ----------
 
-    /** Load all judgments from CSV (resource or file). */
+    /**
+     * Load all judgments from CSV (resource or file).
+     */
     public synchronized List<Judgment> getAllJudgments() {
         List<Judgment> out = new ArrayList<>();
         try (BufferedReader br = openReader()) {
@@ -155,19 +167,31 @@ public class CsvConnector implements Connector {
         return out;
     }
 
-    /** Get judgment by integer id. */
+    /**
+     * Get judgment by integer id.
+     */
     public synchronized Optional<Judgment> getById(String id) {
         return getAllJudgments().stream().filter(j -> j.getId().equals(id)).findFirst();
     }
 
-    /** List all ids in CSV (fast enough for small datasets). */
+    /**
+     * List all ids in CSV (fast enough for small datasets).
+     */
     public synchronized List<String> listIds() {
         return getAllJudgments().stream().map(Judgment::getId).collect(Collectors.toList());
     }
 
-    /** Insert or update a single judgment (by id). Requires writable csvPath. */
+    private Path getCsvPath() {
+        return csvPath;
+    }
+
+
+    /**
+     * Insert or update a single judgment (by id). Requires writable csvPath.
+     */
     public synchronized void upsert(Judgment j) {
         ensureWritable();
+        System.out.println("[CsvConnector] upsert -> " + getCsvPath().toAbsolutePath());  // <—
         List<Judgment> all = getAllJudgments();
         boolean updated = false;
         for (int i = 0; i < all.size(); i++) {
@@ -219,7 +243,9 @@ public class CsvConnector implements Connector {
         return lower.startsWith("id,");
     }
 
-    /** Split CSV by commas outside quotes. */
+    /**
+     * Split CSV by commas outside quotes.
+     */
     private static String[] parseCsvLine(String line) {
         String[] raw = line.split(",(?=(?:[^\"]*\"[^\"]*\")*[^\"]*$)", -1);
         return Arrays.stream(raw).map(String::trim).map(CsvConnector::unquote).toArray(String[]::new);
@@ -249,12 +275,15 @@ public class CsvConnector implements Connector {
         d.setPriorRecord(parseBoolean(v[17]));
         d.setPunishmentType(emptyToNull(v[18]));
         d.setSentenceMonths(parseIntObj(v[19]));
+        d.setGuilty(parseBoolean(v[20]));
+        d.setFine(parseIntObj(v[21]));
+        d.setDrivingBan(parseBoolean(v[22]));
         return d;
     }
 
     private static String toRow(Judgment d) {
         // keep column order in sync with HEADER
-        List<String> cols = new ArrayList<>(21);
+        List<String> cols = new ArrayList<>(23);
         cols.add(String.valueOf(d.getId()));
         cols.add(q(d.getCourt()));
         cols.add(q(d.getCaseNumber()));
@@ -275,6 +304,9 @@ public class CsvConnector implements Connector {
         cols.add(b(d.getPriorRecord()));
         cols.add(q(d.getPunishmentType()));
         cols.add(n(d.getSentenceMonths()));
+        cols.add(b(d.getGuilty()));
+        cols.add(n(d.getFine()));
+        cols.add(b(d.getDrivingBan()));
         return String.join(",", cols);
     }
 
@@ -285,7 +317,9 @@ public class CsvConnector implements Connector {
         return list.stream().map(String::trim).filter(s -> !s.isEmpty()).collect(Collectors.joining("; "));
     }
 
-    /** quote a string if needed for CSV */
+    /**
+     * quote a string if needed for CSV
+     */
     private static String q(String s) {
         String t = emptyToNull(s);
         if (t == null) return "";
@@ -297,8 +331,13 @@ public class CsvConnector implements Connector {
         return t;
     }
 
-    private static String n(Number n) { return n == null ? "" : String.valueOf(n); }
-    private static String b(Boolean b) { return b == null ? "" : String.valueOf(b); }
+    private static String n(Number n) {
+        return n == null ? "" : String.valueOf(n);
+    }
+
+    private static String b(Boolean b) {
+        return b == null ? "" : String.valueOf(b);
+    }
 
     private static String unquote(String s) {
         if (s == null) return null;
@@ -318,21 +357,27 @@ public class CsvConnector implements Connector {
         try {
             String t = emptyToNull(s);
             return (t == null) ? null : Double.valueOf(t);
-        } catch (Exception e) { return null; }
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private static Integer parseIntObj(String s) {
         try {
             String t = emptyToNull(s);
             return (t == null) ? null : Integer.valueOf(t);
-        } catch (Exception e) { return null; }
+        } catch (Exception e) {
+            return null;
+        }
     }
 
     private static int parseInt(String s, int def) {
         try {
             String t = emptyToNull(s);
             return (t == null) ? def : Integer.parseInt(t);
-        } catch (Exception e) { return def; }
+        } catch (Exception e) {
+            return def;
+        }
     }
 
     private static Boolean parseBoolean(String s) {
