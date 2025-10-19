@@ -211,3 +211,100 @@ __marimo__/
 
 # SQLite
 *.db*
+
+### Java ###
+*.class
+*.war
+*.ear
+*.jar
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs
+hs_err_pid*
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+# Ignore wrapper files if not using the maven wrapper
+# .mvn/wrapper/maven-wrapper.jar
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### Eclipse ###
+.classpath
+.project
+.settings/
+bin/
+tmp/
+
+### VS Code ###
+.vscode/
+
+### Logs and Temp Files ###
+logs/
+*.log
+*.tmp
+*.bak
+*.swp
+
+### OS-specific ###
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+
+### Spring Boot Specific ###
+# Embedded Tomcat / Jetty / Undertow temp files
+.spring-boot-devtools.properties
+.spring-boot-devtools.log
+.spring-boot-devtools.restart.log
+
+# Application local config overrides
+application-local.yml
+application-local.properties
+application-dev.yml
+application-dev.properties
+
+# If using environment-specific configs in resources
+# comment out if you commit configs intentionally
+/src/main/resources/application-*.yml
+/src/main/resources/application-*.properties
