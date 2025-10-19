@@ -201,6 +201,50 @@ def split_sections_judgment(text):
 # ========== Main ==========
 pdf_files = [f for f in os.listdir(data_folder) if f.lower().endswith(".pdf")]
 
+def text_to_xml(text: str) -> None:
+    sections_text = split_sections_judgment(text)
+
+    # Extract court, case number, and date from beginning
+    court_match = re.search(r"Osnovni\s+Sud\s+u\s+[A-ZČĆŽŠĐa-zčćžšđ]+", text)
+    court_name = court_match.group(0).strip() if court_match else "Osnovni Sud"
+
+    case_match = re.search(r"K\s*\d{1,4}/\d{4}", text)
+    case_number = case_match.group(0).replace(" ", "_").replace("/", "_") if case_match else "unknown"
+
+    date_match = re.search(r"\d{1,2}\.\s*[A-ZČĆŽŠĐa-zčćžšđ]+\s*\d{4}", text)
+    date_str = date_match.group(0).strip() if date_match else "2024-01-01"
+    date_iso = parse_date(date_str)
+
+    nsmap = {None: "http://docs.oasis-open.org/legaldocml/ns/akn/3.0"}
+    akn = etree.Element("akomaNtoso", nsmap=nsmap)
+    judgment = etree.SubElement(akn, "judgment")
+
+    meta = etree.SubElement(judgment, "meta")
+    identification = etree.SubElement(meta, "identification", {"source": "#court"})
+    FRBRWork = etree.SubElement(identification, "FRBRWork")
+
+    frbr_uri = f"/akn/me/judgment/{court_name.lower().replace(' ', '_')}/{date_iso}/{case_number}"
+    etree.SubElement(FRBRWork, "FRBRthis", {"value": frbr_uri})
+    etree.SubElement(FRBRWork, "FRBRuri", {"value": frbr_uri})
+    etree.SubElement(FRBRWork, "FRBRdate", {"date": date_iso, "name": "Decision"})
+    etree.SubElement(FRBRWork, "FRBRauthor", {"href": f"#{court_name.lower().replace(' ', '_')}"})
+
+    body = etree.SubElement(judgment, "judgmentBody")
+    add_section(body, "introduction", sections_text.get("introduction", ""))
+    add_section(body, "defendant", sections_text.get("defendant", ""))
+    add_section(body, "verdict", sections_text.get("verdict", ""))
+    add_section(body, "reasoning", sections_text.get("reasoning", ""))
+    add_section(body, "punishment", sections_text.get("punishment", ""))
+    add_section(body, "arguments", sections_text.get("arguments", ""))
+
+    xml_filename = f"{case_number}.xml"
+    xml_path = os.path.join(xml_folder, xml_filename)
+    xml_tree = etree.ElementTree(akn)
+    xml_tree.write(xml_path, pretty_print=True, xml_declaration=True, encoding="UTF-8")
+
+    print(f"✅ Saved XML for {pdf_file} (court={court_name}, case={case_number}, date={date_iso})")
+
+
 for pdf_file in pdf_files:
     pdf_path = os.path.join(data_folder, pdf_file)
 

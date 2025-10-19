@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<akomaNtoso xmlns="http://docs.oasis-open.org/legaldocml/ns/akn/3.0">
+  <judgment>
+    <meta>
+      <identification source="#court">
+        <FRBRWork>
+          <FRBRthis value="/akn/me/judgment/osnovni_sud/2024-01-01/K_927_2024"/>
+          <FRBRuri value="/akn/me/judgment/osnovni_sud/2024-01-01/K_927_2024"/>
+          <FRBRdate date="2024-01-01" name="Decision"/>
+          <FRBRauthor href="#osnovni_sud"/>
+        </FRBRWork>
+      </identification>
+    </meta>
+    <judgmentBody>
+      <introduction>
+        <p>U IME CRNE GORE K.br. K 927/2024 OSNOVNI SUD U PODGORICI, prvostepeni, krivični, po sudiji Larisa Mijušković-Stamatović, u krivičnom predmetu protiv okrivljenog L.V., zbog krivičnog djela Ugrožavanje javnog saobraćaja, po optužnom predlogu ODT Podgorica, nakon održanog glavnog javnog pretresa, donio je,</p>
+      </introduction>
+      <defendant>
+        <p>Okrivljeni: L.V., student, neženjen, od majke M.T.. O s l o b a đ a s e Zato što je: utvrđeno da se ne može dokazati da je optuženi odgovoran za nanesene povrede, pa mu Sud, primjenom citiranih zakonskih odredbi, i z r i č e, Oslobađa se optužbe za krivično djelo Ugrožavanje javnog saobraćaja iz člana 338 <ref href="criminal_code#stav1" showAs="stav1"/> Krivičnog zakonika Crne Gore u vezi člana 1 <ref href="criminal_code#stav3" showAs="stav3"/> Zakona o bezbjednosti saobraćaja na putevima i člana 73 <ref href="criminal_code#stav2" showAs="stav2"/> Zakona o bezbjednosti saobraćaja na putevima.</p>
+      </defendant>
+      <verdict>
+        <p/>
+      </verdict>
+      <reasoning>
+        <p>Zato što je: utvrđeno da se ne može dokazati da je optuženi odgovoran za nanesene povrede, pa mu Sud, primjenom citiranih zakonskih odredbi, i z r i č e, Oslobađa se optužbe za krivično djelo Ugrožavanje javnog saobraćaja iz člana 338 <ref href="criminal_code#stav1" showAs="stav1"/> Krivičnog zakonika Crne Gore u vezi člana 1 <ref href="criminal_code#stav3" showAs="stav3"/> Zakona o bezbjednosti saobraćaja na putevima i člana 73 <ref href="criminal_code#stav2" showAs="stav2"/> Zakona o bezbjednosti saobraćaja na putevima.</p>
+      </reasoning>
+      <punishment>
+        <p/>
+      </punishment>
+      <arguments>
+        <p>O b r a z l o ž e nj e Optužni predlog je podnijelo Osnovno državno tužilaštvo Podgorica, tereteći okrivljenog L.V. za krivično djelo Ugrožavanje javnog saobraćaja. Okrivljeni je negirao krivicu, navodeći da nije odgovoran za nanesene povrede. Dokazi su uključivali iskaze svjedoka i medicinske nalaze, ali nije utvrđena odgovornost okrivljenog. Na osnovu izloženog, shodno članu 374 ZKP-a odlučeno je kao u izreci presude. OSNOVNI SUD U PODGORICI Dana SUDIJA Larisa Mijušković-Stamatović PRAVNA POUKA: Protiv ove presude dozvoljena je žalba u roku od 15 dana od dana prijema presude.</p>
+      </arguments>
+    </judgmentBody>
+  </judgment>
+</akomaNtoso>
