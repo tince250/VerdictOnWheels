@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Paths
 data_folder = "data"
-xml_folder = "xml"
+xml_folder = "data/verdicts/xml"
 os.makedirs(xml_folder, exist_ok=True)
 
 # ========== Dates ==========
@@ -242,7 +242,7 @@ def text_to_xml(text: str) -> None:
     xml_tree = etree.ElementTree(akn)
     xml_tree.write(xml_path, pretty_print=True, xml_declaration=True, encoding="UTF-8")
 
-    print(f"✅ Saved XML for {pdf_file} (court={court_name}, case={case_number}, date={date_iso})")
+    # print(f"✅ Saved XML for {pdf_file} (court={court_name}, case={case_number}, date={date_iso})")
 
 
 for pdf_file in pdf_files:

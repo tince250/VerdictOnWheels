@@ -1,5 +1,0 @@
-(batch* "bin\\dr-device.bat")
-(set-verbose on)
-(set-debug off)
-(batch* "rulebase-comp.bat")
-(exit)

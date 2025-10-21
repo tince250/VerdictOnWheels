@@ -45,7 +45,7 @@ public class CsvConnector implements Connector {
      * CSV header in canonical order
      */
     private static final String HEADER = String.join(",",
-            "id", "court", "caseNumber", "judge", "prosecutor", "defendant", "offense", "injuries", "verdictType",
+            "id", "court", "caseNumber", "judge", "prosecutor", "defendant", "offense", "verdictType",
             "appliedProvisions", "violationTypes", "speedKmh", "speedLimitKmh", "alcoholLevelPromil",
             "roadCondition", "injurySeverity", "damageEur", "mentalState", "priorRecord", "punishmentType", "sentenceMonths"
     );
