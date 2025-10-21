@@ -1,9 +1,14 @@
 import os
 from typing import Any, Dict
+import json
 
 from fastapi import HTTPException
 from utils.xml_parser import parse_judgment_xml
 from data.db import insert_judgment
+from dto import GenerateJudgmentDTO
+from llm.llm_service import prompt_llm_with_preset
+from data.verdicts.judgement_to_xml import create_xml_from_text
+from data.verdicts.test import text_to_xml
 
 DATA_DIR = "data/verdicts/xml"
 
@@ -74,3 +79,8 @@ def get_judgment_metadata(case_number: str) -> Dict[str, Any]:
         "accidentOccured": True,
         "roadType": "regional road"
     }
+
+def generate_new_judgment(dto: GenerateJudgmentDTO):
+    text = prompt_llm_with_preset("generate_new_judgment", dto.model_dump_json())
+    text_to_xml(text)
+

@@ -23,6 +23,10 @@ def save_xml(raw_xml, out_path):
         with open(out_path.replace(".xml", "_raw.xml"), "w", encoding="utf-8") as f:
             f.write(raw_xml)
 
+def create_xml_from_text(text: str) -> str:
+    raw_xml = prompt_llm_with_preset("judgment_to_akn").replace("```xml", "").replace("```", "").strip()
+    return raw_xml
+
 
 def main():
     for file in os.listdir(VERDICTS_DIR):
