@@ -193,15 +193,7 @@ public class CsvConnector implements Connector {
         ensureWritable();
         System.out.println("[CsvConnector] upsert -> " + getCsvPath().toAbsolutePath());  // <—
         List<Judgment> all = getAllJudgments();
-        boolean updated = false;
-        for (int i = 0; i < all.size(); i++) {
-            if (all.get(i).getId() == j.getId()) {
-                all.set(i, j);
-                updated = true;
-                break;
-            }
-        }
-        if (!updated) all.add(j);
+        all.add(j);
         writeAll(all);
     }
 
