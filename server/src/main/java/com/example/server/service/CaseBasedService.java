@@ -160,7 +160,7 @@ public class CaseBasedService implements StandardCBRApplication {
 
         Boolean isGuilty = determineIfGuilty(similarCases);
 
-        judgment.setGuilty(isGuilty);
+        judgment.setIsGuilty(isGuilty);
 
         if (isGuilty) {
             judgment.setSentenceMonths(determineSentenceMonths(similarCases));
@@ -228,10 +228,10 @@ public class CaseBasedService implements StandardCBRApplication {
         for (SimilarCaseDTO dto : similarCases) {
             double sim = dto.getSimilarity();
             Judgment j = dto.getCaseDesc();
-            if (j.getGuilty() == null) continue;
+            if (j.getIsGuilty() == null) continue;
 
             weightSum += sim;
-            if (j.getGuilty()) guiltyWeight += sim;
+            if (j.getIsGuilty()) guiltyWeight += sim;
             else notGuiltyWeight += sim;
         }
 

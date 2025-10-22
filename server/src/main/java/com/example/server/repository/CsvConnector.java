@@ -47,7 +47,7 @@ public class CsvConnector implements Connector {
     private static final String HEADER = String.join(",",
             "id", "court", "caseNumber", "judge", "prosecutor", "defendant", "offense", "verdictType",
             "appliedProvisions", "violationTypes", "speedKmh", "speedLimitKmh", "alcoholLevelPromil",
-            "roadCondition", "injurySeverity", "damageEur", "mentalState", "priorRecord", "punishmentType", "sentenceMonths"
+            "roadCondition", "injurySeverity", "damageEur", "mentalState", "priorRecord", "isGuilty", "punishmentType", "sentenceMonths"
     );
 
     // ---------- ctors ----------
@@ -275,7 +275,7 @@ public class CsvConnector implements Connector {
         d.setPriorRecord(parseBoolean(v[17]));
         d.setPunishmentType(emptyToNull(v[18]));
         d.setSentenceMonths(parseIntObj(v[19]));
-        d.setGuilty(parseBoolean(v[20]));
+        d.setIsGuilty(parseBoolean(v[20]));
         d.setFine(parseIntObj(v[21]));
         d.setDrivingBan(parseBoolean(v[22]));
         return d;
@@ -304,7 +304,7 @@ public class CsvConnector implements Connector {
         cols.add(b(d.getPriorRecord()));
         cols.add(q(d.getPunishmentType()));
         cols.add(n(d.getSentenceMonths()));
-        cols.add(b(d.getGuilty()));
+        cols.add(b(d.getIsGuilty()));
         cols.add(n(d.getFine()));
         cols.add(b(d.getDrivingBan()));
         return String.join(",", cols);

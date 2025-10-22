@@ -2,7 +2,6 @@ package com.example.server.controller;
 
 import com.example.server.dto.CBRSuggestionDTO;
 import com.example.server.dto.SimilarCaseDTO;
-import com.example.server.model.CaseDetails;
 import com.example.server.model.Judgment;
 import com.example.server.service.CaseBasedService;
 import com.example.server.service.JudgmentService;
@@ -45,6 +44,7 @@ class JudgmentController {
 
     @PostMapping(value = "")
     public void insertJudgment(@RequestBody Judgment judgment) {
+        System.out.println("upsert judgment: " + judgment);
         this.judgmentService.insertJudgment(judgment);
     }
 

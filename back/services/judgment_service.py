@@ -3,6 +3,7 @@ import json
 import os
 import json
 import csv
+from datetime import date
 from typing import Dict, Any, Optional
 from fastapi import HTTPException
 from utils.xml_parser import parse_judgment_xml
@@ -13,7 +14,7 @@ from data.verdicts.judgement_to_xml import create_xml_from_text
 from data.verdicts.test import text_to_xml
 
 
-CSV_PATH = "../server/src/main/resources/presude.csv"
+CSV_PATH = "../server/data/presude.csv"
 
 DATA_DIR = "data/verdicts/xml"
 
@@ -91,6 +92,7 @@ def get_judgment_metadata(case_number: str) -> Optional[Dict[str, Any]]:
     with open(CSV_PATH, mode='r', encoding='utf-8') as file:
         reader = csv.DictReader(file)
         for row in reader:
+            print(row["caseNumber"].strip(), target_case)
             if row["caseNumber"].strip() == target_case:
                 return {
                     "id": row["id"],
@@ -125,5 +127,6 @@ def update_judgment(judgment: Dict[str, Any]):
     return judgment
 
 def generate_new_judgment(dto: GenerateJudgmentDTO):
+    dto.date = date.today().strftime("%d.%m.%Y")
     text = prompt_llm_with_preset("generate_new_judgment", dto.model_dump_json())
     text_to_xml(text)
