@@ -13,8 +13,15 @@ from data.verdicts.test import text_to_xml
 DATA_DIR = "data/verdicts/xml"
 
 def list_judgments():
-    #return [parse_judgment_xml(os.path.join(DATA_DIR, f))["meta"] for f in os.listdir(DATA_DIR) if f.endswith(".xml")]
-    return None
+    """
+    Lists all judgment XML file names in the `data/verdicts/xml` folder,
+    excluding the '.xml' extension.
+    """
+    return [
+        os.path.splitext(filename)[0]
+        for filename in os.listdir(DATA_DIR)
+        if filename.endswith(".xml")
+    ]
 
 def get_judgment(judgment_filename: str) -> Dict[str, Any]:
     """
