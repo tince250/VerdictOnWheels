@@ -30,4 +30,6 @@ class GenerateJudgmentDTO(BaseModel):
     accidentOccured: Optional[bool] = False
     roadType: Optional[str] = ''
 
+    date: Optional[str] = ''
+
     textDescription: Optional[str] = ''

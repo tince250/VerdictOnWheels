@@ -29,7 +29,7 @@ import java.util.Map;
 @Service
 public class RuleBasedService {
 
-    private static final String BASE_PATH = "C:\\Users\\dusan\\OneDrive\\Desktop\\pravnaInformatika\\VerdictOnWheels\\dr-device\\";
+    private static final String BASE_PATH = "/Users/tinamihajlovic/Documents/master/Pravna/VerdictOnWheels/dr-device/";
 
 
     public JudgmentResponse processJudgment(Judgment judgment) {

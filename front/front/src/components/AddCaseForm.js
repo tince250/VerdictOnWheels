@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { 
   Box, 
   Button, 
@@ -22,7 +23,8 @@ import SimilarCasesScroll from './SimilarCasesScroll';
 function AddCaseForm() {
   const [activeStep, setActiveStep] = useState(0);
   const steps = ['Unos informacija', 'Pregled i potvrda'];
-  
+  const navigate = useNavigate();
+
   // Form state
   const [caseData, setCaseData] = useState({
     id: '',
@@ -258,6 +260,8 @@ function AddCaseForm() {
         if (response.ok) {
         console.log('Judgment submitted successfully');
         alert('Presuda je uspešno kreirana!');
+        let formattedCaseNumber = caseData.caseNumber.replace(" ", "_").replace("/", "_")
+        navigate(`/judgments/${formattedCaseNumber}`);
         // window.location.href = '/judgments'; // Uncomment to redirect
         } else {
         console.error('Error submitting judgment:', response.statusText);

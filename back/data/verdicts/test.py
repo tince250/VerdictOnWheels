@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Paths
 data_folder = "data"
-xml_folder = "xml"
+xml_folder = "data/verdicts/xml"
 os.makedirs(xml_folder, exist_ok=True)
 
 # ========== Dates ==========

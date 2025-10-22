@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
 import {
   Box,
   Typography,
@@ -12,14 +13,16 @@ import {
   Paper
 } from '@mui/material';
 
-const JudgmentDetail = ({ judgmentId }) => {
+const JudgmentDetail = () => {
+  const { judgmentId } = useParams();
   const [judgment, setJudgment] = useState(null);
   const [metadata, setMetadata] = useState(null);
 
   useEffect(() => {
     const fetchJudgment = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/judgments/K_37_2024`);
+        console.log('Fetching judgment for ID:', judgmentId);
+        const response = await fetch(`http://localhost:8000/judgments/${judgmentId}`);
         const data = await response.json();
         setJudgment(data);
       } catch (error) {
@@ -29,7 +32,7 @@ const JudgmentDetail = ({ judgmentId }) => {
 
     const fetchMetadata = async () => {
       try {
-        const response = await fetch(`http://localhost:8000/judgments/K_37_2024/metadata`);
+        const response = await fetch(`http://localhost:8000/judgments/${judgmentId}/metadata`);
         const data = await response.json();
         setMetadata(data);
       } catch (error) {

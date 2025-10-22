@@ -179,12 +179,12 @@ public class Judgment implements CaseComponent {
         return damageEur;
     }
 
-    public Boolean getGuilty() {
+    public Boolean getIsGuilty() {
         return isGuilty;
     }
 
-    public void setGuilty(Boolean guilty) {
-        isGuilty = guilty;
+    public void setIsGuilty(Boolean isGuilty) {
+        this.isGuilty = isGuilty;
     }
 
     public void setDamageEur(Double damageEur) {
