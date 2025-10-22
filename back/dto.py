@@ -2,32 +2,32 @@ from typing import List, Optional
 from pydantic import BaseModel
 
 class GenerateJudgmentDTO(BaseModel):
-    id: Optional[str] = None
-    court: Optional[str] = None
-    caseNumber: Optional[str] = None
-    judge: Optional[str] = None
-    prosecutor: Optional[str] = None
-    defendant: Optional[str] = None
+    id: Optional[str] = ''
+    court: Optional[str] = ''
+    caseNumber: Optional[str] = ''
+    judge: Optional[str] = ''
+    prosecutor: Optional[str] = ''
+    defendant: Optional[str] = ''
 
-    offense: Optional[str] = None
-    verdictType: Optional[str] = None
+    offense: Optional[str] = ''
+    verdictType: Optional[str] = ''
     appliedProvisions: List[str] = []
-    isGuilty: Optional[bool] = None
+    isGuilty: Optional[bool] = False
 
     violationTypes: List[str] = []
-    speedKmh: Optional[float] = None
-    speedLimitKmh: Optional[float] = None
-    alcoholLevelPromil: Optional[float] = None
-    roadCondition: Optional[str] = None
-    injurySeverity: Optional[str] = None
-    damageEur: Optional[float] = None
-    mentalState: Optional[str] = None
-    priorRecord: Optional[bool] = None
-    punishmentType: Optional[str] = None
-    sentenceMonths: Optional[int] = None
-    fine: Optional[int] = None
-    drivingBan: Optional[bool] = None
-    accidentOccured: Optional[bool] = None
-    roadType: Optional[str] = None
+    speedKmh: Optional[int] = 0
+    speedLimitKmh: Optional[int] = 0
+    alcoholLevelPromil: Optional[float] = 0.0
+    roadCondition: Optional[str] = ''
+    injurySeverity: Optional[str] = ''
+    damageEur: Optional[int] = 0
+    mentalState: Optional[str] = ''
+    priorRecord: Optional[bool] = False
+    punishmentType: Optional[str] = ''
+    sentenceMonths: Optional[int] = 0
+    fine: Optional[int] = 0
+    drivingBan: Optional[int] = 0
+    accidentOccured: Optional[bool] = False
+    roadType: Optional[str] = ''
 
-    textDescription: Optional[str] = None
+    textDescription: Optional[str] = ''

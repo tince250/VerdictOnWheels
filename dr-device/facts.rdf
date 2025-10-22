@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<rdf:RDF xmlns:lc="http://informatika.ftn.uns.ac.rs/legal-case.rdf#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+    <lc:case rdf:about="http://informatika.ftn.uns.ac.rs/legal-case.rdf#case01">
+        <lc:name>case01</lc:name>
+        <lc:defendant>John Doe</lc:defendant>
+        <lc:speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</lc:speed>
+        <lc:allowed_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</lc:allowed_speed>
+        <lc:caused_accident>ne</lc:caused_accident>
+        <lc:injury>uknown</lc:injury>
+        <lc:driving_on>town</lc:driving_on>
+        <lc:alcohol_level rdf:datatype="http://www.w3.org/2001/XMLSchema#double">0.6</lc:alcohol_level>
+        <lc:speed_over rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</lc:speed_over>
+    </lc:case>
+</rdf:RDF>
