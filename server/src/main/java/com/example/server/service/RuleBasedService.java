@@ -2,6 +2,7 @@ package com.example.server.service;
 
 import com.example.server.model.CaseDetails;
 import com.example.server.model.Judgment;
+import com.example.server.model.JudgmentResponse;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -20,6 +21,7 @@ import java.io.IOException;
 import java.lang.reflect.Field;
 import java.nio.file.Files;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +32,7 @@ public class RuleBasedService {
     private static final String BASE_PATH = "C:\\Users\\dusan\\OneDrive\\Desktop\\pravnaInformatika\\VerdictOnWheels\\dr-device\\";
 
 
-    public Map<String, Object> processJudgment(Judgment judgment) {
+    public JudgmentResponse processJudgment(Judgment judgment) {
         // Convert Judgment to CaseDetails
         CaseDetails caseDetails = convertToCaseDetails(judgment);
 
@@ -50,7 +52,26 @@ public class RuleBasedService {
 
         // Parse the results
         File exportFile = new File(BASE_PATH, "export.rdf");
-        return parseExportFile(exportFile);
+
+        return createJudgmentResponse(parseExportFile(exportFile));
+    }
+
+    public JudgmentResponse createJudgmentResponse(Map<String, Object> ruleResults) {
+        String triggeredRule = (String) ruleResults.getOrDefault("triggered_rule", "");
+        List<String> appliedProvisions = new ArrayList<>();
+        String description = "";
+
+        switch (triggeredRule) {
+            case "alcohol_level_violation_lv1_cl_182":
+                description = "nedozvoljena kolicina alkohola u krvi";
+                appliedProvisions.add("cl. 182");
+                break;
+            default:
+                // Default case - empty description and provisions list
+                break;
+        }
+
+        return new JudgmentResponse(description, appliedProvisions, ruleResults);
     }
 
     // Helper method to convert Judgment to CaseDetails
@@ -216,6 +237,8 @@ public class RuleBasedService {
         }
     }
 
+
+
     public static Map<String, Object> parseExportFile(File rdfFile) {
         Map<String, Object> result = new LinkedHashMap<>();
         Map<String, String> penalties = new LinkedHashMap<>();
@@ -267,33 +290,5 @@ public class RuleBasedService {
         }
 
         return result;
-    }
-
-    public static void main(String[] args) {
-        CaseDetails caseDetails = new CaseDetails();
-        caseDetails.setCaseNumber("case01");
-        caseDetails.setDefendant("John Doe");
-        caseDetails.setSpeedKmh(50);
-        caseDetails.setSpeedLimitKmh(60);
-        caseDetails.setAccidentOccured("ne");
-//        caseDetails.setDamageEur("1500");
-        caseDetails.setInjurySeverity("uknown");
-        caseDetails.setRoadType("town");
-        caseDetails.setAlcoholLevelPromil(0.6);
-        caseDetails.setSpeedOver(50, 50);
-
-        Map<String, Object> attributes = toAttributeMap(caseDetails);
-        createRdfFile("case01", attributes, "facts.rdf");
-
-        runScript("clean.bat");
-        runScript("start.bat");
-
-        attributes.forEach((k, v) -> System.out.println(k + " = " + v));
-
-        File f = new File("C:/Users/dusan/OneDrive/Desktop/pravnaInformatika/VerdictOnWheels/dr-device/export.rdf");
-        Map<String, Object> parsed = parseExportFile(f);
-
-        System.out.println("✅ Extracted values:");
-        parsed.forEach((k, v) -> System.out.println(k + " = " + v));
     }
 }

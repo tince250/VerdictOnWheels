@@ -4,6 +4,7 @@ import com.example.server.dto.CBRSuggestionDTO;
 import com.example.server.dto.SimilarCaseDTO;
 import com.example.server.model.CaseDetails;
 import com.example.server.model.Judgment;
+import com.example.server.model.JudgmentResponse;
 import com.example.server.service.CaseBasedService;
 import com.example.server.service.JudgmentService;
 import com.example.server.service.RuleBasedService;
@@ -49,7 +50,7 @@ class JudgmentController {
     }
 
     @PostMapping(value = "rule-based")
-    public Map<String, Object> getRuleBasedJudgment(@RequestBody Judgment judgment) {
+    public JudgmentResponse getRuleBasedJudgment(@RequestBody Judgment judgment) {
         // Simply call the unified service method
         return ruleBasedService.processJudgment(judgment);
     }

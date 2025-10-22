@@ -16,6 +16,8 @@ import {
   Radio,
   RadioGroup
 } from '@mui/material';
+// Import the separate component
+import SimilarCasesScroll from './SimilarCasesScroll';
 
 function AddCaseForm() {
   const [activeStep, setActiveStep] = useState(0);
@@ -59,7 +61,8 @@ function AddCaseForm() {
     finalJailMonths: '',
     finalDrivingBan: '',
     appliedRules: '',
-    similarCases: ''
+    similarCases: '',
+    similarCasesData: [] // For storing the raw case data
   });
 
   // Change handler
@@ -101,26 +104,49 @@ function AddCaseForm() {
     .then(ruleData => {
       console.log('Rule-based response:', ruleData);
 
-      caseData.appliedProvisions = ['čl. 182 ZOBS'];
-      console.log("caseData step 2: ", caseData);
-      // Process the rule-based response
-      const ruleFine = (ruleData.to_pay_min && ruleData.to_pay_max) 
-        ? `${ruleData.to_pay_min} - ${ruleData.to_pay_max}` 
-        : "0";
+      // Process the new response format
+      let ruleFine = "0";
+      let ruleVerdict = "NIJE KRIV";
+      let appliedRulesDescription = "";
+      let provisions = [];
+
+      // Check if we have the new response format
+      if (ruleData.penalties) {
+        // New format
+        ruleFine = (ruleData.penalties.to_pay_min && ruleData.penalties.to_pay_max) 
+          ? `${ruleData.penalties.to_pay_min} - ${ruleData.penalties.to_pay_max}` 
+          : "0";
+        
+        ruleVerdict = (Object.keys(ruleData.penalties).length > 0) ? "KRIV JE" : "NIJE KRIV";
+        appliedRulesDescription = ruleData.description || "";
+        provisions = ruleData.appliedProvisions || [];
+      } else {
+        // Old format
+        ruleFine = (ruleData.to_pay_min && ruleData.to_pay_max) 
+          ? `${ruleData.to_pay_min} - ${ruleData.to_pay_max}` 
+          : "0";
+        
+        ruleVerdict = ruleData.triggered_rule ? "KRIV JE" : "NIJE KRIV";
+        appliedRulesDescription = ruleData.triggered_rule || "";
+      }
       
-      const ruleVerdict = ruleData.triggered_rule ? "KRIV JE" : "NIJE KRIV";
+      // Update case data with applied provisions
+      setCaseData(prevData => ({
+        ...prevData,
+        appliedProvisions: provisions
+      }));
       
       // Update verdict state with rule-based data
       setVerdict(prevVerdict => ({
         ...prevVerdict,
         ruleVerdict: ruleVerdict,
         ruleFine: ruleFine,
-        appliedRules: ruleData.triggered_rule || "",
+        appliedRules: appliedRulesDescription,
       }));
       
       // Then call the CBR endpoint
       return fetch(`http://localhost:8080/api/judgment/cbr-judgment?k=5`, {
-        method: 'POST',  // The endpoint is a GET but requires a body, so we use POST
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formattedData)
       });
@@ -137,10 +163,13 @@ function AddCaseForm() {
         const caseJailMonths = extractJailMonths(cbrData.judgment) || "0";
         const caseDrivingBan = extractDrivingBan(cbrData.judgment) || "0";
         
-        // Format similar cases for display
+        // Store the raw similar cases data for the cards
+        const similarCasesData = cbrData.similarCases || [];
+        
+        // Format similar cases for text display (backward compatibility)
         let similarCasesText = '';
-        if (cbrData.similarCases && cbrData.similarCases.length > 0) {
-          similarCasesText = cbrData.similarCases.map(sc => 
+        if (similarCasesData.length > 0) {
+          similarCasesText = similarCasesData.map(sc => 
             `Presuda ${sc.caseDesc.caseNumber || 'Nepoznat'} - ${sc.caseDesc.court || 'Nepoznat sud'} (${Math.round(sc.similarity * 100)}% sličnosti)`
           ).join('\n');
         }
@@ -153,6 +182,7 @@ function AddCaseForm() {
           caseJailMonths: caseJailMonths,
           caseDrivingBan: caseDrivingBan,
           similarCases: similarCasesText,
+          similarCasesData: similarCasesData, // Store raw data for cards
           // Set the final verdict based on rule and case verdicts
           finalVerdict: prevVerdict.ruleVerdict || caseVerdict || "KRIV JE"
         }));
@@ -170,24 +200,19 @@ function AddCaseForm() {
 
   // Helper functions for extracting data from the CBR response
   const determineVerdict = (judgment) => {
-    // This is a placeholder - adjust according to your judgment structure
     if (!judgment) return "";
-    // Assume there's some property that indicates guilty/not guilty
     return judgment.guilty === true ? "KRIV JE" : "NIJE KRIV";
   };
   
   const extractFine = (judgment) => {
-    // Adjust according to your judgment structure
     return judgment.fine ? judgment.fine.toString() : "0";
   };
   
   const extractJailMonths = (judgment) => {
-    // Adjust according to your judgment structure
     return judgment.jailMonths ? judgment.jailMonths.toString() : "0";
   };
   
   const extractDrivingBan = (judgment) => {
-    // Adjust according to your judgment structure
     return judgment.drivingBan ? judgment.drivingBan.toString() : "0";
   };
 
@@ -196,21 +221,17 @@ function AddCaseForm() {
   };
 
   const handleSubmit = () => {
-    // This function will handle the final submission of the complete verdict
-    console.log('Final verdict submitted:', verdict);
-    
+    // Final submission logic
     const formattedData = {
         ...caseData,
-        // Add verdict information if needed
         isGuilty: verdict.finalVerdict === 'KRIV JE',
         fine: verdict.finalFine ? parseInt(verdict.finalFine) : 0,
         sentenceMonths: verdict.finalJailMonths ? parseInt(verdict.finalJailMonths) : 0,
         drivingBan: verdict.finalDrivingBan ? parseInt(verdict.finalDrivingBan) : 0
     };
 
-      console.log('Submitting final judgment:', formattedData);
+    console.log('Submitting final judgment:', formattedData);
   
-    // Call the endpoint to insert the judgment
     // First, call the generate endpoint
     fetch('http://localhost:8000/judgments/generate', {
         method: 'POST',
@@ -252,7 +273,7 @@ function AddCaseForm() {
   // Options
   const roadTypeOptions = [
     { value: 'town_road', label: 'Naseljeno mesto' },
-    { value: 'rural_road', label: 'Ne naseljeno mesto' }
+    { value: 'rural_road', label: 'Nenaseljeno mesto' }
   ];
   
   const mentalStateOptions = [
@@ -346,6 +367,12 @@ function AddCaseForm() {
                   checked={caseData.priorRecord}
                   onChange={handleChange}
                   name="priorRecord"
+                  sx={{ 
+                    color: '#9e9e9e', 
+                    '&.Mui-checked': { 
+                    color: '#D19A6A' 
+                    } 
+                }}
                 />
               }
               label="Ranija osuđivanost"
@@ -422,6 +449,12 @@ function AddCaseForm() {
                   checked={caseData.accidentOccured}
                   onChange={handleChange}
                   name="accidentOccured"
+                  sx={{ 
+                    color: '#9e9e9e', 
+                    '&.Mui-checked': { 
+                    color: '#D19A6A' 
+                    } 
+                }}
                 />
               }
               label="Došlo do nezgode"
@@ -480,9 +513,9 @@ function AddCaseForm() {
             Kreirajte novu presudu
           </Typography>
           
-          <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4, gap: 3 }}>
+          <Box sx={{ display: 'flex', mb: 4, gap: 3 }}>
             {/* Left section - Rule-based reasoning */}
-            <Box sx={{ flex: 1 }}>
+            <Box sx={{ width: '50%' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Typography variant="subtitle1" fontWeight="bold" sx={{ mr: 2 }}>
                   Rasuđivanje po pravilima:
@@ -543,19 +576,44 @@ function AddCaseForm() {
                 sx={{ 
                   p: 2, 
                   bgcolor: '#f5f5f5', 
-                  minHeight: '100px',
-                  maxHeight: '150px',
+                  height: '200px',
                   overflow: 'auto'
                 }}
               >
-                <Typography variant="body2">
-                  {verdict.appliedRules}
-                </Typography>
+                <Box sx={{ display: 'flex' }}>
+                  {/* Description column */}
+                  <Box sx={{ flex: 1, pr: 2 }}>
+                    <Typography variant="body2" fontWeight="bold" sx={{ mb: 1 }}>
+                      Opis:
+                    </Typography>
+                    <Typography variant="body2">
+                      {verdict.appliedRules || "Nema opisa"}
+                    </Typography>
+                  </Box>
+                  
+                  {/* Applied provisions column */}
+                  <Box sx={{ flex: 1 }}>
+                    <Typography variant="body2" fontWeight="bold" sx={{ mb: 1 }}>
+                      Primenjene odredbe:
+                    </Typography>
+                    {caseData.appliedProvisions && caseData.appliedProvisions.length > 0 ? (
+                      <ul style={{ paddingLeft: '20px', margin: 0 }}>
+                        {caseData.appliedProvisions.map((provision, index) => (
+                          <li key={index}>
+                            <Typography variant="body2">{provision}</Typography>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <Typography variant="body2">Nema primenjenih odredbi</Typography>
+                    )}
+                  </Box>
+                </Box>
               </Paper>
             </Box>
             
             {/* Right section - Case-based reasoning */}
-            <Box sx={{ flex: 1 }}>
+            <Box sx={{ width: '50%' }}>
               <Box sx={{ display: 'flex', alignItems: 'center', mb: 1 }}>
                 <Typography variant="subtitle1" fontWeight="bold" sx={{ mr: 2 }}>
                   Rasuđivanje po slučajevima:
@@ -616,20 +674,12 @@ function AddCaseForm() {
                 sx={{ 
                   p: 2, 
                   bgcolor: '#f5f5f5', 
-                  minHeight: '100px',
-                  maxHeight: '150px',
-                  overflow: 'auto'
+                  height: '200px',
+                  overflow: 'hidden'
                 }}
               >
-                {verdict.similarCases ? verdict.similarCases.split('\n').map((line, index) => (
-                  <Typography key={index} variant="body2">
-                    {line}
-                  </Typography>
-                )) : (
-                  <Typography variant="body2">
-                    Nema sličnih slučajeva.
-                  </Typography>
-                )}
+                {/* Use the imported SimilarCasesScroll component */}
+                <SimilarCasesScroll similarCases={verdict.similarCasesData || []} />
               </Paper>
             </Box>
           </Box>
@@ -649,13 +699,24 @@ function AddCaseForm() {
                 onChange={handleVerdictChange}
               >
                 <FormControlLabel 
+                
                   value="KRIV JE" 
-                  control={<Radio />} 
+                  control={<Radio sx={{ 
+                        color: '#D19A6A', 
+                        '&.Mui-checked': { 
+                        color: '#D19A6A' 
+                        } 
+                    }}/>} 
                   label={<Typography sx={{ color: '#f44336', fontWeight: 'bold' }}>KRIV JE</Typography>}
                 />
                 <FormControlLabel 
                   value="NIJE KRIV" 
-                  control={<Radio />} 
+                  control={<Radio sx={{ 
+                    color: "#D19A6A", 
+                    '&.Mui-checked': { 
+                      color: "#D19A6A" 
+                    } 
+                  }}/>} 
                   label={<Typography sx={{ color: '#4caf50', fontWeight: 'bold' }}>NIJE KRIV</Typography>}
                 />
               </RadioGroup>
@@ -701,7 +762,7 @@ function AddCaseForm() {
             width: 24, 
             height: 24, 
             borderRadius: '50%', 
-            bgcolor: activeStep === 0 ? '#1976d2' : '#e0e0e0', 
+            bgcolor: activeStep === 0 ? '#D19A6A' : '#e0e0e0', 
             color: activeStep === 0 ? 'white' : '#757575', 
             display: 'flex', 
             alignItems: 'center', 
@@ -716,7 +777,7 @@ function AddCaseForm() {
             width: 24, 
             height: 24, 
             borderRadius: '50%', 
-            bgcolor: activeStep === 1 ? '#1976d2' : '#e0e0e0', 
+            bgcolor: activeStep === 1 ? '#D19A6A' : '#e0e0e0', 
             color: activeStep === 1 ? 'white' : '#757575', 
             display: 'flex', 
             alignItems: 'center', 
