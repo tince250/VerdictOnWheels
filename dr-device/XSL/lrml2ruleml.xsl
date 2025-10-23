@@ -17,7 +17,7 @@
         <RuleML>
             <xsl:attribute name="proof">proof.ruleml</xsl:attribute>
             <xsl:attribute name="rdf_export">export.rdf</xsl:attribute>
-            <xsl:attribute name="rdf_export_classes">rural_road_speed_violation_lv2_cl_37 rural_road_speed_violation_lv2_accident_cl_37 town_road_speed_violation_lv2_accident_cl_36_stav_1 town_road_speed_violation_lv2_cl_36_stav_1 town_road_speed_violation_lv1_cl_36_stav_1 rural_road_speed_violation_lv1_cl_37 town_road_speed_violation_lv1_accident_cl_36_stav_1 rural_road_speed_violation_lv1_accident_cl_37 alcohol_level_violation_lv1_accident_cl_182 alcohol_level_violation_lv1_cl_182 to_pay_min to_pay_max driving_ban_months</xsl:attribute>
+            <xsl:attribute name="rdf_export_classes">rural_road_speed_violation_lv2_cl_37 rural_road_speed_violation_lv2_accident_cl_37 town_road_speed_violation_lv2_accident_cl_36_stav_1 town_road_speed_violation_lv2_cl_36_stav_1 town_road_speed_violation_lv1_cl_36_stav_1 rural_road_speed_violation_lv1_cl_37 town_road_speed_violation_lv1_accident_cl_36_stav_1 rural_road_speed_violation_lv1_accident_cl_37 alcohol_level_violation_lv1_accident_cl_182 alcohol_level_violation_lv1_cl_182 to_pay_min to_pay_max max_imprisonment driving_ban</xsl:attribute>
             <xsl:attribute name="rdf_import">&quot;facts.rdf&quot;</xsl:attribute>
             <xsl:apply-templates select="lrml:Statements"/>
         </RuleML>

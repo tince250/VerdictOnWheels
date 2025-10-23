@@ -29,10 +29,11 @@ import java.util.Map;
 @Service
 public class RuleBasedService {
 
-    private static final String BASE_PATH = "/Users/tinamihajlovic/Documents/master/Pravna/VerdictOnWheels/dr-device/";
+    private static final String BASE_PATH = "C:\\Users\\dusan\\OneDrive\\Desktop\\pravnaInformatika\\VerdictOnWheels\\dr-device";
 
 
     public JudgmentResponse processJudgment(Judgment judgment) {
+        judgment.setId(judgment.getCaseNumber().replaceAll("/", "").replaceAll(" ", ""));
         // Convert Judgment to CaseDetails
         CaseDetails caseDetails = convertToCaseDetails(judgment);
 
@@ -43,7 +44,7 @@ public class RuleBasedService {
         Map<String, Object> attributes = toAttributeMap(caseDetails);
 
         // Create RDF file
-        String filename = "facts-" + caseId + ".rdf";
+        String filename = "facts.rdf";
         createRdfFile(caseId, attributes, filename);
 
         // Run the processing scripts

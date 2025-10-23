@@ -1,6 +1,7 @@
 package com.example.server.model;
 
 public class CaseDetails {
+    private String id;
     private String caseNumber;
     private String defendant;
     private int speedKmh;
@@ -28,6 +29,14 @@ public class CaseDetails {
         this.injurySeverity = injurySeverity;
         this.roadType = roadType;
         this.alcoholLevelPromil = alcoholLevelPromil;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 
     // Getters and setters
@@ -88,7 +97,11 @@ public class CaseDetails {
     }
 
     public void setInjurySeverity(String injurySeverity) {
+        if(injurySeverity.isEmpty()){
+            this.injurySeverity = "nema";
+        } else{
         this.injurySeverity = injurySeverity;
+        }
     }
 
     public String getRoadType() {
