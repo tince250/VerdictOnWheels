@@ -65,7 +65,62 @@ public class RuleBasedService {
         switch (triggeredRule) {
             case "alcohol_level_violation_lv1_cl_182":
                 description = "nedozvoljena kolicina alkohola u krvi";
-                appliedProvisions.add("cl. 182");
+                appliedProvisions.add("cl. 182 ZOBS");
+                break;
+            case "alcohol_level_violation_lv1_accident_cl_182":
+                description = "alkohol u krvi + nesreca";
+                appliedProvisions.add("cl. 319 ZOBS");
+                break;
+
+            case "town_road_speed_violation_lv1_cl_36_stav_1":
+                description = "prekoracenje brzine u naseljenom mestu (manje)";
+                appliedProvisions.add("cl. 36 ZOBS");
+                break;
+            case "town_road_speed_violation_lv2_cl_36_stav_1":
+                description = "prekoracenje brzine u naseljenom mestu (vece)";
+                appliedProvisions.add("cl. 36 ZOBS");
+                break;
+            case "town_road_speed_violation_lv1_accident_cl_36_stav_1":
+                description = "prekoracenje brzine u naseljenom mestu sa nesrecom";
+                appliedProvisions.add("cl. 36 ZOBS");
+                break;
+            case "town_road_speed_violation_lv2_accident_cl_36_stav_1":
+                description = "teze prekoracenje u naseljenom mestu sa nesrecom";
+                appliedProvisions.add("cl. 36 ZOBS");
+                break;
+
+            case "town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1":
+                description = "nesreca sa lakom povredom";
+                appliedProvisions.add("cl. 339 KZ");
+                break;
+            case "town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1":
+                description = "nesreca sa teskom povredom";
+                appliedProvisions.add("cl. 340 KZ");
+                break;
+            case "town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1":
+                description = "nesreca sa smrtnim ishodom";
+                appliedProvisions.add("cl. 340 KZ");
+                break;
+            case "town_road_speed_violation_lv1_accident_damage_gt20000_cl_36_stav_1":
+                description = "nesreca sa stetom preko 20000 EUR";
+                appliedProvisions.add("cl. 339 KZ");
+                break;
+
+            case "rural_road_speed_violation_lv1_cl_37":
+                description = "prekoracenje brzine van naselja (manje)";
+                appliedProvisions.add("cl. 37 ZOBS");
+                break;
+            case "rural_road_speed_violation_lv2_cl_37":
+                description = "prekoracenje brzine van naselja (vece)";
+                appliedProvisions.add("cl. 37 ZOBS");
+                break;
+            case "rural_road_speed_violation_lv1_accident_cl_37":
+                description = "prekoracenje van naselja sa nesrecom";
+                appliedProvisions.add("cl. 37 ZOBS");
+                break;
+            case "rural_road_speed_violation_lv2_accident_cl_37":
+                description = "teze prekoracenje van naselja sa nesrecom";
+                appliedProvisions.add("cl. 37 ZOBS");
                 break;
             default:
                 // Default case - empty description and provisions list
