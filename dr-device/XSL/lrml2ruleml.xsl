@@ -17,7 +17,7 @@
         <RuleML>
             <xsl:attribute name="proof">proof.ruleml</xsl:attribute>
             <xsl:attribute name="rdf_export">export.rdf</xsl:attribute>
-            <xsl:attribute name="rdf_export_classes">rural_road_speed_violation_lv2_cl_37 rural_road_speed_violation_lv2_accident_cl_37 town_road_speed_violation_lv2_accident_cl_36_stav_1 town_road_speed_violation_lv2_cl_36_stav_1 town_road_speed_violation_lv1_cl_36_stav_1 rural_road_speed_violation_lv1_cl_37 town_road_speed_violation_lv1_accident_cl_36_stav_1 rural_road_speed_violation_lv1_accident_cl_37 alcohol_level_violation_lv1_accident_cl_182 alcohol_level_violation_lv1_cl_182 to_pay_min to_pay_max max_imprisonment driving_ban</xsl:attribute>
+            <xsl:attribute name="rdf_export_classes">rural_road_speed_violation_lv2_cl_37 rural_road_speed_violation_lv2_accident_cl_37 town_road_speed_violation_lv2_accident_cl_36_stav_1 town_road_speed_violation_lv2_cl_36_stav_1 town_road_speed_violation_lv1_cl_36_stav_1 rural_road_speed_violation_lv1_cl_37 town_road_speed_violation_lv1_accident_cl_36_stav_1 rural_road_speed_violation_lv1_accident_cl_37 town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1 town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1 town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1 town_road_speed_violation_lv1_accident_damage_gt20000_cl_36_stav_1 alcohol_level_violation_lv1_accident_cl_182 alcohol_level_violation_lv1_cl_182 to_pay_min to_pay_max max_imprisonment driving_ban</xsl:attribute>
             <xsl:attribute name="rdf_import">&quot;facts.rdf&quot;</xsl:attribute>
             <xsl:apply-templates select="lrml:Statements"/>
         </RuleML>
@@ -153,7 +153,14 @@
             <xsl:for-each select="ruleml:Ind">
                 <slot>
                     <Ind>
-                        <xsl:attribute name="uri" select="@type"/>
+                        <xsl:attribute name="uri">
+                            <xsl:choose>
+                                <xsl:when test="normalize-space(@type) != ''">
+                                    <xsl:value-of select="@type"/>
+                                </xsl:when>
+                                <xsl:otherwise>value</xsl:otherwise>
+                            </xsl:choose>
+                        </xsl:attribute>
                     </Ind>
                     <Data><xsl:value-of select="."/></Data>
                 </slot>
@@ -200,39 +207,41 @@
     </xsl:template>
     
     <xsl:template match="lrml:Reparation">
-        <xsl:variable name="penaltyKey" select="replace(lrml:appliesPenalty/@keyref,'^(#)','')"/>
-        <xsl:for-each select="lrml:toPrescriptiveStatement">
-            <xsl:variable name="targetPrescriptiveStatementKey" select="replace(@keyref,'^(#)','')"/>
-            <Implies ruletype="defeasiblerule">
-                <oid>
-                    <Ind>
-                        <xsl:attribute name="uri" select="$penaltyKey"/>
-                        <xsl:value-of select="$penaltyKey"/>
-                    </Ind>
-                </oid>
-                <body>
-                    <Atom>
-                        <op>
-                            <Rel><xsl:value-of select="//lrml:PrescriptiveStatement[@key=$targetPrescriptiveStatementKey]//ruleml:then//ruleml:Rel"/></Rel>
-                        </op>
-                        <slot>
-                            <Ind uri="defendant"/>
-                            <Var>Defendant</Var>
-                        </slot>
-                    </Atom>
-                </body>
-                <head>
-                    <Atom>
-                        <op>
-                            <Rel><xsl:value-of select="replace(//lrml:PenaltyStatement[@key=$penaltyKey]//ruleml:Rel/@iri,'^(:)','')"/></Rel>
-                        </op>
-                        <slot>
-                            <Ind uri="value"/>
-                            <Data xsi:type="xs:integer"><xsl:value-of select="//lrml:PenaltyStatement[@key=$penaltyKey]//ruleml:Ind"/></Data>
-                        </slot>
-                    </Atom>
-                </head>
-            </Implies>
+        <xsl:for-each select="lrml:appliesPenalty">
+            <xsl:variable name="penaltyKey" select="replace(@keyref,'^(#)','')"/>
+            <xsl:for-each select="../lrml:toPrescriptiveStatement">
+                <xsl:variable name="targetPrescriptiveStatementKey" select="replace(@keyref,'^(#)','')"/>
+                <Implies ruletype="defeasiblerule">
+                    <oid>
+                        <Ind>
+                            <xsl:attribute name="uri" select="$penaltyKey"/>
+                            <xsl:value-of select="$penaltyKey"/>
+                        </Ind>
+                    </oid>
+                    <body>
+                        <Atom>
+                            <op>
+                                <Rel><xsl:value-of select="//lrml:PrescriptiveStatement[@key=$targetPrescriptiveStatementKey]//ruleml:then//ruleml:Rel"/></Rel>
+                            </op>
+                            <slot>
+                                <Ind uri="defendant"/>
+                                <Var>Defendant</Var>
+                            </slot>
+                        </Atom>
+                    </body>
+                    <head>
+                        <Atom>
+                            <op>
+                                <Rel><xsl:value-of select="replace(//lrml:PenaltyStatement[@key=$penaltyKey]//ruleml:Rel/@iri,'^(:)','')"/></Rel>
+                            </op>
+                            <slot>
+                                <Ind uri="value"/>
+                                <Data xsi:type="xs:integer"><xsl:value-of select="//lrml:PenaltyStatement[@key=$penaltyKey]//ruleml:Ind"/></Data>
+                            </slot>
+                        </Atom>
+                    </head>
+                </Implies>
+            </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
     

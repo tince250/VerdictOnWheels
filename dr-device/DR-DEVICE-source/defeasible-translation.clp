@@ -1593,6 +1593,10 @@
 		   do
 			(bind ?var-to-find (nth$ ?n ?extra-rule:second-rule-condition-conclusion-vars))
 			(bind ?var-to-negate (nth$ ?n ?extra-rule:first-rule-condition-conclusion-vars))
+			(if (or (eq ?var-to-negate nil) (eq ?var-to-negate "") (eq ?var-to-negate (create$)))
+			   then
+				(bind ?var-to-negate "(create$)")
+			)
 			(bind ?pos (member$ ?var-to-find ?extra-rule:second-rule-conclusion))
 			(if (integerp ?pos)
 			   then
@@ -1828,6 +1832,17 @@
 	; competing rules
 	(translate-extra-competing-rules rule-out)
 	(close rule-out)
+	; Some generated rules may contain malformed one-argument neq tests.
+	; Normalize them to (neq ?var (create$)) before loading.
+	(bind ?sanitize-cmd (str-cat
+		"powershell -NoProfile -ExecutionPolicy Bypass -Command \""
+		"$p='" ?rule-filename "';"
+		"$c=[System.IO.File]::ReadAllText($p);"
+		"$c=[System.Text.RegularExpressions.Regex]::Replace($c,'\(neq\s+([^\s\)]+)\s*\)','(neq $1 (create$$))');"
+		"[System.IO.File]::WriteAllText($p,$c);"
+		"\""
+	))
+	(system ?sanitize-cmd)
 	(verbose " ok" crlf crlf)
 	(load-only-r-device ?rule-filename)
 	(calc-defeasible-stratum)
@@ -1859,10 +1874,20 @@
 	(bind ?export-rdf-file (nth$ 1 $?export-parameters))
 	(bind ?export-proof-file (nth$ 2 $?export-parameters))
 	(bind $?export-rdf-classes (rest$ (rest$ $?export-parameters)))
+	(bind $?valid-export-rdf-classes (create$))
+	(while (> (length$ $?export-rdf-classes) 0)
+	   do
+		(bind ?export-class (nth$ 1 $?export-rdf-classes))
+		(if (class-existp ?export-class)
+		   then
+			(bind $?valid-export-rdf-classes (create$ $?valid-export-rdf-classes ?export-class))
+		)
+		(bind $?export-rdf-classes (rest$ $?export-rdf-classes))
+	)
 	(if (neq ?export-rdf-file "")
 	   then
 		(bind ?rulebase-address (return-rulebase-address ?filename))
-		(dr-device_export_rdf ?rulebase-address ?export-rdf-file ?export-proof-file $?export-rdf-classes)
+		(dr-device_export_rdf ?rulebase-address ?export-rdf-file ?export-proof-file $?valid-export-rdf-classes)
 	)	
 )
 

@@ -611,11 +611,18 @@
 	(while (> (length$ $?classes) 0)
 	   do
 	   	(bind ?class (nth$ 1 $?classes))
-		(bind $?class-refs (send (class-instance-name ?class) get-class-refs))
-		(bind ?pos (member$ ?slot $?class-refs))
-		(if (numberp ?pos)
+		(if (class-existp ?class)
 		   then
-			(return (nth$ (+ ?pos 1) $?class-refs))
+			(bind ?class-instance (class-instance-name ?class))
+			(if (instance-existp ?class-instance)
+			   then
+				(bind $?class-refs (send ?class-instance get-class-refs))
+				(bind ?pos (member$ ?slot $?class-refs))
+				(if (numberp ?pos)
+				   then
+					(return (nth$ (+ ?pos 1) $?class-refs))
+				)
+			)
 		)
 		(bind $?classes (rest$ $?classes))
 	)

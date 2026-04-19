@@ -108,6 +108,8 @@ function AddCaseForm() {
 
       // Process the new response format
       let ruleFine = "0";
+      let ruleJailMonths = "0";
+      let ruleDrivingBan = "0";
       let ruleVerdict = "NIJE KRIV";
       let appliedRulesDescription = "";
       let provisions = [];
@@ -118,6 +120,8 @@ function AddCaseForm() {
         ruleFine = (ruleData.penalties.to_pay_min && ruleData.penalties.to_pay_max) 
           ? `${ruleData.penalties.to_pay_min} - ${ruleData.penalties.to_pay_max}` 
           : "0";
+        ruleJailMonths = ruleData.penalties.max_imprisonment || "0";
+        ruleDrivingBan = ruleData.penalties.driving_ban || "0";
         
         ruleVerdict = (Object.keys(ruleData.penalties).length > 0) ? "KRIV JE" : "NIJE KRIV";
         appliedRulesDescription = ruleData.description || "";
@@ -127,6 +131,8 @@ function AddCaseForm() {
         ruleFine = (ruleData.to_pay_min && ruleData.to_pay_max) 
           ? `${ruleData.to_pay_min} - ${ruleData.to_pay_max}` 
           : "0";
+        ruleJailMonths = ruleData.max_imprisonment || "0";
+        ruleDrivingBan = ruleData.driving_ban || "0";
         
         ruleVerdict = ruleData.triggered_rule ? "KRIV JE" : "NIJE KRIV";
         appliedRulesDescription = ruleData.triggered_rule || "";
@@ -143,6 +149,8 @@ function AddCaseForm() {
         ...prevVerdict,
         ruleVerdict: ruleVerdict,
         ruleFine: ruleFine,
+        ruleJailMonths: ruleJailMonths,
+        ruleDrivingBan: ruleDrivingBan,
         appliedRules: appliedRulesDescription,
       }));
       
