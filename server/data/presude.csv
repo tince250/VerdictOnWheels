@@ -1,0 +1,4 @@
+id,court,caseNumber,judge,prosecutor,defendant,offense,verdictType,appliedProvisions,violationTypes,speedKmh,speedLimitKmh,alcoholLevelPromil,roadCondition,injurySeverity,damageEur,mentalState,priorRecord,isGuilty,punishmentType,sentenceMonths
+2,Osnovni sud u Podgorici,K 173/2024,Ilija Radulović,Biljana Medenica,V.G.,Ugrožavanje javnog saobraćaja,presuda,čl. 40 ZOBS; čl. 182 ZOBS,nepoštovanje prvenstva,48.0,50.0,0.5,mokro,teška,,umišljaj,false,uslovna,10,true,5000,true
+3,Osnovni sud u Beranama,K 676/2023,Milica Tomić,Luka Jovanović,S.P.,Ugrožavanje javnog saobraćaja,presuda,čl. 36 ZOBS; čl. 27 ZOBS,alkohol; prekoračenje brzine,90.0,50.0,1.2,noć,teška,7000.0,umišljaj,true,zatvor,8,true,0,false
+1,Osnovni sud u Podgorici,K 87/2024,Marko Radović,Biljana Medenica,V.G.,Ugrožavanje javnog saobraćaja,presuda,čl. 36 ZOBS; čl. 40 ZOBS,nedržanje odstojanja,56.0,50.0,0.0,suvo,laka,3500.0,nehat,false,uslovna,6,false,0,false

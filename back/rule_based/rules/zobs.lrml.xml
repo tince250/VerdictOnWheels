@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/"
+                  xmlns:ruleml="http://ruleml.org/spec"
+                  xml:lang="sr-Latn-ME">
+
+  <!-- ===================== AKN REFERENCES (ZOBS) ===================== -->
+  <lrml:References>
+    <lrml:Reference lrml:key="refZOBS26"  lrml:href="/akn/me/act/zobs/last/art_26"/>
+    <lrml:Reference lrml:key="refZOBS27"  lrml:href="/akn/me/act/zobs/last/art_27"/>
+    <lrml:Reference lrml:key="refZOBS36"  lrml:href="/akn/me/act/zobs/last/art_36"/>
+    <lrml:Reference lrml:key="refZOBS40"  lrml:href="/akn/me/act/zobs/last/art_40"/>
+    <lrml:Reference lrml:key="refZOBS76"  lrml:href="/akn/me/act/zobs/last/art_76"/>
+    <lrml:Reference lrml:key="refZOBS176" lrml:href="/akn/me/act/zobs/last/art_176"/>
+  </lrml:References>
+
+  <!-- ===================== NORMALIZATION: svaka specifična povreda -> violatesTrafficRules ===================== -->
+  <lrml:PrescriptiveStatement lrml:key="PS_VIOLATION_FOLDS_TO_VIOLATES">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:Atom>
+          <ruleml:Rel>trafficRuleViolation</ruleml:Rel>
+          <ruleml:Var>?Driver</ruleml:Var>
+          <ruleml:Var>?RuleId</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom>
+          <ruleml:Rel>violatesTrafficRules</ruleml:Rel>
+          <ruleml:Var>?Driver</ruleml:Var>
+        </ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+  </lrml:PrescriptiveStatement>
+
+  <!-- ===================== Član 26: Manevar samo uz prethodno uvjeravanje i signalizaciju ===================== -->
+  <!-- Tekstualna osnova: obaveza uvjeravanja u bezbjednost prije manevra + obaveza davanja znaka za cijelo vrijeme radnje -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_26_SAFETY_BEFORE_MANOEUVRE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>initiatesManoeuvre</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <!-- eksplicitno: nije se prethodno uvjerio da radnju može učiniti bezbjedno -->
+          <ruleml:Atom><ruleml:Rel>noPriorSafetyCheck</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_26_SAFETY</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS26"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_26_SIGNAL_DURING_MANOEUVRE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>performsManoeuvre</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <!-- mora dati jasan i blagovremen znak; znak mora trajati cijelu radnju -->
+          <ruleml:Atom><ruleml:Rel>signalNotGivenOrNotContinuous</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_26_SIGNAL</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS26"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <!-- ===================== Član 27: Uključivanje u saobraćaj ===================== -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_27_NO_IMPEDIMENT_AND_SIGNAL">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>mergesFromNonTrafficSurfaceOrStop</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>impedesOtherParticipants</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>failedToSignalMerge</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          </ruleml:Or>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_27_GENERAL</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS27"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_27_HELPER_IN_LOW_VISIBILITY">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>mergesFromDrivewayOrGarage</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>lowVisibilityOrSightlines</ruleml:Rel><ruleml:Var>?Location</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>noExternalHelperOutsideVehicle</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_27_HELPER</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS27"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_27_YIELD_ON_ENTRY">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>mergesIntoCarriageway</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>failedToYieldToVehiclesOnCarriageway</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>failedToYieldToPedestrians</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          </ruleml:Or>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_27_YIELD</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS27"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_27_MUD_REMOVAL">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:Or>
+          <ruleml:And>
+            <ruleml:Atom><ruleml:Rel>aboutToEnterAsphaltFromDirt</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>failedToStopAndCleanMudFromWheels</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          </ruleml:And>
+          <ruleml:Atom><ruleml:Rel>leftMudOnAsphaltCarriageway</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:Or>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_27_MUD</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS27"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <!-- ===================== Član 36: Brzina u naselju ===================== -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_36_SPEED_IN_SETTLEMENT">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>inSettlement</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <!-- dozvoljena brzina = min(50, znakVišaDo 80 ako postoji) -> modelujemo kao computedLimit -->
+          <ruleml:Atom><ruleml:Rel>actualSpeedKmH</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?V</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>permittedSettlementSpeedKmH</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Limit</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>greaterThan</ruleml:Rel><ruleml:Var>?V</ruleml:Var><ruleml:Var>?Limit</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_36_SPEED</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS36"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <!-- ===================== Član 40: Prvenstvo prolaza na raskrsnici ===================== -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_YIELD_RIGHT_SIDE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>atIntersectionOrMeeting</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>vehicleApproachesFromRight</ruleml:Rel><ruleml:Var>?Other</ruleml:Var><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>failedToYield</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Other</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_RIGHT_SIDE</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_LEFT_TURN_YIELD_ONCOMING">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>turnsLeftAtIntersection</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>oncomingVehicleStraightOrRight</ruleml:Rel><ruleml:Var>?Other</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>failedToYield</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Other</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_LEFT_TURN</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_RAIL_PRIORITY">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>conflictWithRailVehicle</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Rail</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>failedToYield</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Rail</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_RAIL</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_PRIORITY_ROAD_ENTRY">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>enteringPriorityRoad</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>failedToYieldToAllOnPriorityRoad</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_PRIORITY_ROAD</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_FROM_DIRT_OR_NONTRAFFIC_SURFACE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Or>
+            <ruleml:Atom><ruleml:Rel>enteringFromDirtToAsphalt</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+            <ruleml:Atom><ruleml:Rel>enteringFromNonTrafficSurface</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          </ruleml:Or>
+          <ruleml:Atom><ruleml:Rel>failedToYieldToAllOnTargetRoad</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_ENTRY_GENERAL</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_40_BICYCLE_PATH_CROSSING">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>cutsAcrossBicyclePathOrLaneOnTurn</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>failedToYieldToBicyclesOnPath</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_40_BIKEPATH</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS40"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <!-- ===================== Član 76: Potrebno odstojanje ===================== -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_76_FOLLOWING_DISTANCE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>followsAnotherVehicle</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Lead</ruleml:Var></ruleml:Atom>
+          <!-- „potrebno odstojanje“ modelujemo kao: nije moguće blagovremeno usporiti/zaustaviti -->
+          <ruleml:Atom><ruleml:Rel>cannotStopInTimeIfLeadSlowsOrStops</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Lead</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_76_DISTANCE</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS76"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <!-- ===================== Član 176: Vozačka dozvola i zabrana upravljanja ===================== -->
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_176_NO_VALID_LICENCE">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>drivesMotorVehicleOnPublicRoad</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Not>
+            <ruleml:Or>
+              <ruleml:Atom><ruleml:Rel>holdsValidDomesticLicenceForCategory</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Cat</ruleml:Var></ruleml:Atom>
+              <ruleml:Atom><ruleml:Rel>holdsValidForeignOrIntlLicenceWithinAllowance</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Cat</ruleml:Var></ruleml:Atom>
+            </ruleml:Or>
+          </ruleml:Not>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_176_NO_LIC</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS176"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_176_FOREIGN_LICENCE_TIME_LIMIT">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>usesForeignLicence</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <!-- granica važenja strane dozvole: npr. 6 mjeseci od ulaska (za određene statuse) -->
+          <ruleml:Atom><ruleml:Rel>exceededForeignLicenceAllowanceMonths</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>6</ruleml:Ind></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_176_FOREIGN_LIMIT</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS176"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_176_DRIVING_WHEN_BANNED">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>drivesMotorVehicleOnPublicRoad</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Atom><ruleml:Rel>administrativeBanOnDrivingInForce</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Ind>ZOBS_176_BANNED</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS176"/></lrml:References>
+  </lrml:ViolationStatement>
+
+  <lrml:ViolationStatement lrml:key="VS_ZOBS_176_OWNER_ALLOWING_UNLICENSED">
+    <ruleml:Imp>
+      <ruleml:if>
+        <ruleml:And>
+          <ruleml:Atom><ruleml:Rel>ownerOrKeeperPermitsDriving</ruleml:Rel><ruleml:Var>?Owner</ruleml:Var><ruleml:Var>?Driver</ruleml:Var></ruleml:Atom>
+          <ruleml:Not>
+            <ruleml:Or>
+              <ruleml:Atom><ruleml:Rel>holdsValidDomesticLicenceForCategory</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Cat</ruleml:Var></ruleml:Atom>
+              <ruleml:Atom><ruleml:Rel>holdsValidForeignOrIntlLicenceWithinAllowance</ruleml:Rel><ruleml:Var>?Driver</ruleml:Var><ruleml:Var>?Cat</ruleml:Var></ruleml:Atom>
+            </ruleml:Or>
+          </ruleml:Not>
+        </ruleml:And>
+      </ruleml:if>
+      <ruleml:then>
+        <ruleml:Atom><ruleml:Rel>trafficRuleViolation</ruleml:Rel><ruleml:Var>?Owner</ruleml:Var><ruleml:Ind>ZOBS_176_OWNER_PERMITS</ruleml:Ind></ruleml:Atom>
+      </ruleml:then>
+    </ruleml:Imp>
+    <lrml:References><lrml:Reference lrml:key="refZOBS176"/></lrml:References>
+  </lrml:ViolationStatement>
+
+</lrml:LegalRuleML>

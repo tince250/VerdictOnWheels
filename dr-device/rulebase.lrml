@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lrml:LegalRuleML xmlns:lrml="http://docs.oasis-open.org/legalruleml/ns/v1.0/"
+                  xmlns:xs="http://www.w3.org/2001/XMLSchema"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://docs.oasis-open.org/legalruleml/ns/v1.0/ xsd-compact/lrml-compact.xsd"
+                  xmlns:ruleml="http://ruleml.org/spec">
+
+    <lrml:Statements>
+        <!-- Town Road Speed Violations -->
+        <!-- Rule: Speeding on town road level 1 -->
+        <lrml:PrescriptiveStatement key="ps1">
+            <ruleml:Rule key=":rule1" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:speed_over"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Var>speed_over</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&gt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>49</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&lt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>61</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:driving_on"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">town_road</ruleml:Data>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:caused_accident"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">ne</ruleml:Data>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom>
+                        <ruleml:Rel>town_road_speed_violation_lv1_cl_36_stav_1</ruleml:Rel>
+                        <ruleml:Var type=":defendant">Defendant</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rule: Speeding on town road level 2 -->
+        <lrml:PrescriptiveStatement key="ps7">
+            <ruleml:Rule key=":rule7" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:speed_over"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Var>speed_over</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&gt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>59</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&lt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>71</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:driving_on"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">town_road</ruleml:Data>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:caused_accident"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">ne</ruleml:Data>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom>
+                        <ruleml:Rel>town_road_speed_violation_lv2_cl_36_stav_1</ruleml:Rel>
+                        <ruleml:Var type=":defendant">Defendant</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rural Road Speed Violations -->
+        <!-- Rule: Speeding on rural road level 1 -->
+        <lrml:PrescriptiveStatement key="ps11">
+            <ruleml:Rule key=":rule11" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:speed_over"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Var>speed_over</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&gt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>59</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&lt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>71</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:driving_on"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">rural_road</ruleml:Data>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:caused_accident"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">ne</ruleml:Data>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom>
+                        <ruleml:Rel>rural_road_speed_violation_lv1_cl_37</ruleml:Rel>
+                        <ruleml:Var type=":defendant">Defendant</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rule: Speeding on rural road level 2 -->
+        <lrml:PrescriptiveStatement key="ps12">
+            <ruleml:Rule key=":rule12" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:speed_over"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Var>speed_over</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&gt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>69</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&lt;</ruleml:Fun>
+                                <ruleml:Var>speed_over</ruleml:Var>
+                                <ruleml:Ind>81</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:driving_on"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">rural_road</ruleml:Data>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:caused_accident"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">ne</ruleml:Data>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom>
+                        <ruleml:Rel>rural_road_speed_violation_lv2_cl_37</ruleml:Rel>
+                        <ruleml:Var type=":defendant">Defendant</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rule: Rural road level 1 with accident -->
+        <lrml:PrescriptiveStatement key="ps13">
+            <ruleml:Rule key=":rule13" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>59</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>71</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">rural_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rule: Rural road level 2 with accident -->
+        <lrml:PrescriptiveStatement key="ps14">
+            <ruleml:Rule key=":rule14" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>69</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>81</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">rural_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Alcohol Level Violations -->
+        <!-- Rule: Alcohol level violation -->
+        <lrml:PrescriptiveStatement key="ps5">
+            <ruleml:Rule key=":rule5" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:alcohol_level"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Var>alcohol_level</ruleml:Var>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&gt;</ruleml:Fun>
+                                <ruleml:Var>alcohol_level</ruleml:Var>
+                                <ruleml:Ind>0.4</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Expr>
+                                <ruleml:Fun>&lt;</ruleml:Fun>
+                                <ruleml:Var>alcohol_level</ruleml:Var>
+                                <ruleml:Ind>1.1</ruleml:Ind>
+                            </ruleml:Expr>
+                        </ruleml:Atom>
+                        <ruleml:Atom>
+                            <ruleml:Rel iri="lc:caused_accident"/>
+                            <ruleml:Var type="lc:defendant">Defendant</ruleml:Var>
+                            <ruleml:Data xsi:type="xs:string">ne</ruleml:Data>
+                        </ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom>
+                        <ruleml:Rel>alcohol_level_violation_lv1_cl_182</ruleml:Rel>
+                        <ruleml:Var type=":defendant">Defendant</ruleml:Var>
+                    </ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <!-- town 50-60 with accident + laka (minor injury) -->
+        <lrml:PrescriptiveStatement key="ps16">
+            <ruleml:Rule key=":rule16" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>49</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>61</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:injury"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">laka</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- town 50-60 with accident + teska (serious injury) -->
+        <lrml:PrescriptiveStatement key="ps17">
+            <ruleml:Rule key=":rule17" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>49</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>61</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:injury"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">teska</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- town 50-60 with accident + fatalna (fatal injury) -->
+        <lrml:PrescriptiveStatement key="ps18">
+            <ruleml:Rule key=":rule18" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>49</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>61</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:injury"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">fatalna</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- town 50-60 with accident + damage_eur > 20000 -->
+        <lrml:PrescriptiveStatement key="ps19">
+            <ruleml:Rule key=":rule19" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>49</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>61</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:damage_eur"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>damage_eur</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>damage_eur</ruleml:Var><ruleml:Ind>20000</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_damage_gt20000_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+		<lrml:PrescriptiveStatement key="ps3">
+            <ruleml:Rule key=":rule3" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>49</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>61</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Town road 60-70 with accident -->
+        <lrml:PrescriptiveStatement key="ps9">
+            <ruleml:Rule key=":rule9" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:speed_over"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>speed_over</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>59</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>speed_over</ruleml:Var><ruleml:Ind>71</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:driving_on"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">town_road</ruleml:Data></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Alcohol with accident -->
+        <lrml:PrescriptiveStatement key="ps6">
+            <ruleml:Rule key=":rule6" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:And>
+                        <ruleml:Atom><ruleml:Rel iri="lc:alcohol_level"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Var>alcohol_level</ruleml:Var></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&gt;</ruleml:Fun><ruleml:Var>alcohol_level</ruleml:Var><ruleml:Ind>0.4</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Expr><ruleml:Fun>&lt;</ruleml:Fun><ruleml:Var>alcohol_level</ruleml:Var><ruleml:Ind>1.1</ruleml:Ind></ruleml:Expr></ruleml:Atom>
+                        <ruleml:Atom><ruleml:Rel iri="lc:caused_accident"/><ruleml:Var type="lc:defendant">Defendant</ruleml:Var><ruleml:Data xsi:type="xs:string">da</ruleml:Data></ruleml:Atom>
+                    </ruleml:And>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_accident_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Negation Rules -->
+        <!-- Negation: Town road level 2 negates level 1 -->
+ 		<lrml:PrescriptiveStatement key="ps8">
+            <ruleml:Rule key=":rule8" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- town accident: lv2_accident negates lv1_accident -->
+        <lrml:PrescriptiveStatement key="ps10">
+            <ruleml:Rule key=":rule10" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Negation: Rural road level 2 negates level 1 -->
+        <lrml:PrescriptiveStatement key="ps27">
+            <ruleml:Rule key=":rule27" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Negation: Rural accident level 2 negates level 1 -->
+        <lrml:PrescriptiveStatement key="ps28">
+            <ruleml:Rule key=":rule28" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- alcohol accident negates non-accident alcohol (avoid duplicate conclusions) -->
+        <lrml:PrescriptiveStatement key="ps15">
+            <ruleml:Rule key=":rule15" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_accident_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+        <!-- fatalna negates teska -->
+        <lrml:PrescriptiveStatement key="ps20">
+            <ruleml:Rule key=":rule20" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- fatalna negates laka -->
+        <lrml:PrescriptiveStatement key="ps21">
+            <ruleml:Rule key=":rule21" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- teska negates laka -->
+        <lrml:PrescriptiveStatement key="ps22">
+            <ruleml:Rule key=":rule22" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- laka negates generic accident (same pattern as ps24/ps25 for fatalna/teska) -->
+        <lrml:PrescriptiveStatement key="ps26">
+            <ruleml:Rule key=":rule26" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- damage >20000 negates generic accident lv1 (so the high-damage conclusion takes precedence) -->
+        <lrml:PrescriptiveStatement key="ps23">
+            <ruleml:Rule key=":rule23" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_damage_gt20000_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- fatalna and teska also negate the generic accident lv1 conclusion -->
+        <lrml:PrescriptiveStatement key="ps24">
+            <ruleml:Rule key=":rule24" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="ps25">
+            <ruleml:Rule key=":rule25" closure="universal" strength="defeasible">
+                <ruleml:if>
+                    <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                </ruleml:if>
+                <ruleml:then>
+                    <ruleml:Negation>
+                        <ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom>
+                    </ruleml:Negation>
+                </ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- === PENALTIES AS EXPLICIT RULES (defendant-scoped, avoids reparation churn) === -->
+
+        <lrml:PrescriptiveStatement key="psp1_min">
+            <ruleml:Rule key=":pen_ps1_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>150</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp1_max">
+            <ruleml:Rule key=":pen_ps1_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>400</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp7_min">
+            <ruleml:Rule key=":pen_ps7_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>300</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp7_max">
+            <ruleml:Rule key=":pen_ps7_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>1000</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp5_min">
+            <ruleml:Rule key=":pen_ps5_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>150</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp5_max">
+            <ruleml:Rule key=":pen_ps5_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>400</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp3_min">
+            <ruleml:Rule key=":pen_ps3_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>150</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp3_max">
+            <ruleml:Rule key=":pen_ps3_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>400</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp3_ban">
+            <ruleml:Rule key=":pen_ps3_ban" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>driving_ban</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>3</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp9_min">
+            <ruleml:Rule key=":pen_ps9_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>300</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp9_max">
+            <ruleml:Rule key=":pen_ps9_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>1000</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp9_ban">
+            <ruleml:Rule key=":pen_ps9_ban" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv2_accident_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>driving_ban</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>3</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp6_ban">
+            <ruleml:Rule key=":pen_ps6_ban" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>alcohol_level_violation_lv1_accident_cl_182</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>driving_ban</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>3</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp16_jail">
+            <ruleml:Rule key=":pen_ps16_jail" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_laka_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>max_imprisonment</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>6</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp17_jail">
+            <ruleml:Rule key=":pen_ps17_jail" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_teska_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>max_imprisonment</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>6</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp18_jail">
+            <ruleml:Rule key=":pen_ps18_jail" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_injury_fatalna_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>max_imprisonment</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>6</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp19_jail">
+            <ruleml:Rule key=":pen_ps19_jail" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>town_road_speed_violation_lv1_accident_damage_gt20000_cl_36_stav_1</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>max_imprisonment</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>6</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- Rural penalties -->
+        <lrml:PrescriptiveStatement key="psp11_min">
+            <ruleml:Rule key=":pen_ps11_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>150</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp11_max">
+            <ruleml:Rule key=":pen_ps11_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>400</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp12_min">
+            <ruleml:Rule key=":pen_ps12_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>300</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp12_max">
+            <ruleml:Rule key=":pen_ps12_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>1000</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp13_min">
+            <ruleml:Rule key=":pen_ps13_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>150</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp13_max">
+            <ruleml:Rule key=":pen_ps13_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>400</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp13_ban">
+            <ruleml:Rule key=":pen_ps13_ban" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv1_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>driving_ban</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>3</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp14_min">
+            <ruleml:Rule key=":pen_ps14_min" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_min</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>300</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp14_max">
+            <ruleml:Rule key=":pen_ps14_max" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>to_pay_max</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>1000</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <lrml:PrescriptiveStatement key="psp14_ban">
+            <ruleml:Rule key=":pen_ps14_ban" closure="universal" strength="defeasible">
+                <ruleml:if><ruleml:Atom><ruleml:Rel>rural_road_speed_violation_lv2_accident_cl_37</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var></ruleml:Atom></ruleml:if>
+                <ruleml:then><ruleml:Atom><ruleml:Rel>driving_ban</ruleml:Rel><ruleml:Var type=":defendant">Defendant</ruleml:Var><ruleml:Ind>3</ruleml:Ind></ruleml:Atom></ruleml:then>
+            </ruleml:Rule>
+        </lrml:PrescriptiveStatement>
+
+        <!-- === OVERRIDES: ensure correct precedence (accident > non-accident, higher lv > lower lv) === -->
+
+        <!-- town: accident rules override non-accident -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps3" over="#ps1"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps9" over="#ps7"/>
+        </lrml:OverrideStatement>
+
+        <!-- alcohol accident overrides speed accident (alcohol more severe) -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps6" over="#ps3"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps6" over="#ps9"/>
+        </lrml:OverrideStatement>
+
+        <!-- existing basic overrides -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps7" over="#ps1"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps5" over="#ps1"/>
+        </lrml:OverrideStatement>
+
+        <!-- specific injury/damage accident rules override generic accident -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps16" over="#ps3"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps17" over="#ps3"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps18" over="#ps3"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps19" over="#ps3"/>
+        </lrml:OverrideStatement>
+
+        <!-- rural: accident rules override non-accident -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps13" over="#ps11"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps14" over="#ps12"/>
+        </lrml:OverrideStatement>
+
+        <!-- rural basic overrides -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps12" over="#ps11"/>
+        </lrml:OverrideStatement>
+
+        <!-- alcohol accident overrides rural speed accidents too -->
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps6" over="#ps13"/>
+        </lrml:OverrideStatement>
+
+        <lrml:OverrideStatement>
+            <lrml:Override under="#ps6" over="#ps14"/>
+        </lrml:OverrideStatement>
+    </lrml:Statements>
+</lrml:LegalRuleML>

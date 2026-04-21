@@ -1,0 +1,217 @@
+judgment_to_akn: |
+  Convert the following Montenegrin/Serbian **judgment (presuda)** into valid **Akoma Ntoso 3.0 XML**.
+  Follow these rules:
+
+  1. **Structure**
+
+     * Root: `<judgment xml:lang="sr-Latn-ME">`.
+     * Sections: `<meta>`, `<judgmentBody>` (with `<introduction>`, `<decision>`, `<motivation>`, `<conclusions>`), optional `<attachments>`.
+
+  2. **Meta**
+
+     * **FRBR identifiers**: Work, Expression, Manifestation with URIs `/akn/me/judgment/YYYY-MM-DD/COURT_SLUG/CASE_NUMBER`. Add `@sr-Latn` for Expression.
+     * **References**:
+
+       * `<TLCOrganization>` for court, `<TLCPerson>` for judge, clerk, prosecutor, defendant, counsel.
+       * `<ref>` for every cited law article/paragraph/item, URIs like:
+
+         * KZ CG → `/akn/me/act/data/criminal_code/2025`
+         * ZKP → `/akn/me/act/data/criminal_procedure_code/2025`
+         * ZOBS → `/akn/me/act/data/law_on_road_traffic_safety/2025`
+         * the references for go in format clan1_stav1_t1 
+
+     * **Classification**: at least keywords `saobraćaj`, `ugrožavanje javnog saobraćaja`; subjects `/akn/me/subjects/criminal-law`, `/akn/me/subjects/traffic`.
+     * **Lifecycle**: `<eventRef type="judgment" date="YYYY-MM-DD"/>`.
+     * **Parties**: `<party>` linking roles (`#defendant`, `#prosecutor`, `#defence`) to persons.
+
+  3. **Judgment body**
+
+     * **Introduction**: court, case number, parties, date.
+     * **Decision**: operative part (acquittal/conviction, costs), with legal refs.
+     * **Motivation**: facts, reasoning, all cited laws in `<ref>`.
+     * **Conclusions**: publication/appeal info.
+     * keep most of the text as is.
+       * All of the references should be used in this sections in the middle of the text when they are mentioned.
+       * If the law uses "clan u vezi sa clanom" references, use seperate references `clanX_stavY` for each part.
+       * If the law uses "clan u vezi sa stavom" references, use seperate references `clan_stavX`and `clan_stavY` for each part.
+
+  4. **Facts/attachments (optional)**: add `<doc name="facts-summary">` with structured summary if clear.
+
+  5. **Extraction & normalization**
+
+     * Dates → ISO `YYYY-MM-DD`.
+     * Keep initials for anonymized names.
+     * Normalize law acronyms: `kz`, `zkp`, `zobs`.
+     * Do **not invent** content; omit missing sections.
+
+  RETURN ONLY THE Akoma Ntoso 3.0 XML, NO EXPLANATIONS.
+
+judgment_to_db: |
+  You are a legal NLP assistant. 
+  Your task is to extract structured data from the following Montenegrin court judgment (presuda). 
+  The output MUST be in valid JSON format following this schema:
+
+  {
+    "judgment_id": "string",                   // broj predmeta
+    "court": "string",                     // naziv suda
+    "decision_date": "YYYY-MM-DD",         // datum donošenja
+    "decision_type": "string",             // Presuda / Rešenje
+    "judge": "string",
+    "clerk": "string",
+    "prosecutor": "string or null",
+    "defendant": "string or initials",
+    "prosecuted_before": "true/false",    // da li je optuzeni ranije osudjivan
+    "prosecuted_before_act": "string or null",    // za sta je optuzeni ranije osudjivan
+    "lawyers": ["string"],
+    "witnesses": ["string"],
+    "decision": "kriv/nije kriv",
+    "punishment": "string or null",                   // kazna, na sta je osudjen ako je kriv
+    "due_payment": "string or null",                  // novcana kazna
+    "condition": "string or null",                    //u slucaju uslovne presude, koji je uslov
+
+    "legal_references": [
+      { "law": "string", "article": int, "paragraph": int or null }
+    ],
+
+    "facts": {
+      "driver_actions": {
+        "speed_kmh": int or null,
+        "speed_limit_kmh": int or null,
+        "alcohol_level_promil": float or null,
+        "distance_too_short": true/false/null,
+        "failed_to_yield": true/false/null,
+        "reversing": true/false/null
+      },
+      "accident": {
+        "occurred": true/false,
+        "injury": {
+          "type": "laka/teska/null",
+          "victim": "string or null"
+        },
+        "damage_eur": float or null
+      },
+      "mental_state": "nehat/umišljaj/null"
+    },
+
+    "reasoner_facts": [
+      "string"  // atoms ready for DR-Device, e.g. followsAnotherVehicle(vozac1)
+    ]
+  }
+
+  Rules:
+  - If a field is not mentioned, set it to null (not empty string).
+  - Extract full names if available, otherwise use initials.
+  - Always normalize legal references to {law, article, paragraph}.
+  - Facts should be expressed in numbers/booleans where possible.
+  - For reasoner_facts, map the facts into logical atoms following LegalRuleML rules 
+    (e.g. if text says 'nije držao odstojanje' → distanceTooShort(vozac1)).
+  - Always respond with the extracted JSON only, put the response between "```json" and "```"
+
+  Now extract the data from the following judgment text:
+generate_new_judgment: |
+  Napravi presudu koja STROGO prati sledeću strukturu i format (kao u sudskim PDF-ovima), NE DODAJ informacije koje nisu jasno naznačene ulaznim informacijama. 
+
+  1) Prvi pasus – uvodna formula u JEDNOJ cjelini:
+    - Mora početi velikim slovima: "U IME CRNE GORE"
+    - U istom pasusu navedi:
+      K.br. {caseNumber} {court U VELIKIM SLOVIMA}, prvostepeni, krivični, 
+      po sudiji {judge}, uz učešće zapisničara {clerk ako ga ima ili izostavi frazu}, 
+      u krivičnom predmetu protiv okrivljenog {defendant ili inicijali}, 
+      zbog krivičnog djela {offense}, 
+      po optužnom predlogu {prosecutor ako postoji, u standardnom obliku npr. "ODT Podgorica"}, 
+      nakon održanog glavnog javnog pretresa (ili odgovarajućeg procesnog izraza ako imaš), 
+      zaključi frazom: "donio je," (zarez i zarez + prelaz u novu sekciju).
+    - U ovom pasusu koristi standardne sudske kolokacije, neutralan ton i stil.
+
+  2) Zaseban naslov u centru sledećeg reda:
+    P R E S U D U
+    (svako slovo odvojeno razmakom, tačno ovako)
+
+  3) Podaci o okrivljenom – zaseban pasus počinje sa:
+    Okrivljeni: {ime, prezime, kratak biografski blok, u istom stilu kao uzorci, uključi sledeće informacija ako i samo ako postoje: rođenje, prebivalište, državljanstvo, pismenost/obrazovanje, bračno stanje, imovno stanje, kaznena evidencija ako postoji}.
+
+  4) Linija o odluci o krivici – zaseban red (tačno razmaknuto slovo po slovo):
+    - Ako je isGuilty = True napiši: "K r i v je"
+    - Ako je isGuilty = False napiši: "O s l o b a đ a s e"
+
+  5) Činjenični opis i pravna kvalifikacija – zaseban pasus:
+    - Počni sa "Zato što je:" i narativno opiši radnju, mjesto, vrijeme, način, posljedice (povrede, šteta).
+    - Uključi normativnu referencu u tekstualnom obliku, npr:
+      "… iz člana [navedi član] Krivičnog zakonika Crne Gore" 
+      “u vezi člana [navedi član] Zakona o bezbjednosti saobraćaja na putevima”
+      (Prihvati i kraći oblik: “čl. X st. Y KZCG”, “čl. Q ZOBS”.)
+    - Ako postoje elementi umišljaj/nehat, jasno ih navedi.
+    - Završi rečenicom koja vodi u izreku: 
+      "pa mu Sud, primjenom citiranih zakonskih odredbi, i z r i č e,"
+
+  6) Izreka o kazni – zaseban pasus:
+    - Ako je isGuilty = True formuliši izreku u standardnom stilu, npr:
+      "USLOVNU OSUDU kojom mu utvrđuje kaznu zatvora u trajanju od {sentenceMonths} mjeseci …"
+      Ako postoji novčana kazna: "… i novčanu kaznu u iznosu od {fine} eura …"
+      Ako postoji zabrana upravljanja: "… te zabranu upravljanja motornim vozilom …"
+    - Ako je isGuilty = False napiši standardnu oslob. izreku: 
+      "Oslobađa se optužbe za…", bez kazne. Svakako navedi prekršaje za koje je optužen, ali govori u stilu jasnom da je u pitanju oslobađanje, a ne osuda.
+    - Troškovi postupka (samo ako postoje): npr. 
+      "Okrivljeni se obavezuje da plati troškove postupka u iznosu … i paušal … u roku …"
+
+  7) O b r a z l o ž e nj e – zaseban naslov i više pasusa:
+    - Optužni predlog (ko, kada, šta predlaže).
+    - Odbrana okrivljenog (da li priznaje, šta navodi).
+    - Dokazi: svedoci, zapisnici, veštačenja – nabroj u jednoj ili više rečenica u stilu uzoraka.
+    - Utvrđene činjenice i psihički odnos (umišljaj/nehat).
+    - Pravna kvalifikacija i primjena prava na činjenice (ponovi članke po potrebi u tekstualnom obliku "član X stav Y", bez XML).
+    - CBR uporedna praksa (ako je imas): "Uporedni slučajevi: {K br./godina}, ..."
+    - Zaključno: "Na osnovu izloženog, shodno članu 374 ZKP-a odlučeno je kao u izreci presude."
+
+  8) Završetak – potpisna klauzula i pravna pouka (sve u jednom završnom bloku):
+    {COURT U VELIKIM SLOVIMA}
+    Dana {datum (ako imaš)} 
+    ZAPISNIČAR {ime zapisničara ako imaš, ili izostavi} 
+    S U D I J A {judge}
+    PRAVNA POUKA: {standardna rečenica: npr. "Protiv ove presude dozvoljena je žalba u roku ...", 
+    ili ako je sporazum o priznanju krivice: "… žalba je dozvoljena samo ukoliko presuda nije u skladu sa sporazumom ..."}
+
+  Dodatna pravila:
+  - NIKAKO NE koriste podatke koje nemaš. Koristi isključivo infomacije navedene u "Ulazni podaci:"
+  - NE koristi nikakve oznake formata (nema markdown-a, nema XML/HTML).
+  - NE koristi liste sa crticama; sve su sudski pasusi.
+  - Naslovi "P R E S U D U" i "O b r a z l o ž e nj e" moraju biti tačno tako napisani (razmaknuta slova).
+  - Normativne reference isključivo u tekstu ("član/stav"), bez <ref> tagova.
+  - Ako nemaš neki podatak (npr. zapisničar), preskoči tu sintagmu — ne izmišljaj NIKAKO podatke koje nemaš.
+
+  IZLAZ: isključivo običan tekst u navedenom stilu i redosledu.
+
+  Primer:
+  """
+  U IME CRNE GORE  
+  K.br.87/24  
+
+  OSNOVNI SUD U PODGORICI, po sudiji Marku Radoviću, uz učešće zapisničarke Jelene Vuković, u krivičnom predmetu protiv okrivljenog V.G. iz Podgorice, zbog krivičnog djela ugrožavanje javnog saobraćaja iz člana 339 stav 1 Krivičnog zakonika Crne Gore, odlučujući po optužnom predlogu Osnovnog državnog tužilaštva Podgorica Kt.br.102/24 od 14.03.2024. godine, nakon održanog glavnog pretresa dana 12.06.2024. godine, donio je sledeću
+
+  **P R E S U D U**
+
+  Okrivljeni: V.G. iz Podgorice, ranije neosuđivan, zaposlen, oženjen, otac dvoje djece,  
+
+  **K R I V   J E**
+
+  Što je dana 11. februara 2024. godine, oko 17:30 časova, u ulici Moskovska u Podgorici, kao učesnik u saobraćaju, ne pridržavajući se saobraćajnih propisa — upravljao vozilom marke "Golf 7" registarskih oznaka PG..., brzinom od oko 75 km/h na dijelu puta gdje je dozvoljena brzina 50 km/h, pri čemu nije držao propisano odstojanje i prednjim dijelom svog vozila udario u zadnji dio vozila marke "Ford Focus" registarskih oznaka PG..., kojim je upravljao oštećeni S.B., koji je zadobio lakše tjelesne povrede. 
+
+  Na taj način je ugrozio javni saobraćaj i dovodio u opasnost život i tijelo ljudi, čime je izvršio krivično djelo **ugrožavanje javnog saobraćaja iz člana 339 stav 1 Krivičnog zakonika Crne Gore**.
+
+  Sud, primjenom navedenih zakonskih odredbi, te članova 4, 42 i 52 Krivičnog zakonika Crne Gore, donosi sledeću
+
+  **O D L U K U**
+
+  Okrivljenom V.G. se izriče **uslovna osuda**, kojom mu se utvrđuje kazna zatvora u trajanju od **6 (šest) mjeseci**, koja se neće izvršiti ukoliko u roku od **2 (dvije) godine** od pravosnažnosti presude ne izvrši novo krivično djelo.  
+  Okrivljeni je dužan da na ime troškova krivičnog postupka uplati iznos od **150,00 eura**, u roku od 15 dana od pravosnažnosti presude, pod prijetnjom prinudne naplate.
+
+  **PRAVNA POUKA:**  
+  Protiv ove presude dozvoljena je žalba Višem sudu u roku od 15 dana od dana prijema presude.
+
+  U Podgorici, dana 12.06.2024.  
+  ZAPISNIČAR: Jelena Vuković  
+  SUDIJA: Marko Radović
+
+  """
+
+  Ulazni podaci:
