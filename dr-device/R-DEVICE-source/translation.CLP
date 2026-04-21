@@ -889,7 +889,7 @@
 		(bind ?var-or-else (nth$ 3 $?first-slot))
 		(if (and (is-var ?var-or-else) (= (length$ $?first-slot) 4))
 		   then
-		   	(if (slot-existp ?class ?slot-name inherit)
+		   	(if (and (class-existp ?class) (slot-existp ?class ?slot-name inherit))
 		   	   then
 		   	   	(bind ?default-value (slot-default-value ?class ?slot-name))
 		   	   else
@@ -899,9 +899,9 @@
 			   then
 			   	(bind ?default-value "(create$)")
 			   else
-			   	(if (eq ?default-value 0)
+			   	(if (or (eq ?default-value nil) (eq ?default-value "") (eq ?default-value FALSE))
 			   	   then
-			   	   	(bind ?default-value nil)
+			   	   	(bind ?default-value "(create$)")
 			   	)
 			)
 			(bind $?result (create$ $?result "(" neq ?var-or-else ?default-value ")"))

@@ -109,19 +109,22 @@
 	(bind ?*triple_counter* (- ?*triple_counter* 1))
   	(bind ?p (instance-name-to-symbol ?p))
 	(bind ?p-type (multi-get-type-of ?p $?classes))
-	(if (and (instance-namep ?o) (instance-existp ?o))
-  	   then
-  		(bind ?o-class (class ?o))
-		(if (not (compatible-types ?o-class ?p-type))
-		   then
-		 	(assert (triple (subject ?o) (predicate [rdf:type]) (object (symbol-to-instance-name ?p-type))))
-		 	(bind ?*triple_counter* (+ ?*triple_counter* 1))
+	(if (neq ?p-type FALSE)
+	   then
+		(if (and (instance-namep ?o) (instance-existp ?o))
+	   	   then
+			(bind ?o-class (class ?o))
+			(if (not (compatible-types ?o-class ?p-type))
+			   then
+		 		(assert (triple (subject ?o) (predicate [rdf:type]) (object (symbol-to-instance-name ?p-type))))
+		 		(bind ?*triple_counter* (+ ?*triple_counter* 1))
+			)
+	   	   else
+	 		(if (assert (triple (subject ?o) (predicate [rdf:type]) (object (symbol-to-instance-name ?p-type))))
+	 		   then
+	 			(bind ?*triple_counter* (+ ?*triple_counter* 1))
+	 		)
 		)
-	   else
-	 	(if (assert (triple (subject ?o) (predicate [rdf:type]) (object (symbol-to-instance-name ?p-type))))
-	 	   then
-	 		(bind ?*triple_counter* (+ ?*triple_counter* 1))
-	 	)
 	)
 	(bind ?pos (inv-pair-member $slot ?p $?old-slot-values))
 	(if (neq ?pos FALSE)

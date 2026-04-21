@@ -131,6 +131,8 @@
 	(bind $?condition (subseq$ $?condition-and-slot 1 (- (member$ $$$ $?condition-and-slot) 1)))
 	(bind $?slot (subseq$ $?condition-and-slot (+ (member$ $$$ $?condition-and-slot) 1) (length$ $?condition-and-slot)))
 	(bind $?value-expr (subseq$ $?slot 3 (- (length$ $?slot) 1)))
+	(bind ?value FALSE)
+	(bind ?slot-field slot)
 	(if (= (length$ $?value-expr) 1)
 	   then
 	   	(bind ?value (nth$ 1 $?value-expr))
@@ -158,6 +160,9 @@
 	   	   		(bind ?slot-field multislot)
 	   	   		(bind ?value (nth$ 2 $?value-expr))
 	   	   	)
+	   	   else
+	   	   	(bind ?slot-field slot)
+	   	   	(bind ?value (nth$ 1 $?value-expr))
 	   	)
 	)
 	(if (floatp ?value)
